@@ -1,6 +1,7 @@
-import { Product, CartService } from './../../services/cart.service';
 import { Component, OnInit } from '@angular/core';
+import { Product, CartService } from './../../services/cart.service';
 import { ModalController, AlertController } from '@ionic/angular';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-cart-modal',
@@ -13,7 +14,8 @@ export class CartModalPage implements OnInit {
   paymentHandler: any = null;
   setPayment = false;
   amount: number;
- 
+  totalAmount: number;
+
   constructor(private cartService: CartService, private modalCtrl: ModalController, private alertCtrl: AlertController) { }
  
   ngOnInit() {
@@ -21,15 +23,15 @@ export class CartModalPage implements OnInit {
     this.invokeStripe();
   }
  
-  decreaseCartItem(product) {
+  decreaseCartItem(product: Product) {
     this.cartService.decreaseProduct(product);
   }
  
-  increaseCartItem(product) {
+  increaseCartItem(product: Product) {
     this.cartService.addProduct(product);
   }
  
-  removeCartItem(product) {
+  removeCartItem(product: Product) {
     this.cartService.removeProduct(product);
   }
  
@@ -105,12 +107,7 @@ makePayment() {
     // alert.present().then(() => {
     //   this.modalCtrl.dismiss();
     // });
-
-
-
-
-
-
+    
   }
 
 }

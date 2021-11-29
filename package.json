@@ -43,6 +43,7 @@
     "cordova-plugin-nativegeocoder": "^3.4.1",
     "material-steppers": "^2.0.0",
     "ng-otp-input": "^1.8.1",
+    "ng2-search-filter": "^0.5.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

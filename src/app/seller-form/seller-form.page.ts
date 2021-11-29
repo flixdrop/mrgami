@@ -7,7 +7,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ModalController, AlertController } from '@ionic/angular';
 import { GetAnimalData, SellerFormApiService } from '../services/seller-form-api.service';
 
-//const { Camera } = CameraPlugin;
+//const { Camer } = CameraPlugin;
 
 @Component({
   selector: 'app-seller-form',

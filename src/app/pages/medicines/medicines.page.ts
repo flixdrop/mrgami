@@ -16,7 +16,7 @@ export class MedicinesPage implements OnInit {
   products = [];
   cartItemCount: BehaviorSubject<number>;
   @ViewChild('cart', {static: false, read: ElementRef})fab: ElementRef;
-
+  searchTerm: any;
 
  constructor(
     private data: DataService,
@@ -63,5 +63,13 @@ export class MedicinesPage implements OnInit {
     node.addEventListener('animationend', handleAnimationEnd)
   }
 
+  doRefresh(event) {
+    console.log('Begin async operation');
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 2500);
+  }
 
 }

@@ -15,6 +15,7 @@ export class HomePage implements OnInit {
   public categories = [];
   public featuredProducts = [];
   public bestSellProducts = [];
+  searchTerm: any;
 
   constructor(
     private data: DataService,
@@ -25,5 +26,14 @@ export class HomePage implements OnInit {
     this.categories = this.data.getCategories();
     this.featuredProducts = this.data.getFeaturedProducts();
     this.bestSellProducts = this.data.getBestSellProducts();
+  }
+
+  doRefresh(event) {
+    console.log('Begin async operation');
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 2500);
   }
 }

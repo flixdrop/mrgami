@@ -10,7 +10,13 @@ import { DataService } from '../data.service';
 })
 export class LandingPage implements OnInit {
   public categories = [];
-
+  images: any;
+  slideOpts = {
+    initialSlide: 0,
+    slidesPerView: 3,
+    spaceBetween: 25,
+    speed: 500,
+  };
   constructor( private util: UtilService,
     private navCtrl: NavController,private data: DataService,) { 
     
@@ -18,6 +24,16 @@ export class LandingPage implements OnInit {
 
   ngOnInit() {
     this.categories = this.data.getTodaysOffers();
+    this.images = [
+      '../assets/todaysoffers.PNG',
+      '../assets/todaysoffers.PNG',
+      '../assets/todaysoffers.PNG',
+      '../assets/todaysoffers.PNG',
+      '../assets/todaysoffers.PNG',
+      '../assets/todaysoffers.PNG',
+      '../assets/todaysoffers.PNG',
+      '../assets/todaysoffers.PNG',
+    ];
   }
 
 

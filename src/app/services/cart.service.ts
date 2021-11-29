@@ -32,9 +32,6 @@ export interface IProduct {
 })
 export class CartService {
 
-
-
-
   data: Product[] = [
     { id: 0, name: 'Medicine1', price: 120, image:'../../assets/products/medicine1.jpg', amount: 0 },
     { id: 1, name: 'Medicine2', price: 150, image:'../../assets/products/medicine2.jpg', amount: 0 },
@@ -44,7 +41,6 @@ export class CartService {
  
   private cart = [];
   private cartItemCount = new BehaviorSubject(0);
-
 
   getProducts() {
     return this.data;
@@ -58,7 +54,7 @@ export class CartService {
     return this.cartItemCount;
   }
  
-  addProduct(product) {
+  addProduct(product: Product) {
     let added = false;
     for (let p of this.cart) {
       if (p.id === product.id) {
@@ -74,7 +70,7 @@ export class CartService {
     this.cartItemCount.next(this.cartItemCount.value + 1);
   }
  
-  decreaseProduct(product) {
+  decreaseProduct(product: Product) {
     for (let [index, p] of this.cart.entries()) {
       if (p.id === product.id) {
         p.amount -= 1;
@@ -86,7 +82,7 @@ export class CartService {
     this.cartItemCount.next(this.cartItemCount.value - 1);
   }
  
-  removeProduct(product) {
+  removeProduct(product: Product) {
     for (let [index, p] of this.cart.entries()) {
       if (p.id === product.id) {
         this.cartItemCount.next(this.cartItemCount.value - p.amount);

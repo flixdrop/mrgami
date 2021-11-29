@@ -1,220 +1,416 @@
-.backbtn {
-    margin-left: 15px;
-}
+// .backbtn {
+//     margin-left: 15px;
+// }
 
-.notification {
-    margin-right: 15px;
-}
+// .notification {
+//     margin-right: 15px;
+// }
 
-ion-content {
-    --padding-top: 80px;
-    --padding-bottom: 16px;
-    --padding-start: 26px;
-    --padding-end: 26px;
-    --background: url(../../assets/bgman.jpg) no-repeat center/cover fixed;
-    box-shadow: inset 0 0 0 50vw rgba(7, 76, 155, 0.3)
+// ion-content {
+//     --padding-top: 80px;
+//     --padding-bottom: 16px;
+//     --padding-start: 26px;
+//     --padding-end: 26px;
+//     --background: url(../../assets/bgman.jpg) no-repeat center/cover fixed;
+//     box-shadow: inset 0 0 0 50vw rgba(7, 76, 155, 0.3)
     
     
-    // --background-color:#1e1e1e;
-}
-ion-grid{
-    padding: 150px 5px 5px 20px;
-}
-.item-name {
-    color: #2bff00;
-}
+//     // --background-color:#1e1e1e;
+// }
+// ion-grid{
+//     padding: 150px 5px 5px 20px;
+// }
+// .item-name {
+//     color: #2bff00;
+// }
 
-.price {
-    color: #3CF185;
+// .price {
+//     color: #3CF185;
 
-    span {
-        color: #3CF185;
-        text-decoration: line-through;
-        margin-left: 20px;
-        font-size: medium;
-        vertical-align: top;
-    }
-}
+//     span {
+//         color: #3CF185;
+//         text-decoration: line-through;
+//         margin-left: 20px;
+//         font-size: medium;
+//         vertical-align: top;
+//     }
+// }
 
-.seperator {
-    hr {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        background: #818080;
-    }
-}
-h5{
-    color:#23ac08;
-    font-size: larger;
+// .seperator {
+//     hr {
+//         position: absolute;
+//         left: 0;
+//         width: 100%;
+//         background: #818080;
+//     }
+// }
+// h5{
+//     color:#23ac08;
+//     font-size: larger;
     
-}
-.count {
-    height: 100%;
-    // display: flex;
-    justify-content:space-between;
-    align-items:center;
-    color: var(--ion-color-primary);
-    font-size: large;
-    span {
-        color: #26ff73;
-        align-content: space-around;
-    }
-}
-.review {
-    margin-top: 16px;
-    color: #9dad0d;
+// }
+// .count {
+//     height: 100%;
+//     // display: flex;
+//     justify-content:space-between;
+//     align-items:center;
+//     color: var(--ion-color-primary);
+//     font-size: large;
+//     span {
+//         color: #26ff73;
+//         align-content: space-around;
+//     }
+// }
+// .review {
+//     margin-top: 16px;
+//     color: #9dad0d;
 
-    .rating {
-        display: inline-block;
-        color: #9dad0d;
-        background: var(--ion-color-primary);
-        padding: 10px 20px 10px 20px;
-        border-radius: 5px;
-        margin-right: 10px;
-    }
+//     .rating {
+//         display: inline-block;
+//         color: #9dad0d;
+//         background: var(--ion-color-primary);
+//         padding: 10px 20px 10px 20px;
+//         border-radius: 5px;
+//         margin-right: 10px;
+//     }
 
  
-}
-.ion-padding-vertical-custom {
-    // --padding-top: var(--ion-padding, 16px);
-    // --padding-bottom: var(--ion-padding, 16px);
-    padding-top: 5px;
-}
-.curved{
-border-radius:100% 0% 100% 0% / 0% 100% 0% 100% ; //100% 0% 10% 90% / 100% 88% 12% 0% ;
-color:#36363F;
-width: 120px;
-height: 120px;
-}
+// }
+// .ion-padding-vertical-custom {
+//     // --padding-top: var(--ion-padding, 16px);
+//     // --padding-bottom: var(--ion-padding, 16px);
+//     padding-top: 5px;
+// }
+// .curved{
+// border-radius:100% 0% 100% 0% / 0% 100% 0% 100% ; //100% 0% 10% 90% / 100% 88% 12% 0% ;
+// color:#36363F;
+// width: 120px;
+// height: 120px;
+// }
 
-.description {
-    padding-top: 15px;
+// .description {
+//     padding-top: 15px;
+//     display: flex;
+//     justify-content: space-between;
+//     zoom:250%;
+//     h5 {
+//         color: #9dad0d;
+//         padding-top: 10px;
+        
+//     }
+
+//     p {
+//         color: #9dad0d;
+//     }
+//     .colleft{
+//         justify-content: start;
+//         zoom:250%;
+//     }
+//     .colright{
+        
+//         justify-content: end;
+//         align-items: flex-end;
+//         zoom:250%;
+//     }
+// }
+
+// .variation {
+//     padding-top: 16px;
+
+//     ion-segment-button {
+//         color: #9dad0d;
+//     }
+// }
+
+// .variation-selector {
+//     margin-top: 30px;
+//     display: flex;
+//     position: relative;
+
+//     .active-variation {
+//         opacity: 1 !important;
+//         z-index: 1 !important;
+//     }
+
+//     .sizes {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         position: absolute;
+//         width: 100%;
+//         opacity: 0;
+//         z-index: 0;
+//         padding-bottom: 30px;
+
+//         div {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             background-color: #9dad0d;
+//             width: 50px;
+//             height: 50px;
+//             margin-right: 8px;
+//             transition: 0.5s ease-in-out;
+//         }
+
+//         .active {
+//             color: #1a0000;
+//             background-color: var(--ion-color-primary);
+//         }
+//     }
+
+//     .colors {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         position: absolute;
+//         width: 100%;
+//         opacity: 0;
+//         z-index: 0;
+//         padding-bottom: 30px;
+
+//         div {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             background-color: #9dad0d;
+//             width: 70px;
+//             height: 50px;
+//             margin-right: 8px;
+//             transition: 0.5s ease-in-out;
+//         }
+
+//         .active {
+//             color: #9dad0d;
+//             background-color: var(--ion-color-primary);
+//         }
+//     }
+// }
+// // ion-card{
+// //     --background-color: #36363F;
+// // }
+// .card {
+//     background-color: #000000b8; // black
+//     text-align: center;
+//     box-shadow: none;
+//   }
+// ion-footer {
+//     ion-row {
+//         padding: 0;
+
+//         ion-col {
+//             padding: 0;
+
+//             ion-button {
+//                 margin: 0;
+//                 height: 50px;
+//                 font-size: 18px;
+//                 box-shadow: none;
+//             }
+//         }
+//     }
+// }
+// a{
+//     text-decoration: none;
+//     color: rgb(0, 0, 0);
+// }
+// // This will remove footer shadow on android
+// .footer-md::before {
+//     background-image: none !important;
+// }
+
+
+// .card{
+//   background: url('https://www.theindiaforum.in/sites/default/files/field/image/2021/05/28/ramkumar-radhakrishnan-wikimedia-1622193304.jpeg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   border-radius: 0;
+//   margin: 0;
+//   padding: 5%;
+// }
+
+// .img{
+//   height: 100%;
+//   width: 100%;
+//   background-repeat: no-repeat;
+//   background-size: contain;
+// }
+
+// ion-slides {
+//   height: 25%;
+//   padding: 0;
+//   margin: 0;
+// }
+
+// ion-slide{
+//   height: 100%;
+//   width: 100%;
+//   ion-label{
+//     font-size: 12px;
+//   }
+// }
+
+// .center{
+//   text-align: center;
+//   font-weight: bold;
+// }
+
+// ion-thumbnail{
+//   height: 100px;
+//   width: 120px;
+// }
+
+// .toolbar{
+//   margin: 5% 0;
+// }
+
+// ion-content{
+//   margin: 0;
+//   padding: 0;
+// }
+
+// ion-text{
+//   font-size: 15px;
+// }
+
+// ion-searchbar{
+//   border: none;
+//   border-radius: 0;
+// }
+
+// .offersImg{
+//   border: 3px solid white;
+// }
+
+
+.card{
+    background: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 75%;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
+  
+  .img{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  ion-slides {
+    z-index: 2;
+    --background: transparent !important;
+    height: 25%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ion-slide{
+    --background: transparent !important;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    ion-label{
+      font-size: 12px;
+    }
+  }
+  
+  .center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  ion-thumbnail{
+    height: 100px;
+    width: 120px;
+  }
+  
+  .toolbar{
+    margin: 5% 0;
+  }
+  
+  ion-content{
+    margin: 0;
+    padding: 0;
+  }
+  
+  ion-text{
+    font-size: 15px;
+  }
+  
+  ion-searchbar{
+    border: none;
+    border-radius: 0;
+  }
+  
+  .offersImg{
+    border: 3px solid white;
+  }
+  
+  .textCenter{
+    text-align: center;
+  }
+  
+  .reverseCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gradient{
+    border-radius: 10px;
+    background: linear-gradient(180deg, #1777AD 10.94%, rgba(23, 119, 173, 0) 100%);
+  }
+  
+  ion-grid{
+    margin: 0;
+    padding: 0;
+  }
+  
+  ion-item{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .bigBtn{
+    margin: 7% 0%;
+  }
+  
+  .smallBtn{
     display: flex;
     justify-content: space-between;
-    zoom:250%;
-    h5 {
-        color: #9dad0d;
-        padding-top: 10px;
-        
-    }
-
-    p {
-        color: #9dad0d;
-    }
-    .colleft{
-        justify-content: start;
-        zoom:250%;
-    }
-    .colright{
-        
-        justify-content: end;
-        align-items: flex-end;
-        zoom:250%;
-    }
-}
-
-.variation {
-    padding-top: 16px;
-
-    ion-segment-button {
-        color: #9dad0d;
-    }
-}
-
-.variation-selector {
-    margin-top: 30px;
-    display: flex;
-    position: relative;
-
-    .active-variation {
-        opacity: 1 !important;
-        z-index: 1 !important;
-    }
-
-    .sizes {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        width: 100%;
-        opacity: 0;
-        z-index: 0;
-        padding-bottom: 30px;
-
-        div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #9dad0d;
-            width: 50px;
-            height: 50px;
-            margin-right: 8px;
-            transition: 0.5s ease-in-out;
-        }
-
-        .active {
-            color: #1a0000;
-            background-color: var(--ion-color-primary);
-        }
-    }
-
-    .colors {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        width: 100%;
-        opacity: 0;
-        z-index: 0;
-        padding-bottom: 30px;
-
-        div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #9dad0d;
-            width: 70px;
-            height: 50px;
-            margin-right: 8px;
-            transition: 0.5s ease-in-out;
-        }
-
-        .active {
-            color: #9dad0d;
-            background-color: var(--ion-color-primary);
-        }
-    }
-}
-// ion-card{
-//     --background-color: #36363F;
-// }
-.card {
-    background-color: #000000b8; // black
-    text-align: center;
-    box-shadow: none;
   }
-ion-footer {
-    ion-row {
-        padding: 0;
-
-        ion-col {
-            padding: 0;
-
-            ion-button {
-                margin: 0;
-                height: 50px;
-                font-size: 18px;
-                box-shadow: none;
-            }
-        }
-    }
-}
-a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-// This will remove footer shadow on android
-.footer-md::before {
-    background-image: none !important;
-}
+  
+  .content{
+    z-index: 2;
+    --background: transparent !important;
+  }
+  
+  .backgroundCard{
+    margin: 0;
+    padding: 0;
+    opacity: 25%;
+    position: fixed;
+    background-image: url('../../assets/bgman.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    z-index: 1;
+  }
+  
+  

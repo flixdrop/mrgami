@@ -1,34 +1,33 @@
-<ion-header>
-  <ion-content fullscreen  >
- 
+  <!-- <ion-content fullscreen>
+
     <div class="ion-text-end">
       <ion-button (click)="close()" fill="clear" color="dark">
         <ion-icon name="close" slot="start"></ion-icon>
       </ion-button>
     </div>
-   
-    <div class="ion-padding" style="color: #0fd15dc5 ;" >
-   
-      <ion-list  > 
-        <ion-item *ngFor="let p of cart" class="ion-text-wrap"  >
-          <ion-grid style="color: #0fd15d ;"  > 
-            <ion-row class="ion-align-items-center"  > 
-              <ion-col size="2" class="ion-align-self-center"  >
+
+    <div class="ion-padding" style="color: #0fd15dc5 ;">
+
+      <ion-list>
+        <ion-item *ngFor="let p of cart" class="ion-text-wrap">
+          <ion-grid style="color: #0fd15d ;">
+            <ion-row class="ion-align-items-center">
+              <ion-col size="2" class="ion-align-self-center">
                 <ion-button color="medium" fill="clear" (click)="decreaseCartItem(p)">
                   <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
                 </ion-button>
               </ion-col>
-   
+
               <ion-col size="1" class="ion-align-self-center">
                 {{ p.amount }}
               </ion-col>
-   
+
               <ion-col size="2" class="ion-align-self-center">
                 <ion-button color="medium" fill="clear" (click)="increaseCartItem(p)">
                   <ion-icon name="add-circle" slot="icon-only"></ion-icon>
                 </ion-button>
               </ion-col>
-   
+
               <ion-col size="2" offset="5">
                 <ion-button color="medium" fill="clear" (click)="removeCartItem(p)">
                   <ion-icon name="close-circle" slot="icon-only"></ion-icon>
@@ -45,10 +44,10 @@
             </ion-row>
           </ion-grid>
         </ion-item>
-        <ion-item  > 
+        <ion-item>
           <ion-grid style="color: #0fd15d ;">
             <ion-row>
-              <ion-col size="9"  >
+              <ion-col size="9">
                 Total:
               </ion-col>
               <ion-col size="3" class="ion-text-end">
@@ -58,10 +57,119 @@
           </ion-grid>
         </ion-item>
       </ion-list>
-   
-      <ion-button color= "success" expand="full" (click)="makePayment()">
+
+      <ion-button color="success" expand="full" (click)="makePayment()">
         Checkout
       </ion-button>
     </div>
-   
-  </ion-content>
+
+  </ion-content> -->
+
+  <ion-content>
+
+    <ion-toolbar>
+      <ion-icon (click)="close()" size="large" name="close" slot="end"></ion-icon>
+    </ion-toolbar>
+<div>
+  <ion-card class="card" color="light">
+    <ion-list class="list" color *ngFor="let c of cart; let i=index">
+      <ion-toolbar color="none">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="itemDetails" size="12">
+              <ion-label color="danger">REFIT ANIMAL CARE- 10KG</ion-label>
+              <p>Celebrate Mineral Mixture...</p>
+              <p>Delivery By- 6th October</p>
+              <p>Delivery Fees- &#x20B9;50</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12">
+              <a>Save for later</a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid slot="end">
+          <ion-row>
+            <ion-col size="3"></ion-col>
+            <ion-col class="center" size="6">
+              <ion-thumbnail><ion-img src="{{c.image}}" ></ion-img></ion-thumbnail>
+            </ion-col>
+            <ion-col size="3"><ion-icon color="danger" name="trash-sharp" (click)="removeCartItem(c)"></ion-icon></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="center" size="12">
+              <ion-text color="primary">{{c.name}}</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="center" size="2">
+              <ion-icon size="large" name="remove-circle-sharp" color="primary" (click)="decreaseCartItem(c)"></ion-icon>
+            </ion-col>
+            <ion-col class="center" size="8">
+              <ion-item lines="none" color="none">
+                <ion-text color="warning">{{c.amount}}</ion-text>
+              </ion-item>
+            </ion-col>
+            <ion-col class="center" size="2">
+              <ion-icon size="large" name="add-circle-sharp" color="primary" (click)="increaseCartItem(c)"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-toolbar>
+      <ion-button shape="round" expand="block" color="dark">You have a Promo Code? Apply Here</ion-button>
+    </ion-list>
+    <!-- <ion-toolbar color="none">
+      <ion-item lines="full" color="none">
+        <ion-label slot="start" color="primary">PRICE DETAILS</ion-label>
+      </ion-item>
+    </ion-toolbar>
+    <ion-toolbar class="priceTable" color="none">
+      <ion-item lines="none" color="none">
+        <ion-label slot="start" color="primary">{{'Price of c.amount Item'}})</ion-label>
+        <ion-label slot="end">1440</ion-label>
+      </ion-item>
+      <ion-item lines="none" color="none">
+        <ion-label slot="start" color="primary">Discount</ion-label>
+        <ion-label slot="end">&#x20B9;68</ion-label>
+      </ion-item>
+      <ion-item lines="full" color="none">
+        <ion-label slot="start" color="primary">Delivery Charges</ion-label>
+        <ion-label slot="end">Free</ion-label>
+      </ion-item>
+      <ion-item lines="none" color="none">
+        <ion-label slot="start" color="primary">Total Cost</ion-label>
+        <ion-label slot="end" color="warning">&#x20B9;{{'c.amount*c.price'}}</ion-label>
+      </ion-item>
+    </ion-toolbar> -->
+  </ion-card>
+  <ion-toolbar color="none">
+    <ion-item lines="full" color="none">
+      <ion-label slot="start" color="primary">PRICE DETAILS</ion-label>
+    </ion-item>
+  </ion-toolbar>
+  <ion-toolbar class="priceTable" color="none">
+    <!-- <ion-item lines="none" color="none">
+      <ion-label slot="start" color="primary">PRICE</ion-label>
+      <ion-label slot="end"></ion-label>
+    </ion-item>
+    <ion-item lines="none" color="none">
+      <ion-label slot="start" color="primary">Discount</ion-label>
+      <ion-label slot="end">&#x20B9;68</ion-label>
+    </ion-item> -->
+    <ion-item lines="full" color="none">
+      <ion-label slot="start" color="primary">Delivery Charges</ion-label>
+      <ion-label slot="end">Free</ion-label>
+    </ion-item>
+    <ion-item lines="none" color="none">
+      <ion-label slot="start" color="primary">Total Cost</ion-label>
+      <ion-label slot="end" color="warning">{{ getTotal() | currency:'INR' }}</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</div>
+</ion-content>
+
+  <ion-footer>
+    <ion-button expand="block" color="success" (click)="close()" (click)="makePayment()"><ion-icon slot="end" name="checkmark-done-sharp"></ion-icon>PLACE ORDER!</ion-button>
+  </ion-footer>
+  

@@ -1,12 +1,32 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons style="
+    clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
+    background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
+      <ion-buttons routerLink="/home" routerDirection="back">
+        <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
+      </ion-buttons>
+      <span style="color: azure;">BACK</span>
+    </ion-buttons>
+    <ion-title>Medicines</ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar color="light">
+    <ion-item lines="full" color="light">
+      <ion-searchbar [(ngModel)]="searchTerm" color="light" mode="md"></ion-searchbar>
+    </ion-item>
+  </ion-toolbar>
+  <!-- <ion-toolbar>
     <ion-title>Medicines</ion-title>
     <ion-buttons style="
     clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
     background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
-      <ion-buttons 
-   routerLink="/home" routerDirection="back">
-       <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
+      <ion-buttons routerLink="/home" routerDirection="back">
+        <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
       </ion-buttons>
       <span style="color: azure;">BACK</span>
     </ion-buttons>
@@ -16,35 +36,47 @@
         <ion-icon name="notifications-outline" color="dark"></ion-icon>
       </ion-button>
     </ion-buttons>
-  </ion-toolbar>
+  </ion-toolbar> -->
 </ion-header>
 
-<ion-content>
-  <ion-fab    vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button  style="--background: #0fd15dc5 ;" (click)="openCart()" #cart>
+<ion-content color="none">
+  <ion-fab vertical="top" horizontal="end" slot="fixed" edge="true">
+    <ion-fab-button style="--background: #0fd15dc5 ;" (click)="openCart()" #cart>
       <div class="cart-length">{{ cartItemCount | async }}</div>
       <ion-icon name="cart" class="cart-icon"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+  <!-- <ion-toolbar color="light">
+    <ion-item lines="full" color="light">
+      <ion-searchbar [(ngModel)]="searchTerm" color="light" mode="md"></ion-searchbar>
+    </ion-item>
+  </ion-toolbar> -->
+
+  <ion-refresher class="center" slot="fixed" pullMin="120" pullMax="50" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
+      refreshingText="Please Wait...">
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-list>
-    <ion-card style="--background:#36363f;" *ngFor="let p of products">
+    <ion-card style="--background:#36363f;" *ngFor="let p of products | filter:searchTerm">
       <ion-card-header>
-        <ion-card-title  style="color: aliceblue;">{{ p.name }}</ion-card-title>
+        <ion-card-title style="color: aliceblue;">{{ p.name }}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <ion-row class="ion-align-items-center">
           <ion-col size="6">
-            <img class= "med-img" src="{{ p.image }}" />
+            <img class="med-img" src="{{ p.image }}" />
             <ion-label class="med-price" color="secondary">
               <b style="color: #3CF185 ;">{{ p.price | currency:'INR' }}</b>
             </ion-label>
           </ion-col>
           <ion-col size="6" class="ion-text-right">
-            <ion-label padding  style="color: #ffffff ;" >REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for
+            <ion-label padding style="color: #ffffff ;">REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for
               Buffalo,Cow,Cattle,Poultry,
               Goat & Pig (RIGMIN Forte Powder)
-              </ion-label>
-            <ion-button style="background-color:#FF5555; color: azure; border-radius: 8px;" fill="clear" (click)="addToCart(p)">
+            </ion-label>
+            <ion-button style="background-color:#FF5555; color: azure; border-radius: 8px;" fill="clear"
+              (click)="addToCart(p)">
               Add to cart
             </ion-button>
           </ion-col>
@@ -53,31 +85,32 @@
     </ion-card>
   </ion-list>
 
-<ion-footer>
-  <ion-tabs>
-    <ion-tab-bar slot="bottom" class="ion-no-border">
-      <ion-tab-button tab="landing"> 
-        <!-- <ion-icon name="cart" ></ion-icon> -->
-        <img style="height: 30px; width: 30px;" src="../../assets/icon/home.png"/>
-        <ion-label style="color: #EC5B5B;">Home</ion-label>
-      </ion-tab-button>
-  
-      <ion-tab-button tab="landing"  style="margin-left: -50px;">
-        <!-- <ion-icon name="cafe"></ion-icon> -->
-        <img style="height: 30px; width: 30px; " src="../../assets/icon/ad.png"/>
-        <ion-label style="color: #06D25A;">My Ads</ion-label>
-        <!-- <ion-badge *ngIf="new_message">{{new_message}}</ion-badge> -->
-      </ion-tab-button>
-  
-      <!-- <svg height="50" viewBox="0 0 100 50" width="100" xmlns="http://www.w3.org/2000/svg"><path d="M100 0v50H0V0c.543 27.153 22.72 49 50 49S99.457 27.153 99.99 0h.01z" fill="#1f1f1f" fill-rule="evenodd"></path></svg> -->
-  
-      <ion-tab-button tab="medicines" style=" margin-right: -60px;" >
-        <!-- <ion-icon name="bandage"></ion-icon> -->
-        <img style="height: 30px; width: 30px;" src="../../assets/icon/old-purchase.png"/>
-        <ion-label style="color: #06D25A;">Purchase</ion-label>
-        <!-- <ion-badge *ngIf="new_activities">{{new_activities}}</ion-badge> -->
-      </ion-tab-button>
-      </ion-tab-bar>
-  </ion-tabs>
+  <ion-footer>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" class="ion-no-border">
+        <ion-tab-button tab="landing">
+          <!-- <ion-icon name="cart" ></ion-icon> -->
+          <img style="height: 30px; width: 30px;" src="../../assets/icon/home.png" />
+          <ion-label style="color: #EC5B5B;">Home</ion-label>
+        </ion-tab-button>
 
-</ion-footer></ion-content>
+        <ion-tab-button tab="landing" style="margin-left: -50px;">
+          <!-- <ion-icon name="cafe"></ion-icon> -->
+          <img style="height: 30px; width: 30px; " src="../../assets/icon/ad.png" />
+          <ion-label style="color: #06D25A;">My Ads</ion-label>
+          <!-- <ion-badge *ngIf="new_message">{{new_message}}</ion-badge> -->
+        </ion-tab-button>
+
+        <!-- <svg height="50" viewBox="0 0 100 50" width="100" xmlns="http://www.w3.org/2000/svg"><path d="M100 0v50H0V0c.543 27.153 22.72 49 50 49S99.457 27.153 99.99 0h.01z" fill="#1f1f1f" fill-rule="evenodd"></path></svg> -->
+
+        <ion-tab-button tab="medicines" style=" margin-right: -60px;">
+          <!-- <ion-icon name="bandage"></ion-icon> -->
+          <img style="height: 30px; width: 30px;" src="../../assets/icon/old-purchase.png" />
+          <ion-label style="color: #06D25A;">Purchase</ion-label>
+          <!-- <ion-badge *ngIf="new_activities">{{new_activities}}</ion-badge> -->
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+
+  </ion-footer>
+</ion-content>

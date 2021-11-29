@@ -11,13 +11,15 @@ import { HomePage } from './home.page';
 import {GetlocationComponent} from '../components/getlocation/getlocation.component';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    Ng2SearchPipeModule
   ],
   providers: [ Geolocation,
     NativeGeocoder],
