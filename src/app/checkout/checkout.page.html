@@ -1,0 +1,53 @@
+<div class="center" *ngIf="!setPayment">
+  <h2 class="mt-5 mb-4">Flixdrop Cattle App</h2>
+  <form (ngSubmit) = "onPayClick()">
+    <div class="form-group" >
+      <label for="exampleFormControlInput1">Paying to Flixdrop</label>
+      <input type="text" class="form-control"
+      style="height:50px" placeholder="Enter Amount" [(ngModel)]="amount"  name="pay" required>
+      <button class="btn btn-danger btn-block" type="submit" >Pay</button>
+    </div>
+  </form>
+</div>
+
+<ion-content *ngIf="setPayment">
+  <div class="wrapper">
+    <div class="card px-4">
+        <div class=" my-3">
+            <p class="h8">Card number</p>
+            <p class="text-muted ">Your Saved Cards</p>
+        </div>
+        <div class="debit-card mb-3">
+            <div class="d-flex flex-column h-100"> <label class="d-block">
+                    <div class="d-flex position-relative">
+                        <div> <img src="https://www.freepnglogos.com/uploads/visa-inc-logo-png-11.png" class="visa" alt="">
+                            <p class="mt-2 mb-4 text-white fw-bold">Flixdrop User</p>
+                        </div>
+                        <div class="input"> <input type="radio" name="card" id="check"> </div>
+                    </div>
+                </label>
+                <div class="mt-auto fw-bold d-flex align-items-center justify-content-between">
+                    <p>4989 1237 1234 4532</p>
+                    <p>01/24</p>
+                </div>
+            </div>
+        </div>
+        <div class="debit-card card-2 mb-4">
+            <div class="d-flex flex-column h-100"> <label class="d-block">
+                    <div class="d-flex position-relative">
+                        <div> <img src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-logo-png-transparent-svg-vector-bie-supply-0.png" alt="master" class="master">
+                            <p class="text-white fw-bold">Flixdrop User</p>
+                        </div>
+                        <div class="input"> <input type="radio" name="card" id="check"> </div>
+                    </div>
+                </label>
+                <div class="mt-auto fw-bold d-flex align-items-center justify-content-between">
+                    <p class="m-0">5540 2345 3453 2343</p>
+                    <p class="m-0">05/23</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn mb-4" (click)="makePayment()"> Pay Now ₹ {{amount}} </div>
+    </div>
+</div>
+</ion-content>

@@ -1,0 +1,11 @@
+ion-button{
+    --background:#0fd15d;
+}
+
+ion-content{
+    --background:var(--background)
+}
+
+ion-item{
+    --background:var(--background)
+}

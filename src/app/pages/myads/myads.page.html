@@ -1,0 +1,191 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color: azure;" >MY ADS</ion-title>
+    <ion-buttons style="
+    clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
+    background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
+      <ion-buttons 
+   routerLink="/home" routerDirection="back">
+       <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
+      </ion-buttons>
+      <span style="color: azure;">BACK</span>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="card"  *ngFor="let data of data2; let i=index">
+    <ion-grid>
+      <ion-row (click)="presentModal(i)">
+        <ion-col class="imgCol" size="4"  >
+        
+            <ion-slides pager="true" [options]="slideOpts"  *ngIf="viewEntered" zoom="true">
+              <ion-slide *ngFor="let img of data.imgUrl" >
+                <img style="background-image: url('{{img}}'); " class="img"/>
+              </ion-slide>
+            </ion-slides>
+    
+        </ion-col>
+        <ion-col size="8">
+          <ion-row>
+            <ion-col class="cardTitle">
+              <ion-label color="success">ANIMAL: </ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-label class="subLabels">Breed: {{data.breed}}</ion-label>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label class="subLabels">Locaction: {{data.location}}</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-label class="subLabels">Lactation: {{data.lactationNumber}}</ion-label>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label class="subLabels">Milk/Day: {{data.milkPerDay}}</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-label class="subLabels">Age: {{data.age}}</ion-label>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label class="subLabels">Calf: {{data.calf}}</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-item class="cardButtons" lines="none">
+        <ion-button color="danger" slot="start" shape="round" (click)="onDelete(i)"><ion-label class="subLabels">DISCARD</ion-label></ion-button>
+        <ion-button color="success" slot="end" shape="round" (click)="onPost(i)"><ion-label class="subLabels">POST THIS</ion-label></ion-button>
+      </ion-item>
+    </ion-grid>
+  </ion-card>
+</ion-content>
+
+
+
+
+
+
+
+
+<!-- 
+<ion-content [fullscreen]="true">
+<div style="text-align: center; color: aliceblue;">
+  <h3>Published Ads</h3>
+</div>
+  <ion-card class="card" *ngFor="let data of data; let i=index">
+    <ion-grid>
+      <ion-row (click)="presentModal(i)">
+        <ion-col class="imgCol" size="4">
+          <ion-content>
+            <ion-slides pager="true" [options]="slideOpts">
+              <ion-slide *ngFor="let img of data.imgUrl">
+                <ion-img style="background-image: url('{{img}}');" class="img"></ion-img>
+              </ion-slide>
+            </ion-slides>
+          </ion-content>
+        </ion-col>
+        <ion-col size="8">
+          <ion-row>
+            <ion-col class="cardTitle">
+              <ion-label color="success">ANIMAL: {{data.animal}}</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-label class="subLabels">Breed: {{data.breed}}</ion-label>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label class="subLabels">Locaction: {{data.location}}</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-label class="subLabels">Status: {{data.status}}</ion-label>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label class="subLabels">Milk/Day: {{data.milkPerDay}}</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-label class="subLabels">Age: {{data.age}}</ion-label>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label class="subLabels">Calf: {{data.calf}}</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-item class="cardButtons" lines="none">
+        <ion-button color="danger" slot="start"  (click)="onDelete(i)">Delete</ion-button>
+        <ion-button color="success" slot="end"   (click)="presentModal(i)">Analytics</ion-button>
+      </ion-item>
+    </ion-grid>
+  </ion-card>
+  <ion-item-divider style="color: #3CF185; height: 5px;"></ion-item-divider>
+  <div style="text-align: center; color: aliceblue;">
+    <h3>Unpublished Ads</h3>
+  </div>
+  <ion-card class="card" *ngFor="let data of data; let i=index">
+    <ion-grid>
+      <ion-row (click)="presentModal(i)">
+        <ion-col class="imgCol" size="4">
+          <ion-content>
+            <ion-slides pager="true" [options]="slideOpts">
+              <ion-slide *ngFor="let img of data.imgUrl">
+                <ion-img style="background-image: url('{{img}}');" class="img"></ion-img>
+              </ion-slide>
+            </ion-slides>
+          </ion-content>
+        </ion-col>
+        <ion-col size="8">
+          <ion-row>
+            <ion-col class="cardTitle">
+              <ion-label color="success">ANIMAL: {{data.animal}}</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-label class="subLabels">Breed: {{data.breed}}</ion-label>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label class="subLabels">Locaction: {{data.location}}</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-label class="subLabels">Status: {{data.status}}</ion-label>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label class="subLabels">Milk/Day: {{data.milkPerDay}}</ion-label>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-label class="subLabels">Age: {{data.age}}</ion-label>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label class="subLabels">Calf: {{data.calf}}</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-item class="cardButtons" lines="none">
+        <ion-button color="danger" slot="start"  (click)="onDelete(i)">DISCARD</ion-button>
+        <ion-button color="success" slot="end"   (click)="presentModal(i)">POST THIS</ion-button>
+      </ion-item>
+    </ion-grid>
+  </ion-card>
+</ion-content> -->

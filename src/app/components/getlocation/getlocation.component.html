@@ -1,0 +1,61 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Store the cattle location
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+<ion-card color="light" class="ion-text-center">
+  <ion-card-title>Get the location</ion-card-title>
+
+  <ion-grid>
+
+
+    <ion-row>
+      <ion-col size="4" class="ion-text-center">
+        Latitude
+      </ion-col>
+      <ion-col>
+        <ion-badge class="ion-text-wrap" color="medium">{{latitude}}</ion-badge>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col size="4" class="ion-text-center">
+        longitude
+      </ion-col>
+      <ion-col>
+        <ion-badge class="ion-text-wrap" color="medium">{{longitude}}</ion-badge>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4" class="ion-text-center" color="medium">
+        Accuracy
+      </ion-col>
+      <ion-col>
+        <ion-badge class="ion-text-wrap" color="medium">{{accuracy}}</ion-badge>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4" class="ion-text-center">
+        Address
+      </ion-col>
+      <ion-col>
+        <ion-icon name="location"></ion-icon>
+        <ion-badge class="ion-text-wrap" color="medium">{{address}}</ion-badge>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-card>
+<div *ngIf="!address" >
+  <ion-button (click)="getGeolocation()" color="warning" expand="full"><ion-progress-bar type="indeterminate"></ion-progress-bar>Get Cattle Address </ion-button>
+</div>
+</ion-content> -->
+<div>{{latitude}}</div>

@@ -1,0 +1,41 @@
+.cardTitle{
+  text-align: center;
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.card{
+  background-color: #36363F;
+}
+
+.cardButtons{
+  --background: #36363F !important;
+  color: white;
+  font-weight: bold;
+}
+
+.imgCol{
+  padding: 0;
+  text-align: center;
+  align-items: center;
+}
+
+.subLabels{
+  color: white;
+  font-weight: bold;
+}
+
+.img{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+ion-slides {
+  height: 100%;
+
+}

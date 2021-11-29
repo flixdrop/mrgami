@@ -1,0 +1,146 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" class="backbtn" routerLink="/home" routerDirection="back">
+        <img src="../../assets/back-dark.svg" />
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons >
+      <ion-button>
+        <ion-searchbar placeholder="Search Cattles"></ion-searchbar>
+        <!-- <ion-icon name="search-outline" color="dark"></ion-icon> -->
+      </ion-button>
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        <span>&nbsp;</span>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<!-- <div>
+  <label>Buy Animal</label>
+</div> -->
+<ion-content>
+   <ion-grid>
+     <ion-row>
+      <ion-col size="6">
+        <ion-button class="curved" (click)=goToBuy()><img src="../../assets/icon/sell-cow-icon.png" width= "90px"
+          height=" 90px"></ion-button>
+       </ion-col>
+       <ion-col size="6">
+         <ion-button class="curved" (click)=goToMedicine()><img src="../../assets/icon/cow-medicine.png" width= "90px"
+          height=" 90px"></ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+      <ion-col size="6">
+       <ion-button class="curved" (click)=goToFeed()><img src="../../assets/icon/animal-feed.png" width= "90px"
+        height=" 90px"></ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button class="curved" (click)=goToSemen()><img src="../../assets/icon/cow-semen.png" width= "90px"
+          height=" 90px"></ion-button>
+       </ion-col>
+     </ion-row>
+   </ion-grid>
+   <div class="category-slider ion-padding-start">
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+      <ion-slide *ngFor="let category of categories">
+        <ion-col>
+          <h4>{{ category.name }}</h4>
+          <img src="{{ category.image }}" />
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+   <!-- <ion-card class="card">
+     <ion-card-title>Today's Offers</ion-card-title>
+    <ion-slides pager="false" class="product-slider">
+      <ion-slide>
+        <img src="../../assets/product-slider/prod-slide1.jpg" height="100px"/>
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/product-slider/prod-slide1.jpg" height="100px"/>
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/product-slider/prod-slide1.jpg" height="100px"/>
+      </ion-slide>
+    </ion-slides>
+    </ion-card> -->
+  <!-- <ion-slides pager="true" class="product-slider">
+    <ion-slide>
+      <img src="../../assets/product-slider/prod-slide1.png" />
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/product-slider/prod-slide1.png" />
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/product-slider/prod-slide1.png" />
+    </ion-slide>
+  </ion-slides> -->
+  <!-- <div class="seperator">
+    <hr>
+  </div>
+  <div class="ion-padding-vertical-custom">
+    
+    <h4 class="price">
+      Rs 40000
+      <span class="real-price">Rs 80000</span>
+    </h4>
+  </div>
+
+  <div class="seperator">
+    <hr>
+  </div> -->
+
+  
+
+
+
+
+  <!-- <div class="variation">
+    <ion-segment (ionChange)="segmentChanged($event)" value="size">
+      <ion-segment-button value="size">
+        <ion-label>Select Size</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="color">
+        <ion-label>Select Color</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="seperator">
+    <hr>
+  </div>
+
+  <div class="variation-selector">
+    <div class="sizes" [class.active-variation]="activeVariation == 'size'">
+      <div [class.active]="selectedSize == 1" (click)="changeSize(1)">
+        S
+      </div>
+      <div [class.active]="selectedSize == 2" (click)="changeSize(2)">
+        M
+      </div>
+      <div [class.active]="selectedSize == 3" (click)="changeSize(3)">
+        L
+      </div>
+      <div [class.active]="selectedSize == 4" (click)="changeSize(4)">
+        XL
+      </div>
+    </div>
+
+    <div class="colors" [class.active-variation]="activeVariation == 'color'">
+      <div [class.active]="selectedColor == 1" (click)="changeColor(1)">
+        BLACK
+      </div>
+      <div [class.active]="selectedColor == 2" (click)="changeColor(2)">
+        GREEN
+      </div>
+      <div [class.active]="selectedColor == 3" (click)="changeColor(3)">
+        BLUE
+      </div>
+    </div>
+  </div> -->
+

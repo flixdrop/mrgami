@@ -1,0 +1,43 @@
+
+ion-fab-button.background{
+    --background: url(../../assets/sell_image.jpg) 0 0/100% 100% no-repeat;
+}
+
+
+// ion-tab-bar.ion-no-border{
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     --background: #1e1e1e85;
+
+//     ion-tab-button {
+//       --background: transparent;
+//     }
+// }
+
+
+
+.tabsbg{
+    --background: #000000;
+}
+ion-tab-bar.ion-no-border{
+    clip-path: polygon(50% 0, 100% 17%, 100% 99%, 0 100%, 0 17%);
+    height: 80px;
+    --background: #36363F;//#1F1F29;
+    // ion-tab-button.background-avatar{
+    //     --background-image: url(../../assets/icon/favicon.png) 0 0/100% 100% no-repeat;
+      
+    // }
+    // ion-tab-button.background-myads{
+    //     --background-image: url(../../assets/icon/ad.png) 0 0/100% 100% no-repeat;
+        
+    // }
+    // ion-tab-button.background-home{
+    //     --background-image: url(../../assets/icon/home.png) 0 0/100% 100% no-repeat;
+       
+    // }
+    // ion-tab-button.background-purchase{
+    //     --background-image: url(../../assets/icon/old-purchase.png) 0 0/100% 100% no-repeat;
+        
+    // }
+}
