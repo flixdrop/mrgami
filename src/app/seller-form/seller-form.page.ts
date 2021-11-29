@@ -5,7 +5,7 @@ import { AbstractControl, FormControl, FormGroup, NgForm, Validators } from '@an
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ModalController, AlertController } from '@ionic/angular';
-import { SellerFormApiService } from '../services/seller-form-api.service';
+import { GetAnimalData, SellerFormApiService } from '../services/seller-form-api.service';
 
 //const { Camera } = CameraPlugin;
 
@@ -67,7 +67,7 @@ export class SellerFormPage implements OnInit {
  imagesList: string[]=[''];
   breeds: string[];
   dat: string;
-  data2: import("c:/Users/flixd/Documents/GitHub/flixop/ionic-ecommerce-app-master/src/app/services/seller-form-api.service").GetAnimalData;
+  data2: GetAnimalData;
   public testup(event){ this.files=event.target.files;
 console.log("Files/Uploaded Images"+this.files);
 }
