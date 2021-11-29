@@ -26,7 +26,7 @@ export class MyadsPage implements OnInit {
     public sellerFormApiService:SellerFormApiService ) {}
 
   ngOnInit(){
-    this.data = this.service.data;
+   // this.data = this.service.data;
     this.getAllads();
     
   }
@@ -37,7 +37,9 @@ export class MyadsPage implements OnInit {
 getAllads() {
   this.sellerFormApiService.getData().subscribe((data2) => {
     this.data2 = data2;
+    //console.log("ImageUrls",data2.imageUrls);
     console.log("data2",data2);
+ 
   });
   // console.log('27lines',this.sellerFormApiService.data);
 }
