@@ -1,12 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title style="color: azure;" >MY ADS</ion-title>
+    <ion-title color="dark">My ADs</ion-title>
     <ion-buttons style="
     clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
     background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
-      <ion-buttons 
-   routerLink="/home" routerDirection="back">
-       <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
+      <ion-buttons routerLink="/home" routerDirection="back">
+        <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
       </ion-buttons>
       <span style="color: azure;">BACK</span>
     </ion-buttons>
@@ -17,10 +16,75 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
+
+  <ion-toolbar color="dark">
+    <ion-item lines="full" color="dark">
+      <ion-searchbar [(ngModel)]="searchTerm" color="dark" mode="md"></ion-searchbar>
+    </ion-item>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card class="card"  *ngFor="let data of data2; let i=index">
+<ion-content [fullscreen]="true">
+
+  <ion-refresher class="center" slot="fixed" pullMin="170" pullMax="50" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
+      refreshingText="Please Wait...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <!-- <ion-toolbar color="none">
+    <ion-item lines="full" color="none">
+      <ion-searchbar [(ngModel)]="searchTerm" mode="md"></ion-searchbar>
+    </ion-item>
+  </ion-toolbar> -->
+
+  <ion-card class="card" *ngFor="let data of data | filter:searchTerm; let i=index" color="light">
+    <ion-grid>
+      <ion-row (click)="presentModal(i)">
+        <ion-col class="imgCol" size="6">
+          <ion-content>
+            <ion-slides pager="true" [options]="slideOpts" *ngIf="viewEntered" zoom="true">
+              <ion-slide *ngFor="let img of data.imgUrl">
+                <ion-img style="background-image: url('{{img}}');" class="img"></ion-img>
+              </ion-slide>
+            </ion-slides>
+          </ion-content>
+        </ion-col>
+        <ion-col size="6">
+          <ion-row color="none">
+            <ion-col size="12">
+              <ion-toolbar class="toolbar" color="none">
+                <ion-label slot="start" color="primary">
+                  <ion-icon color="success" slot="start" name="pin-sharp"></ion-icon>{{data.animal}}
+                </ion-label>
+                <ion-icon size="large" slot="end" color="primary" name="create-sharp"></ion-icon>
+              </ion-toolbar>
+              <ion-label color="warning">Price: {{data.askingPrice}}</ion-label>
+              <ion-label class="subLabels">Breed: {{data.breed}}</ion-label>
+              <ion-label class="subLabels">Lactation: {{data.lactationNumber}}</ion-label>
+              <ion-label class="subLabels">Milk/Day: {{data.milkPerDay}}</ion-label>
+              <ion-label class="subLabels">Age: {{data.age}}</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-item lines="none" color="none">
+        <ion-button color="danger" slot="start" expand="block" (click)="onDelete(i)">
+          <ion-icon slot="end" name="trash-bin-sharp"></ion-icon>DISCARD
+        </ion-button>
+        <ion-button color="primary" slot="end" expand="block" (click)="onPost(i)">
+          <ion-icon slot="end" name="pencil-sharp"></ion-icon>POST THIS
+        </ion-button>
+      </ion-item>
+    </ion-grid>
+  </ion-card>
+
+</ion-content>
+
+
+
+<!-- <ion-content>
+  <ion-card class="card"  *ngFor="let data of data; let i=index">
     <ion-grid>
       <ion-row (click)="presentModal(i)">
         <ion-col class="imgCol" size="4"  >
@@ -70,13 +134,7 @@
       </ion-item>
     </ion-grid>
   </ion-card>
-</ion-content>
-
-
-
-
-
-
+</ion-content> -->
 
 
 <!-- 

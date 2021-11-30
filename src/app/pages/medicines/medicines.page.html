@@ -8,7 +8,7 @@
       </ion-buttons>
       <span style="color: azure;">BACK</span>
     </ion-buttons>
-    <ion-title color="light">Medicines</ion-title>
+    <ion-title color="dark">Medicines</ion-title>
     <ion-buttons slot="end">
       <ion-button class="notification">
         <ion-icon name="notifications-outline" color="dark"></ion-icon>
@@ -39,51 +39,48 @@
   </ion-toolbar> -->
 </ion-header>
 
-<ion-content color="none">
+<ion-content>
   <ion-fab vertical="top" horizontal="end" slot="fixed" edge="true">
     <ion-fab-button style="--background: #0fd15dc5 ;" (click)="openCart()" #cart>
       <div class="cart-length">{{ cartItemCount | async }}</div>
       <ion-icon name="cart" class="cart-icon"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-  <!-- <ion-toolbar color="light">
-    <ion-item lines="full" color="light">
-      <ion-searchbar [(ngModel)]="searchTerm" color="light" mode="md"></ion-searchbar>
-    </ion-item>
-  </ion-toolbar> -->
 
   <ion-refresher class="center" slot="fixed" pullMin="120" pullMax="50" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
       refreshingText="Please Wait...">
     </ion-refresher-content>
   </ion-refresher>
-  <ion-list>
-    <ion-card style="--background:#36363f;" *ngFor="let p of products | filter:searchTerm">
+
+    <ion-card class="ion-padding" *ngFor="let p of products | filter:searchTerm; let i=index">
       <ion-card-header>
-        <ion-card-title style="color: aliceblue;">{{ p.name }}</ion-card-title>
+        {{ p.name }}     
       </ion-card-header>
-      <ion-card-content>
-        <ion-row class="ion-align-items-center">
-          <ion-col size="6">
-            <img class="med-img" src="{{ p.image }}" />
-            <ion-label class="med-price" color="secondary">
-              <b style="color: #3CF185 ;">{{ p.price | currency:'INR' }}</b>
-            </ion-label>
+      <ion-grid (click)="medModal(p)">
+        <ion-row>
+          <ion-col class="reverseCenter" size="6">
+            <ion-thumbnail>
+              <ion-img src="{{p.image}}"></ion-img>
+            </ion-thumbnail>
           </ion-col>
-          <ion-col size="6" class="ion-text-right">
-            <ion-label padding style="color: #ffffff ;">REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for
+          <ion-col class="reverseCenter" size="6">
+            <ion-label>REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for
               Buffalo,Cow,Cattle,Poultry,
               Goat & Pig (RIGMIN Forte Powder)
             </ion-label>
-            <ion-button style="background-color:#FF5555; color: azure; border-radius: 8px;" fill="clear"
-              (click)="addToCart(p)">
-              Add to cart
-            </ion-button>
           </ion-col>
         </ion-row>
-      </ion-card-content>
+      </ion-grid>
+      <ion-toolbar color="none">
+        <ion-item slot="start" lines="none" color="none">
+          <ion-label color="success">{{ p.price | currency:'INR' }}</ion-label>
+        </ion-item>
+          <ion-button slot="end" color="danger" size="small" expand="block" (click)="addToCart(p)">
+            Add to cart
+          </ion-button>
+      </ion-toolbar>
     </ion-card>
-  </ion-list>
 
   <ion-footer>
     <ion-tabs>

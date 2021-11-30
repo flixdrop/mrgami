@@ -413,4 +413,9 @@
     z-index: 1;
   }
   
+  ion-searchbar{
+    border-bottom: 1px solid silver;
+    --box-shadow: none !important;
+    z-index: 2;
+  }
   

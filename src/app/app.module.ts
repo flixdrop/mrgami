@@ -24,6 +24,9 @@ import { LoginService } from './services/login.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CartModalPageModule } from './pages/cart-modal/cart-modal.module';
 import { SellerFormPageModule } from './seller-form/seller-form.module';
+import { MediaCapture } from '@ionic-native/media-capture/ngx';
+import { FileOpener } from '@ionic-native/file-opener/ngx';
+import { MedModalPage } from './pages/med-modal/med-modal.page';
 
 @NgModule({
   declarations: [AppComponent, SellerFormPipe,],
@@ -39,6 +42,7 @@ import { SellerFormPageModule } from './seller-form/seller-form.module';
     FormsModule,
     HttpClientModule,
     CartModalPageModule,
+    // MedModalPage,
     SellerFormPageModule
   ],
   providers: [
@@ -47,7 +51,10 @@ import { SellerFormPageModule } from './seller-form/seller-form.module';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     Geolocation,
     NativeGeocoder,
-    LoginService
+    LoginService,
+    MediaCapture,
+    MedModalPage,
+    FileOpener
   ],
   bootstrap: [AppComponent]
 })

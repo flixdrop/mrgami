@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product, CartService } from './../../services/cart.service';
 import { ModalController, AlertController } from '@ionic/angular';
 import { BehaviorSubject } from 'rxjs';
+import { MedModalPage } from '../med-modal/med-modal.page';
 
 @Component({
   selector: 'app-cart-modal',
@@ -108,6 +109,28 @@ makePayment() {
     //   this.modalCtrl.dismiss();
     // });
     
+  }
+
+  async medModal(product){
+    let modal = await this.modalCtrl.create({
+      component: MedModalPage,
+      cssClass: "cart-modal",
+      componentProps: {
+        'name': product.name,
+        'image': product.image,
+        'price': product.price
+      }
+    });
+    modal.present();
+  }
+
+  doRefresh(event) {
+    console.log("Begin async operation");
+
+    setTimeout(() => {
+      console.log("Async operation has ended");
+      event.target.complete();
+    }, 2500);
   }
 
 }

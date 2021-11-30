@@ -37,5 +37,9 @@
 
 ion-slides {
   height: 100%;
+}
 
+ion-searchbar{
+  border-bottom: 1px solid silver;
+  --box-shadow: none !important;
 }

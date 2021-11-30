@@ -1,6 +1,6 @@
 <ion-header class="ion-padding">
   <ion-toolbar color="none">
-    <ion-searchbar slot="start" placeholder="Search Cattles" mode="md" color="dark"></ion-searchbar>
+    <ion-searchbar class="searchbar" slot="start" placeholder="Search Cattles" mode="md" color="none"></ion-searchbar>
     <ion-item color="none" lines="none" slot="end">
       <ion-icon size="large" slot="end" name="notifications-outline" color="danger"></ion-icon>
     </ion-item>
@@ -62,7 +62,7 @@
 <ion-content class="content ion-padding" [fullscreen]="true">
 
   <ion-toolbar color="none">
-    <ion-button size="large" expand="block" color="light">
+    <ion-button size="large" expand="block" color="light" (click)="recordAudio()">
       <ion-label color="danger">FREE VET DOCTOR 24/7</ion-label>
     </ion-button>
   </ion-toolbar>

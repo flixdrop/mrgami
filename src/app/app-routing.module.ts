@@ -15,9 +15,10 @@ const routes: Routes = [
     path: 'myads-modal',
     loadChildren: () => import('./pages/myads-modal/myads-modal.module').then( m => m.MyadsModalPageModule)
   },
-
-
-
+  {
+    path: 'med-modal',
+    loadChildren: () => import('./pages/med-modal/med-modal.module').then( m => m.MedModalPageModule)
+  },
 ];
 
 @NgModule({
