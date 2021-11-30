@@ -15,3 +15,45 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.background{
+    opacity: 75%;
+    // background-image: url('../../assets//loginbg.PNG');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // top: 50%;
+    height: 50%;
+    width: 100%;
+    position: fixed;
+    z-index: 0;
+}
+
+ion-content{
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    --background: transparent !important;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-label{
+    color: wheat;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+ion-button{
+    margin: 5% 0%;
+}
+
+ion-img{
+    width: 75%;
+    height: 75%;
+}

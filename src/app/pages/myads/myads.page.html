@@ -32,12 +32,6 @@
     </ion-refresher-content>
   </ion-refresher>
 
-  <!-- <ion-toolbar color="none">
-    <ion-item lines="full" color="none">
-      <ion-searchbar [(ngModel)]="searchTerm" mode="md"></ion-searchbar>
-    </ion-item>
-  </ion-toolbar> -->
-
   <ion-card class="card" *ngFor="let data of data | filter:searchTerm; let i=index" color="light">
     <ion-grid>
       <ion-row (click)="presentModal(i)">

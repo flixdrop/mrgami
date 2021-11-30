@@ -1,19 +1,18 @@
-<ion-header>
- 
-</ion-header>
 
-<ion-content class="ion-padding ion-text-center">
-  <div class="container">
-    <div class="page-header">
-      <h1>Welcome to MRGAMI</h1>
-      <h3>Get the best for your cattle</h3>
-    </div>
+<div class="background"></div>
 
-    <img src="../../assets/welcome.png" />
+<ion-content class="ion-padding">
+   
+  <ion-grid>
+    <ion-row>
+      <ion-col class="center" size="12">
+        <ion-img src="../../assets/welcome.png"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>   
 
-    <div class="button-container">
-      <ion-button expand="block" class="main-button" routerLink="login" routerDirection="forward">Log in</ion-button>
-      <ion-button expand="block" color="dark" fill="clear" routerLink="signup" routerDirection="forward">Signup</ion-button>
-    </div>
-  </div>
+  <ion-toolbar color="none">
+      <ion-button size="large" expand="block" routerLink="login" color="medium" routerDirection="forward">LOG IN<ion-icon size="large" slot="end" name="log-in-outline"></ion-icon></ion-button>
+      <ion-button size="large" expand="block" color="medium" routerLink="signup" routerDirection="forward">SIGN UP<ion-icon size="large" slot="end" name="create-outline"></ion-icon></ion-button>
+    </ion-toolbar>
 </ion-content>

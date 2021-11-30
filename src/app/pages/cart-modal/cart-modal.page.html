@@ -69,9 +69,8 @@
     <ion-toolbar>
       <ion-icon (click)="close()" size="large" name="close" slot="end"></ion-icon>
     </ion-toolbar>
-<div>
-  <ion-card class="card" color="light">
-    <ion-list class="list" color *ngFor="let c of cart; let i=index">
+  <ion-card class="card" color="none">
+    <ion-list class="list" color="none" *ngFor="let c of cart; let i=index">
       <ion-toolbar color="none">
         <ion-grid (click)="medModal(c)">
           <ion-row>
@@ -165,7 +164,6 @@
       <ion-label slot="end" color="warning">{{ getTotal() | currency:'INR' }}</ion-label>
     </ion-item>
   </ion-toolbar>
-</div>
 </ion-content>
 
   <ion-footer>
