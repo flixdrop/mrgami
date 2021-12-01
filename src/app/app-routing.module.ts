@@ -49,7 +49,11 @@ const routes: Routes = [
     path: '',
     redirectTo: '/welcome',
     pathMatch: 'full'
+  },  {
+    path: 'blog-feedback',
+    loadChildren: () => import('./pages/blog-feedback/blog-feedback.module').then( m => m.BlogFeedbackPageModule)
   }
+
 ];
 
 @NgModule({

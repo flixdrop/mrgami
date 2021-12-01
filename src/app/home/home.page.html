@@ -57,7 +57,7 @@
   <div class="product-slider ion-padding-start">
     <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
       <ion-slide *ngFor="let product of featuredProducts| filter:searchTerm">
-        <ion-col class="ion-text-left" routerLink="/item-details" routerDirection="forward">
+        <ion-col class="ion-text-left" routerLink="/tabs/item-details" routerDirection="forward">
           <img src="{{ product.image }}" />
           <p style="color: aliceblue;">Rs {{ product.price }}</p>
           <h6 style="color: aliceblue;">{{ product.name }}</h6>

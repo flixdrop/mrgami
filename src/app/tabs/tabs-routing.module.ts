@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('../home/home.module').then( m => m.HomePageModule)
   },
+  {
+    path: 'blog-feedback',
+    loadChildren: () => import('../pages/blog-feedback/blog-feedback.module').then( m => m.BlogFeedbackPageModule)
+  },
   // { path: 'welcome',
   // loadChildren: () => import('../welcome/welcome.module').then( m => m.WelcomePageModule)},
   // {
