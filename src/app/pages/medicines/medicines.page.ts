@@ -1,28 +1,27 @@
-import { DataService } from '../../data.service';
-import { CartService } from '../../services/cart.service';
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
-import { CartModalPage } from '../../pages/cart-modal/cart-modal.page';
-import { BehaviorSubject } from 'rxjs';
+import { DataService } from "../../data.service";
+import { CartService } from "../../services/cart.service";
+import { Component, ViewChild, ElementRef, OnInit } from "@angular/core";
+import { ModalController } from "@ionic/angular";
+import { CartModalPage } from "../../pages/cart-modal/cart-modal.page";
+import { BehaviorSubject } from "rxjs";
+import { MedModalPage } from "../med-modal/med-modal.page";
 @Component({
-  selector: 'app-medicines',
-  templateUrl: './medicines.page.html',
-  styleUrls: ['./medicines.page.scss'],
+  selector: "app-medicines",
+  templateUrl: "./medicines.page.html",
+  styleUrls: ["./medicines.page.scss"],
 })
 export class MedicinesPage implements OnInit {
-
-
   cart = [];
   products = [];
   cartItemCount: BehaviorSubject<number>;
-  @ViewChild('cart', {static: false, read: ElementRef})fab: ElementRef;
+  @ViewChild("cart", { static: false, read: ElementRef }) fab: ElementRef;
   searchTerm: any;
 
- constructor(
+  constructor(
     private data: DataService,
-    private cartService: CartService, 
+    private cartService: CartService,
     private modalCtrl: ModalController
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.products = this.cartService.getProducts();
@@ -32,44 +31,56 @@ export class MedicinesPage implements OnInit {
 
   addToCart(product) {
     this.cartService.addProduct(product);
-    this.animateCSS('tada');
+    this.animateCSS("tada");
   }
- 
+
   async openCart() {
-    this.animateCSS('bounceOutLeft', true);
- 
+    this.animateCSS("bounceOutLeft", true);
+
     let modal = await this.modalCtrl.create({
       component: CartModalPage,
-      cssClass: 'cart-modal'
+      cssClass: "cart-modal",
     });
     modal.onWillDismiss().then(() => {
-      this.fab.nativeElement.classList.remove('animated', 'bounceOutLeft')
-      this.animateCSS('bounceInLeft');
+      this.fab.nativeElement.classList.remove("animated", "bounceOutLeft");
+      this.animateCSS("bounceInLeft");
     });
     modal.present();
   }
- 
+
   animateCSS(animationName, keepAnimated = false) {
     const node = this.fab.nativeElement;
-    node.classList.add('animated', animationName)
-    
+    node.classList.add("animated", animationName);
+
     //https://github.com/daneden/animate.css
     function handleAnimationEnd() {
       if (!keepAnimated) {
-        node.classList.remove('animated', animationName);
+        node.classList.remove("animated", animationName);
       }
-      node.removeEventListener('animationend', handleAnimationEnd)
+      node.removeEventListener("animationend", handleAnimationEnd);
     }
-    node.addEventListener('animationend', handleAnimationEnd)
+    node.addEventListener("animationend", handleAnimationEnd);
+  }
+
+  async medModal(product){
+    let modal = await this.modalCtrl.create({
+      component: MedModalPage,
+      cssClass: "cart-modal",
+      componentProps: {
+        'name': product.name,
+        'image': product.image,
+        'price': product.price
+      }
+    });
+    modal.present();
   }
 
   doRefresh(event) {
-    console.log('Begin async operation');
+    console.log("Begin async operation");
 
     setTimeout(() => {
-      console.log('Async operation has ended');
+      console.log("Async operation has ended");
       event.target.complete();
     }, 2500);
   }
-
 }

@@ -42,7 +42,6 @@ import { MedModalPage } from './pages/med-modal/med-modal.page';
     FormsModule,
     HttpClientModule,
     CartModalPageModule,
-    // MedModalPage,
     SellerFormPageModule
   ],
   providers: [

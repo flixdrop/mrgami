@@ -24,43 +24,49 @@
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs> -->
-<ion-tabs class="tabsbg">
-
-  <ion-fab vertical="bottom" horizontal="center" translucent="true">
-    <ion-fab-button class="background" (click)=popSellerForm()>
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-
-  </ion-fab>
-
-  <ion-tab-bar slot="bottom" class="ion-no-border">
+<ion-tabs slot="bottom" class="tabsbg">
+  <ion-tab-bar class="ion-no-border">
+      <!-- <ion-fab vertical="top" edge="true" horizontal="center" translucent="true">
+      <ion-fab-button color="light" class="background" (click)=popSellerForm()>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab> -->
     <ion-tab-button tab="landing"> 
+      <ion-icon size="large" name="home" color="danger"></ion-icon>
+      <ion-label color="danger">HOME</ion-label>
       <!-- <ion-icon name="cart" ></ion-icon> -->
-      <img style="height: 30px; width: 30px;" src="../../assets/icon/home.png"/>
-      <ion-label style="color: #EC5B5B;">Home</ion-label>
+      <!-- <img style="height: 30px; width: 30px;" src="../../assets/icon/home.png"/> -->
     </ion-tab-button>
-
-    <ion-tab-button tab="myads"  style="margin-left: -50px;">
+    
+    <ion-tab-button  tab="myads">
+      <ion-icon size="large" name="newspaper" color="success"></ion-icon>
+      <ion-label color="success">MY ADs</ion-label>
+      <!-- <img style="height: 30px; width: 30px; " src="../../assets/icon/ad.png"/> -->
       <!-- <ion-icon name="cafe"></ion-icon> -->
-      <img style="height: 30px; width: 30px; " src="../../assets/icon/ad.png"/>
-      <ion-label style="color: #06D25A;">My Ads</ion-label>
       <!-- <ion-badge *ngIf="new_message">{{new_message}}</ion-badge> -->
     </ion-tab-button>
-
+    
+    <ion-tab-button>
+      <ion-fab vertical="center" horizontal="center" translucent="true">
+        <ion-fab-button color="light" class="background" (click)=popSellerForm()>
+          <ion-icon size="large" name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-tab-button>
+    
     <!-- <svg height="50" viewBox="0 0 100 50" width="100" xmlns="http://www.w3.org/2000/svg"><path d="M100 0v50H0V0c.543 27.153 22.72 49 50 49S99.457 27.153 99.99 0h.01z" fill="#1f1f1f" fill-rule="evenodd"></path></svg> -->
-
-    <ion-tab-button tab="medicines" style=" margin-right: -60px;" >
+    
+    <ion-tab-button tab="medicines">
+      <ion-icon size="large" name="medkit" color="success"></ion-icon>
+      <ion-label color="success">VET PHARMA</ion-label>
       <!-- <ion-icon name="bandage"></ion-icon> -->
-      <img style="height: 30px; width: 30px;" src="../../assets/icon/old-purchase.png"/>
-      <ion-label style="color: #06D25A;">Purchase</ion-label>
+      <!-- <img style="height: 30px; width: 30px;" src="../../assets/icon/old-purchase.png"/> -->
       <!-- <ion-badge *ngIf="new_activities">{{new_activities}}</ion-badge> -->
     </ion-tab-button>
-
-    <ion-tab-button tab="insemination" >
-
-      <ion-icon style="height: 40px; width: 40px; " color="success" name="person-circle-outline"></ion-icon>
-     
-
+    
+    <ion-tab-button tab="insemination">
+      <ion-icon size="large" color="light" name="person-circle"></ion-icon>
+      <ion-label color="light">PROFILE</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>

@@ -48,18 +48,50 @@
 //     margin: 0;
 // }
 
-
 .center{
-    justify-content: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  color: rgb(245, 96, 10);
-  --ion-text-color: #ffffff;
+  text-align: left;
   }
-  .card-center{
-    margin-top: 200px;
-  }
-  
+
   ng-otp-input{
     color: rgb(245, 96, 10);
+  }
+
+  ion-content{
+    margin: 0;
+    padding: 0;
+  }
+
+  ion-grid{
+    position: relative;
+    top: 25%;
+  }
+
+  ion-img{
+    width: 75%;
+    height: 75%;
+  }
+
+  ion-toolbar{
+    --background: transparent;
+  }
+  
+  ion-input{
+    --background: transparent;
+  }
+
+  ion-item{
+    --background: transparent;
+  }
+
+  ng-opt-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+    color: rgb(104, 91, 81);
   }

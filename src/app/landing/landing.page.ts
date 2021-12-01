@@ -42,13 +42,13 @@ export class LandingPage implements OnInit {
   }
 
   goToBuy(){
-  this.navCtrl.navigateRoot('home', { animationDirection: 'forward' });
+  this.navCtrl.navigateRoot('tabs/home', { animationDirection: 'forward' });
   }
   goToMedicine(){
-  this.navCtrl.navigateRoot('medicines', { animationDirection: 'forward' });
+  this.navCtrl.navigateRoot('tabs/medicines', { animationDirection: 'forward' });
   }
   goToFeed(){
-    this.navCtrl.navigateRoot('home', { animationDirection: 'forward' });
+    this.navCtrl.navigateRoot('tabs/home', { animationDirection: 'forward' });
     }
     goToSemen(){
       this.navCtrl.navigateRoot('home', { animationDirection: 'forward' });

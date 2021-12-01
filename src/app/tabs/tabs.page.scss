@@ -15,15 +15,14 @@ ion-fab-button.background{
 //     }
 // }
 
-
-
 .tabsbg{
-    --background: #000000;
+    --background: transparent;
 }
+
 ion-tab-bar.ion-no-border{
     clip-path: polygon(50% 0, 100% 17%, 100% 99%, 0 100%, 0 17%);
-    height: 80px;
-    --background: #36363F;//#1F1F29;
+    height: 10%;
+    --background: #36363F;
     // ion-tab-button.background-avatar{
     //     --background-image: url(../../assets/icon/favicon.png) 0 0/100% 100% no-repeat;
       

@@ -16,7 +16,8 @@
     </ion-buttons>
   </ion-toolbar>
   <ion-toolbar color="none">
-    <ion-searchbar slot="start" [(ngModel)]="searchTerm" placeholder="Search Cattles" mode="md" color="dark"></ion-searchbar>
+    <ion-searchbar slot="start" [(ngModel)]="searchTerm" placeholder="Search Cattles" mode="md" color="dark">
+    </ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -36,7 +37,7 @@
     <h2>Breed</h2>
     <p>See all</p>
   </div>
- 
+
   <div class="category-slider ion-padding-start">
     <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
       <ion-slide *ngFor="let category of categories| filter:searchTerm">
@@ -58,8 +59,8 @@
       <ion-slide *ngFor="let product of featuredProducts| filter:searchTerm">
         <ion-col class="ion-text-left" routerLink="/item-details" routerDirection="forward">
           <img src="{{ product.image }}" />
-          <p  style="color: aliceblue;">Rs {{ product.price }}</p>
-          <h6  style="color: aliceblue;">{{ product.name }}</h6>
+          <p style="color: aliceblue;">Rs {{ product.price }}</p>
+          <h6 style="color: aliceblue;">{{ product.name }}</h6>
         </ion-col>
       </ion-slide>
     </ion-slides>
@@ -75,8 +76,8 @@
       <ion-slide *ngFor="let product of bestSellProducts| filter:searchTerm">
         <ion-col class="ion-text-left" routerLink="/item-details" routerDirection="forward">
           <img src="{{ product.image }}" />
-          <p  style="color: aliceblue;">Rs {{ product.price }}</p>
-          <h6  style="color: aliceblue;">{{ product.name }}</h6>
+          <p style="color: aliceblue;">Rs {{ product.price }}</p>
+          <h6 style="color: aliceblue;">{{ product.name }}</h6>
         </ion-col>
       </ion-slide>
     </ion-slides>

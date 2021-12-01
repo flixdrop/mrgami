@@ -11,7 +11,7 @@
 
 //   constructor(
 //     private util: UtilService,
-//     private navCtrl: NavController, 
+//     private navCtrl: NavController,
 //   ) { }
 
 //   ngOnInit() {
@@ -25,57 +25,61 @@
 
 // }
 
-
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { NavController } from '@ionic/angular';
-import { LoginService } from '../services/login.service';
-import { UtilService } from '../util.service';
+import { Component } from "@angular/core";
+import { Router } from "@angular/router";
+import { NavController } from "@ionic/angular";
+import { LoginService } from "../services/login.service";
+import { UtilService } from "../util.service";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: "app-login",
+  templateUrl: "./login.page.html",
+  styleUrls: ["./login.page.scss"],
 })
 export class LoginPage {
   inputNumber;
   isNumberSubmitted: boolean;
   name;
-  otpreceived='889963';
+  otpreceived = "889963";
   otp: any;
-  constructor(private navCtrl: NavController, private router: Router,
+  constructor(
+    private navCtrl: NavController,
+    private router: Router,
     private login: LoginService,
-    private util: UtilService,) {}
-  onOtpChange(otp){
+    private util: UtilService
+  ) {}
+  onOtpChange(otp) {
     this.otp = otp;
     console.log(otp);
   }
-  onLogin(){
+  onLogin() {
+    //this.isNumberSubmitted =true;
+    this.login.validateOtp(this.name, this.inputNumber, this.otp).subscribe(
+      (response) => {
         //this.isNumberSubmitted =true;
-        this.login.validateOtp(this.name,this.inputNumber,this.otp)
-        .subscribe(response =>{
-          //this.isNumberSubmitted =true;
-          console.log('onLogin with OTP', response);
+        console.log("onLogin with OTP", response);
         //this.router.navigate(['welcome']);
-        this.navCtrl.navigateRoot('landing', { animationDirection: 'forward' });
+        this.navCtrl.navigateRoot("tabs/landing", { animationDirection: "forward" });
         this.util.setMenuState(true);
-        console.log('Clicked');
-        },
-        error =>{
-          //this.isNumberSubmitted = false;
-          console.log('Error in onLogin()',error);
-        });
+        console.log("Clicked");
+      },
+      (error) => {
+        //this.isNumberSubmitted = false;
+        console.log("Error in onLogin()", error);
+      }
+    );
   }
 
-  onNumberSubmitted(){
-    //this.isNumberSubmitted =true;
-    this.login.generateOtp(this.name,this.inputNumber)
-    .subscribe(response =>{
-      this.isNumberSubmitted =true;
-      console.log('NumberSubmitted', response);
-    },
-    error =>{
-      this.isNumberSubmitted = false;
-    });
+  onNumberSubmitted() {
+    this.login.generateOtp(this.name, this.inputNumber).subscribe(
+      (response) => {
+        this.isNumberSubmitted = true;
+        console.log("NumberSubmitted", response);
+        localStorage.setItem("isLoggedIn", "true");
+      },
+      (error) => {
+        this.isNumberSubmitted = false;
+      }
+    );
   }
 }
