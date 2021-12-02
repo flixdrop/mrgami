@@ -6,7 +6,7 @@
       </ion-button>
     </ion-buttons>
 
-    <ion-buttons slot="end">
+    <!-- <ion-buttons slot="end">
       <ion-button>
         <ion-icon name="search-outline" color="dark"></ion-icon>
       </ion-button>
@@ -14,106 +14,125 @@
         <ion-icon name="notifications-outline" color="dark"></ion-icon>
         <span>&nbsp;</span>
       </ion-button>
-    </ion-buttons>
+    </ion-buttons> -->
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-row>
-    <ion-col size="12">
+<ion-content class="ion-padding">
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="right" translucent="true">
+    <ion-fab-button (click)="location()" color="light" class="background">
+      <!-- (click)=popSellerForm() -->
+      <ion-icon size="large" name="location-outline" color="danger"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-card>
+    <ion-grid>
+      <!-- <ion-row>
+    <ion-col class="center" size="12">
       <ion-button (click)="location()" color="black">
-        <ion-icon name="location-outline"></ion-icon>
+      <ion-icon name="location-outline"></ion-icon>
         {{address}}</ion-button>
     </ion-col>
-    <!-- <ion-col size="6">
-      <ion-button expand="full" color="light">Other areas</ion-button>
-    </ion-col> -->
-  </ion-row>
-  <ion-row>
     <ion-col size="6">
-  <ion-button expand="full" color="success">
-    <ion-icon name="logo-whatsapp"></ion-icon>
-    <a href="https://api.whatsapp.com/send?phone=+919860067118">Message</a>
-  </ion-button>
-  </ion-col>
-  <ion-col size="6">
-    <ion-button expand="full" color="success">
-      <ion-icon name="call"></ion-icon>Call Owner</ion-button>
+      <ion-button expand="full" color="light">Other areas</ion-button>
     </ion-col>
-    </ion-row>
-    <ion-card class="card">
-  <ion-slides pager="true" class="product-slider" style="width: 290px;">
-    <ion-slide style="width: 290px; height:193px;">
-      <img  style="width: 290px; height:193px;" src="../../assets/product-slider/prod-slide1.png" />
-    </ion-slide>
-    <ion-slide>
-      <img style="width: 290px; height:193px;" src="../../assets/product-slider/prod-slide1.png" />
-    </ion-slide>
-    <ion-slide>
-      <img style="width: 290px; height:193px;" src="../../assets/product-slider/prod-slide1.png" />
-    </ion-slide>
-  </ion-slides>
-  <div class="seperator">
-    <hr>
-  </div>
-  <div class="ion-padding-vertical-custom">
-    
-    <h4 class="price">
-      Rs 40000
-      <span class="real-price">Rs 80000</span>
-    </h4>
-  </div>
+  </ion-row> -->
+      <ion-row>
+        <ion-col size="6">
+          <ion-button expand="block" color="success">
+            <ion-icon></ion-icon>
+            <ion-label color="light">
+              <a href="https://api.whatsapp.com/send?phone=+919860067118">Message</a>
+            </ion-label>
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="block" color="success">
+            <ion-icon name="call" color="light"></ion-icon>
+            <ion-label color="light">Owner</ion-label>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-  <div class="seperator">
-    <hr>
-  </div>
-
-  <ion-grid class="count">
-    <ion-row>
-      <ion-col>
-          Breed :<span> Cow</span>
-      </ion-col>
-      <ion-col >
-    
-          Lactation :<span> 4</span>
-      
-      </ion-col>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ion-slides pager="true">
+            <ion-slide>
+              <ion-img src="../../assets/product-slider/prod-slide1.png"></ion-img>
+            </ion-slide>
+            <ion-slide>
+              <ion-img src="../../assets/product-slider/prod-slide1.png"></ion-img>
+            </ion-slide>
+            <ion-slide>
+              <ion-img src="../../assets/product-slider/prod-slide1.png"></ion-img>
+            </ion-slide>
+          </ion-slides>
+        </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col>
-            Breed :<span> Cow</span>
-        </ion-col>
-        <ion-col >
-      
-            Lactation :<span> 4</span>
-        
-        </ion-col>
-        </ion-row><ion-row>
-          <ion-col>
-              Breed :<span> Cow</span>
-          </ion-col>
-          <ion-col >
-        
-              Lactation :<span> 4</span>
-          
-          </ion-col>
-          </ion-row>
-  </ion-grid>
+        <ion-col size="12">
+          <ion-toolbar color="none">
+            <ion-item lines="none" color="none" slot="start">
+              <ion-label color="success">Rs 40000</ion-label>
+            </ion-item>
+            <ion-item lines="none" color="none" slot="end">
+              <ion-label color="success">Rs 80000</ion-label>
+            </ion-item>
+          </ion-toolbar>
 
-  <div class="seperator">
-    <hr>
-  </div>
-</ion-card>
-<div class="description">
- 
-      <!-- <img src="../../assets/menu_bar.svg"> -->
-      <ion-icon name="chevron-back"></ion-icon>
-  
-      <!-- <img src="../../assets/menu_bar.svg"> -->
-      <ion-icon name="chevron-forward"></ion-icon>
-   
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-</div>
+    <ion-card-content>
+      <ion-toolbar color="none">
+        <ion-item lines="none" color="none" slot="start">
+          <ion-label>Breed : Cow</ion-label>
+        </ion-item>
+        <ion-item lines="none" color="none" slot="end">
+          <ion-label>Loctation : 4</ion-label>
+        </ion-item>
+      </ion-toolbar>
+      <ion-toolbar color="none">
+        <ion-item lines="none" color="none" slot="start">
+          <ion-label>Breed : Cow</ion-label>
+        </ion-item>
+        <ion-item lines="none" color="none" slot="end">
+          <ion-label>Lactation : 4</ion-label>
+        </ion-item>
+      </ion-toolbar>
+      <ion-toolbar color="none">
+        <ion-item lines="none" color="none" slot="start">
+          <ion-label>Breed : Cow</ion-label>
+        </ion-item>
+        <ion-item lines="none" color="none" slot="end">
+          <ion-label>Lactation : 4</ion-label>
+        </ion-item>
+      </ion-toolbar>
+      <ion-toolbar color="none">
+        <ion-item lines="none" color="none" slot="start">
+          <ion-label>Breed : Cow</ion-label>
+        </ion-item>
+        <ion-item lines="none" color="none" slot="end">
+          <ion-label>Lactation : 4</ion-label>
+        </ion-item>
+      </ion-toolbar>
+    </ion-card-content>
+
+  </ion-card>
+  <!-- <div class="description">
+
+    <img src="../../assets/menu_bar.svg">
+    <ion-icon name="chevron-back"></ion-icon>
+
+    <img src="../../assets/menu_bar.svg">
+    <ion-icon name="chevron-forward"></ion-icon>
+
+  </div> -->
   <!-- <div class="variation">
     <ion-segment (ionChange)="segmentChanged($event)" value="size">
       <ion-segment-button value="size">

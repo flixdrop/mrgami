@@ -14,6 +14,14 @@ export class HomePage implements OnInit {
   public categories = [];
   public featuredProducts = [];
   public bestSellProducts = [];
+  slideOpts = {
+    initialSlide: 0,
+    slidesPerView: 3,
+    spaceBetween: 10,
+    speed: 500,
+    zoom: false, 
+    grabCursor: true
+  };
   searchTerm: any;
 
   constructor(private data: DataService) {}

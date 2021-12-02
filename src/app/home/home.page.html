@@ -6,80 +6,110 @@
       </ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button class="notification">
+      <!-- <ion-button class="notification">
         <ion-icon name="notifications-outline" color="dark"></ion-icon>
         <span>&nbsp;</span>
-      </ion-button>
-      <ion-button class="filter">
+      </ion-button> -->
+      <!-- <ion-button class="filter">
         <ion-icon name="funnel-outline" color="dark"></ion-icon>
-      </ion-button>
+      </ion-button> -->
     </ion-buttons>
+    <ion-title> But Animal</ion-title>
   </ion-toolbar>
   <ion-toolbar color="none">
-    <ion-searchbar slot="start" [(ngModel)]="searchTerm" placeholder="Search Cattles" mode="md" color="dark">
+    <ion-searchbar [(ngModel)]="searchTerm" placeholder="Search Cattles" mode="md">
     </ion-searchbar>
+    <ion-item lines="none" color="none" slot="end">
+      <ion-icon name="funnel-outline" color="dark"></ion-icon>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
-  <!-- <ion-toolbar color="none">
-    <ion-searchbar slot="start" placeholder="Search Cattles" mode="md" color="dark"></ion-searchbar>
-    <ion-icon size="large" slot="end" name="notifications" color="danger"></ion-icon>
-  </ion-toolbar> -->
+<ion-content class="ion-padding">
   <ion-refresher class="center" slot="fixed" pullMin="120" pullMax="50" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
       refreshingText="Please Wait...">
     </ion-refresher-content>
   </ion-refresher>
 
-  <div class="title ion-padding">
-    <h2>Breed</h2>
-    <p>See all</p>
-  </div>
+  <ion-toolbar color="none">
+    <ion-item lines="full" color="none">
+      <ion-label slot="start" color="warning">Breed</ion-label>
+      <a slot="end" color="medium">See all</a>
+    </ion-item>
+  </ion-toolbar>
 
-  <div class="category-slider ion-padding-start">
-    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
-      <ion-slide *ngFor="let category of categories| filter:searchTerm">
-        <ion-col>
-          <h4>{{ category.name }}</h4>
-          <img src="{{ category.image }}" />
+  <ion-card color="none">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ion-slides [options]="slideOpts">
+            <ion-slide class="center" *ngFor="let category of categories| filter:searchTerm">
+              <ion-thumbnail>
+                <ion-img src="{{ category.image }}"></ion-img>
+              </ion-thumbnail>
+              <ion-label>{{ category.name }}</ion-label>
+            </ion-slide>
+          </ion-slides>
         </ion-col>
-      </ion-slide>
-    </ion-slides>
-  </div>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 
-  <div class="title ion-padding">
-    <h2 class="font-bold">Featured</h2>
-    <p>See all</p>
-  </div>
+  <ion-toolbar color="none">
+    <ion-item lines="full" color="none">
+      <ion-label slot="start" color="warning">Featured</ion-label>
+      <a slot="end" color="medium">See all</a>
+    </ion-item>
+  </ion-toolbar>
 
-  <div class="product-slider ion-padding-start">
-    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
-      <ion-slide *ngFor="let product of featuredProducts| filter:searchTerm">
-        <ion-col class="ion-text-left" routerLink="/tabs/item-details" routerDirection="forward">
-          <img src="{{ product.image }}" />
-          <p style="color: aliceblue;">Rs {{ product.price }}</p>
-          <h6 style="color: aliceblue;">{{ product.name }}</h6>
+  <ion-card color="none">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" routerLink="/tabs/item-details" routerDirection="forward">
+          <ion-slides [options]="slideOpts">
+            <ion-slide class="center" *ngFor="let product of featuredProducts| filter:searchTerm">
+              <ion-thumbnail>
+                <ion-img src="{{ product.image }}"></ion-img>
+              </ion-thumbnail>
+              <ion-label style="color: aliceblue;">Rs {{ product.price }}</ion-label>
+              <ion-label style="color: aliceblue;">{{ product.name }}</ion-label>
+            </ion-slide>
+          </ion-slides>
         </ion-col>
-      </ion-slide>
-    </ion-slides>
-  </div>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 
-  <div class="title ion-padding">
-    <h2 class="font-bold">Best Sell</h2>
-    <p>See all</p>
-  </div>
+  <ion-toolbar color="none">
+    <ion-item lines="full" color="none">
+      <ion-label slot="start" color="warning">Best Sell</ion-label>
+      <a slot="end" color="medium">See all</a>
+    </ion-item>
+  </ion-toolbar>
 
-  <div class="product-slider ion-padding-start">
-    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
-      <ion-slide *ngFor="let product of bestSellProducts| filter:searchTerm">
-        <ion-col class="ion-text-left" routerLink="/item-details" routerDirection="forward">
-          <img src="{{ product.image }}" />
-          <p style="color: aliceblue;">Rs {{ product.price }}</p>
-          <h6 style="color: aliceblue;">{{ product.name }}</h6>
+  <ion-card color="none">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ion-slides [options]="slideOpts">
+            <ion-slide class="center" *ngFor="let product of bestSellProducts| filter:searchTerm">
+              <ion-thumbnail>
+                <ion-img src="{{ product.image }}"></ion-img>
+              </ion-thumbnail>
+              <ion-label>Rs {{ product.price }}</ion-label>
+              <ion-label>{{ product.name }}</ion-label>
+            </ion-slide>
+          </ion-slides>
         </ion-col>
-      </ion-slide>
-    </ion-slides>
-  </div>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="right" translucent="true">
+    <ion-fab-button color="medium">
+      <ion-icon size="large" name="star-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
 </ion-content>
