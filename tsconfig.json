@@ -1,6 +1,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    
+    //edited to allow json formdata
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 // Category Interface
 export interface ICategory {
   id: number,
@@ -23,6 +22,7 @@ export interface IProduct {
   providedIn: 'root'
 })
 export class DataService {
+  
   getTodaysOffers(): any[] {
     let todaysOffers = [];
 

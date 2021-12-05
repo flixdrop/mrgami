@@ -1,21 +1,43 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { ActionSheetController, IonContent, IonSlides, NavController, ToastController } from '@ionic/angular';
-import { AbstractControl, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ModalController, AlertController } from '@ionic/angular';
 import { GetAnimalData, SellerFormApiService } from '../services/seller-form-api.service';
-
+import { DataService } from '../data.service';
+import JsonFile from '../services/adform.json';
 //const { Camer } = CameraPlugin;
+
+// export interface Options{
+//  label?: string;
+//  placeholder?: string;
+//  required?: boolean;
+//  type?: string;
+//  children?: Array<FormControlObject>;
+// }
+
+export interface FormControlObject{
+  name: string;
+  animalbreed: string;
+  animaltype: string;
+  label: string;
+  type: string;
+}
 
 @Component({
   selector: 'app-seller-form',
   templateUrl: './seller-form.page.html',
   styleUrls: ['./seller-form.page.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class SellerFormPage implements OnInit {
+
+  adForm: any = JsonFile;
+  public myForm: FormGroup = this.fb.group({});
+  animalTypeSelected: any;
 
   @ViewChild(IonContent, { static: true }) ionContent: IonContent;
   @ViewChild(IonSlides, { static: false }) ionSlides: IonSlides;
@@ -46,12 +68,8 @@ export class SellerFormPage implements OnInit {
   public billingForm: FormGroup;
   public paymentForm: FormGroup;
   public shippingForm: FormGroup;
-
   public imagePath: SafeResourceUrl;
-
   public times = [];
-
-
   files: FileList;
   
   public slidesOpts = {
@@ -64,13 +82,13 @@ export class SellerFormPage implements OnInit {
   public isBeginning = true;
   public isEnd = false;
   types: string[];
- imagesList: string[]=[''];
+  imagesList: string[]=[''];
   breeds: string[];
   dat: string;
   data2: GetAnimalData;
   public testup(event){ this.files=event.target.files;
-console.log("Files/Uploaded Images"+this.files);
-}
+  console.log("Files/Uploaded Images"+this.files);
+  }
   get billingFirstName(): AbstractControl {
     return this.billingForm.get('animal_name');
   }
@@ -136,34 +154,52 @@ console.log("Files/Uploaded Images"+this.files);
     private sanitizer: DomSanitizer,
     private modalCtrl: ModalController, private alertCtrl: AlertController,
     private sellerFormApiService: SellerFormApiService,
-    public toastController: ToastController) {
+    public toastController: ToastController,
+    private dataService:DataService, 
+    private fb: FormBuilder) {
   }
 
   ngOnInit() {
-    
+    this.myForm = this.fb.group({});
+    this.createForm(this.adForm);
     this.setupForm();
     this.buildSlides();
-    this.times = ['Karnatak', 'Maharasthra', 'Tamilnadu', 'Kerla', 'UP',];
-    this.types = ['Cow', 'Buffalo', 'Ox',];
-    this.breeds = ['Sindhi', 'Jersey', 'Desi',];
-   
+    this.times = ['Karnatak', 'Maharasthra', 'Tamilnadu', 'Kerla', 'UP'];
+    this.types = ['Cow', 'Buffalo', 'Ox'];
+    this.breeds = ['Sindhi', 'Jersey', 'Desi'];
   }
 
-  ionViewDidEnter() {
-    this.ionSlides.update(); //This resolved the issue of content not showing up
-    // this.setupForm();
-    // this.buildSlides();
-    // this.times = ['Karnatak', 'Maharasthra', 'Tamilnadu', 'Kerla', 'UP',];
-    // this.types = ['Cow', 'Buffalo', 'Ox',];
-    //this.ionSlides.updateAutoHeight();
-    //console.log("ionViewDidEnter");
-    // this.setupForm();
-    // this.buildSlides();
-    // this.times = ['Karnatak', 'Maharasthra', 'Tamilnadu', 'Kerla', 'UP',];
-    // this.types = ['Cow', 'Buffalo', 'Ox',];
+  onSelectAnimalType(event){
+    this.animalTypeSelected = event.detail.value;
+    console.log('animalTypeSelected- ', this.animalTypeSelected);
   }
 
+  createForm(controls: Array<FormControlObject>){
+    for(let control of controls){
+      const formControl = new FormControl();
+      this.myForm.addControl(control.name, formControl);
+    }
+  }
 
+  onSubmit(){
+    console.log('form value- ', this.myForm.value);
+    console.log('form validity- ', this.myForm.valid);
+    this.myForm.reset();
+    }
+
+  // ionViewDidEnter() {
+  //   this.ionSlides.update(); //This resolved the issue of content not showing up
+  //   // this.setupForm();
+  //   // this.buildSlides();
+  //   // this.times = ['Karnatak', 'Maharasthra', 'Tamilnadu', 'Kerla', 'UP',];
+  //   // this.types = ['Cow', 'Buffalo', 'Ox',];
+  //   //this.ionSlides.updateAutoHeight();
+  //   //console.log("ionViewDidEnter");
+  //   // this.setupForm();
+  //   // this.buildSlides();
+  //   // this.times = ['Karnatak', 'Maharasthra', 'Tamilnadu', 'Kerla', 'UP',];
+  //   // this.types = ['Cow', 'Buffalo', 'Ox',];
+  // }
 
   buildSlides() {
     const slides = ['Animal', 'Seller-Info', 'Summary', 'Publish'];

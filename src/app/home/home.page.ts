@@ -4,6 +4,7 @@ import { Component, ViewChild, ElementRef, OnInit } from "@angular/core";
 import { ModalController } from "@ionic/angular";
 import { CartModalPage } from "../pages/cart-modal/cart-modal.page";
 import { BehaviorSubject } from "rxjs";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-home",
@@ -24,7 +25,7 @@ export class HomePage implements OnInit {
   };
   searchTerm: any;
 
-  constructor(private data: DataService) {}
+  constructor(private data: DataService, private router: Router) {}
 
   ngOnInit() {
     this.categories = this.data.getCategories();
@@ -40,4 +41,9 @@ export class HomePage implements OnInit {
       event.target.complete();
     }, 2500);
   }
+
+  onClickFab(){
+    this.router.navigateByUrl('/tabs/seller-form');
+  }
+
 }

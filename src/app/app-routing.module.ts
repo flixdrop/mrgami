@@ -50,6 +50,8 @@ const routes: Routes = [
     redirectTo: '/welcome',
     pathMatch: 'full'
   },
+  
+
  
 
 ];

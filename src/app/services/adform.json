@@ -1,0 +1,84 @@
+[
+    {
+      "animaltype": ["cow", "buffalo", "ox"],
+      "name": "type",
+      "label": "Animal type",
+      "value": "",
+      "type": "select"
+  },
+    {
+        "cow": ["cow 1", "cow 2", "cow 3"],
+        "buffalo": ["buffalo 1", "buffalo 2", "buffalo 3"],
+        "ox": ["ox 1", "ox 2", "ox 3"],
+        "name": "breed",
+        "label": "Animal breed",
+        "value": "",
+        "type": "select"
+    },
+    {
+        "name": "description",
+        "label": "Description about the animal",
+        "value": "",
+        "type": "textarea",
+        "placeholder": "describe your animal.",
+        "validators": {
+            "required": true,
+            "minLength": 10
+        }
+    },
+    {
+      "name": "askingPrice",
+      "label": "Asking price",
+      "value": "",
+      "type": "number",
+      "placeholder": "enter expected price",
+      "validators": {
+          "required": true,
+          "minLength": 10
+      }
+  },
+  {
+    "name": "weight",
+    "label": "Animal weight",
+    "value": "",
+    "type": "number",
+    "placeholder": "enter animal wieght",
+    "validators": {
+        "required": true,
+        "minLength": 10
+    }
+},
+{
+  "name": "age",
+  "label": "Animal age",
+  "value": "",
+  "type": "number",
+  "placeholder": "enter animal age",
+  "validators": {
+      "required": true,
+      "minLength": 10
+  }
+},
+{
+"name": "lactationNumber",
+"label": "Lactation",
+"value": "",
+"type": "number",
+"placeholder": "enter no. of lactation",
+"validators": {
+    "required": true,
+    "minLength": 10
+}
+},
+{
+"name": "milkPerDay",
+"label": "Milk/Day",
+"value": "",
+"type": "number",
+"placeholder": "enter milk quantity per day",
+"validators": {
+    "required": true,
+    "minLength": 10
+}
+}
+]

@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { SellerFormPage } from './seller-form.page';
 import { SellerFormPageRoutingModule } from './seller-form-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -16,6 +17,7 @@ import { SellerFormPageRoutingModule } from './seller-form-routing.module';
     IonicModule,
     ReactiveFormsModule,
     SellerFormPageRoutingModule,
+    HttpClientModule
   ],
   declarations: [SellerFormPage],
   bootstrap: [SellerFormPage]
