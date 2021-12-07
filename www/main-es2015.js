@@ -270,7 +270,33 @@ module.exports = webpackAsyncContext;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-app class=\"app\">\r\n  <ion-split-pane contentId=\"main-content\">\r\n    <ion-menu contentId=\"main-content\" type=\"overlay\" [disabled]=\"!isMenuEnabled\">\r\n      <ion-content>\r\n        <div class=\"main-list\">\r\n          <ion-list id=\"inbox-list\">\r\n\r\n            <ion-menu-toggle auto-hide=\"false\">\r\n              <ion-item lines=\"none\" (click)=\"navigate('/home', 1)\" detail=\"false\" class=\"ion-text-center\" [class.selected]=\"selectedIndex == 1\">\r\n                <ion-label>Home</ion-label>\r\n              </ion-item>\r\n            </ion-menu-toggle>\r\n            <ion-menu-toggle auto-hide=\"false\">\r\n              <ion-item lines=\"none\" (click)=\"navigate('/profile', 2)\" detail=\"false\" class=\"ion-text-center\" [class.selected]=\"selectedIndex == 2\">\r\n                <ion-label>Profile</ion-label>\r\n              </ion-item>\r\n            </ion-menu-toggle>\r\n            <ion-menu-toggle auto-hide=\"false\">\r\n              <ion-item lines=\"none\" (click)=\"navigate('/my-cart', 3)\" detail=\"false\" class=\"ion-text-center\" [class.selected]=\"selectedIndex == 3\">\r\n                <ion-label>My Cart</ion-label>\r\n              </ion-item>\r\n            </ion-menu-toggle>\r\n            <ion-menu-toggle auto-hide=\"false\">\r\n              <ion-item lines=\"none\" (click)=\"navigate('/favorite', 4)\" detail=\"false\" class=\"ion-text-center\" [class.selected]=\"selectedIndex == 4\">\r\n                <ion-label>Favorite</ion-label>\r\n              </ion-item>\r\n            </ion-menu-toggle>\r\n            <ion-menu-toggle auto-hide=\"false\">\r\n              <ion-item lines=\"none\" (click)=\"navigate('/my-orders', 5)\" detail=\"false\" class=\"ion-text-center\" [class.selected]=\"selectedIndex == 5\">\r\n                <ion-label>My Orders</ion-label>\r\n              </ion-item>\r\n            </ion-menu-toggle>\r\n          </ion-list>\r\n\r\n          <!-- Close Button -->\r\n          <ion-button fill=\"clear\" color=\"dark\" (click)=\"close()\">\r\n            <ion-icon name=\"close-circle-outline\"></ion-icon>\r\n          </ion-button>\r\n        </div>\r\n       \r\n      </ion-content>\r\n      \r\n    </ion-menu>\r\n    <ion-router-outlet id=\"main-content\"></ion-router-outlet>\r\n  </ion-split-pane>\r\n</ion-app>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-app class=\"app\">\n  <ion-split-pane contentId=\"main-content\">\n    <ion-menu contentId=\"main-content\" type=\"overlay\" [disabled]=\"!isMenuEnabled\">\n      <ion-content>\n        <div class=\"main-list\">\n          <ion-list id=\"inbox-list\">\n\n            <ion-menu-toggle auto-hide=\"false\">\n              <ion-item lines=\"none\" (click)=\"navigate('/home', 1)\" detail=\"false\" class=\"ion-text-center\" [class.selected]=\"selectedIndex == 1\">\n                <ion-label>Home</ion-label>\n              </ion-item>\n            </ion-menu-toggle>\n            <ion-menu-toggle auto-hide=\"false\">\n              <ion-item lines=\"none\" (click)=\"navigate('/profile', 2)\" detail=\"false\" class=\"ion-text-center\" [class.selected]=\"selectedIndex == 2\">\n                <ion-label>Profile</ion-label>\n              </ion-item>\n            </ion-menu-toggle>\n            <ion-menu-toggle auto-hide=\"false\">\n              <ion-item lines=\"none\" (click)=\"navigate('/my-cart', 3)\" detail=\"false\" class=\"ion-text-center\" [class.selected]=\"selectedIndex == 3\">\n                <ion-label>My Cart</ion-label>\n              </ion-item>\n            </ion-menu-toggle>\n            <ion-menu-toggle auto-hide=\"false\">\n              <ion-item lines=\"none\" (click)=\"navigate('/favorite', 4)\" detail=\"false\" class=\"ion-text-center\" [class.selected]=\"selectedIndex == 4\">\n                <ion-label>Favorite</ion-label>\n              </ion-item>\n            </ion-menu-toggle>\n            <ion-menu-toggle auto-hide=\"false\">\n              <ion-item lines=\"none\" (click)=\"navigate('/my-orders', 5)\" detail=\"false\" class=\"ion-text-center\" [class.selected]=\"selectedIndex == 5\">\n                <ion-label>My Orders</ion-label>\n              </ion-item>\n            </ion-menu-toggle>\n          </ion-list>\n\n          <!-- Close Button -->\n          <ion-button fill=\"clear\" color=\"dark\" (click)=\"close()\">\n            <ion-icon name=\"close-circle-outline\"></ion-icon>\n          </ion-button>\n        </div>\n       \n      </ion-content>\n      \n    </ion-menu>\n    <ion-router-outlet id=\"main-content\"></ion-router-outlet>\n  </ion-split-pane>\n</ion-app>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/landing/landing.page.html":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/landing/landing.page.html ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header class=\"ion-padding\">\r\n  <ion-toolbar color=\"none\">\r\n    <ion-searchbar class=\"searchbar\" slot=\"start\" placeholder=\"Search Cattles\" mode=\"md\" color=\"none\"></ion-searchbar>\r\n    <ion-item color=\"none\" lines=\"none\" slot=\"end\">\r\n      <ion-icon size=\"large\" slot=\"end\" name=\"notifications-outline\" color=\"danger\"></ion-icon>\r\n    </ion-item>\r\n    <!-- <ion-button size=\"large\" slot=\"end\" class=\"notification\" color=\"none\" fill=\"clear\"> -->\r\n      <!-- <span>&nbsp;</span> -->\r\n    <!-- </ion-button> -->\r\n    <!-- <ion-buttons slot=\"start\">\r\n      <ion-button color=\"primary\" class=\"backbtn\" routerLink=\"/home\" routerDirection=\"back\">\r\n      </ion-button>\r\n    </ion-buttons> -->\r\n    <!-- <ion-buttons>\r\n      <ion-button>\r\n        <ion-icon name=\"search-outline\" color=\"dark\"></ion-icon>\r\n      </ion-button>\r\n    </ion-buttons> -->\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<!-- <ion-content>\r\n   <ion-grid>\r\n     <ion-row>\r\n      <ion-col size=\"6\">\r\n        <ion-button class=\"curved\" (click)=goToBuy()><img src=\"../../assets/icon/sell-cow-icon.png\" width= \"90px\"\r\n          height=\" 90px\"></ion-button>\r\n       </ion-col>\r\n       <ion-col size=\"6\">\r\n         <ion-button class=\"curved\" (click)=goToMedicine()><img src=\"../../assets/icon/cow-medicine.png\" width= \"90px\"\r\n          height=\" 90px\"></ion-button>\r\n        </ion-col>\r\n      </ion-row>\r\n      <ion-row>\r\n      <ion-col size=\"6\">\r\n       <ion-button class=\"curved\" (click)=goToFeed()><img src=\"../../assets/icon/animal-feed.png\" width= \"90px\"\r\n        height=\" 90px\"></ion-button>\r\n      </ion-col>\r\n      <ion-col size=\"6\">\r\n        <ion-button class=\"curved\" (click)=goToSemen()><img src=\"../../assets/icon/cow-semen.png\" width= \"90px\"\r\n          height=\" 90px\"></ion-button>\r\n       </ion-col>\r\n     </ion-row>\r\n   </ion-grid>\r\n   <div class=\"category-slider ion-padding-start\">\r\n    <ion-slides [options]=\"{ slidesPerView: 'auto', zoom: false, grabCursor: true }\">\r\n      <ion-slide *ngFor=\"let category of categories\">\r\n        <ion-col>\r\n          <h4>{{ category.name }}</h4>\r\n          <img src=\"{{ category.image }}\" />\r\n        </ion-col>\r\n      </ion-slide>\r\n    </ion-slides>\r\n  </div>\r\n</ion-content> -->\r\n\r\n\r\n<ion-card class=\"backgroundCard\">\r\n\r\n</ion-card>\r\n\r\n<ion-content class=\"content ion-padding\" [fullscreen]=\"true\">\r\n\r\n  <ion-toolbar color=\"none\">\r\n    <ion-button size=\"large\" expand=\"block\" color=\"light\" (click)=\"recordAudio()\">\r\n      <ion-label color=\"danger\">FREE VET DOCTOR 24/7</ion-label>\r\n    </ion-button>\r\n  </ion-toolbar>\r\n\r\n  <ion-grid>\r\n    <ion-row (click)=\"goToBuy()\" class=\"bigBtn gradient\">\r\n      <ion-col class=\"reverseCenter\" size=\"6\">\r\n        <ion-item lines=\"none\" color=\"none\">\r\n          <ion-thumbnail>\r\n            <ion-img class=\"btnImg\" src=\"../../assets/icon/sell-cow-icon.png\"></ion-img>\r\n          </ion-thumbnail>\r\n        </ion-item>\r\n      </ion-col>\r\n      <ion-col class=\"reverseCenter\" size=\"6\">\r\n        <span>\r\n          <ion-label color=\"success\">BUY</ion-label>\r\n        </span>\r\n        <span>\r\n          <ion-label color=\"light\">ANIMAL</ion-label>\r\n        </span>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n\r\n  <ion-grid>\r\n    <ion-row class=\"smallBtn\">\r\n      <ion-col (click)=\"goToFeed()\" class=\"reverseCenter gradient\" size=\"5.5\">\r\n        <ion-item lines=\"none\" color=\"none\">\r\n          <ion-thumbnail>\r\n            <ion-img class=\"btnImg\" src=\"../../assets/icon/animal-feed.png\"></ion-img>\r\n          </ion-thumbnail>\r\n        </ion-item>\r\n        <span class=\"reverseCenter\">\r\n          <ion-label color=\"success\">BUY ANIMAL</ion-label>\r\n        </span>\r\n        <span class=\"reverseCenter\">\r\n          <ion-label color=\"light\">FEED</ion-label>\r\n        </span>\r\n      </ion-col>\r\n      <ion-col (click)=\"goToMedicine()\" class=\"reverseCenter gradient\" size=\"5.5\">\r\n        <ion-item lines=\"none\" color=\"none\">\r\n          <ion-thumbnail>\r\n            <ion-img class=\"btnImg\" src=\"../../assets/icon/cow-medicine.png\"></ion-img>\r\n          </ion-thumbnail>\r\n        </ion-item>\r\n        <span class=\"reverseCenter\">\r\n          <ion-label color=\"success\">BUY ANIMAL</ion-label>\r\n        </span>\r\n        <span class=\"reverseCenter\">\r\n          <ion-label color=\"light\">MEDICINE</ion-label>\r\n        </span>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n\r\n  <ion-toolbar class=\"center toolbar\" color=\"none\">\r\n      <ion-chip color=\"none\">\r\n        <ion-icon size=\"large\" name=\"alarm-sharp\" color=\"warning\"></ion-icon>\r\n        <ion-label color=\"light\">Today's Offers</ion-label>\r\n      </ion-chip>\r\n  </ion-toolbar>\r\n\r\n  <ion-card class=\"card\">\r\n    <ion-slides #slides [options]=\"slideOpts\">\r\n      <ion-slide *ngFor=\"let img of images; let i=index\">\r\n          <ion-grid>\r\n            <ion-row>\r\n              <ion-col class=\"offersSlide\" size=\"12\">\r\n                <ion-img class=\"offersImg\" src=\"{{img}}\" class=\"img\"></ion-img>\r\n              </ion-col>\r\n            </ion-row>\r\n            <ion-row>\r\n              <ion-col class=\"offersSlide\" size=\"12\">\r\n                <ion-label color=\"dark\">Offer Details</ion-label>\r\n              </ion-col>\r\n            </ion-row>\r\n          </ion-grid>\r\n      </ion-slide>\r\n    </ion-slides>\r\n  </ion-card>\r\n\r\n</ion-content>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<!-- <ion-card class=\"card\">\r\n     <ion-card-title>Today's Offers</ion-card-title>\r\n    <ion-slides pager=\"false\" class=\"product-slider\">\r\n      <ion-slide>\r\n        <img src=\"../../assets/product-slider/prod-slide1.jpg\" height=\"100px\"/>\r\n      </ion-slide>\r\n      <ion-slide>\r\n        <img src=\"../../assets/product-slider/prod-slide1.jpg\" height=\"100px\"/>\r\n      </ion-slide>\r\n      <ion-slide>\r\n        <img src=\"../../assets/product-slider/prod-slide1.jpg\" height=\"100px\"/>\r\n      </ion-slide>\r\n    </ion-slides>\r\n    </ion-card> -->\r\n<!-- <ion-slides pager=\"true\" class=\"product-slider\">\r\n    <ion-slide>\r\n      <img src=\"../../assets/product-slider/prod-slide1.png\" />\r\n    </ion-slide>\r\n    <ion-slide>\r\n      <img src=\"../../assets/product-slider/prod-slide1.png\" />\r\n    </ion-slide>\r\n    <ion-slide>\r\n      <img src=\"../../assets/product-slider/prod-slide1.png\" />\r\n    </ion-slide>\r\n  </ion-slides> -->\r\n<!-- <div class=\"seperator\">\r\n    <hr>\r\n  </div>\r\n  <div class=\"ion-padding-vertical-custom\">\r\n    \r\n    <h4 class=\"price\">\r\n      Rs 40000\r\n      <span class=\"real-price\">Rs 80000</span>\r\n    </h4>\r\n  </div>\r\n\r\n  <div class=\"seperator\">\r\n    <hr>\r\n  </div> -->\r\n\r\n\r\n\r\n\r\n\r\n\r\n<!-- <div class=\"variation\">\r\n    <ion-segment (ionChange)=\"segmentChanged($event)\" value=\"size\">\r\n      <ion-segment-button value=\"size\">\r\n        <ion-label>Select Size</ion-label>\r\n      </ion-segment-button>\r\n      <ion-segment-button value=\"color\">\r\n        <ion-label>Select Color</ion-label>\r\n      </ion-segment-button>\r\n    </ion-segment>\r\n  </div>\r\n\r\n  <div class=\"seperator\">\r\n    <hr>\r\n  </div>\r\n\r\n  <div class=\"variation-selector\">\r\n    <div class=\"sizes\" [class.active-variation]=\"activeVariation == 'size'\">\r\n      <div [class.active]=\"selectedSize == 1\" (click)=\"changeSize(1)\">\r\n        S\r\n      </div>\r\n      <div [class.active]=\"selectedSize == 2\" (click)=\"changeSize(2)\">\r\n        M\r\n      </div>\r\n      <div [class.active]=\"selectedSize == 3\" (click)=\"changeSize(3)\">\r\n        L\r\n      </div>\r\n      <div [class.active]=\"selectedSize == 4\" (click)=\"changeSize(4)\">\r\n        XL\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"colors\" [class.active-variation]=\"activeVariation == 'color'\">\r\n      <div [class.active]=\"selectedColor == 1\" (click)=\"changeColor(1)\">\r\n        BLACK\r\n      </div>\r\n      <div [class.active]=\"selectedColor == 2\" (click)=\"changeColor(2)\">\r\n        GREEN\r\n      </div>\r\n      <div [class.active]=\"selectedColor == 3\" (click)=\"changeColor(3)\">\r\n        BLUE\r\n      </div>\r\n    </div>\r\n  </div> -->");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.page.html":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.page.html ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-button class=\"backbtn\" routerLink=\"/welcome\" routerDirection=\"back\">\r\n        <img src=\"../../assets/back.svg\" />\r\n      </ion-button>\r\n    </ion-buttons>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<!-- <ion-content class=\"ion-padding\">\r\n  <div class=\"ion-padding container\">\r\n    <h1>Login</h1>\r\n\r\n    <div class=\"form-container\">\r\n      <ion-item>\r\n        <ion-label position=\"floating\">Email</ion-label>\r\n        <ion-input></ion-input>\r\n      </ion-item>\r\n      <ion-item>\r\n        <ion-label position=\"floating\">Password</ion-label>\r\n        <ion-input type=\"password\"></ion-input>\r\n        <ion-icon name=\"eye\" slot=\"end\"></ion-icon>\r\n      </ion-item>\r\n\r\n      <ion-button expand=\"block\" class=\"main-button\" (click)=\"login()\">Log in</ion-button>\r\n\r\n      <div class=\"sign-up\">\r\n        Don't have an account? <ion-button color=\"dark\" fill=\"clear\" routerLink=\"/signup\" routerDirection=\"forward\">Sign up</ion-button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</ion-content> -->\r\n\r\n\r\n<!-- <div class=\"container\">\r\n<ion-card class=\"card-center\">\r\n  <ng-otp-input  (onInputChange)=\"onOtpChange($event)\"  [config]=\"{length:5}\"></ng-otp-input>\r\n<ion-item>\r\n<ion-button  color=\"primary\">Click Me</ion-button>\r\n</ion-item>\r\n</ion-card>\r\n<button class=\"btn btn-success\">\r\n  Click Me\r\n</button>\r\n\r\n</div> -->\r\n\r\n<!-- <div class=\"card\" style=\"width: 80%;margin: 200px 30px 30px 150px;\">\r\n<div class=\"card-center\" >\r\n  <div>\r\n    <h5  >Login</h5>\r\n    <p >Resend Otp?</p>\r\n    <ng-otp-input  (onInputChange)=\"onOtpChange($event)\"  [config]=\"{length:5}\"></ng-otp-input>\r\n    <ion-button  color=\"primary\">Click Me</ion-button>\r\n  </div>\r\n\r\n</div>\r\n\r\n</div> -->\r\n\r\n<ion-content class=\"ion-padding\">\r\n  <ion-grid>\r\n  \r\n    <ion-row *ngIf='!isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n        <ion-toolbar>\r\n          <ion-item lines=\"full\">\r\n            <ion-label position=\"floating\">NAME</ion-label>\r\n            <ion-input [(ngModel)]='name'></ion-input>\r\n          </ion-item>\r\n        </ion-toolbar>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row *ngIf='!isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n        <ion-toolbar>\r\n          <ion-item lines=\"full\">\r\n            <ion-label position=\"floating\">PHONE NO.</ion-label>\r\n            <ion-input [(ngModel)]='inputNumber'></ion-input>\r\n          </ion-item>\r\n        </ion-toolbar>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row *ngIf='!isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n        <ion-toolbar>\r\n          <ion-button expand=\"block\" (click)=\"onNumberSubmitted()\" color=\"medium\">LOGIN WITH OTP</ion-button>\r\n        </ion-toolbar>\r\n      </ion-col>\r\n    </ion-row>\r\n\r\n    <ion-row *ngIf='isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n            <ng-otp-input (onInputChange)=\"onOtpChange($event)\" [config]=\"{length:6}\"></ng-otp-input>\r\n      </ion-col>\r\n    </ion-row>\r\n\r\n    <ion-row *ngIf='isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n        <ion-toolbar>\r\n          <ion-button expand=\"block\" (click)=\"onLogin()\" color=\"medium\">LOGIN</ion-button>\r\n        </ion-toolbar>\r\n      </ion-col>\r\n    </ion-row>\r\n\r\n    <ion-row>\r\n      <ion-col class=\"center\" size=\"12\">\r\n        <ion-item class=\"center\" lines=\"none\" color=\"none\">\r\n          <ion-icon size=\"large\" name=\"logo-google\" color=\"medium\"></ion-icon>\r\n        </ion-item>\r\n        <ion-item class=\"center\" lines=\"none\" color=\"none\">\r\n          <ion-icon size=\"large\" name=\"logo-facebook\" color=\"medium\"></ion-icon>\r\n        </ion-item>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col class=\"center\" size=\"12\">\r\n          <ion-button fill=\"clear\" expand=\"block\" routerLink=\"/tabs/landing\" color=\"medium\" routerDirection=\"forward\">Skip now<ion-icon size=\"large\" slot=\"end\" name=\"log-in-outline\"></ion-icon></ion-button>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n \r\n\r\n</ion-content>");
 
 /***/ }),
 
@@ -283,20 +309,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("  <!-- <ion-content fullscreen>\r\n\r\n    <div class=\"ion-text-end\">\r\n      <ion-button (click)=\"close()\" fill=\"clear\" color=\"dark\">\r\n        <ion-icon name=\"close\" slot=\"start\"></ion-icon>\r\n      </ion-button>\r\n    </div>\r\n\r\n    <div class=\"ion-padding\" style=\"color: #0fd15dc5 ;\">\r\n\r\n      <ion-list>\r\n        <ion-item *ngFor=\"let p of cart\" class=\"ion-text-wrap\">\r\n          <ion-grid style=\"color: #0fd15d ;\">\r\n            <ion-row class=\"ion-align-items-center\">\r\n              <ion-col size=\"2\" class=\"ion-align-self-center\">\r\n                <ion-button color=\"medium\" fill=\"clear\" (click)=\"decreaseCartItem(p)\">\r\n                  <ion-icon name=\"remove-circle\" slot=\"icon-only\"></ion-icon>\r\n                </ion-button>\r\n              </ion-col>\r\n\r\n              <ion-col size=\"1\" class=\"ion-align-self-center\">\r\n                {{ p.amount }}\r\n              </ion-col>\r\n\r\n              <ion-col size=\"2\" class=\"ion-align-self-center\">\r\n                <ion-button color=\"medium\" fill=\"clear\" (click)=\"increaseCartItem(p)\">\r\n                  <ion-icon name=\"add-circle\" slot=\"icon-only\"></ion-icon>\r\n                </ion-button>\r\n              </ion-col>\r\n\r\n              <ion-col size=\"2\" offset=\"5\">\r\n                <ion-button color=\"medium\" fill=\"clear\" (click)=\"removeCartItem(p)\">\r\n                  <ion-icon name=\"close-circle\" slot=\"icon-only\"></ion-icon>\r\n                </ion-button>\r\n              </ion-col>\r\n            </ion-row>\r\n            <ion-row>\r\n              <ion-col size=\"9\">\r\n                <b>{{ p.name }}</b>\r\n              </ion-col>\r\n              <ion-col size=\"3\" class=\"ion-text-end\">\r\n                {{ p.amount * p.price | currency:'INR' }}\r\n              </ion-col>\r\n            </ion-row>\r\n          </ion-grid>\r\n        </ion-item>\r\n        <ion-item>\r\n          <ion-grid style=\"color: #0fd15d ;\">\r\n            <ion-row>\r\n              <ion-col size=\"9\">\r\n                Total:\r\n              </ion-col>\r\n              <ion-col size=\"3\" class=\"ion-text-end\">\r\n                {{ getTotal() | currency:'INR' }}\r\n              </ion-col>\r\n            </ion-row>\r\n          </ion-grid>\r\n        </ion-item>\r\n      </ion-list>\r\n\r\n      <ion-button color=\"success\" expand=\"full\" (click)=\"makePayment()\">\r\n        Checkout\r\n      </ion-button>\r\n    </div>\r\n\r\n  </ion-content> -->\r\n\r\n  <ion-content>\r\n\r\n    <ion-toolbar>\r\n      <ion-icon (click)=\"close()\" size=\"large\" name=\"close\" slot=\"end\"></ion-icon>\r\n    </ion-toolbar>\r\n<div>\r\n  <ion-card class=\"card\" color=\"light\">\r\n    <ion-list class=\"list\" color *ngFor=\"let c of cart; let i=index\">\r\n      <ion-toolbar color=\"none\">\r\n        <ion-grid>\r\n          <ion-row>\r\n            <ion-col class=\"itemDetails\" size=\"12\">\r\n              <ion-label color=\"danger\">REFIT ANIMAL CARE- 10KG</ion-label>\r\n              <p>Celebrate Mineral Mixture...</p>\r\n              <p>Delivery By- 6th October</p>\r\n              <p>Delivery Fees- &#x20B9;50</p>\r\n            </ion-col>\r\n          </ion-row>\r\n          <ion-row>\r\n            <ion-col size=\"12\">\r\n              <a>Save for later</a>\r\n            </ion-col>\r\n          </ion-row>\r\n        </ion-grid>\r\n        <ion-grid slot=\"end\">\r\n          <ion-row>\r\n            <ion-col size=\"3\"></ion-col>\r\n            <ion-col class=\"center\" size=\"6\">\r\n              <ion-thumbnail><ion-img src=\"{{c.image}}\" ></ion-img></ion-thumbnail>\r\n            </ion-col>\r\n            <ion-col size=\"3\"><ion-icon color=\"danger\" name=\"trash-sharp\" (click)=\"removeCartItem(c)\"></ion-icon></ion-col>\r\n          </ion-row>\r\n          <ion-row>\r\n            <ion-col class=\"center\" size=\"12\">\r\n              <ion-text color=\"primary\">{{c.name}}</ion-text>\r\n            </ion-col>\r\n          </ion-row>\r\n          <ion-row>\r\n            <ion-col class=\"center\" size=\"2\">\r\n              <ion-icon size=\"large\" name=\"remove-circle-sharp\" color=\"primary\" (click)=\"decreaseCartItem(c)\"></ion-icon>\r\n            </ion-col>\r\n            <ion-col class=\"center\" size=\"8\">\r\n              <ion-item lines=\"none\" color=\"none\">\r\n                <ion-text color=\"warning\">{{c.amount}}</ion-text>\r\n              </ion-item>\r\n            </ion-col>\r\n            <ion-col class=\"center\" size=\"2\">\r\n              <ion-icon size=\"large\" name=\"add-circle-sharp\" color=\"primary\" (click)=\"increaseCartItem(c)\"></ion-icon>\r\n            </ion-col>\r\n          </ion-row>\r\n        </ion-grid>\r\n      </ion-toolbar>\r\n      <ion-button shape=\"round\" expand=\"block\" color=\"dark\">You have a Promo Code? Apply Here</ion-button>\r\n    </ion-list>\r\n    <!-- <ion-toolbar color=\"none\">\r\n      <ion-item lines=\"full\" color=\"none\">\r\n        <ion-label slot=\"start\" color=\"primary\">PRICE DETAILS</ion-label>\r\n      </ion-item>\r\n    </ion-toolbar>\r\n    <ion-toolbar class=\"priceTable\" color=\"none\">\r\n      <ion-item lines=\"none\" color=\"none\">\r\n        <ion-label slot=\"start\" color=\"primary\">{{'Price of c.amount Item'}})</ion-label>\r\n        <ion-label slot=\"end\">1440</ion-label>\r\n      </ion-item>\r\n      <ion-item lines=\"none\" color=\"none\">\r\n        <ion-label slot=\"start\" color=\"primary\">Discount</ion-label>\r\n        <ion-label slot=\"end\">&#x20B9;68</ion-label>\r\n      </ion-item>\r\n      <ion-item lines=\"full\" color=\"none\">\r\n        <ion-label slot=\"start\" color=\"primary\">Delivery Charges</ion-label>\r\n        <ion-label slot=\"end\">Free</ion-label>\r\n      </ion-item>\r\n      <ion-item lines=\"none\" color=\"none\">\r\n        <ion-label slot=\"start\" color=\"primary\">Total Cost</ion-label>\r\n        <ion-label slot=\"end\" color=\"warning\">&#x20B9;{{'c.amount*c.price'}}</ion-label>\r\n      </ion-item>\r\n    </ion-toolbar> -->\r\n  </ion-card>\r\n  <ion-toolbar color=\"none\">\r\n    <ion-item lines=\"full\" color=\"none\">\r\n      <ion-label slot=\"start\" color=\"primary\">PRICE DETAILS</ion-label>\r\n    </ion-item>\r\n  </ion-toolbar>\r\n  <ion-toolbar class=\"priceTable\" color=\"none\">\r\n    <!-- <ion-item lines=\"none\" color=\"none\">\r\n      <ion-label slot=\"start\" color=\"primary\">PRICE</ion-label>\r\n      <ion-label slot=\"end\"></ion-label>\r\n    </ion-item>\r\n    <ion-item lines=\"none\" color=\"none\">\r\n      <ion-label slot=\"start\" color=\"primary\">Discount</ion-label>\r\n      <ion-label slot=\"end\">&#x20B9;68</ion-label>\r\n    </ion-item> -->\r\n    <ion-item lines=\"full\" color=\"none\">\r\n      <ion-label slot=\"start\" color=\"primary\">Delivery Charges</ion-label>\r\n      <ion-label slot=\"end\">Free</ion-label>\r\n    </ion-item>\r\n    <ion-item lines=\"none\" color=\"none\">\r\n      <ion-label slot=\"start\" color=\"primary\">Total Cost</ion-label>\r\n      <ion-label slot=\"end\" color=\"warning\">{{ getTotal() | currency:'INR' }}</ion-label>\r\n    </ion-item>\r\n  </ion-toolbar>\r\n</div>\r\n</ion-content>\r\n\r\n  <ion-footer>\r\n    <ion-button expand=\"block\" color=\"success\" (click)=\"close()\" (click)=\"makePayment()\"><ion-icon slot=\"end\" name=\"checkmark-done-sharp\"></ion-icon>PLACE ORDER!</ion-button>\r\n  </ion-footer>\r\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("  <!-- <ion-content fullscreen>\r\n\r\n    <div class=\"ion-text-end\">\r\n      <ion-button (click)=\"close()\" fill=\"clear\" color=\"dark\">\r\n        <ion-icon name=\"close\" slot=\"start\"></ion-icon>\r\n      </ion-button>\r\n    </div>\r\n\r\n    <div class=\"ion-padding\" style=\"color: #0fd15dc5 ;\">\r\n\r\n      <ion-list>\r\n        <ion-item *ngFor=\"let p of cart\" class=\"ion-text-wrap\">\r\n          <ion-grid style=\"color: #0fd15d ;\">\r\n            <ion-row class=\"ion-align-items-center\">\r\n              <ion-col size=\"2\" class=\"ion-align-self-center\">\r\n                <ion-button color=\"medium\" fill=\"clear\" (click)=\"decreaseCartItem(p)\">\r\n                  <ion-icon name=\"remove-circle\" slot=\"icon-only\"></ion-icon>\r\n                </ion-button>\r\n              </ion-col>\r\n\r\n              <ion-col size=\"1\" class=\"ion-align-self-center\">\r\n                {{ p.amount }}\r\n              </ion-col>\r\n\r\n              <ion-col size=\"2\" class=\"ion-align-self-center\">\r\n                <ion-button color=\"medium\" fill=\"clear\" (click)=\"increaseCartItem(p)\">\r\n                  <ion-icon name=\"add-circle\" slot=\"icon-only\"></ion-icon>\r\n                </ion-button>\r\n              </ion-col>\r\n\r\n              <ion-col size=\"2\" offset=\"5\">\r\n                <ion-button color=\"medium\" fill=\"clear\" (click)=\"removeCartItem(p)\">\r\n                  <ion-icon name=\"close-circle\" slot=\"icon-only\"></ion-icon>\r\n                </ion-button>\r\n              </ion-col>\r\n            </ion-row>\r\n            <ion-row>\r\n              <ion-col size=\"9\">\r\n                <b>{{ p.name }}</b>\r\n              </ion-col>\r\n              <ion-col size=\"3\" class=\"ion-text-end\">\r\n                {{ p.amount * p.price | currency:'INR' }}\r\n              </ion-col>\r\n            </ion-row>\r\n          </ion-grid>\r\n        </ion-item>\r\n        <ion-item>\r\n          <ion-grid style=\"color: #0fd15d ;\">\r\n            <ion-row>\r\n              <ion-col size=\"9\">\r\n                Total:\r\n              </ion-col>\r\n              <ion-col size=\"3\" class=\"ion-text-end\">\r\n                {{ getTotal() | currency:'INR' }}\r\n              </ion-col>\r\n            </ion-row>\r\n          </ion-grid>\r\n        </ion-item>\r\n      </ion-list>\r\n\r\n      <ion-button color=\"success\" expand=\"full\" (click)=\"makePayment()\">\r\n        Checkout\r\n      </ion-button>\r\n    </div>\r\n\r\n  </ion-content> -->\r\n\r\n  <ion-content>\r\n    <ion-toolbar>\r\n      <ion-icon (click)=\"close()\" size=\"large\" name=\"close\" slot=\"end\"></ion-icon>\r\n    </ion-toolbar>\r\n  <ion-card class=\"card\" color=\"none\">\r\n    <ion-list class=\"list\" color=\"none\" *ngFor=\"let c of cart; let i=index\">\r\n      <ion-toolbar color=\"none\">\r\n        <ion-grid (click)=\"medModal(c)\">\r\n          <ion-row>\r\n            <ion-col class=\"itemDetails\" size=\"12\">\r\n              <ion-label color=\"danger\">REFIT ANIMAL CARE- 10KG</ion-label>\r\n              <p>Celebrate Mineral Mixture...</p>\r\n              <p>Delivery By- 6th October</p>\r\n              <p>Delivery Fees- &#x20B9;50</p>\r\n            </ion-col>\r\n          </ion-row>\r\n          <ion-row>\r\n            <ion-col size=\"12\">\r\n              <a>Save for later</a>\r\n            </ion-col>\r\n          </ion-row>\r\n        </ion-grid>\r\n        <ion-grid slot=\"end\">\r\n          <ion-row>\r\n            <ion-col size=\"3\"></ion-col>\r\n            <ion-col (click)=\"medModal(c)\" class=\"center\" size=\"6\">\r\n              <ion-thumbnail><ion-img src=\"{{c.image}}\" ></ion-img></ion-thumbnail>\r\n            </ion-col>\r\n            <ion-col size=\"3\"><ion-icon color=\"danger\" name=\"trash-sharp\" (click)=\"removeCartItem(c)\"></ion-icon></ion-col>\r\n          </ion-row>\r\n          <ion-row>\r\n            <ion-col class=\"center\" size=\"12\">\r\n              <ion-text color=\"primary\">{{c.name}}</ion-text>\r\n            </ion-col>\r\n          </ion-row>\r\n          <ion-row>\r\n            <ion-col class=\"center\" size=\"2\">\r\n              <ion-icon size=\"large\" name=\"remove-circle-sharp\" color=\"primary\" (click)=\"decreaseCartItem(c)\"></ion-icon>\r\n            </ion-col>\r\n            <ion-col class=\"center\" size=\"8\">\r\n              <ion-item lines=\"none\" color=\"none\">\r\n                <ion-text color=\"warning\">{{c.amount}}</ion-text>\r\n              </ion-item>\r\n            </ion-col>\r\n            <ion-col class=\"center\" size=\"2\">\r\n              <ion-icon size=\"large\" name=\"add-circle-sharp\" color=\"primary\" (click)=\"increaseCartItem(c)\"></ion-icon>\r\n            </ion-col>\r\n          </ion-row>\r\n        </ion-grid>\r\n      </ion-toolbar>\r\n      <ion-button shape=\"round\" expand=\"block\" color=\"light\">You have a Promo Code? Apply Here</ion-button>\r\n    </ion-list>\r\n    <!-- <ion-toolbar color=\"none\">\r\n      <ion-item lines=\"full\" color=\"none\">\r\n        <ion-label slot=\"start\" color=\"primary\">PRICE DETAILS</ion-label>\r\n      </ion-item>\r\n    </ion-toolbar>\r\n    <ion-toolbar class=\"priceTable\" color=\"none\">\r\n      <ion-item lines=\"none\" color=\"none\">\r\n        <ion-label slot=\"start\" color=\"primary\">{{'Price of c.amount Item'}})</ion-label>\r\n        <ion-label slot=\"end\">1440</ion-label>\r\n      </ion-item>\r\n      <ion-item lines=\"none\" color=\"none\">\r\n        <ion-label slot=\"start\" color=\"primary\">Discount</ion-label>\r\n        <ion-label slot=\"end\">&#x20B9;68</ion-label>\r\n      </ion-item>\r\n      <ion-item lines=\"full\" color=\"none\">\r\n        <ion-label slot=\"start\" color=\"primary\">Delivery Charges</ion-label>\r\n        <ion-label slot=\"end\">Free</ion-label>\r\n      </ion-item>\r\n      <ion-item lines=\"none\" color=\"none\">\r\n        <ion-label slot=\"start\" color=\"primary\">Total Cost</ion-label>\r\n        <ion-label slot=\"end\" color=\"warning\">&#x20B9;{{'c.amount*c.price'}}</ion-label>\r\n      </ion-item>\r\n    </ion-toolbar> -->\r\n  </ion-card>\r\n  <ion-toolbar color=\"none\">\r\n    <ion-item lines=\"full\" color=\"none\">\r\n      <ion-label slot=\"start\" color=\"primary\">PRICE DETAILS</ion-label>\r\n    </ion-item>\r\n  </ion-toolbar>\r\n  <ion-toolbar class=\"priceTable\" color=\"none\">\r\n    <!-- <ion-item lines=\"none\" color=\"none\">\r\n      <ion-label slot=\"start\" color=\"primary\">PRICE</ion-label>\r\n      <ion-label slot=\"end\"></ion-label>\r\n    </ion-item>\r\n    <ion-item lines=\"none\" color=\"none\">\r\n      <ion-label slot=\"start\" color=\"primary\">Discount</ion-label>\r\n      <ion-label slot=\"end\">&#x20B9;68</ion-label>\r\n    </ion-item> -->\r\n    <ion-item lines=\"full\" color=\"none\">\r\n      <ion-label slot=\"start\" color=\"primary\">Delivery Charges</ion-label>\r\n      <ion-label slot=\"end\">Free</ion-label>\r\n    </ion-item>\r\n    <ion-item lines=\"none\" color=\"none\">\r\n      <ion-label slot=\"start\" color=\"primary\">Total Cost</ion-label>\r\n      <ion-label slot=\"end\" color=\"warning\">{{ getTotal() | currency:'INR' }}</ion-label>\r\n    </ion-item>\r\n  </ion-toolbar>\r\n</ion-content>\r\n\r\n  <ion-footer>\r\n    <ion-button expand=\"block\" color=\"success\" (click)=\"close()\" (click)=\"makePayment()\"><ion-icon slot=\"end\" name=\"checkmark-done-sharp\"></ion-icon>PLACE ORDER!</ion-button>\r\n  </ion-footer>\r\n  ");
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/seller-form/seller-form.page.html":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/seller-form/seller-form.page.html ***!
-  \*****************************************************************************************/
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/med-modal/med-modal.page.html":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/med-modal/med-modal.page.html ***!
+  \*******************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <ion-toolbar color=\"dark\">\r\n    <ion-title>Cattle Ads</ion-title>\r\n   \r\n    <ion-icon name=\"close\" slot=\"end\" (click)=\"dismis()\" size=\"large\" ></ion-icon>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"ion-padding\">\r\n\r\n  <div>\r\n\r\n    <div class=\"flex justify-content-space-between ion-margin-top relative\">\r\n      <div class=\"absolute full-width line\"></div>\r\n      <div class=\"flex flex-column justify-content-center full-width\"\r\n        *ngFor=\"let slide of slides; let index = index; let first = first; let last = last;\">\r\n        <span [ngClass]=\"{ 'align-self-end': last, 'align-self-center': (!first && !last) }\"\r\n          class=\"flex flex-column align-items-center justify-content-center bold text-medium radius\"\r\n          style=\"width: 30px; height: 30px;\"\r\n          [style.background]=\"slide === currentSlide ? 'var(--ion-color-primary)':'var(--ion-color-light-shade)'\"\r\n          [style.color]=\"slide === currentSlide ? 'var(--ion-color-light)':'var(--ion-color-dark)'\"\r\n          [ngClass]=\"{ 'align-self-end': last, 'align-self-center': (!first && !last) }\">\r\n          {{ index + 1 }}\r\n        </span>\r\n        <span [style.color]=\"slide === currentSlide ? 'var(--ion-color-primary)':'var(--ion-color-medium)'\"\r\n          [ngClass]=\"{ 'align-self-end': last, 'align-self-center': (!first && !last) }\"\r\n          class=\"flex text-medium bold ion-margin-vertical\">\r\n          {{ slide }}\r\n        </span>\r\n      </div>\r\n    </div>\r\n\r\n    <ion-slides [options]=\"slidesOpts\" (ionSlideDidChange)=\"onSlidesDidChange()\"\r\n      (ionSlideWillChange)=\"onSlidesChanged()\">\r\n      <ng-container *ngFor=\"let slide of slides\">\r\n        <ion-slide>\r\n\r\n          <div class=\"full-width ion-text-start\">\r\n\r\n            <form [formGroup]=\"billingForm\" #billingFormRef=\"ngForm\" novalidate *ngIf=\"slide === 'Animal'\">\r\n\r\n              <ion-list-header class=\"ion-no-padding\" style=\"min-height: auto;\" >\r\n                <ion-label class=\"ion-text-center\" color=\"primary\"> \r\n                  Animal details\r\n                </ion-label>\r\n              </ion-list-header>\r\n\r\n              <ion-row>\r\n                <ion-col>\r\n                  <ion-item class=\"item-select\" lines=\"none\">\r\n                    <ion-label position=\"stacked\"  class=\"labelcolor\">Type</ion-label>\r\n                    <select class=\"text-small\" formControlName=\"type\">\r\n                      <option [value]=\"null\" disabled selected>\r\n                        Select Type\r\n                      </option>\r\n                      <option *ngFor=\"let type of types\" [value]=\"type\">\r\n                        {{ type }}\r\n                      </option>\r\n                    </select>\r\n                  </ion-item>\r\n                  <!-- <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"shippingDeliveryTime?.errors?.required && shippingFormRef?.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text> -->\r\n                </ion-col>\r\n              </ion-row>\r\n              <ion-row>\r\n                <ion-col>\r\n                  <ion-item class=\"item-select\" lines=\"none\">\r\n                    <ion-label position=\"stacked\"  class=\"labelcolor\">Breed</ion-label>\r\n                    <select class=\"text-small\" formControlName=\"breed\">\r\n                      <option [value]=\"null\" disabled selected>\r\n                        Select Type\r\n                      </option>\r\n                      <option *ngFor=\"let breed of breeds\" [value]=\"breed\">\r\n                        {{ breed }}\r\n                      </option>\r\n                    </select>\r\n                  </ion-item>\r\n                  <!-- <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"shippingDeliveryTime?.errors?.required && shippingFormRef?.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text> -->\r\n                </ion-col>\r\n              </ion-row>\r\n              <div formGroupName=\"animalDetails\">\r\n              <ion-row>\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\" class=\"labelcolor\">Animal Name</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"animalName\"></ion-input>\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"billingFirstName?.errors?.required && billingFormRef.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col>\r\n\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\"  class=\"labelcolor\">Description</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"description\"></ion-input>\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"billingLastName?.errors?.required && billingFormRef.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col>\r\n              </ion-row>\r\n            \r\n           \r\n              <ion-row>\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\"  class=\"labelcolor\">Asking Price</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"askingPrice\" inputmode=\"numeric\"></ion-input>\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"billingEmail?.errors?.required && billingFormRef.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col>\r\n              </ion-row>\r\n\r\n              <ion-row>\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\"  class=\"labelcolor\">Weight</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"weight\"></ion-input>\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"billingAddress?.errors?.required && billingFormRef.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col>\r\n              </ion-row>\r\n\r\n              <ion-row>\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\"  class=\"labelcolor\">Age</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"age\" inputmode=\"numeric\"></ion-input>\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"billingCity?.errors?.required && billingFormRef.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col>\r\n\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\"  class=\"labelcolor\">Lactation</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"lactationNumber\" inputmode=\"numeric\"></ion-input>\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"billingState?.errors?.required && billingFormRef.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col>\r\n              </ion-row>\r\n\r\n              <ion-row>\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\"  class=\"labelcolor\">Milk Per Day</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"milkPerDay\" inputmode=\"numeric\"></ion-input>\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"billingZip?.errors?.required && billingFormRef.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col>\r\n\r\n                <!-- <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\">Country code</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"country_code\" placeholder=\"two-letter code\"></ion-input>\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"billingCountryCode?.errors?.required && billingFormRef.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col> -->\r\n              </ion-row>\r\n            </div>\r\n\r\n            </form>\r\n\r\n            <form [formGroup]=\"shippingForm\" #shippingFormRef=\"ngForm\" novalidate *ngIf=\"slide === 'Seller-Info'\">\r\n\r\n              <ion-list-header class=\"ion-no-padding\" style=\"min-height: auto;\">\r\n                <ion-label class=\"ion-text-center\" color=\"primary\">\r\n                  Seller Information\r\n                </ion-label>\r\n              </ion-list-header>\r\n              <div formGroupName=\"sellerInformation\">\r\n              <ion-row>\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\"  class=\"labelcolor\">Owner's Name</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"ownerName\"></ion-input>\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"shippingAddress?.errors?.required && shippingFormRef.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col>\r\n              </ion-row>\r\n\r\n              <ion-row>\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\"  class=\"labelcolor\">Contact Number</ion-label>\r\n                    <input type=\"number\" formControlName=\"phone\" />\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"shippingPhone?.errors?.required && shippingFormRef.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col>\r\n                <ion-col>\r\n                  <ion-item class=\"item-select\" lines=\"none\">\r\n                    <ion-label position=\"stacked\"  class=\"labelcolor\">State</ion-label>\r\n                    <select class=\"text-small\" formControlName=\"state\">\r\n                      <option [value]=\"null\" disabled selected>\r\n                        Select State\r\n                      </option>\r\n                      <option *ngFor=\"let time of times\" [value]=\"time\">\r\n                        {{ time }}\r\n                      </option>\r\n                    </select>\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"shippingDeliveryTime?.errors?.required && shippingFormRef?.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col>\r\n              </ion-row>\r\n\r\n           \r\n              <ion-row>\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\"  class=\"labelcolor\">Town</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"town\"></ion-input>\r\n                  </ion-item>\r\n                </ion-col>\r\n              </ion-row>\r\n              <ion-row>\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\"  class=\"labelcolor\">District</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"district\"></ion-input>\r\n                  </ion-item>\r\n                </ion-col>\r\n              </ion-row>\r\n            </div >\r\n\r\n              <div class=\"flex align-items-center full-width ion-margin-top\" formGroupName=\"imageUrls\">\r\n\r\n                <ion-item lines=\"full\">\r\n                  <ion-label slot=\"start\" color=\"danger\" for=\"age\" for=\"imagesList\">Upload Image</ion-label>\r\n                  <ion-input class=\"ion-padding\" id=\"imagesList\" type=\"file\" inputmode=\"file\" multiple formControlName=\"imagesList\" \r\n                  (change)=\"onFileChange($event)\"></ion-input>\r\n                </ion-item>\r\n                <!-- <div class=\"ion-margin-end\">\r\n                  <h5 class=\"text-medium bold\"  class=\"labelcolor\">Upload image</h5>\r\n                 \r\n                  <ion-button strong shape=\"round\" color=\"success\" size=\"small\" (click)=\"presentActionSheet()\" formControlName=\"imagesList\">\r\n                    Select\r\n                  </ion-button>\r\n                </div>\r\n                <div >\r\n                  <img class=\"img-thumb\" [src]=\"imagePath\" *ngIf=\"imagePath\" >\r\n                </div> -->\r\n              </div>\r\n\r\n            </form>\r\n\r\n            <div [hidden]=\"slide !== 'Summary'\">\r\n              <ion-list-header class=\"ion-no-padding\" style=\"min-height: auto;\">\r\n                <ion-label class=\"ion-text-center\" color=\"primary\">\r\n                  Ads Details\r\n                </ion-label>\r\n              </ion-list-header>\r\n\r\n              <div *ngIf=\"shippingForm.valid\">\r\n                <p class=\"text-medium bold ion-text-uppercase\">\r\n                  Owner's Information\r\n                </p>\r\n                <div class=\"divider\"></div>\r\n\r\n                <div  *ngFor=\"let control of shippingForm.controls | keyvalue: originalOrder\">\r\n                  <p style=\"color: coral;\" class=\"text-medium margin-v-sm\">\r\n                    <span class=\"bold\" class=\"labelcolor\">\r\n                      {{ control.key.replace('_', ' ') | titlecase }}:\r\n                    </span>\r\n                    {{ control.value.value || '--' }}\r\n                  </p>\r\n                </div>\r\n                <p class=\"text-medium margin-v-sm\" *ngIf=\"imagePath\">\r\n                  <span class=\"bold\">\r\n                    Attachment:\r\n                  </span>\r\n                  <img class=\"img-thumb\" [src]=\"imagePath\">\r\n                </p>\r\n              </div>\r\n\r\n              <div *ngIf=\"billingForm.valid\">\r\n                <div class=\"divider\"></div>\r\n                <p class=\"text-medium bold ion-text-uppercase\">\r\n                  Animal details\r\n                </p>\r\n                <div class=\"divider\"></div>\r\n                <p class=\"text-medium margin-v-sm\" style=\"color: coral;\"\r\n                  *ngFor=\"let control of billingForm.controls | keyvalue: originalOrder\">\r\n                  <span class=\"bold\" style=\"color:azure\">\r\n                    {{ control.key.replace('_', ' ') | titlecase }}:\r\n                  </span>\r\n                  {{ control.value.value || '--' }}\r\n                </p>\r\n              </div>\r\n              <ion-button expand=\"full\" color=\"success\" (click)=\"showJSON()\"></ion-button>\r\n              <div>\r\n                <pre>\r\n                  {{ showJSONRawValues() | json}}\r\n                </pre>\r\n              </div>\r\n\r\n              <!-- <div class=\"divider\"></div>\r\n              <p class=\"text-medium bold ion-text-uppercase\">\r\n                Items\r\n              </p>\r\n              <div class=\"divider\"></div> -->\r\n<!--\r\n              <ion-list>\r\n                <ion-item *ngFor=\"let item of order?.items\">\r\n                  <ion-label>\r\n                    <h2 class=\"text-medium bold\">{{ item.name }}</h2>\r\n                  </ion-label>\r\n                  <div>\r\n                    <span class=\"text-medium\">{{ item.amount | currency}}</span>\r\n                  </div>\r\n                </ion-item>\r\n                <ion-item>\r\n                  <ion-label>\r\n                    <h2 class=\"text-medium bold\">Subtotal</h2>\r\n                  </ion-label>\r\n                  <div>\r\n                    <span class=\"text-medium\">{{ order?.subtotal | currency}}</span>\r\n                  </div>\r\n                </ion-item>\r\n                <ion-item>\r\n                  <ion-label>\r\n                    <h2 class=\"text-medium bold\">Shipping & Handling</h2>\r\n                  </ion-label>\r\n                  <div>\r\n                    <span class=\"text-medium\">{{ order?.shippingFee | currency}}</span>\r\n                  </div>\r\n                </ion-item>\r\n                <ion-item>\r\n                  <ion-label>\r\n                    <h2 class=\"text-medium bold\">Total</h2>\r\n                  </ion-label>\r\n                  <div>\r\n                    <span class=\"text-medium bold\">{{ order?.total | currency}}</span>\r\n                  </div>\r\n                </ion-item>\r\n              </ion-list> -->\r\n            </div>\r\n            \r\n\r\n            <form [formGroup]=\"paymentForm\" #paymentFormRef=\"ngForm\" novalidate *ngIf=\"slide === 'Publish'\">\r\n\r\n<!--\r\n              <ion-list-header class=\"ion-no-padding\" style=\"min-height: auto;\">\r\n                <ion-label class=\"ion-text-center\" color=\"primary\">\r\n                  Pay order\r\n                </ion-label>\r\n              </ion-list-header> -->\r\n<!--\r\n              <ion-row>\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\">Card number</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"number\"></ion-input>\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"paymentNumber?.errors?.required && paymentFormRef.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col>\r\n              </ion-row> -->\r\n\r\n              <!-- <ion-row>\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\">Expiration</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"expiration\"></ion-input>\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"paymentExpiration?.errors?.required && paymentFormRef.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col>\r\n\r\n                <ion-col>\r\n                  <ion-item lines=\"none\">\r\n                    <ion-label position=\"stacked\">CVV</ion-label>\r\n                    <ion-input type=\"text\" formControlName=\"cvv\"></ion-input>\r\n                  </ion-item>\r\n                  <ion-text color=\"danger\">\r\n                    <span class=\"text-tiny\"\r\n                      [style.visibility]=\"paymentCvv?.errors?.required && paymentFormRef.submitted ? '' : 'hidden'\">\r\n                      Field required\r\n                    </span>\r\n                  </ion-text>\r\n                </ion-col>\r\n              </ion-row> -->\r\n\r\n              <div class=\"ion-text-center\">\r\n                <ion-button type=\"button\" style=\"width: 200px;\" class=\"ion-margin-vertical\" strong size=\"large\"\r\n                  shape=\"round\"  color=\"success\" (click) = \"dismis()\">\r\n                  <!-- (click)=\"onNextButtonTouched() -->\r\n                 Publishing..\r\n                </ion-button>\r\n              </div>\r\n\r\n              <div class=\"ion-text-center\">\r\n                <ion-button type=\"button\" style=\"width: 200px;\" class=\"ion-margin-vertical\" strong size=\"large\"\r\n                  shape=\"round\" color=\"light\" (click)=\"onBackButtonTouched()\">\r\n                  Cancel\r\n                </ion-button>\r\n              </div>\r\n\r\n            </form>\r\n\r\n          </div>\r\n\r\n        </ion-slide>\r\n\r\n      </ng-container>\r\n\r\n    </ion-slides>\r\n\r\n  </div>\r\n\r\n</ion-content>\r\n\r\n<ion-footer>\r\n  <ion-toolbar>\r\n    <div class=\"full-width flex align-items-center justify-content-space-between\">\r\n      <ion-button style=\"width: 120px;\" strong shape=\"round\" color=\"dark\"\r\n        [style.visibility]=\"(isBeginning || isEnd) ? 'hidden' : ''\" (click)=\"onBackButtonTouched()\">\r\n        <span>Back</span>\r\n        <ion-icon slot=\"start\" name=\"chevron-back\"></ion-icon>\r\n      </ion-button>\r\n      <ion-button style=\"width: 120px;\" strong shape=\"round\" color=\"danger\" [style.visibility]=\"isEnd ? 'hidden' : ''\"\r\n        (click)=\"onNextButtonTouched()\">\r\n        <span>Next</span>\r\n      </ion-button>\r\n    </div>\r\n  </ion-toolbar>\r\n</ion-footer>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n  <ion-item lines=\"none\" color=\"light\">\r\n    <ion-icon slot=\"end\" name=\"close\" (click)=\"dismiss()\"></ion-icon>\r\n  </ion-item>\r\n  <ion-card class=\"ion-padding\">\r\n    <ion-card-header>\r\n      {{ name}} \r\n    </ion-card-header>\r\n    <ion-grid>\r\n      <ion-row>\r\n        <ion-col class=\"reverseCenter\" size=\"12\">\r\n          <ion-thumbnail>\r\n            <ion-img src=\"{{image}}\"></ion-img>\r\n          </ion-thumbnail>\r\n        </ion-col>\r\n        \r\n      </ion-row>\r\n      <ion-row>\r\n        <ion-col class=\"reverseCenter\" size=\"12\">\r\n          <ion-label>REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for\r\n            Buffalo,Cow,Cattle,Poultry,\r\n            Goat & Pig (RIGMIN Forte Powder)\r\n          </ion-label>\r\n        </ion-col>\r\n      </ion-row>\r\n    </ion-grid>\r\n    <ion-toolbar color=\"none\">\r\n      <ion-item slot=\"start\" lines=\"none\" color=\"none\">\r\n        <ion-label color=\"success\">{{ price | currency:'INR' }}</ion-label>\r\n      </ion-item>\r\n    </ion-toolbar>\r\n  </ion-card>\r\n</ion-content>");
 
 /***/ }),
 
@@ -313,21 +339,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _landing_landing_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./landing/landing.page */ "./src/app/landing/landing.page.ts");
+/* harmony import */ var _login_login_page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./login/login.page */ "./src/app/login/login.page.ts");
+
+
 
 
 
 const routes = [
     {
         path: '',
+        loadChildren: () => __webpack_require__.e(/*! import() | welcome-welcome-module */ "welcome-welcome-module").then(__webpack_require__.bind(null, /*! ./welcome/welcome.module */ "./src/app/welcome/welcome.module.ts")).then(m => m.WelcomePageModule)
+    },
+    {
+        path: 'tabs',
         loadChildren: () => __webpack_require__.e(/*! import() | tabs-tabs-module */ "tabs-tabs-module").then(__webpack_require__.bind(null, /*! ./tabs/tabs.module */ "./src/app/tabs/tabs.module.ts")).then(m => m.TabsPageModule)
     },
     {
+        path: 'login',
+        loadChildren: () => __webpack_require__.e(/*! import() | login-login-module */ "login-login-module").then(__webpack_require__.bind(null, /*! ./login/login.module */ "./src/app/login/login.module.ts")).then(m => m.LoginPageModule)
+    },
+    {
         path: 'cart-modal',
-        loadChildren: () => Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./pages/cart-modal/cart-modal.module */ "./src/app/pages/cart-modal/cart-modal.module.ts")).then(m => m.CartModalPageModule)
+        loadChildren: () => Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./pages/cart-modal/cart-modal.module */ "./src/app/pages/cart-modal/cart-modal.module.ts")).then(m => m.CartModalPageModule),
     },
     {
         path: 'myads-modal',
         loadChildren: () => Promise.all(/*! import() | pages-myads-modal-myads-modal-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-myads-modal-myads-modal-module")]).then(__webpack_require__.bind(null, /*! ./pages/myads-modal/myads-modal.module */ "./src/app/pages/myads-modal/myads-modal.module.ts")).then(m => m.MyadsModalPageModule)
+    },
+    {
+        path: 'med-modal',
+        loadChildren: () => __webpack_require__.e(/*! import() | pages-med-modal-med-modal-module */ "pages-med-modal-med-modal-module").then(__webpack_require__.bind(null, /*! ./pages/med-modal/med-modal.module */ "./src/app/pages/med-modal/med-modal.module.ts")).then(m => m.MedModalPageModule)
+    },
+    {
+        path: 'login/:id',
+        component: _login_login_page__WEBPACK_IMPORTED_MODULE_4__["LoginPage"],
+        children: [
+            {
+                path: 'landing',
+                component: _landing_landing_page__WEBPACK_IMPORTED_MODULE_3__["LandingPage"]
+            },
+        ]
+    },
+    {
+        path: 'signup',
+        loadChildren: () => __webpack_require__.e(/*! import() | signup-signup-module */ "signup-signup-module").then(__webpack_require__.bind(null, /*! ./signup/signup.module */ "./src/app/signup/signup.module.ts")).then(m => m.SignupPageModule)
+    },
+    {
+        path: '',
+        redirectTo: '/welcome',
+        pathMatch: 'full'
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -341,6 +402,60 @@ AppRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     })
 ], AppRoutingModule);
 
+// import { NgModule } from '@angular/core';
+// import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+// const routes: Routes = [
+//   {
+//         path: '',
+//         loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule),
+//       },
+//     {
+//         path: 'login',
+//         loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+//       },
+//       {
+//         path: 'signup',
+//         loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+//       },
+//   {
+//     path: 'cart-modal',
+//     loadChildren: () => import('./pages/cart-modal/cart-modal.module').then( m => m.CartModalPageModule)
+//   },
+//   {
+//     path: 'myads-modal',
+//     loadChildren: () => import('./pages/myads-modal/myads-modal.module').then( m => m.MyadsModalPageModule)
+//   },
+//   {
+//     path: 'med-modal',
+//     loadChildren: () => import('./pages/med-modal/med-modal.module').then( m => m.MedModalPageModule)
+//   },
+//   {
+//     path: '',
+//     redirectTo: 'welcome',
+//     pathMatch: 'full',
+//   },
+//   // {
+//   //   path: 'welcome',
+//   //   loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule),
+//   //   children:[
+//   //     {
+//   //       path: 'login',
+//   //       loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+//   //     },
+//   //     {
+//   //       path: 'signup',
+//   //       loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+//   //     },
+//   //   ],
+//   // },
+// ];
+// @NgModule({
+//   imports: [
+//     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+//   ],
+//   exports: [RouterModule]
+// })
+// export class AppRoutingModule {}
 
 
 /***/ }),
@@ -354,7 +469,7 @@ AppRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".app {\n  background-color: #1F1F29;\n}\n\nion-menu {\n  --width: 100%;\n}\n\n.main-list {\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.main-list ion-list {\n  width: 100%;\n}\n\n.main-list ion-list ion-item {\n  font-size: 18px;\n  font-weight: 100;\n}\n\n.main-list ion-list .selected {\n  border-left: 5px solid var(--ion-color-primary);\n  color: var(--ion-color-primary);\n}\n\n.main-list ion-button {\n  position: absolute;\n  bottom: 10%;\n  right: 10%;\n  font-size: 24px;\n  --ripple-color: transparent;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UseUJBQUE7QUFDRjs7QUFDQTtFQUNFLGFBQUE7QUFFRjs7QUFDQTtFQUNFLFlBQUE7RUFDQSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtBQUVGOztBQUFFO0VBQ0UsV0FBQTtBQUVKOztBQUFJO0VBQ0UsZUFBQTtFQUNBLGdCQUFBO0FBRU47O0FBQ0k7RUFDRSwrQ0FBQTtFQUNBLCtCQUFBO0FBQ047O0FBR0U7RUFDRSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0VBQ0EsZUFBQTtFQUNBLDJCQUFBO0FBREoiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwe1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICMxRjFGMjk7XHJcbn1cclxuaW9uLW1lbnUge1xyXG4gIC0td2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5tYWluLWxpc3Qge1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcblxyXG4gIGlvbi1saXN0IHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG5cclxuICAgIGlvbi1pdGVtIHtcclxuICAgICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgICBmb250LXdlaWdodDogMTAwO1xyXG4gICAgfVxyXG5cclxuICAgIC5zZWxlY3RlZCB7XHJcbiAgICAgIGJvcmRlci1sZWZ0OiA1cHggc29saWQgdmFyKC0taW9uLWNvbG9yLXByaW1hcnkpO1xyXG4gICAgICBjb2xvcjogdmFyKC0taW9uLWNvbG9yLXByaW1hcnkpO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgaW9uLWJ1dHRvbiB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBib3R0b206IDEwJTtcclxuICAgIHJpZ2h0OiAxMCU7XHJcbiAgICBmb250LXNpemU6IDI0cHg7XHJcbiAgICAtLXJpcHBsZS1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgfVxyXG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".app {\n  background-color: #1F1F29;\n}\n\nion-menu {\n  --width: 100%;\n}\n\n.main-list {\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.main-list ion-list {\n  width: 100%;\n}\n\n.main-list ion-list ion-item {\n  font-size: 18px;\n  font-weight: 100;\n}\n\n.main-list ion-list .selected {\n  border-left: 5px solid var(--ion-color-primary);\n  color: var(--ion-color-primary);\n}\n\n.main-list ion-button {\n  position: absolute;\n  bottom: 10%;\n  right: 10%;\n  font-size: 24px;\n  --ripple-color: transparent;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UseUJBQUE7QUFDRjs7QUFDQTtFQUNFLGFBQUE7QUFFRjs7QUFDQTtFQUNFLFlBQUE7RUFDQSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtBQUVGOztBQUFFO0VBQ0UsV0FBQTtBQUVKOztBQUFJO0VBQ0UsZUFBQTtFQUNBLGdCQUFBO0FBRU47O0FBQ0k7RUFDRSwrQ0FBQTtFQUNBLCtCQUFBO0FBQ047O0FBR0U7RUFDRSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxVQUFBO0VBQ0EsZUFBQTtFQUNBLDJCQUFBO0FBREoiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwe1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMUYxRjI5O1xufVxuaW9uLW1lbnUge1xuICAtLXdpZHRoOiAxMDAlO1xufVxuXG4ubWFpbi1saXN0IHtcbiAgaGVpZ2h0OiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcblxuICBpb24tbGlzdCB7XG4gICAgd2lkdGg6IDEwMCU7XG5cbiAgICBpb24taXRlbSB7XG4gICAgICBmb250LXNpemU6IDE4cHg7XG4gICAgICBmb250LXdlaWdodDogMTAwO1xuICAgIH1cblxuICAgIC5zZWxlY3RlZCB7XG4gICAgICBib3JkZXItbGVmdDogNXB4IHNvbGlkIHZhcigtLWlvbi1jb2xvci1wcmltYXJ5KTtcbiAgICAgIGNvbG9yOiB2YXIoLS1pb24tY29sb3ItcHJpbWFyeSk7XG4gICAgfVxuICB9XG5cbiAgaW9uLWJ1dHRvbiB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogMTAlO1xuICAgIHJpZ2h0OiAxMCU7XG4gICAgZm9udC1zaXplOiAyNHB4O1xuICAgIC0tcmlwcGxlLWNvbG9yOiB0cmFuc3BhcmVudDtcbiAgfVxufSJdfQ== */");
 
 /***/ }),
 
@@ -468,9 +583,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_login_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./services/login.service */ "./src/app/services/login.service.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var _pages_cart_modal_cart_modal_module__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/cart-modal/cart-modal.module */ "./src/app/pages/cart-modal/cart-modal.module.ts");
-/* harmony import */ var _seller_form_seller_form_module__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./seller-form/seller-form.module */ "./src/app/seller-form/seller-form.module.ts");
-/* harmony import */ var _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ionic-native/media-capture/ngx */ "./node_modules/@ionic-native/media-capture/__ivy_ngcc__/ngx/index.js");
-/* harmony import */ var _ionic_native_file_opener_ngx__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @ionic-native/file-opener/ngx */ "./node_modules/@ionic-native/file-opener/__ivy_ngcc__/ngx/index.js");
+/* harmony import */ var _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @ionic-native/media-capture/ngx */ "./node_modules/@ionic-native/media-capture/__ivy_ngcc__/ngx/index.js");
+/* harmony import */ var _ionic_native_file_opener_ngx__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ionic-native/file-opener/ngx */ "./node_modules/@ionic-native/file-opener/__ivy_ngcc__/ngx/index.js");
+/* harmony import */ var _pages_med_modal_med_modal_page__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/med-modal/med-modal.page */ "./src/app/pages/med-modal/med-modal.page.ts");
 
 
 
@@ -510,7 +625,6 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_17__["HttpClientModule"],
             _pages_cart_modal_cart_modal_module__WEBPACK_IMPORTED_MODULE_18__["CartModalPageModule"],
-            _seller_form_seller_form_module__WEBPACK_IMPORTED_MODULE_19__["SellerFormPageModule"]
         ],
         providers: [
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
@@ -519,12 +633,347 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_15__["Geolocation"],
             _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_14__["NativeGeocoder"],
             _services_login_service__WEBPACK_IMPORTED_MODULE_16__["LoginService"],
-            _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_20__["MediaCapture"],
-            _ionic_native_file_opener_ngx__WEBPACK_IMPORTED_MODULE_21__["FileOpener"]
+            _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_19__["MediaCapture"],
+            _pages_med_modal_med_modal_page__WEBPACK_IMPORTED_MODULE_21__["MedModalPage"],
+            _ionic_native_file_opener_ngx__WEBPACK_IMPORTED_MODULE_20__["FileOpener"]
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/data.service.ts":
+/*!*********************************!*\
+  !*** ./src/app/data.service.ts ***!
+  \*********************************/
+/*! exports provided: DataService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataService", function() { return DataService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+let DataService = class DataService {
+    constructor() { }
+    getTodaysOffers() {
+        let todaysOffers = [];
+        let cat1 = {
+            id: 1,
+            name: '',
+            image: '../../assets/product-slider/prod-slide3.jpg'
+        };
+        let cat2 = {
+            id: 2,
+            name: '',
+            image: '../../assets/product-slider/prod-slide3.jpg'
+        };
+        let cat3 = {
+            id: 3,
+            name: '',
+            image: '../../assets/product-slider/prod-slide3.jpg'
+        };
+        todaysOffers.push(cat1, cat2, cat3);
+        return todaysOffers;
+    }
+    getCategories() {
+        let categories = [];
+        let cat1 = {
+            id: 1,
+            name: 'Cows',
+            image: '../../assets/categories/category-1.png'
+        };
+        let cat2 = {
+            id: 2,
+            name: 'Goats',
+            image: '../../assets/categories/category-2.png'
+        };
+        let cat3 = {
+            id: 3,
+            name: 'Buffalos',
+            image: '../../assets/categories/category-3.png'
+        };
+        categories.push(cat1, cat2, cat3);
+        return categories;
+    }
+    getFeaturedProducts() {
+        let products = [];
+        let prod1 = {
+            id: 1,
+            name: 'Heifer',
+            price: 55000,
+            image: '../../assets/products/prod-1.png'
+        };
+        let prod2 = {
+            id: 2,
+            name: 'Ox',
+            price: 140000,
+            image: '../../assets/products/prod-2.png'
+        };
+        let prod3 = {
+            id: 1,
+            name: 'Goat',
+            price: 20000,
+            image: '../../assets/products/prod-3.png'
+        };
+        products.push(prod1, prod2, prod3);
+        return products;
+    }
+    getBestSellProducts() {
+        let products = [];
+        let prod1 = {
+            id: 1,
+            name: 'Cow',
+            price: 55000,
+            image: '../../assets/products/prod-4.png'
+        };
+        let prod2 = {
+            id: 2,
+            name: 'Buffalo',
+            price: 34000,
+            image: '../../assets/products/prod-5.png'
+        };
+        let prod3 = {
+            id: 1,
+            name: 'Ox',
+            price: 40000,
+            image: '../../assets/products/prod-6.png'
+        };
+        products.push(prod1, prod2, prod3);
+        return products;
+    }
+};
+DataService.ctorParameters = () => [];
+DataService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], DataService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/landing/landing.page.scss":
+/*!*******************************************!*\
+  !*** ./src/app/landing/landing.page.scss ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".card {\n  background: transparent;\n  background-repeat: no-repeat;\n  background-size: cover;\n  opacity: 75%;\n  border-radius: 0;\n  margin: 0;\n  padding: 0;\n  position: relative;\n  z-index: 2;\n  top: 0;\n  left: 0;\n}\n\n.img {\n  height: 100%;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: contain;\n}\n\nion-slides {\n  z-index: 2;\n  --background: transparent !important;\n  height: 25%;\n  padding: 0;\n  margin: 0;\n}\n\nion-slide {\n  --background: transparent !important;\n  z-index: 2;\n  height: 100%;\n  width: 100%;\n}\n\nion-slide ion-label {\n  font-size: 12px;\n}\n\n.center {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n}\n\nion-thumbnail {\n  height: 100px;\n  width: 120px;\n}\n\n.toolbar {\n  margin: 5% 0;\n}\n\nion-content {\n  margin: 0;\n  padding: 0;\n}\n\nion-text {\n  font-size: 15px;\n}\n\nion-searchbar {\n  border: none;\n  border-radius: 0;\n}\n\n.offersImg {\n  border: 3px solid white;\n}\n\n.textCenter {\n  text-align: center;\n}\n\n.reverseCenter {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n\n.gradient {\n  border-radius: 10px;\n  background: linear-gradient(180deg, #1777AD 10.94%, rgba(23, 119, 173, 0) 100%);\n}\n\nion-grid {\n  margin: 0;\n  padding: 0;\n}\n\nion-item {\n  margin: 0;\n  padding: 0;\n}\n\n.bigBtn {\n  margin: 7% 0%;\n}\n\n.smallBtn {\n  display: flex;\n  justify-content: space-between;\n}\n\n.content {\n  z-index: 2;\n  --background: transparent !important;\n}\n\n.backgroundCard {\n  margin: 0;\n  padding: 0;\n  opacity: 25%;\n  position: fixed;\n  background-image: url('bgman.jpg');\n  background-repeat: no-repeat;\n  background-size: cover;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 50%;\n  border-bottom-left-radius: 15%;\n  border-bottom-right-radius: 15%;\n  z-index: 1;\n}\n\nion-searchbar {\n  border-bottom: 1px solid silver;\n  --box-shadow: none !important;\n  z-index: 2;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGFuZGluZy9sYW5kaW5nLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUE2UkE7RUFDSSx1QkFBQTtFQUNBLDRCQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsZ0JBQUE7RUFDQSxTQUFBO0VBQ0EsVUFBQTtFQUNBLGtCQUFBO0VBQ0EsVUFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0FBNVJKOztBQStSRTtFQUNFLFlBQUE7RUFDQSxXQUFBO0VBQ0EsNEJBQUE7RUFDQSx3QkFBQTtBQTVSSjs7QUErUkU7RUFDRSxVQUFBO0VBQ0Esb0NBQUE7RUFDQSxXQUFBO0VBQ0EsVUFBQTtFQUNBLFNBQUE7QUE1Uko7O0FBK1JFO0VBQ0Usb0NBQUE7RUFDQSxVQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7QUE1Uko7O0FBNlJJO0VBQ0UsZUFBQTtBQTNSTjs7QUErUkU7RUFDRSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0FBNVJKOztBQStSRTtFQUNFLGFBQUE7RUFDQSxZQUFBO0FBNVJKOztBQStSRTtFQUNFLFlBQUE7QUE1Uko7O0FBK1JFO0VBQ0UsU0FBQTtFQUNBLFVBQUE7QUE1Uko7O0FBK1JFO0VBQ0UsZUFBQTtBQTVSSjs7QUErUkU7RUFDRSxZQUFBO0VBQ0EsZ0JBQUE7QUE1Uko7O0FBK1JFO0VBQ0UsdUJBQUE7QUE1Uko7O0FBK1JFO0VBQ0Usa0JBQUE7QUE1Uko7O0FBK1JFO0VBQ0UsYUFBQTtFQUNBLHNCQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtBQTVSSjs7QUErUkU7RUFDRSxtQkFBQTtFQUNBLCtFQUFBO0FBNVJKOztBQStSRTtFQUNFLFNBQUE7RUFDQSxVQUFBO0FBNVJKOztBQStSRTtFQUNFLFNBQUE7RUFDQSxVQUFBO0FBNVJKOztBQStSRTtFQUNFLGFBQUE7QUE1Uko7O0FBK1JFO0VBQ0UsYUFBQTtFQUNBLDhCQUFBO0FBNVJKOztBQStSRTtFQUNFLFVBQUE7RUFDQSxvQ0FBQTtBQTVSSjs7QUErUkU7RUFDRSxTQUFBO0VBQ0EsVUFBQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0VBQ0Esa0NBQUE7RUFDQSw0QkFBQTtFQUNBLHNCQUFBO0VBQ0EsTUFBQTtFQUNBLE9BQUE7RUFDQSxXQUFBO0VBQ0EsV0FBQTtFQUNBLDhCQUFBO0VBQ0EsK0JBQUE7RUFDQSxVQUFBO0FBNVJKOztBQStSRTtFQUNFLCtCQUFBO0VBQ0EsNkJBQUE7RUFDQSxVQUFBO0FBNVJKIiwiZmlsZSI6InNyYy9hcHAvbGFuZGluZy9sYW5kaW5nLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIC5iYWNrYnRuIHtcclxuLy8gICAgIG1hcmdpbi1sZWZ0OiAxNXB4O1xyXG4vLyB9XHJcblxyXG4vLyAubm90aWZpY2F0aW9uIHtcclxuLy8gICAgIG1hcmdpbi1yaWdodDogMTVweDtcclxuLy8gfVxyXG5cclxuLy8gaW9uLWNvbnRlbnQge1xyXG4vLyAgICAgLS1wYWRkaW5nLXRvcDogODBweDtcclxuLy8gICAgIC0tcGFkZGluZy1ib3R0b206IDE2cHg7XHJcbi8vICAgICAtLXBhZGRpbmctc3RhcnQ6IDI2cHg7XHJcbi8vICAgICAtLXBhZGRpbmctZW5kOiAyNnB4O1xyXG4vLyAgICAgLS1iYWNrZ3JvdW5kOiB1cmwoLi4vLi4vYXNzZXRzL2JnbWFuLmpwZykgbm8tcmVwZWF0IGNlbnRlci9jb3ZlciBmaXhlZDtcclxuLy8gICAgIGJveC1zaGFkb3c6IGluc2V0IDAgMCAwIDUwdncgcmdiYSg3LCA3NiwgMTU1LCAwLjMpXHJcbiAgICBcclxuICAgIFxyXG4vLyAgICAgLy8gLS1iYWNrZ3JvdW5kLWNvbG9yOiMxZTFlMWU7XHJcbi8vIH1cclxuLy8gaW9uLWdyaWR7XHJcbi8vICAgICBwYWRkaW5nOiAxNTBweCA1cHggNXB4IDIwcHg7XHJcbi8vIH1cclxuLy8gLml0ZW0tbmFtZSB7XHJcbi8vICAgICBjb2xvcjogIzJiZmYwMDtcclxuLy8gfVxyXG5cclxuLy8gLnByaWNlIHtcclxuLy8gICAgIGNvbG9yOiAjM0NGMTg1O1xyXG5cclxuLy8gICAgIHNwYW4ge1xyXG4vLyAgICAgICAgIGNvbG9yOiAjM0NGMTg1O1xyXG4vLyAgICAgICAgIHRleHQtZGVjb3JhdGlvbjogbGluZS10aHJvdWdoO1xyXG4vLyAgICAgICAgIG1hcmdpbi1sZWZ0OiAyMHB4O1xyXG4vLyAgICAgICAgIGZvbnQtc2l6ZTogbWVkaXVtO1xyXG4vLyAgICAgICAgIHZlcnRpY2FsLWFsaWduOiB0b3A7XHJcbi8vICAgICB9XHJcbi8vIH1cclxuXHJcbi8vIC5zZXBlcmF0b3Ige1xyXG4vLyAgICAgaHIge1xyXG4vLyAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuLy8gICAgICAgICBsZWZ0OiAwO1xyXG4vLyAgICAgICAgIHdpZHRoOiAxMDAlO1xyXG4vLyAgICAgICAgIGJhY2tncm91bmQ6ICM4MTgwODA7XHJcbi8vICAgICB9XHJcbi8vIH1cclxuLy8gaDV7XHJcbi8vICAgICBjb2xvcjojMjNhYzA4O1xyXG4vLyAgICAgZm9udC1zaXplOiBsYXJnZXI7XHJcbiAgICBcclxuLy8gfVxyXG4vLyAuY291bnQge1xyXG4vLyAgICAgaGVpZ2h0OiAxMDAlO1xyXG4vLyAgICAgLy8gZGlzcGxheTogZmxleDtcclxuLy8gICAgIGp1c3RpZnktY29udGVudDpzcGFjZS1iZXR3ZWVuO1xyXG4vLyAgICAgYWxpZ24taXRlbXM6Y2VudGVyO1xyXG4vLyAgICAgY29sb3I6IHZhcigtLWlvbi1jb2xvci1wcmltYXJ5KTtcclxuLy8gICAgIGZvbnQtc2l6ZTogbGFyZ2U7XHJcbi8vICAgICBzcGFuIHtcclxuLy8gICAgICAgICBjb2xvcjogIzI2ZmY3MztcclxuLy8gICAgICAgICBhbGlnbi1jb250ZW50OiBzcGFjZS1hcm91bmQ7XHJcbi8vICAgICB9XHJcbi8vIH1cclxuLy8gLnJldmlldyB7XHJcbi8vICAgICBtYXJnaW4tdG9wOiAxNnB4O1xyXG4vLyAgICAgY29sb3I6ICM5ZGFkMGQ7XHJcblxyXG4vLyAgICAgLnJhdGluZyB7XHJcbi8vICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4vLyAgICAgICAgIGNvbG9yOiAjOWRhZDBkO1xyXG4vLyAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWlvbi1jb2xvci1wcmltYXJ5KTtcclxuLy8gICAgICAgICBwYWRkaW5nOiAxMHB4IDIwcHggMTBweCAyMHB4O1xyXG4vLyAgICAgICAgIGJvcmRlci1yYWRpdXM6IDVweDtcclxuLy8gICAgICAgICBtYXJnaW4tcmlnaHQ6IDEwcHg7XHJcbi8vICAgICB9XHJcblxyXG4gXHJcbi8vIH1cclxuLy8gLmlvbi1wYWRkaW5nLXZlcnRpY2FsLWN1c3RvbSB7XHJcbi8vICAgICAvLyAtLXBhZGRpbmctdG9wOiB2YXIoLS1pb24tcGFkZGluZywgMTZweCk7XHJcbi8vICAgICAvLyAtLXBhZGRpbmctYm90dG9tOiB2YXIoLS1pb24tcGFkZGluZywgMTZweCk7XHJcbi8vICAgICBwYWRkaW5nLXRvcDogNXB4O1xyXG4vLyB9XHJcbi8vIC5jdXJ2ZWR7XHJcbi8vIGJvcmRlci1yYWRpdXM6MTAwJSAwJSAxMDAlIDAlIC8gMCUgMTAwJSAwJSAxMDAlIDsgLy8xMDAlIDAlIDEwJSA5MCUgLyAxMDAlIDg4JSAxMiUgMCUgO1xyXG4vLyBjb2xvcjojMzYzNjNGO1xyXG4vLyB3aWR0aDogMTIwcHg7XHJcbi8vIGhlaWdodDogMTIwcHg7XHJcbi8vIH1cclxuXHJcbi8vIC5kZXNjcmlwdGlvbiB7XHJcbi8vICAgICBwYWRkaW5nLXRvcDogMTVweDtcclxuLy8gICAgIGRpc3BsYXk6IGZsZXg7XHJcbi8vICAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbi8vICAgICB6b29tOjI1MCU7XHJcbi8vICAgICBoNSB7XHJcbi8vICAgICAgICAgY29sb3I6ICM5ZGFkMGQ7XHJcbi8vICAgICAgICAgcGFkZGluZy10b3A6IDEwcHg7XHJcbiAgICAgICAgXHJcbi8vICAgICB9XHJcblxyXG4vLyAgICAgcCB7XHJcbi8vICAgICAgICAgY29sb3I6ICM5ZGFkMGQ7XHJcbi8vICAgICB9XHJcbi8vICAgICAuY29sbGVmdHtcclxuLy8gICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IHN0YXJ0O1xyXG4vLyAgICAgICAgIHpvb206MjUwJTtcclxuLy8gICAgIH1cclxuLy8gICAgIC5jb2xyaWdodHtcclxuICAgICAgICBcclxuLy8gICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGVuZDtcclxuLy8gICAgICAgICBhbGlnbi1pdGVtczogZmxleC1lbmQ7XHJcbi8vICAgICAgICAgem9vbToyNTAlO1xyXG4vLyAgICAgfVxyXG4vLyB9XHJcblxyXG4vLyAudmFyaWF0aW9uIHtcclxuLy8gICAgIHBhZGRpbmctdG9wOiAxNnB4O1xyXG5cclxuLy8gICAgIGlvbi1zZWdtZW50LWJ1dHRvbiB7XHJcbi8vICAgICAgICAgY29sb3I6ICM5ZGFkMGQ7XHJcbi8vICAgICB9XHJcbi8vIH1cclxuXHJcbi8vIC52YXJpYXRpb24tc2VsZWN0b3Ige1xyXG4vLyAgICAgbWFyZ2luLXRvcDogMzBweDtcclxuLy8gICAgIGRpc3BsYXk6IGZsZXg7XHJcbi8vICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcblxyXG4vLyAgICAgLmFjdGl2ZS12YXJpYXRpb24ge1xyXG4vLyAgICAgICAgIG9wYWNpdHk6IDEgIWltcG9ydGFudDtcclxuLy8gICAgICAgICB6LWluZGV4OiAxICFpbXBvcnRhbnQ7XHJcbi8vICAgICB9XHJcblxyXG4vLyAgICAgLnNpemVzIHtcclxuLy8gICAgICAgICBkaXNwbGF5OiBmbGV4O1xyXG4vLyAgICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4vLyAgICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbi8vICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4vLyAgICAgICAgIHdpZHRoOiAxMDAlO1xyXG4vLyAgICAgICAgIG9wYWNpdHk6IDA7XHJcbi8vICAgICAgICAgei1pbmRleDogMDtcclxuLy8gICAgICAgICBwYWRkaW5nLWJvdHRvbTogMzBweDtcclxuXHJcbi8vICAgICAgICAgZGl2IHtcclxuLy8gICAgICAgICAgICAgZGlzcGxheTogZmxleDtcclxuLy8gICAgICAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbi8vICAgICAgICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbi8vICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM5ZGFkMGQ7XHJcbi8vICAgICAgICAgICAgIHdpZHRoOiA1MHB4O1xyXG4vLyAgICAgICAgICAgICBoZWlnaHQ6IDUwcHg7XHJcbi8vICAgICAgICAgICAgIG1hcmdpbi1yaWdodDogOHB4O1xyXG4vLyAgICAgICAgICAgICB0cmFuc2l0aW9uOiAwLjVzIGVhc2UtaW4tb3V0O1xyXG4vLyAgICAgICAgIH1cclxuXHJcbi8vICAgICAgICAgLmFjdGl2ZSB7XHJcbi8vICAgICAgICAgICAgIGNvbG9yOiAjMWEwMDAwO1xyXG4vLyAgICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1pb24tY29sb3ItcHJpbWFyeSk7XHJcbi8vICAgICAgICAgfVxyXG4vLyAgICAgfVxyXG5cclxuLy8gICAgIC5jb2xvcnMge1xyXG4vLyAgICAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbi8vICAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbi8vICAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuLy8gICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbi8vICAgICAgICAgd2lkdGg6IDEwMCU7XHJcbi8vICAgICAgICAgb3BhY2l0eTogMDtcclxuLy8gICAgICAgICB6LWluZGV4OiAwO1xyXG4vLyAgICAgICAgIHBhZGRpbmctYm90dG9tOiAzMHB4O1xyXG5cclxuLy8gICAgICAgICBkaXYge1xyXG4vLyAgICAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xyXG4vLyAgICAgICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuLy8gICAgICAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuLy8gICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzlkYWQwZDtcclxuLy8gICAgICAgICAgICAgd2lkdGg6IDcwcHg7XHJcbi8vICAgICAgICAgICAgIGhlaWdodDogNTBweDtcclxuLy8gICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OiA4cHg7XHJcbi8vICAgICAgICAgICAgIHRyYW5zaXRpb246IDAuNXMgZWFzZS1pbi1vdXQ7XHJcbi8vICAgICAgICAgfVxyXG5cclxuLy8gICAgICAgICAuYWN0aXZlIHtcclxuLy8gICAgICAgICAgICAgY29sb3I6ICM5ZGFkMGQ7XHJcbi8vICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWlvbi1jb2xvci1wcmltYXJ5KTtcclxuLy8gICAgICAgICB9XHJcbi8vICAgICB9XHJcbi8vIH1cclxuLy8gLy8gaW9uLWNhcmR7XHJcbi8vIC8vICAgICAtLWJhY2tncm91bmQtY29sb3I6ICMzNjM2M0Y7XHJcbi8vIC8vIH1cclxuLy8gLmNhcmQge1xyXG4vLyAgICAgYmFja2dyb3VuZC1jb2xvcjogIzAwMDAwMGI4OyAvLyBibGFja1xyXG4vLyAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4vLyAgICAgYm94LXNoYWRvdzogbm9uZTtcclxuLy8gICB9XHJcbi8vIGlvbi1mb290ZXIge1xyXG4vLyAgICAgaW9uLXJvdyB7XHJcbi8vICAgICAgICAgcGFkZGluZzogMDtcclxuXHJcbi8vICAgICAgICAgaW9uLWNvbCB7XHJcbi8vICAgICAgICAgICAgIHBhZGRpbmc6IDA7XHJcblxyXG4vLyAgICAgICAgICAgICBpb24tYnV0dG9uIHtcclxuLy8gICAgICAgICAgICAgICAgIG1hcmdpbjogMDtcclxuLy8gICAgICAgICAgICAgICAgIGhlaWdodDogNTBweDtcclxuLy8gICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMThweDtcclxuLy8gICAgICAgICAgICAgICAgIGJveC1zaGFkb3c6IG5vbmU7XHJcbi8vICAgICAgICAgICAgIH1cclxuLy8gICAgICAgICB9XHJcbi8vICAgICB9XHJcbi8vIH1cclxuLy8gYXtcclxuLy8gICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuLy8gICAgIGNvbG9yOiByZ2IoMCwgMCwgMCk7XHJcbi8vIH1cclxuLy8gLy8gVGhpcyB3aWxsIHJlbW92ZSBmb290ZXIgc2hhZG93IG9uIGFuZHJvaWRcclxuLy8gLmZvb3Rlci1tZDo6YmVmb3JlIHtcclxuLy8gICAgIGJhY2tncm91bmQtaW1hZ2U6IG5vbmUgIWltcG9ydGFudDtcclxuLy8gfVxyXG5cclxuXHJcbi8vIC5jYXJke1xyXG4vLyAgIGJhY2tncm91bmQ6IHVybCgnaHR0cHM6Ly93d3cudGhlaW5kaWFmb3J1bS5pbi9zaXRlcy9kZWZhdWx0L2ZpbGVzL2ZpZWxkL2ltYWdlLzIwMjEvMDUvMjgvcmFta3VtYXItcmFkaGFrcmlzaG5hbi13aWtpbWVkaWEtMTYyMjE5MzMwNC5qcGVnJyk7XHJcbi8vICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuLy8gICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4vLyAgIGJvcmRlci1yYWRpdXM6IDA7XHJcbi8vICAgbWFyZ2luOiAwO1xyXG4vLyAgIHBhZGRpbmc6IDUlO1xyXG4vLyB9XHJcblxyXG4vLyAuaW1ne1xyXG4vLyAgIGhlaWdodDogMTAwJTtcclxuLy8gICB3aWR0aDogMTAwJTtcclxuLy8gICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4vLyAgIGJhY2tncm91bmQtc2l6ZTogY29udGFpbjtcclxuLy8gfVxyXG5cclxuLy8gaW9uLXNsaWRlcyB7XHJcbi8vICAgaGVpZ2h0OiAyNSU7XHJcbi8vICAgcGFkZGluZzogMDtcclxuLy8gICBtYXJnaW46IDA7XHJcbi8vIH1cclxuXHJcbi8vIGlvbi1zbGlkZXtcclxuLy8gICBoZWlnaHQ6IDEwMCU7XHJcbi8vICAgd2lkdGg6IDEwMCU7XHJcbi8vICAgaW9uLWxhYmVse1xyXG4vLyAgICAgZm9udC1zaXplOiAxMnB4O1xyXG4vLyAgIH1cclxuLy8gfVxyXG5cclxuLy8gLmNlbnRlcntcclxuLy8gICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbi8vICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbi8vIH1cclxuXHJcbi8vIGlvbi10aHVtYm5haWx7XHJcbi8vICAgaGVpZ2h0OiAxMDBweDtcclxuLy8gICB3aWR0aDogMTIwcHg7XHJcbi8vIH1cclxuXHJcbi8vIC50b29sYmFye1xyXG4vLyAgIG1hcmdpbjogNSUgMDtcclxuLy8gfVxyXG5cclxuLy8gaW9uLWNvbnRlbnR7XHJcbi8vICAgbWFyZ2luOiAwO1xyXG4vLyAgIHBhZGRpbmc6IDA7XHJcbi8vIH1cclxuXHJcbi8vIGlvbi10ZXh0e1xyXG4vLyAgIGZvbnQtc2l6ZTogMTVweDtcclxuLy8gfVxyXG5cclxuLy8gaW9uLXNlYXJjaGJhcntcclxuLy8gICBib3JkZXI6IG5vbmU7XHJcbi8vICAgYm9yZGVyLXJhZGl1czogMDtcclxuLy8gfVxyXG5cclxuLy8gLm9mZmVyc0ltZ3tcclxuLy8gICBib3JkZXI6IDNweCBzb2xpZCB3aGl0ZTtcclxuLy8gfVxyXG5cclxuXHJcbi5jYXJke1xyXG4gICAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICAgIG9wYWNpdHk6IDc1JTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDA7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgei1pbmRleDogMjtcclxuICAgIHRvcDogMDtcclxuICAgIGxlZnQ6IDA7XHJcbiAgfVxyXG4gIFxyXG4gIC5pbWd7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvbnRhaW47XHJcbiAgfVxyXG4gIFxyXG4gIGlvbi1zbGlkZXMge1xyXG4gICAgei1pbmRleDogMjtcclxuICAgIC0tYmFja2dyb3VuZDogdHJhbnNwYXJlbnQgIWltcG9ydGFudDtcclxuICAgIGhlaWdodDogMjUlO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIG1hcmdpbjogMDtcclxuICB9XHJcbiAgXHJcbiAgaW9uLXNsaWRle1xyXG4gICAgLS1iYWNrZ3JvdW5kOiB0cmFuc3BhcmVudCAhaW1wb3J0YW50O1xyXG4gICAgei1pbmRleDogMjtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaW9uLWxhYmVse1xyXG4gICAgICBmb250LXNpemU6IDEycHg7XHJcbiAgICB9XHJcbiAgfVxyXG4gIFxyXG4gIC5jZW50ZXJ7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIH1cclxuICBcclxuICBpb24tdGh1bWJuYWlse1xyXG4gICAgaGVpZ2h0OiAxMDBweDtcclxuICAgIHdpZHRoOiAxMjBweDtcclxuICB9XHJcbiAgXHJcbiAgLnRvb2xiYXJ7XHJcbiAgICBtYXJnaW46IDUlIDA7XHJcbiAgfVxyXG4gIFxyXG4gIGlvbi1jb250ZW50e1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICB9XHJcbiAgXHJcbiAgaW9uLXRleHR7XHJcbiAgICBmb250LXNpemU6IDE1cHg7XHJcbiAgfVxyXG4gIFxyXG4gIGlvbi1zZWFyY2hiYXJ7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgICBib3JkZXItcmFkaXVzOiAwO1xyXG4gIH1cclxuICBcclxuICAub2ZmZXJzSW1ne1xyXG4gICAgYm9yZGVyOiAzcHggc29saWQgd2hpdGU7XHJcbiAgfVxyXG4gIFxyXG4gIC50ZXh0Q2VudGVye1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIH1cclxuICBcclxuICAucmV2ZXJzZUNlbnRlcntcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIH1cclxuICBcclxuICAuZ3JhZGllbnR7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDE4MGRlZywgIzE3NzdBRCAxMC45NCUsIHJnYmEoMjMsIDExOSwgMTczLCAwKSAxMDAlKTtcclxuICB9XHJcbiAgXHJcbiAgaW9uLWdyaWR7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gIH1cclxuICBcclxuICBpb24taXRlbXtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgfVxyXG4gIFxyXG4gIC5iaWdCdG57XHJcbiAgICBtYXJnaW46IDclIDAlO1xyXG4gIH1cclxuICBcclxuICAuc21hbGxCdG57XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gIH1cclxuICBcclxuICAuY29udGVudHtcclxuICAgIHotaW5kZXg6IDI7XHJcbiAgICAtLWJhY2tncm91bmQ6IHRyYW5zcGFyZW50ICFpbXBvcnRhbnQ7XHJcbiAgfVxyXG4gIFxyXG4gIC5iYWNrZ3JvdW5kQ2FyZHtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgICBvcGFjaXR5OiAyNSU7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uL2Fzc2V0cy9iZ21hbi5qcGcnKTtcclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gICAgdG9wOiAwO1xyXG4gICAgbGVmdDogMDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiA1MCU7XHJcbiAgICBib3JkZXItYm90dG9tLWxlZnQtcmFkaXVzOiAxNSU7XHJcbiAgICBib3JkZXItYm90dG9tLXJpZ2h0LXJhZGl1czogMTUlO1xyXG4gICAgei1pbmRleDogMTtcclxuICB9XHJcbiAgXHJcbiAgaW9uLXNlYXJjaGJhcntcclxuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCBzaWx2ZXI7XHJcbiAgICAtLWJveC1zaGFkb3c6IG5vbmUgIWltcG9ydGFudDtcclxuICAgIHotaW5kZXg6IDI7XHJcbiAgfVxyXG4gIFxyXG4iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/landing/landing.page.ts":
+/*!*****************************************!*\
+  !*** ./src/app/landing/landing.page.ts ***!
+  \*****************************************/
+/*! exports provided: LandingPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LandingPage", function() { return LandingPage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _util_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../util.service */ "./src/app/util.service.ts");
+/* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../data.service */ "./src/app/data.service.ts");
+/* harmony import */ var _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/media-capture/ngx */ "./node_modules/@ionic-native/media-capture/__ivy_ngcc__/ngx/index.js");
+/* harmony import */ var _ionic_native_file_opener_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/file-opener/ngx */ "./node_modules/@ionic-native/file-opener/__ivy_ngcc__/ngx/index.js");
+
+
+
+
+
+
+
+let LandingPage = class LandingPage {
+    constructor(util, navCtrl, data, media, opener) {
+        this.util = util;
+        this.navCtrl = navCtrl;
+        this.data = data;
+        this.media = media;
+        this.opener = opener;
+        this.categories = [];
+        this.slideOpts = {
+            initialSlide: 0,
+            slidesPerView: 3,
+            spaceBetween: 25,
+            speed: 500,
+        };
+        this.keys = [];
+    }
+    ngOnInit() {
+        this.categories = this.data.getTodaysOffers();
+        this.images = [
+            '../assets/todaysoffers.PNG',
+            '../assets/todaysoffers.PNG',
+            '../assets/todaysoffers.PNG',
+            '../assets/todaysoffers.PNG',
+            '../assets/todaysoffers.PNG',
+            '../assets/todaysoffers.PNG',
+            '../assets/todaysoffers.PNG',
+            '../assets/todaysoffers.PNG',
+        ];
+    }
+    goToBuy() {
+        this.navCtrl.navigateRoot('tabs/home', { animationDirection: 'forward' });
+    }
+    goToMedicine() {
+        this.navCtrl.navigateRoot('tabs/medicines', { animationDirection: 'forward' });
+    }
+    goToFeed() {
+        this.navCtrl.navigateRoot('tabs/home', { animationDirection: 'forward' });
+    }
+    goToSemen() {
+        this.navCtrl.navigateRoot('home', { animationDirection: 'forward' });
+    }
+    recordAudio() {
+        var option = {
+            limit: 1
+        };
+        this.media.captureAudio(option).then((mediaFile) => {
+            this.audio = mediaFile[0];
+            this.keys = Object.keys(this.audio);
+        });
+    }
+    playAudio() {
+        this.opener.open(this.audio.fullPath, "audio/mpeg");
+    }
+};
+LandingPage.ctorParameters = () => [
+    { type: _util_service__WEBPACK_IMPORTED_MODULE_3__["UtilService"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
+    { type: _data_service__WEBPACK_IMPORTED_MODULE_4__["DataService"] },
+    { type: _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_5__["MediaCapture"] },
+    { type: _ionic_native_file_opener_ngx__WEBPACK_IMPORTED_MODULE_6__["FileOpener"] }
+];
+LandingPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-landing',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./landing.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/landing/landing.page.html")).default,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./landing.page.scss */ "./src/app/landing/landing.page.scss")).default]
+    })
+], LandingPage);
+
+
+
+/***/ }),
+
+/***/ "./src/app/login/login.page.scss":
+/*!***************************************!*\
+  !*** ./src/app/login/login.page.scss ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: left;\n}\n\nng-otp-input {\n  color: #f5600a;\n}\n\nion-content {\n  margin: 0;\n  padding: 0;\n}\n\nion-grid {\n  position: relative;\n  top: 25%;\n}\n\nion-img {\n  width: 75%;\n  height: 75%;\n}\n\nion-toolbar {\n  --background: transparent;\n}\n\nion-input {\n  --background: transparent;\n}\n\nion-item {\n  --background: transparent;\n}\n\nng-opt-input {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  font-weight: bold;\n  font-size: 150%;\n  color: #685b51;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vbG9naW4ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWtEQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7QUFqREY7O0FBb0RFO0VBQ0UsY0FBQTtBQWpESjs7QUFvREU7RUFDRSxTQUFBO0VBQ0EsVUFBQTtBQWpESjs7QUFvREU7RUFDRSxrQkFBQTtFQUNBLFFBQUE7QUFqREo7O0FBb0RFO0VBQ0UsVUFBQTtFQUNBLFdBQUE7QUFqREo7O0FBb0RFO0VBQ0UseUJBQUE7QUFqREo7O0FBb0RFO0VBQ0UseUJBQUE7QUFqREo7O0FBb0RFO0VBQ0UseUJBQUE7QUFqREo7O0FBb0RFO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLGlCQUFBO0VBQ0EsZUFBQTtFQUNBLGNBQUE7QUFqREoiLCJmaWxlIjoic3JjL2FwcC9sb2dpbi9sb2dpbi5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvLyAvLyBUaGlzIHdpbGwgcmVtb3ZlIGlPUyBIZWFkZXIgTGluZVxyXG4vLyBpb24tdG9vbGJhciB7XHJcbi8vICAgICAtLWJvcmRlci13aWR0aDogMCAhaW1wb3J0YW50O1xyXG4vLyB9XHJcblxyXG4vLyAvLyBSZW1vdmluZyBBbmRyb2lkIEhlYWRlciBMaW5lXHJcbi8vIC5oZWFkZXItbWQ6OmFmdGVyIHtcclxuLy8gICAgIGJhY2tncm91bmQ6IG5vbmUgIWltcG9ydGFudDtcclxuLy8gfVxyXG5cclxuLy8gLmNvbnRhaW5lciBoMSB7XHJcbi8vICAgICBtYXJnaW4tdG9wOiAwO1xyXG4vLyB9XHJcblxyXG4vLyAuYmFja2J0biB7XHJcbi8vICAgICBtYXJnaW4tbGVmdDogMjBweDtcclxuLy8gfVxyXG5cclxuLy8gLmZvcm0tY29udGFpbmVyIHtcclxuLy8gICAgIG1hcmdpbi10b3A6IDQ4cHg7XHJcbi8vIH1cclxuXHJcbi8vIC5mb3JtLWNvbnRhaW5lciBpb24taXRlbSB7XHJcbi8vICAgICAtLXBhZGRpbmctc3RhcnQ6IDA7XHJcbi8vICAgICAtLWJvcmRlci1jb2xvcjogI0RBREFEQTtcclxuLy8gfVxyXG5cclxuLy8gLmZvcm0tY29udGFpbmVyIGlvbi1pdGVtIGlvbi1sYWJlbCB7XHJcbi8vICAgICBjb2xvcjogI0E2QTZBNjtcclxuLy8gfVxyXG5cclxuLy8gLmZvcm0tY29udGFpbmVyIGlvbi1pdGVtIGlvbi1pY29uIHtcclxuLy8gICAgIG1hcmdpbi10b3A6IGF1dG87XHJcbi8vICAgICBjb2xvcjogI2M2Y2JkNDtcclxuLy8gfVxyXG5cclxuLy8gLmZvcm0tY29udGFpbmVyIGlvbi1idXR0b24ge1xyXG4vLyAgICAgbWFyZ2luLXRvcDogNDhweDtcclxuLy8gfVxyXG5cclxuLy8gLnNpZ24tdXAge1xyXG4vLyAgICAgZGlzcGxheTogZmxleDtcclxuLy8gICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4vLyAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuLy8gfVxyXG5cclxuLy8gLnNpZ24tdXAgaW9uLWJ1dHRvbiB7XHJcbi8vICAgICBtYXJnaW46IDA7XHJcbi8vIH1cclxuXHJcbi5jZW50ZXJ7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgfVxyXG5cclxuICBuZy1vdHAtaW5wdXR7XHJcbiAgICBjb2xvcjogcmdiKDI0NSwgOTYsIDEwKTtcclxuICB9XHJcblxyXG4gIGlvbi1jb250ZW50e1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICB9XHJcblxyXG4gIGlvbi1ncmlke1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgdG9wOiAyNSU7XHJcbiAgfVxyXG5cclxuICBpb24taW1ne1xyXG4gICAgd2lkdGg6IDc1JTtcclxuICAgIGhlaWdodDogNzUlO1xyXG4gIH1cclxuXHJcbiAgaW9uLXRvb2xiYXJ7XHJcbiAgICAtLWJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xyXG4gIH1cclxuICBcclxuICBpb24taW5wdXR7XHJcbiAgICAtLWJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xyXG4gIH1cclxuXHJcbiAgaW9uLWl0ZW17XHJcbiAgICAtLWJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xyXG4gIH1cclxuXHJcbiAgbmctb3B0LWlucHV0e1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgZm9udC1zaXplOiAxNTAlO1xyXG4gICAgY29sb3I6IHJnYigxMDQsIDkxLCA4MSk7XHJcbiAgfSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/login/login.page.ts":
+/*!*************************************!*\
+  !*** ./src/app/login/login.page.ts ***!
+  \*************************************/
+/*! exports provided: LoginPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPage", function() { return LoginPage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _services_login_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/login.service */ "./src/app/services/login.service.ts");
+/* harmony import */ var _util_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../util.service */ "./src/app/util.service.ts");
+// import { Component, OnInit } from '@angular/core';
+// import { NavController } from '@ionic/angular';
+// import { UtilService } from '../util.service';
+
+// @Component({
+//   selector: 'app-login',
+//   templateUrl: './login.page.html',
+//   styleUrls: ['./login.page.scss'],
+// })
+// export class LoginPage implements OnInit {
+//   constructor(
+//     private util: UtilService,
+//     private navCtrl: NavController,
+//   ) { }
+//   ngOnInit() {
+//   }
+//   login() {
+//     // Enabling Side Menu
+//     this.util.setMenuState(true);
+//     this.navCtrl.navigateRoot('landing', { animationDirection: 'forward' });
+//   }
+// }
+
+
+
+
+
+let LoginPage = class LoginPage {
+    constructor(navCtrl, router, login, util) {
+        this.navCtrl = navCtrl;
+        this.router = router;
+        this.login = login;
+        this.util = util;
+        this.otpreceived = "889963";
+    }
+    onOtpChange(otp) {
+        this.otp = otp;
+        console.log(otp);
+    }
+    onLogin() {
+        //this.isNumberSubmitted =true;
+        this.login.validateOtp(this.name, this.inputNumber, this.otp).subscribe((response) => {
+            //this.isNumberSubmitted =true;
+            console.log("onLogin with OTP", response);
+            //this.router.navigate(['welcome']);
+            this.navCtrl.navigateRoot("tabs/landing", { animationDirection: "forward" });
+            this.util.setMenuState(true);
+            console.log("Clicked");
+        }, (error) => {
+            //this.isNumberSubmitted = false;
+            console.log("Error in onLogin()", error);
+        });
+    }
+    onNumberSubmitted() {
+        this.login.generateOtp(this.name, this.inputNumber).subscribe((response) => {
+            this.isNumberSubmitted = true;
+            console.log("NumberSubmitted", response);
+            localStorage.setItem("isLoggedIn", "true");
+        }, (error) => {
+            this.isNumberSubmitted = false;
+        });
+    }
+};
+LoginPage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _services_login_service__WEBPACK_IMPORTED_MODULE_4__["LoginService"] },
+    { type: _util_service__WEBPACK_IMPORTED_MODULE_5__["UtilService"] }
+];
+LoginPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: "app-login",
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./login.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.page.html")).default,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./login.page.scss */ "./src/app/login/login.page.scss")).default]
+    })
+], LoginPage);
 
 
 
@@ -636,6 +1085,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _services_cart_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../services/cart.service */ "./src/app/services/cart.service.ts");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _med_modal_med_modal_page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../med-modal/med-modal.page */ "./src/app/pages/med-modal/med-modal.page.ts");
+
 
 
 
@@ -732,6 +1183,27 @@ let CartModalPage = class CartModalPage {
             // });
         });
     }
+    medModal(product) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            let modal = yield this.modalCtrl.create({
+                component: _med_modal_med_modal_page__WEBPACK_IMPORTED_MODULE_4__["MedModalPage"],
+                cssClass: "cart-modal",
+                componentProps: {
+                    'name': product.name,
+                    'image': product.image,
+                    'price': product.price
+                }
+            });
+            modal.present();
+        });
+    }
+    doRefresh(event) {
+        console.log("Begin async operation");
+        setTimeout(() => {
+            console.log("Async operation has ended");
+            event.target.complete();
+        }, 2500);
+    }
 };
 CartModalPage.ctorParameters = () => [
     { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_2__["CartService"] },
@@ -745,6 +1217,72 @@ CartModalPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./cart-modal.page.scss */ "./src/app/pages/cart-modal/cart-modal.page.scss")).default]
     })
 ], CartModalPage);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/med-modal/med-modal.page.scss":
+/*!*****************************************************!*\
+  !*** ./src/app/pages/med-modal/med-modal.page.scss ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("ion-thumbnail {\n  width: 100%;\n  height: 100%;\n}\n\nion-card {\n  margin: 0;\n  padding: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbWVkLW1vZGFsL21lZC1tb2RhbC5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxXQUFBO0VBQ0EsWUFBQTtBQUNKOztBQUVFO0VBQ0UsU0FBQTtFQUNBLFVBQUE7QUFDSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL21lZC1tb2RhbC9tZWQtbW9kYWwucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLXRodW1ibmFpbHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gIH1cclxuXHJcbiAgaW9uLWNhcmR7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gIH0iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/pages/med-modal/med-modal.page.ts":
+/*!***************************************************!*\
+  !*** ./src/app/pages/med-modal/med-modal.page.ts ***!
+  \***************************************************/
+/*! exports provided: MedModalPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MedModalPage", function() { return MedModalPage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+
+
+
+let MedModalPage = class MedModalPage {
+    constructor(modalController) {
+        this.modalController = modalController;
+    }
+    ngOnInit() {
+        console.log('name- ', this.name);
+        console.log('image- ', this.image);
+        console.log('price- ', this.price);
+    }
+    dismiss() {
+        // using the injected ModalController this page
+        // can "dismiss" itself and optionally pass back data
+        this.modalController.dismiss({
+            'dismissed': true
+        });
+    }
+};
+MedModalPage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] }
+];
+MedModalPage.propDecorators = {
+    name: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
+    image: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
+    price: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }]
+};
+MedModalPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-med-modal',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./med-modal.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/med-modal/med-modal.page.html")).default,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./med-modal.page.scss */ "./src/app/pages/med-modal/med-modal.page.scss")).default]
+    })
+], MedModalPage);
 
 
 
@@ -774,490 +1312,6 @@ SellerFormPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         name: 'sellerForm'
     })
 ], SellerFormPipe);
-
-
-
-/***/ }),
-
-/***/ "./src/app/seller-form/seller-form-routing.module.ts":
-/*!***********************************************************!*\
-  !*** ./src/app/seller-form/seller-form-routing.module.ts ***!
-  \***********************************************************/
-/*! exports provided: SellerFormPageRoutingModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SellerFormPageRoutingModule", function() { return SellerFormPageRoutingModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _seller_form_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./seller-form.page */ "./src/app/seller-form/seller-form.page.ts");
-
-
-
-
-const routes = [
-    {
-        path: '',
-        component: _seller_form_page__WEBPACK_IMPORTED_MODULE_3__["SellerFormPage"]
-    }
-];
-let SellerFormPageRoutingModule = class SellerFormPageRoutingModule {
-};
-SellerFormPageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
-        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]],
-    })
-], SellerFormPageRoutingModule);
-
-
-
-/***/ }),
-
-/***/ "./src/app/seller-form/seller-form.module.ts":
-/*!***************************************************!*\
-  !*** ./src/app/seller-form/seller-form.module.ts ***!
-  \***************************************************/
-/*! exports provided: SellerFormPageModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SellerFormPageModule", function() { return SellerFormPageModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-/* harmony import */ var _seller_form_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./seller-form.page */ "./src/app/seller-form/seller-form.page.ts");
-/* harmony import */ var _seller_form_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./seller-form-routing.module */ "./src/app/seller-form/seller-form-routing.module.ts");
-
-
-
-
-
-
-
-let SellerFormPageModule = class SellerFormPageModule {
-};
-SellerFormPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [
-            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
-            _seller_form_routing_module__WEBPACK_IMPORTED_MODULE_6__["SellerFormPageRoutingModule"],
-        ],
-        declarations: [_seller_form_page__WEBPACK_IMPORTED_MODULE_5__["SellerFormPage"]],
-        bootstrap: [_seller_form_page__WEBPACK_IMPORTED_MODULE_5__["SellerFormPage"]]
-    })
-], SellerFormPageModule);
-
-
-
-/***/ }),
-
-/***/ "./src/app/seller-form/seller-form.page.scss":
-/*!***************************************************!*\
-  !*** ./src/app/seller-form/seller-form.page.scss ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("ion-item {\n  --padding-start: 0;\n  --background-focused: transparent;\n}\nion-item ion-label {\n  margin-top: 3px;\n  margin-bottom: 6px;\n  font-size: 14px;\n}\nion-item ion-input,\nion-item ion-textarea,\nion-item select,\nion-item input {\n  color: coral;\n  border: 1px solid #cbcbcb;\n  border-radius: 3px;\n  font-size: 13px;\n  --padding-start: 10px;\n}\nion-col {\n  --ion-grid-column-padding: 0 5px;\n}\nion-slides {\n  height: 100%;\n}\nion-slides ion-slide {\n  align-items: flex-start;\n}\nion-slides .swiper-slide {\n  visibility: hidden;\n}\nion-slides .swiper-slide.swiper-slide-active {\n  visibility: visible;\n}\nion-list-header ion-label {\n  margin-top: 16px;\n}\nselect,\ninput {\n  border: none;\n  outline: none;\n  background: transparent;\n  width: 100%;\n  padding: 8px 6px;\n}\n.line {\n  height: 3px;\n  background: var(--ion-color-light-shade);\n  top: 14px;\n  z-index: -1;\n}\n.img-thumb {\n  width: 45px;\n  height: 55px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  display: block;\n}\n.labelcolor {\n  color: azure;\n}\n.flex {\n  display: flex;\n}\n.full-width {\n  width: 100% !important;\n}\n.absolute {\n  position: absolute;\n}\n.relative {\n  position: relative;\n}\n.align-self-center {\n  align-self: center;\n}\n.align-self-end {\n  align-self: flex-end;\n}\n.justify-content-center {\n  justify-content: center;\n}\n.justify-content-space-around {\n  justify-content: space-around;\n}\n.justify-content-space-evenly {\n  justify-content: space-evenly;\n}\n.justify-content-space-between {\n  justify-content: space-between;\n}\n.justify-content-space-end {\n  justify-content: flex-end;\n}\n.align-items-center {\n  align-items: center;\n}\n.flex-column {\n  flex-direction: column;\n}\n.flex-center {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  height: 100%;\n}\n.text-tiny {\n  font-size: 11px !important;\n}\n.text-small {\n  font-size: 12px !important;\n}\n.text-medium {\n  font-size: 14px !important;\n}\n.text-normal {\n  font-size: 16px !important;\n}\n.text-large {\n  font-size: 24px !important;\n}\n.text-xlarge {\n  font-size: 36px !important;\n}\n.text-xxlarge {\n  font-size: 48px !important;\n}\n.radius {\n  border-radius: 8px !important;\n}\n.divider {\n  background: var(--ion-color-light);\n  margin: 8px 0;\n  height: 1px;\n  width: 100%;\n}\n.bold {\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2VsbGVyLWZvcm0vc2VsbGVyLWZvcm0ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQUE7RUFDQSxpQ0FBQTtBQUNKO0FBQUk7RUFDRSxlQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0FBRU47QUFDSTs7OztFQUlFLFlBQUE7RUFDQSx5QkFBQTtFQUNBLGtCQUFBO0VBQ0EsZUFBQTtFQUNBLHFCQUFBO0FBQ047QUFHRTtFQUNFLGdDQUFBO0FBQUo7QUFHRTtFQUNFLFlBQUE7QUFBSjtBQUVJO0VBQ0UsdUJBQUE7QUFBTjtBQUdJO0VBQ0Usa0JBQUE7QUFETjtBQUlJO0VBQ0UsbUJBQUE7QUFGTjtBQU1FO0VBQ0UsZ0JBQUE7QUFISjtBQU1FOztFQUVFLFlBQUE7RUFDQSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7QUFISjtBQU1FO0VBQ0UsV0FBQTtFQUNBLHdDQUFBO0VBQ0EsU0FBQTtFQUNBLFdBQUE7QUFISjtBQU1FO0VBQ0UsV0FBQTtFQUNBLFlBQUE7RUFDQSxvQkFBQTtLQUFBLGlCQUFBO0VBQ0EsY0FBQTtBQUhKO0FBT0U7RUFDSSxZQUFBO0FBSk47QUFRQTtFQUNFLGFBQUE7QUFMRjtBQVFBO0VBQ0Usc0JBQUE7QUFMRjtBQVFBO0VBQ0Usa0JBQUE7QUFMRjtBQVFBO0VBQ0Usa0JBQUE7QUFMRjtBQVFBO0VBQ0Usa0JBQUE7QUFMRjtBQVFBO0VBQ0Usb0JBQUE7QUFMRjtBQVFBO0VBQ0UsdUJBQUE7QUFMRjtBQVFBO0VBQ0UsNkJBQUE7QUFMRjtBQVFBO0VBQ0UsNkJBQUE7QUFMRjtBQVFBO0VBQ0UsOEJBQUE7QUFMRjtBQVFBO0VBQ0UseUJBQUE7QUFMRjtBQVFBO0VBQ0UsbUJBQUE7QUFMRjtBQVFBO0VBQ0Usc0JBQUE7QUFMRjtBQVFBO0VBQ0UsYUFBQTtFQUNBLHNCQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0VBQ0EsWUFBQTtBQUxGO0FBUUE7RUFDRSwwQkFBQTtBQUxGO0FBUUE7RUFDRSwwQkFBQTtBQUxGO0FBUUE7RUFDRSwwQkFBQTtBQUxGO0FBUUE7RUFDRSwwQkFBQTtBQUxGO0FBUUE7RUFDRSwwQkFBQTtBQUxGO0FBUUE7RUFDRSwwQkFBQTtBQUxGO0FBUUE7RUFDRSwwQkFBQTtBQUxGO0FBUUE7RUFDRSw2QkFBQTtBQUxGO0FBUUE7RUFDRSxrQ0FBQTtFQUNBLGFBQUE7RUFDQSxXQUFBO0VBQ0EsV0FBQTtBQUxGO0FBUUE7RUFDRSxpQkFBQTtBQUxGIiwiZmlsZSI6InNyYy9hcHAvc2VsbGVyLWZvcm0vc2VsbGVyLWZvcm0ucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWl0ZW0ge1xyXG4gICAgLS1wYWRkaW5nLXN0YXJ0OiAwO1xyXG4gICAgLS1iYWNrZ3JvdW5kLWZvY3VzZWQ6IHRyYW5zcGFyZW50O1xyXG4gICAgaW9uLWxhYmVsIHtcclxuICAgICAgbWFyZ2luLXRvcDogM3B4O1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiA2cHg7XHJcbiAgICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICAgIH1cclxuICBcclxuICAgIGlvbi1pbnB1dCxcclxuICAgIGlvbi10ZXh0YXJlYSxcclxuICAgIHNlbGVjdCxcclxuICAgIGlucHV0IHtcclxuICAgICAgY29sb3I6IGNvcmFsO1xyXG4gICAgICBib3JkZXI6IDFweCBzb2xpZCAjY2JjYmNiO1xyXG4gICAgICBib3JkZXItcmFkaXVzOiAzcHg7XHJcbiAgICAgIGZvbnQtc2l6ZTogMTNweDtcclxuICAgICAgLS1wYWRkaW5nLXN0YXJ0OiAxMHB4O1xyXG4gICAgfVxyXG4gIH1cclxuICBcclxuICBpb24tY29sIHtcclxuICAgIC0taW9uLWdyaWQtY29sdW1uLXBhZGRpbmc6IDAgNXB4O1xyXG4gIH1cclxuICBcclxuICBpb24tc2xpZGVzIHtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICBcclxuICAgIGlvbi1zbGlkZSB7XHJcbiAgICAgIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0O1xyXG4gICAgfVxyXG4gIFxyXG4gICAgLnN3aXBlci1zbGlkZSB7XHJcbiAgICAgIHZpc2liaWxpdHk6IGhpZGRlbjtcclxuICAgIH1cclxuICBcclxuICAgIC5zd2lwZXItc2xpZGUuc3dpcGVyLXNsaWRlLWFjdGl2ZSB7XHJcbiAgICAgIHZpc2liaWxpdHk6IHZpc2libGU7XHJcbiAgICB9XHJcbiAgfVxyXG4gIFxyXG4gIGlvbi1saXN0LWhlYWRlciBpb24tbGFiZWwge1xyXG4gICAgbWFyZ2luLXRvcDogMTZweDtcclxuICB9XHJcbiAgXHJcbiAgc2VsZWN0LFxyXG4gIGlucHV0IHtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIG91dGxpbmU6IG5vbmU7XHJcbiAgICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgcGFkZGluZzogOHB4IDZweDtcclxuICB9XHJcbiAgXHJcbiAgLmxpbmUge1xyXG4gICAgaGVpZ2h0OiAzcHg7XHJcbiAgICBiYWNrZ3JvdW5kOiB2YXIoLS1pb24tY29sb3ItbGlnaHQtc2hhZGUpO1xyXG4gICAgdG9wOiAxNHB4O1xyXG4gICAgei1pbmRleDogLTE7XHJcbiAgfVxyXG4gIFxyXG4gIC5pbWctdGh1bWIge1xyXG4gICAgd2lkdGg6IDQ1cHg7XHJcbiAgICBoZWlnaHQ6IDU1cHg7XHJcbiAgICBvYmplY3QtZml0OiBjb3ZlcjtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gIH1cclxuICBcclxuXHJcbiAgLmxhYmVsY29sb3J7XHJcbiAgICAgIGNvbG9yOiBhenVyZTtcclxuICB9XHJcblxyXG4gIFxyXG4uZmxleCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxufVxyXG5cclxuLmZ1bGwtd2lkdGgge1xyXG4gIHdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5hYnNvbHV0ZSB7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG59XHJcblxyXG4ucmVsYXRpdmUge1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxufVxyXG5cclxuLmFsaWduLXNlbGYtY2VudGVyIHtcclxuICBhbGlnbi1zZWxmOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5hbGlnbi1zZWxmLWVuZCB7XHJcbiAgYWxpZ24tc2VsZjogZmxleC1lbmQ7XHJcbn1cclxuXHJcbi5qdXN0aWZ5LWNvbnRlbnQtY2VudGVyIHtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG5cclxuLmp1c3RpZnktY29udGVudC1zcGFjZS1hcm91bmQge1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xyXG59XHJcblxyXG4uanVzdGlmeS1jb250ZW50LXNwYWNlLWV2ZW5seSB7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1ldmVubHk7XHJcbn1cclxuXHJcbi5qdXN0aWZ5LWNvbnRlbnQtc3BhY2UtYmV0d2VlbiB7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG59XHJcblxyXG4uanVzdGlmeS1jb250ZW50LXNwYWNlLWVuZCB7XHJcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcclxufVxyXG5cclxuLmFsaWduLWl0ZW1zLWNlbnRlciB7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxufVxyXG5cclxuLmZsZXgtY29sdW1uIHtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG59XHJcblxyXG4uZmxleC1jZW50ZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuXHJcbi50ZXh0LXRpbnkge1xyXG4gIGZvbnQtc2l6ZTogMTFweCAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4udGV4dC1zbWFsbCB7XHJcbiAgZm9udC1zaXplOiAxMnB4ICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi50ZXh0LW1lZGl1bSB7XHJcbiAgZm9udC1zaXplOiAxNHB4ICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi50ZXh0LW5vcm1hbCB7XHJcbiAgZm9udC1zaXplOiAxNnB4ICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi50ZXh0LWxhcmdlIHtcclxuICBmb250LXNpemU6IDI0cHggIWltcG9ydGFudDtcclxufVxyXG5cclxuLnRleHQteGxhcmdlIHtcclxuICBmb250LXNpemU6IDM2cHggIWltcG9ydGFudDtcclxufVxyXG5cclxuLnRleHQteHhsYXJnZSB7XHJcbiAgZm9udC1zaXplOiA0OHB4ICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5yYWRpdXMge1xyXG4gIGJvcmRlci1yYWRpdXM6IDhweCAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4uZGl2aWRlciB7XHJcbiAgYmFja2dyb3VuZDogdmFyKC0taW9uLWNvbG9yLWxpZ2h0KTtcclxuICBtYXJnaW46IDhweCAwO1xyXG4gIGhlaWdodDogMXB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uYm9sZCB7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbn0iXX0= */");
-
-/***/ }),
-
-/***/ "./src/app/seller-form/seller-form.page.ts":
-/*!*************************************************!*\
-  !*** ./src/app/seller-form/seller-form.page.ts ***!
-  \*************************************************/
-/*! exports provided: SellerFormPage */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SellerFormPage", function() { return SellerFormPage; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-/* harmony import */ var _capacitor_camera__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @capacitor/camera */ "./node_modules/@capacitor/camera/dist/esm/index.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
-/* harmony import */ var _services_seller_form_api_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/seller-form-api.service */ "./src/app/services/seller-form-api.service.ts");
-
-/* eslint-disable @typescript-eslint/naming-convention */
-
-
-
-
-
-
-
-//const { Camer } = CameraPlugin;
-let SellerFormPage = class SellerFormPage {
-    constructor(actionSheetCtrl, navCtrl, sanitizer, modalCtrl, alertCtrl, sellerFormApiService, toastController) {
-        this.actionSheetCtrl = actionSheetCtrl;
-        this.navCtrl = navCtrl;
-        this.sanitizer = sanitizer;
-        this.modalCtrl = modalCtrl;
-        this.alertCtrl = alertCtrl;
-        this.sellerFormApiService = sellerFormApiService;
-        this.toastController = toastController;
-        this.order = {
-            id: 1,
-            items: [{
-                    id: 1,
-                    name: 'Denim T-Shirt',
-                    amount: 15.00,
-                }, {
-                    id: 1,
-                    name: 'Denim Pants',
-                    amount: 5.00,
-                }, {
-                    id: 1,
-                    name: 'Black T-Shirt',
-                    amount: 5.00,
-                }],
-            subtotal: 25.00,
-            shippingFee: 5.00,
-            total: 30.00,
-        };
-        this.times = [];
-        this.slidesOpts = {
-            allowTouchMove: false,
-            autoHeight: true,
-        };
-        this.isBeginning = true;
-        this.isEnd = false;
-        this.imagesList = [''];
-        this.convertBlobToBase64 = (blob) => new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onerror = reject;
-            reader.onload = () => resolve(reader.result);
-            reader.readAsDataURL(blob);
-        });
-        this.originalOrder = () => 0;
-    }
-    testup(event) {
-        this.files = event.target.files;
-        console.log("Files/Uploaded Images" + this.files);
-    }
-    get billingFirstName() {
-        return this.billingForm.get('animal_name');
-    }
-    get billingLastName() {
-        return this.billingForm.get('description');
-    }
-    get billingTypes() {
-        return this.billingForm.get('cattle_types');
-    }
-    get billingEmail() {
-        return this.billingForm.get('asking_price');
-    }
-    get billingAddress() {
-        return this.billingForm.get('weight');
-    }
-    get billingCity() {
-        return this.billingForm.get('age');
-    }
-    get billingState() {
-        return this.billingForm.get('lactation');
-    }
-    get billingZip() {
-        return this.billingForm.get('milk_perday');
-    }
-    get billingCountryCode() {
-        return this.billingForm.get('country_code');
-    }
-    get shippingAddress() {
-        return this.shippingForm.get('owners_name');
-    }
-    get shippingPhone() {
-        return this.shippingForm.get('phone');
-    }
-    get shippingDeliveryTime() {
-        return this.shippingForm.get('state');
-    }
-    get paymentNumber() {
-        return this.paymentForm.get('number');
-    }
-    get paymentExpiration() {
-        return this.paymentForm.get('expiration');
-    }
-    get paymentCvv() {
-        return this.paymentForm.get('cvv');
-    }
-    ngOnInit() {
-        this.setupForm();
-        this.buildSlides();
-        this.times = ['Karnatak', 'Maharasthra', 'Tamilnadu', 'Kerla', 'UP',];
-        this.types = ['Cow', 'Buffalo', 'Ox',];
-        this.breeds = ['Sindhi', 'Jersey', 'Desi',];
-    }
-    ionViewDidEnter() {
-        this.ionSlides.update(); //This resolved the issue of content not showing up
-        // this.setupForm();
-        // this.buildSlides();
-        // this.times = ['Karnatak', 'Maharasthra', 'Tamilnadu', 'Kerla', 'UP',];
-        // this.types = ['Cow', 'Buffalo', 'Ox',];
-        //this.ionSlides.updateAutoHeight();
-        //console.log("ionViewDidEnter");
-        // this.setupForm();
-        // this.buildSlides();
-        // this.times = ['Karnatak', 'Maharasthra', 'Tamilnadu', 'Kerla', 'UP',];
-        // this.types = ['Cow', 'Buffalo', 'Ox',];
-    }
-    buildSlides() {
-        const slides = ['Animal', 'Seller-Info', 'Summary', 'Publish'];
-        this.currentSlide = slides[0];
-        this.slides = slides;
-    }
-    dismis() {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            let json1 = this.billingForm.getRawValue();
-            let json2 = this.shippingForm.getRawValue();
-            let json = Object.assign(Object.assign({}, json1), json2);
-            //  const newForm2 =  {JSON.stringify(this.billingForm.getRawValue()),JSON.stringify(this.shippingForm.getRawValue())}
-            this.dat = JSON.stringify(json);
-            console.log(json);
-            console.log(JSON.stringify(json));
-            this.sellerFormApiService.saveData(this.dat).subscribe((dat) => {
-                this.dat = dat;
-                console.log(this.dat);
-            });
-            this.presentToast();
-            return yield this.modalCtrl.dismiss();
-        });
-    }
-    setupForm() {
-        this.billingForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
-            animalDetails: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
-                age: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('5', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-                animalName: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('Sakhu', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-                askingPrice: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('50000', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-                description: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('Milking Everyday', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-                lactationNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('Yes', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-                milkPerDay: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('3', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-                weight: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('10', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-            }),
-            // animal_name: new FormControl('Sakhu', Validators.required),
-            // description: new FormControl('Milking Everyday', Validators.required),
-            type: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-            breed: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](''),
-        });
-        this.shippingForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
-            sellerInformation: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
-                ownerName: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('Prathamesh', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-                phone: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('+919860067118', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-                state: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-                town: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](''),
-                district: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](''),
-            }),
-            imageUrls: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
-                imagesList: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]()
-            }),
-        });
-        this.paymentForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
-            // eslint-disable-next-line id-blacklist
-            number: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-            expiration: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-            cvv: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
-        });
-    }
-    onSlidesChanged() {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            const index = yield this.ionSlides.getActiveIndex();
-            this.currentSlide = this.slides[index];
-            this.isBeginning = yield this.ionSlides.isBeginning();
-            this.isEnd = yield this.ionSlides.isEnd();
-        });
-    }
-    onSlidesDidChange() {
-        this.ionContent.scrollToTop();
-    }
-    onBackButtonTouched() {
-        this.ionSlides.slidePrev();
-        this.ionContent.scrollToTop();
-    }
-    onNextButtonTouched() {
-        if (this.currentSlide === 'Animal') {
-            this.billingFormRef.onSubmit(undefined);
-            if (this.billingForm.valid) {
-                this.ionSlides.slideNext();
-                this.ionContent.scrollToTop();
-            }
-        }
-        else if (this.currentSlide === 'Seller-Info') {
-            this.shippingFormRef.onSubmit(undefined);
-            if (this.shippingForm.valid) {
-                this.ionSlides.slideNext();
-                this.ionContent.scrollToTop();
-            }
-        }
-        else if (this.currentSlide === 'Publish') {
-            this.paymentFormRef.onSubmit(undefined);
-            if (this.paymentForm.valid) {
-                this.navCtrl.navigateRoot('/thanks', {
-                    animated: true,
-                    animationDirection: 'forward',
-                });
-            }
-        }
-        else {
-            this.ionSlides.slideNext();
-            this.ionContent.scrollToTop();
-        }
-    }
-    onFileChange(event) {
-        if (event.target.files && event.target.files[0]) {
-            var filesAmount = event.target.files.length;
-            console.log(filesAmount);
-            for (let i = 0; i < filesAmount; i++) {
-                var reader = new FileReader();
-                reader.onload = (event) => {
-                    //console.log('Before ImageList', event.target.result);
-                    this.imagesList.push(event.target.result);
-                    console.log("ImageList", this.imagesList);
-                };
-                this.shippingForm.patchValue({
-                    imageUrls: { imagesList: this.imagesList }
-                });
-                reader.readAsDataURL(event.target.files[i]);
-                if (i == filesAmount - 1) {
-                    this.imagesList.shift();
-                    console.log("ImageList After", this.imagesList);
-                }
-                console.log('before', this.imagesList.length);
-            }
-            console.log('after', this.imagesList.length);
-        }
-    }
-    chooseImage(source) {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            try {
-                const image = yield _capacitor_camera__WEBPACK_IMPORTED_MODULE_4__["Camera"].getPhoto({
-                    quality: 70,
-                    width: 600,
-                    height: 600,
-                    preserveAspectRatio: true,
-                    allowEditing: true,
-                    correctOrientation: true,
-                    source,
-                    resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_4__["CameraResultType"].Uri,
-                });
-                const safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(image.webPath);
-                this.imagePath = safeUrl;
-                console.log("Before Imagepath", this.imagePath);
-                const response = yield fetch(image.webPath);
-                const blob = yield response.blob();
-                const base64 = yield this.convertBlobToBase64(blob);
-                this.imagesList.push(base64);
-                console.log(this.imagesList);
-                this.imagePath = this.imagesList;
-                console.log("After Imagepath", this.imagePath);
-                // Send encoded string to server...
-            }
-            catch (error) {
-                console.warn(error);
-            }
-        });
-    }
-    presentActionSheet() {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            const actionSheet = yield this.actionSheetCtrl.create({
-                header: 'Choose an option',
-                buttons: [{
-                        text: 'Photo Library',
-                        handler: () => {
-                            this.chooseImage(_capacitor_camera__WEBPACK_IMPORTED_MODULE_4__["CameraSource"].Photos);
-                        }
-                    }, {
-                        text: 'Camera',
-                        handler: () => {
-                            this.chooseImage(_capacitor_camera__WEBPACK_IMPORTED_MODULE_4__["CameraSource"].Camera);
-                        }
-                    }, {
-                        text: 'Cancel',
-                        role: 'cancel'
-                    }]
-            });
-            return yield actionSheet.present();
-        });
-    }
-    showJSON() {
-        alert(JSON.stringify(this.shippingForm.getRawValue()));
-    }
-    showJSONRawValues() {
-        return this.shippingForm.getRawValue();
-    }
-    // saveAllData() {
-    //   //alert(JSON.stringify(this.data3.getRawValue()));
-    //   this.dat = JSON.stringify(this.data3.getRawValue());
-    //   this.sellerFormApiService.saveData(this.dat).subscribe((dat) => {
-    //     this.dat = dat;
-    //     console.log(this.dat);
-    //   });
-    //   this.presentToast();
-    // }
-    getAllads() {
-        this.sellerFormApiService.getData().subscribe((data2) => {
-            this.data2 = data2;
-            console.log(data2);
-        });
-        // console.log('27lines',this.sellerFormApiService.data);
-    }
-    presentToast() {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            const toast = yield this.toastController.create({
-                message: 'AD CREATED SUCCESSFULLY',
-                position: 'top',
-                duration: 5000,
-                color: 'success',
-                buttons: [
-                    {
-                        side: 'end',
-                        icon: 'checkmark-done-sharp',
-                        handler: () => {
-                            console.log('Favorite clicked');
-                        },
-                    },
-                ],
-            });
-            yield toast.present();
-            const { role } = yield toast.onDidDismiss();
-            console.log('onDidDismiss resolved with role', role);
-        });
-    }
-};
-SellerFormPage.ctorParameters = () => [
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ActionSheetController"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
-    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["DomSanitizer"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"] },
-    { type: _services_seller_form_api_service__WEBPACK_IMPORTED_MODULE_6__["SellerFormApiService"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"] }
-];
-SellerFormPage.propDecorators = {
-    ionContent: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"], args: [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["IonContent"], { static: true },] }],
-    ionSlides: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"], args: [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["IonSlides"], { static: false },] }],
-    billingFormRef: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"], args: ['billingFormRef', { static: false },] }],
-    shippingFormRef: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"], args: ['shippingFormRef', { static: false },] }],
-    paymentFormRef: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"], args: ['paymentFormRef', { static: false },] }]
-};
-SellerFormPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-seller-form',
-        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./seller-form.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/seller-form/seller-form.page.html")).default,
-        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./seller-form.page.scss */ "./src/app/seller-form/seller-form.page.scss")).default]
-    })
-], SellerFormPage);
 
 
 
@@ -1499,69 +1553,6 @@ LoginService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
-/***/ "./src/app/services/seller-form-api.service.ts":
-/*!*****************************************************!*\
-  !*** ./src/app/services/seller-form-api.service.ts ***!
-  \*****************************************************/
-/*! exports provided: SellerFormApiService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SellerFormApiService", function() { return SellerFormApiService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-
-
-
-
-;
-let SellerFormApiService = class SellerFormApiService {
-    constructor(http) {
-        this.http = http;
-        this.baseUrl = 'http://localhost:8080/api/v1/ads';
-    }
-    saveData(dat) {
-        const headers = { 'content-type': 'application/json' };
-        const body = dat;
-        console.log(dat['imageUrls']);
-        console.log('bodyline63', body);
-        return this.http.post(this.baseUrl + '/ad', body, { headers });
-        //return this.data;
-    }
-    getData() {
-        console.log('getdata line 48', this.http.get(this.baseUrl + '/all'));
-        return this.http.get(this.baseUrl + '/all');
-    }
-    handleError(error) {
-        if (error.status === 0) {
-            // A client-side or network error occurred. Handle it accordingly.
-            console.error('An error occurred:', error.error);
-        }
-        else {
-            // The backend returned an unsuccessful response code.
-            // The response body may contain clues as to what went wrong.
-            console.error(`Backend returned code ${error.status}, body was: `, error.error);
-        }
-        // Return an observable with a user-facing error message.
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])('Something bad happened; please try again later.');
-    }
-};
-SellerFormApiService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
-];
-SellerFormApiService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
-    })
-], SellerFormApiService);
-
-
-
-/***/ }),
-
 /***/ "./src/app/util.service.ts":
 /*!*********************************!*\
   !*** ./src/app/util.service.ts ***!
@@ -1663,7 +1654,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\flixd\OneDrive\Documents\GitHub\mrgami\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\flixd\Documents\GitHub\mrgami\src\main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "Flixop",
+	"appId": "com.flixdrop.mrgami",
+	"appName": "MRGAMI",
 	"webDir": "www",
 	"bundledWebRuntime": false,
 	"cordova": {

@@ -46,13 +46,14 @@
         <ion-col size="6">
           <ion-row color="none">
             <ion-col class="flex" size="12">
-              <ion-toolbar class="toolbar" color="none">
-                <ion-label slot="start" color="primary">
-                  <ion-icon color="success" slot="start" name="pin-sharp"></ion-icon>{{data.animal}}
+              <ion-toolbar  style="background-color: #36363f;">
+                <ion-label slot="start" >
+                  <ion-icon color="success" slot="start" name="pin-sharp"></ion-icon>{{data.location}}
                 </ion-label>
                 <ion-icon size="large" slot="end" color="primary" name="create-sharp"></ion-icon>
               </ion-toolbar>
-              <ion-label color="warning">Price: {{data.askingPrice}}</ion-label>
+              <ion-label color="success">Cattle Name: {{data.animalName}}</ion-label>
+              <ion-label color="warning">Price: {{data.quotedPrice}}</ion-label>
               <ion-label class="subLabels">Breed: {{data.breed}}</ion-label>
               <ion-label class="subLabels">Lactation: {{data.lactationNumber}}</ion-label>
               <ion-label class="subLabels">Milk/Day: {{data.milkPerDay}}</ion-label>
@@ -61,11 +62,11 @@
           </ion-row>
         </ion-col>
       </ion-row>
-      <ion-item lines="none" color="none">
+      <ion-item lines="none" style="background-color: #36363F;">
         <ion-button color="danger" slot="start" expand="block" (click)="onDelete(i)">
           <ion-icon slot="end" name="trash-bin-sharp"></ion-icon>DISCARD
         </ion-button>
-        <ion-button color="primary" slot="end" expand="block" (click)="onPost(i)">
+        <ion-button color="success" slot="end" expand="block" (click)="onPost(i)">
           <ion-icon slot="end" name="pencil-sharp"></ion-icon>POST THIS
         </ion-button>
       </ion-item>
