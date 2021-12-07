@@ -7,41 +7,45 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-toolbar color="none">
-    <ion-label slot="start" class="title" color="medium">User Profile</ion-label>
-    <ion-button color="medium" fill="clear" slot="end">
-      Edit Profile
-      <ion-icon size="large" name="create-outline"></ion-icon>
-    </ion-button>
+<ion-content class="ion-padding">
+  <ion-toolbar>
+    <ion-item lines="full" color="none">
+      <ion-label class="title">User Profile</ion-label>
+      <ion-button fill="clear" slot="end">
+        edit 
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
   </ion-toolbar>
 
-  <div class="profile-info">
-    <ion-item>
-      <ion-label position="floating">Name</ion-label>
-      <ion-input value="Flixdrop User"></ion-input>
+  <ion-card class="profileCard">
+    <ion-toolbar>
+      <ion-item>
+        <ion-label position="floating" color="danger">Name</ion-label>
+        <ion-input value="Flixdrop User"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" color="danger">Address Lane</ion-label>
+        <ion-input value="Bengaluru"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" color="danger">City</ion-label>
+        <ion-input value="Bengaluru"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Address Lane</ion-label>
-      <ion-input value="Bengaluru"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">City</ion-label>
-      <ion-input value="Bengaluru"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Gender</ion-label>
+      <ion-label position="floating" color="danger">Gender</ion-label>
       <ion-input value="Male"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Email</ion-label>
+      <ion-label position="floating" color="danger">Email</ion-label>
       <ion-input value="flix@flixdrop.com"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Phone Number</ion-label>
+      <ion-label position="floating" color="danger">Phone Number</ion-label>
       <ion-input value="+91 1236547892"></ion-input>
     </ion-item>
-  </div>
+  </ion-toolbar>
+  </ion-card>
 
   <ion-button expand="full" size="small" color="danger" (click)="onClickLogout()">
     <ion-icon slot="end" name="power-outline" color="light"></ion-icon>

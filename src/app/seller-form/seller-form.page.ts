@@ -229,8 +229,8 @@ export class SellerFormPage implements OnInit {
   let adformData = {
     "animalDetails": {
       "age": this.myForm.get('age').value,
-      // "animalName": this.myForm.get('animalName').value,
-      "askingPrice": this.myForm.get('askingPrice').value,
+      "animalName": this.myForm.get('animalName').value,
+      "askingPrice": this.myForm.get('quotedPrice').value,
       "description": this.myForm.get('description').value,
       "lactationNumber": this.myForm.get('lactationNumber').value,
       "milkPerDay": this.myForm.get('milkPerDay').value,
@@ -262,6 +262,7 @@ export class SellerFormPage implements OnInit {
         });
         this.myForm.reset();
         this.presentToast();
+        this.flag = false;
         // return await this.modalCtrl.dismiss();
   }
   setupForm() {

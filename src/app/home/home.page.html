@@ -44,11 +44,11 @@
       <ion-row>
         <ion-col size="12">
           <ion-slides [options]="slideOpts">
-            <ion-slide class="center" *ngFor="let category of categories| filter:searchTerm">
+            <ion-slide class="center" *ngFor="let category of getApiData| filter:searchTerm; let i=index">
               <ion-thumbnail>
-                <ion-img src="{{ category.image }}"></ion-img>
+                <ion-img src="{{category.imageUrls['imagesList'][0]}}"></ion-img>
               </ion-thumbnail>
-              <ion-label>{{ category.name }}</ion-label>
+              <ion-label>{{category.type}}</ion-label>
             </ion-slide>
           </ion-slides>
         </ion-col>
@@ -68,12 +68,12 @@
       <ion-row>
         <ion-col size="12" routerLink="/tabs/item-details" routerDirection="forward">
           <ion-slides [options]="slideOpts">
-            <ion-slide class="center" *ngFor="let product of featuredProducts| filter:searchTerm">
+            <ion-slide class="center" *ngFor="let product of getApiData| filter:searchTerm">
               <ion-thumbnail>
-                <ion-img src="{{ product.image }}"></ion-img>
+                <ion-img src="{{ product.imageUrls['imagesList'][0] }}"></ion-img>
               </ion-thumbnail>
-              <ion-label style="color: aliceblue;">Rs {{ product.price }}</ion-label>
-              <ion-label style="color: aliceblue;">{{ product.name }}</ion-label>
+              <ion-label style="color: aliceblue;">Rs {{ product.quotedPrice }}</ion-label>
+              <ion-label style="color: aliceblue;">{{ product.type }}</ion-label>
             </ion-slide>
           </ion-slides>
         </ion-col>
@@ -93,12 +93,12 @@
       <ion-row>
         <ion-col size="12">
           <ion-slides [options]="slideOpts">
-            <ion-slide class="center" *ngFor="let product of bestSellProducts| filter:searchTerm">
+            <ion-slide class="center" *ngFor="let product of getApiData| filter:searchTerm">
               <ion-thumbnail>
-                <ion-img src="{{ product.image }}"></ion-img>
+                <ion-img src="{{ product.imageUrls['imagesList'][0] }}"></ion-img>
               </ion-thumbnail>
-              <ion-label>Rs {{ product.price }}</ion-label>
-              <ion-label>{{ product.name }}</ion-label>
+              <ion-label>Rs {{ product.quotedPrice }}</ion-label>
+              <ion-label>{{ product.type }}</ion-label>
             </ion-slide>
           </ion-slides>
         </ion-col>

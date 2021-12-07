@@ -188,8 +188,16 @@ p{
 }
 
 .ion-card{
+  --background: #36363F;
   margin: 0;
   padding: 0;
+}
+
+ion-toolbar{
+  ion-item{
+    --background: #36363F;
+  }
+  --background: #36363F;
 }
 
 ion-grid{
@@ -234,4 +242,14 @@ ion-slide{
 
 ion-title{
   color: white;
+}
+
+ion-input{
+  color: white;
+}
+
+ion-select{
+  width: 100%;
+  --ion-text-color: white !important;
+  --background: white !important;
 }

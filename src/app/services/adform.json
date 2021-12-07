@@ -1,11 +1,18 @@
 {
     "form_1":[
     {
+        "name": "animalName",
+        "label": "Animal Name",
+        "value": "",
+        "type": "text"
+    },
+    {
       "animaltype": ["cow", "buffalo", "ox"],
       "name": "type",
       "label": "Animal type",
       "value": "",
-      "type": "select"
+      "type": "select",
+      "placeholder": "type of animal."
   },
     {
         "cow": ["cow 1", "cow 2", "cow 3"],
@@ -14,7 +21,8 @@
         "name": "breed",
         "label": "Animal breed",
         "value": "",
-        "type": "select"
+        "type": "select",
+        "placeholder": "breed of animal."
     },
     {
         "name": "description",
@@ -28,7 +36,7 @@
         }
     },
     {
-      "name": "askingPrice",
+      "name": "quotedPrice",
       "label": "Asking price",
       "value": "",
       "type": "number",
@@ -128,20 +136,96 @@
                     "label": "District",
                     "value": "",
                     "type": "select",
-                    "placeholder": "select your district.",
-                    "validators": {
-                        "required": true,
-                        "minLength": 10
-                    }},
+                    "placeholder": "select your district."
+                },
                     {
                         "name": "imagesList",
                         "label": "Upload Images",
                         "value": "",
-                        "type": "file",
-                        "validators": {
-                            "required": true,
-                            "minLength": 10
-                        }}       
-    ]
+                        "type": "file"
+                }       
+    ],
+    "userprofile":[
+        {
+            "name": "name",
+            "label": "Name",
+            "value": "",
+            "type": "text",
+            "placeholder": "enter your name."
+        },
+        {
+          "name": "address",
+          "label": "Address",
+          "value": "",
+          "type": "textarea",
+          "placeholder": "enter your address."
+      },
+        {
+            "name": "city",
+            "label": "City",
+            "value": "",
+            "type": "select"
+        },
+        {
+            "name": "gender",
+            "label": "Gender",
+            "value": "",
+            "type": "toggle"
+        },
+        {
+          "name": "quotedPrice",
+          "label": "Asking price",
+          "value": "",
+          "type": "number",
+          "placeholder": "enter expected price.",
+          "validators": {
+              "required": true,
+              "minLength": 10
+          }
+      },
+      {
+        "name": "weight",
+        "label": "Animal weight",
+        "value": "",
+        "type": "number",
+        "placeholder": "enter animal wieght.",
+        "validators": {
+            "required": true,
+            "minLength": 10
+        }
+    },
+    {
+      "name": "age",
+      "label": "Animal age",
+      "value": "",
+      "type": "number",
+      "placeholder": "enter animal age.",
+      "validators": {
+          "required": true,
+          "minLength": 10
+      }
+    },
+    {
+    "name": "lactationNumber",
+    "label": "Lactation",
+    "value": "",
+    "type": "number",
+    "placeholder": "enter no. of lactation.",
+    "validators": {
+        "required": true,
+        "minLength": 10
+    }
+    },
+    {
+    "name": "milkPerDay",
+    "label": "Milk/Day",
+    "value": "",
+    "type": "number",
+    "placeholder": "enter milk quantity per day.",
+    "validators": {
+        "required": true,
+        "minLength": 10
+    }
+    }]
 }
 

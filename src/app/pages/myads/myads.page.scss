@@ -5,7 +5,7 @@
 }
 
 .card{
-  background-color: #36363F;
+  --background: #36363F;
   margin: 0;
   padding: 0;
 }
@@ -49,4 +49,9 @@ ion-slides {
 ion-searchbar{
   border-bottom: 1px solid silver;
   --box-shadow: none !important;
+}
+
+ion-fab-button{
+  border-radius: 50%;
+  border: 1px solid white;
 }

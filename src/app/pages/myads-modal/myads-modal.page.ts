@@ -23,7 +23,6 @@ export class MyadsModalPage {
   viewEntered: boolean;
 
   ngOnInit(){
-
     this.imgUrl.trim();
     console.log('imgUrl- ', this.imgUrl);
   }

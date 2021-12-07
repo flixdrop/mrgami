@@ -12,13 +12,20 @@
 <ion-content class="ion-padding">
   <ion-card class="ion-card">
     <form [formGroup]="myForm" (ngSubmit)="onClickPublish()">
+
+      <ion-toolbar>
+        <ion-item lines="full" color="none">
+          <ion-label class="title">{{ flag===true ? 'Seller Form':'Animal Form'}}</ion-label>
+        </ion-item>
+      </ion-toolbar>
+
       <ion-toolbar color="none" *ngIf="flag === false">
       <ion-item lines="full" *ngFor="let control of adForm.form_1">
         <ion-label slot="start" color="danger" position="fixed" *ngIf="['select'].includes(control.type)">{{control.label}}</ion-label>
         <ion-label color="danger" *ngIf="['textarea'].includes(control.type)" position="floating">{{control.label}}</ion-label>
-        <ion-label color="danger" position="{{['text', 'number'].includes(control.type)? 'floating':'stacked'}}" *ngIf="['askingPrice', 'weight', 'age'].includes(control.name)">{{control.label}}</ion-label>
+        <ion-label color="danger" position="{{['text', 'number'].includes(control.type)? 'floating':'stacked'}}" *ngIf="['animalName','quotedPrice', 'weight', 'age'].includes(control.name)">{{control.label}}</ion-label>
         <ion-input
-        *ngIf="['description', 'askingPrice', 'weight', 'age'].includes(control.name)"
+        *ngIf="['animalName','description', 'quotedPrice', 'weight', 'age'].includes(control.name)"
         [type]="control.type" [formControlName]="control.name" [value]="control.value"></ion-input>
         <ion-textarea
         *ngIf="control.type === 'textarea'" [formControlName]="control.name" [value]="control.value"></ion-textarea>

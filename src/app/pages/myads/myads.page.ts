@@ -50,7 +50,7 @@ getAllads() {
     const modal = await this.modalController.create({
       component: MyadsModalPage,
       componentProps: {
-        imgUrl: this.data[i].imageUrls,
+        imgUrl: this.data[i].imageUrls.imagesList,
         animal: this.data[i].type,
         breed: this.data[i].breed,
         location: this.data[i].lactationNumber,
