@@ -89,18 +89,19 @@ export interface GetAnimalData{
   })
 export class SellerFormApiService {
 
-private baseUrl = 'http://localhost:8080/api/v1/ads';
+// private baseUrl = 'http://localhost:8080/api/v1/ads';
+private baseUrl = 'http://mrgami-env.eba-e7nbfgvg.ap-south-1.elasticbeanstalk.com/api/v1/ads';
+
 constructor(private http: HttpClient) {}
  saveData(dat): Observable<any>{
  
   const headers = { 'content-type': 'application/json'};
   const body = dat;
 console.log(dat['imageUrls']);
-
-  console.log('bodyline63',body);
+console.log('bodyline63',body);
   
    return this.http.post<AnimalData>(this.baseUrl+'/ad', body, {headers});
-  //return this.data;
+  // return this.data;
  }
  getData(): Observable<any>{
    console.log('getdata line 48',this.http.get<any>(this.baseUrl + '/all'));

@@ -36,7 +36,7 @@ export class MyadsPage implements OnInit {
 getAllads() {
   this.sellerFormApiService.getData().subscribe((result) => {
     this.data = result;
-    console.log("data- ", result);
+    console.log('data- ', this.data);
   });
   // console.log('27lines',this.sellerFormApiService.data);
 }
@@ -51,9 +51,9 @@ getAllads() {
       component: MyadsModalPage,
       componentProps: {
         imgUrl: this.data[i].imageUrls,
-        animal: this.data[i].animal,
+        animal: this.data[i].type,
         breed: this.data[i].breed,
-        location: this.data[i].lactation,
+        location: this.data[i].lactationNumber,
         milkPerDay: this.data[i].milkPerDay,
         age: this.data[i].age,
       },

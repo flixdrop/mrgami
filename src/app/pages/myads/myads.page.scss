@@ -35,6 +35,11 @@ ion-img{
 
 }
 
+.flex{
+  display: flex;
+  flex-direction: column;
+}
+
 ion-slides {
   height: 100%;
 }

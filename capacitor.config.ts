@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'Flixop',
+  appId: 'com.flixdrop.mrgami',
+  appName: 'MRGAMI',
   webDir: 'www',
   bundledWebRuntime: false,
   cordova: {

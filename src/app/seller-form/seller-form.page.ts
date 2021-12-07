@@ -38,6 +38,7 @@ export class SellerFormPage implements OnInit {
   adForm: any = JsonFile;
   public myForm: FormGroup = this.fb.group({});
   animalTypeSelected: any;
+  flag: boolean = false;
 
   @ViewChild(IonContent, { static: true }) ionContent: IonContent;
   @ViewChild(IonSlides, { static: false }) ionSlides: IonSlides;
@@ -69,7 +70,10 @@ export class SellerFormPage implements OnInit {
   public paymentForm: FormGroup;
   public shippingForm: FormGroup;
   public imagePath: SafeResourceUrl;
-  public times = [];
+  public states = [];
+  public districts = [];
+  public towns = [];
+
   files: FileList;
   
   public slidesOpts = {
@@ -161,10 +165,13 @@ export class SellerFormPage implements OnInit {
 
   ngOnInit() {
     this.myForm = this.fb.group({});
-    this.createForm(this.adForm);
-    this.setupForm();
+    if(this.flag === false){
+      this.createForm(this.adForm.form_1);
+    } 
     this.buildSlides();
-    this.times = ['Karnatak', 'Maharasthra', 'Tamilnadu', 'Kerla', 'UP'];
+    this.states = ['Karnatak', 'Maharasthra', 'Tamilnadu', 'Kerla', 'UP'];
+    this.districts = ['Bangalore', 'Mumbai', 'Tuticorin', 'Amravati', 'Lucknow'];
+    this.towns = ['Bangalore', 'Mumbai', 'Tuticorin', 'Amravati', 'Lucknow'];
     this.types = ['Cow', 'Buffalo', 'Ox'];
     this.breeds = ['Sindhi', 'Jersey', 'Desi'];
   }
@@ -206,24 +213,56 @@ export class SellerFormPage implements OnInit {
     this.currentSlide = slides[0];
     this.slides = slides;
   }
-  async dismis(){
-   let json1 = this.billingForm.getRawValue();
-   let json2 = this.shippingForm.getRawValue();
-    
-   let json = {...json1,...json2}
+
+  async onClickNext(){
+    this.flag = true;
+    if(this.flag === true){
+      this.createForm(this.adForm.form_2);
+    }
+  }
+
+  async onClickPublish(){
+  //  let json1 = this.billingForm.getRawValue();
+  //  let json2 = this.shippingForm.getRawValue();
+  //  let json = {...json1,...json2}
+  // let adformData = this.myForm.getRawValue();
+  let adformData = {
+    "animalDetails": {
+      "age": this.myForm.get('age').value,
+      // "animalName": this.myForm.get('animalName').value,
+      "askingPrice": this.myForm.get('askingPrice').value,
+      "description": this.myForm.get('description').value,
+      "lactationNumber": this.myForm.get('lactationNumber').value,
+      "milkPerDay": this.myForm.get('milkPerDay').value,
+      "weight": this.myForm.get('weight').value
+    },
+    "breed": this.myForm.get('breed').value,
+    "imageUrls": {
+      "imagesList": this.myForm.get('imagesList').value
+    },
+    "sellerInformation": {
+      "district": this.myForm.get('district').value,
+      "ownerName": this.myForm.get('ownerName').value,
+      "phone": this.myForm.get('phone').value,
+      "state": this.myForm.get('state').value,
+      "town": this.myForm.get('town').value
+    },
+    "type": this.myForm.get('type').value
+  };
+  console.log('adform json data- ', adformData);
 
   //  const newForm2 =  {JSON.stringify(this.billingForm.getRawValue()),JSON.stringify(this.shippingForm.getRawValue())}
-       this.dat = JSON.stringify(json);
-        console.log(json);
-        console.log(JSON.stringify(json));
-
+       this.dat = JSON.stringify(adformData);
+        // console.log(json);
+        // console.log(JSON.stringify(json));
+        console.log('stringify adformData- ', this.dat);
         this.sellerFormApiService.saveData(this.dat).subscribe((dat) => {
           this.dat = dat;
-          console.log(this.dat);
+          console.log('stringify adformData_1- ',this.dat);
         });
+        this.myForm.reset();
         this.presentToast();
-      
-        return await this.modalCtrl.dismiss();
+        // return await this.modalCtrl.dismiss();
   }
   setupForm() {
     this.billingForm = new FormGroup({
@@ -249,19 +288,19 @@ export class SellerFormPage implements OnInit {
       // country_code: new FormControl('IN', Validators.required),
     });
 
-    this.shippingForm = new FormGroup({
-      sellerInformation: new FormGroup({
-        ownerName: new FormControl('Prathamesh', Validators.required),
-      phone: new FormControl('+919860067118', Validators.required),
-      state: new FormControl(null, Validators.required),
-      town: new FormControl(''),
-      district: new FormControl(''),
-     // message: new FormControl(''),
-      }),
-      imageUrls: new FormGroup({
-        imagesList: new FormControl()
-      }),
-    });
+    // this.shippingForm = new FormGroup({
+    //   sellerInformation: new FormGroup({
+    //     ownerName: new FormControl('Prathamesh', Validators.required),
+    //   phone: new FormControl('+919860067118', Validators.required),
+    //   state: new FormControl(null, Validators.required),
+    //   town: new FormControl(''),
+    //   district: new FormControl(''),
+    //  // message: new FormControl(''),
+    //   }),
+    //   imageUrls: new FormGroup({
+    //     imagesList: new FormControl()
+    //   }),
+    // });
 
     this.paymentForm = new FormGroup({
       // eslint-disable-next-line id-blacklist
@@ -287,52 +326,52 @@ export class SellerFormPage implements OnInit {
     this.ionContent.scrollToTop();
   }
 
-  onNextButtonTouched() {
+  // onNextButtonTouched() {
 
-    if (this.currentSlide === 'Animal') {
+  //   if (this.currentSlide === 'Animal') {
 
-      this.billingFormRef.onSubmit(undefined);
+  //     this.billingFormRef.onSubmit(undefined);
 
-      if (this.billingForm.valid) {
-        this.ionSlides.slideNext();
-        this.ionContent.scrollToTop();
-      }
+  //     if (this.billingForm.valid) {
+  //       this.ionSlides.slideNext();
+  //       this.ionContent.scrollToTop();
+  //     }
 
-    } else if (this.currentSlide === 'Seller-Info') {
+  //   } else if (this.currentSlide === 'Seller-Info') {
 
-      this.shippingFormRef.onSubmit(undefined);
+  //     this.shippingFormRef.onSubmit(undefined);
 
-      if (this.shippingForm.valid) {
+  //     if (this.shippingForm.valid) {
         
        
         
-        this.ionSlides.slideNext();
-        this.ionContent.scrollToTop();
-      }
+  //       this.ionSlides.slideNext();
+  //       this.ionContent.scrollToTop();
+  //     }
 
-    } else if (this.currentSlide === 'Publish') {
+  //   } else if (this.currentSlide === 'Publish') {
      
    
-      this.paymentFormRef.onSubmit(undefined);
+  //     this.paymentFormRef.onSubmit(undefined);
 
-      if (this.paymentForm.valid) {
+  //     if (this.paymentForm.valid) {
         
-        this.navCtrl.navigateRoot('/thanks', {
-          animated: true,
-          animationDirection: 'forward',
-        });
-      }
+  //       this.navCtrl.navigateRoot('/thanks', {
+  //         animated: true,
+  //         animationDirection: 'forward',
+  //       });
+  //     }
 
-    }  else {
+  //   }  else {
 
-      this.ionSlides.slideNext();
-      this.ionContent.scrollToTop();
-    }
-  }
+  //     this.ionSlides.slideNext();
+  //     this.ionContent.scrollToTop();
+  //   }
+  // }
   onFileChange(event:any) {
     if (event.target.files && event.target.files[0]) {
         var filesAmount = event.target.files.length;
-        console.log(filesAmount);
+        console.log("Files",filesAmount);
         
         for (let i = 0; i < filesAmount; i++) {
                 var reader = new FileReader();
@@ -341,8 +380,8 @@ export class SellerFormPage implements OnInit {
                    this.imagesList.push(event.target.result);
               console.log("ImageList", this.imagesList);
                 }
-                this.shippingForm.patchValue({
-                  imageUrls: {imagesList:this.imagesList}
+                this.myForm.patchValue({
+                  imagesList: this.imagesList
                  });
                 reader.readAsDataURL(event.target.files[i]);
 

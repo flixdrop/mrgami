@@ -1,4 +1,5 @@
-[
+{
+    "form_1":[
     {
       "animaltype": ["cow", "buffalo", "ox"],
       "name": "type",
@@ -17,7 +18,7 @@
     },
     {
         "name": "description",
-        "label": "Description about the animal",
+        "label": "Description about the animal.",
         "value": "",
         "type": "textarea",
         "placeholder": "describe your animal.",
@@ -31,7 +32,7 @@
       "label": "Asking price",
       "value": "",
       "type": "number",
-      "placeholder": "enter expected price",
+      "placeholder": "enter expected price.",
       "validators": {
           "required": true,
           "minLength": 10
@@ -42,7 +43,7 @@
     "label": "Animal weight",
     "value": "",
     "type": "number",
-    "placeholder": "enter animal wieght",
+    "placeholder": "enter animal wieght.",
     "validators": {
         "required": true,
         "minLength": 10
@@ -53,7 +54,7 @@
   "label": "Animal age",
   "value": "",
   "type": "number",
-  "placeholder": "enter animal age",
+  "placeholder": "enter animal age.",
   "validators": {
       "required": true,
       "minLength": 10
@@ -64,7 +65,7 @@
 "label": "Lactation",
 "value": "",
 "type": "number",
-"placeholder": "enter no. of lactation",
+"placeholder": "enter no. of lactation.",
 "validators": {
     "required": true,
     "minLength": 10
@@ -75,10 +76,72 @@
 "label": "Milk/Day",
 "value": "",
 "type": "number",
-"placeholder": "enter milk quantity per day",
+"placeholder": "enter milk quantity per day.",
 "validators": {
     "required": true,
     "minLength": 10
 }
+}],
+"form_2":[
+{
+    "name": "ownerName",
+    "label": "Owner Name",
+    "value": "",
+    "type": "text",
+    "placeholder": "enter your name.",
+    "validators": {
+        "required": true,
+        "minLength": 10
+    }},
+    {
+        "name": "phone",
+        "label": "Phone No.",
+        "value": "",
+        "type": "number",
+        "placeholder": "enter your Phone No.",
+        "validators": {
+            "required": true,
+            "minLength": 10
+        }},
+        {
+            "name": "state",
+            "label": "State",
+            "value": "",
+            "type": "select",
+            "placeholder": "select your state.",
+            "validators": {
+                "required": true,
+                "minLength": 10
+            }},
+            {
+                "name": "town",
+                "label": "Town",
+                "value": "",
+                "type": "select",
+                "placeholder": "select your town.",
+                "validators": {
+                    "required": true,
+                    "minLength": 10
+                }},
+                {
+                    "name": "district",
+                    "label": "District",
+                    "value": "",
+                    "type": "select",
+                    "placeholder": "select your district.",
+                    "validators": {
+                        "required": true,
+                        "minLength": 10
+                    }},
+                    {
+                        "name": "imagesList",
+                        "label": "Upload Images",
+                        "value": "",
+                        "type": "file",
+                        "validators": {
+                            "required": true,
+                            "minLength": 10
+                        }}       
+    ]
 }
-]
+

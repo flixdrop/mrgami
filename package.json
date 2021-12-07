@@ -46,6 +46,7 @@
     "cordova-plugin-geolocation": "^4.1.0",
     "cordova-plugin-media-capture": "^3.0.3",
     "cordova-plugin-nativegeocoder": "^3.4.1",
+    "jetifier": "^2.0.0",
     "material-steppers": "^2.0.0",
     "ng-otp-input": "^1.8.1",
     "ng2-search-filter": "^0.5.1",

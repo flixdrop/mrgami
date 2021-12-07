@@ -5,6 +5,7 @@ import { ModalController } from "@ionic/angular";
 import { CartModalPage } from "../pages/cart-modal/cart-modal.page";
 import { BehaviorSubject } from "rxjs";
 import { Router } from "@angular/router";
+import { SellerFormApiService } from "../services/seller-form-api.service";
 
 @Component({
   selector: "app-home",
@@ -24,13 +25,22 @@ export class HomePage implements OnInit {
     grabCursor: true
   };
   searchTerm: any;
+  getApiData: any;
 
-  constructor(private data: DataService, private router: Router) {}
+  constructor(private data: DataService, private router: Router, private sellerFormApiService: SellerFormApiService) {}
 
   ngOnInit() {
-    this.categories = this.data.getCategories();
-    this.featuredProducts = this.data.getFeaturedProducts();
-    this.bestSellProducts = this.data.getBestSellProducts();
+    // this.categories = this.data.getCategories();
+    // this.featuredProducts = this.data.getFeaturedProducts();
+    // this.bestSellProducts = this.data.getBestSellProducts();
+    this.getAllads();
+  }
+
+  getAllads() {
+    this.sellerFormApiService.getData().subscribe((result) => {
+      this.getApiData = result;
+      console.log('getApiData- ', this.getApiData);
+    });
   }
 
   doRefresh(event) {
