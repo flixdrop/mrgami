@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button class="backbtn" routerLink="/welcome" routerDirection="back">
@@ -34,4 +34,71 @@
       </div>
     </div>
   </div>
-</ion-content>
+</ion-content> -->
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      Please Sign Up
+    </ion-card-title>
+    <ion-card-subtitle>
+      We'd be happy to have you join our community!
+    </ion-card-subtitle>
+  </ion-card-header>
+  
+    <!-- <mat-card-header>
+      <mat-icon mat-card-avatar>lock</mat-icon>
+      <mat-card-title>Please Sign Up</mat-card-title>
+      <mat-card-subtitle>We'd be happy to have you join our community!</mat-card-subtitle>
+    </mat-card-header> -->
+  
+    <ion-card-content>
+      <form>
+        <ion-label color="success">Full Name</ion-label>
+        <ion-input  placeholder="Full Name" [formControl]="fullName" name="name" required></ion-input>
+        <ion-label color="success">Phone Number</ion-label>
+        <ion-input placeholder="Phone Number (e.g. +919999922222)" [formControl]="sms" name="sms" required></ion-input>
+      </form>
+      <ion-button *ngIf="(busy | async) !==true" color="success" (click)="signup()">
+        SIGN UP<ion-spinner *ngIf="busy | async" name="bubbles">
+        </ion-spinner>
+      </ion-button>
+    </ion-card-content>
+  
+  
+  
+  
+    <!-- <mat-card-content>
+      <form fxLayout="column">
+        <mat-form-field>
+          <input matInput placeholder="Full Name" [formControl]="fullName" name="name" autocomplete="name" required/>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Phone Number (e.g. +12065551211)" [formControl]="sms" type="sms" sms name="sms"
+            autocomplete="username sms" required/>
+        </mat-form-field>
+      </form>
+    </mat-card-content> -->
+  
+    <!-- <mat-card-actions>
+      <div fxFlex></div>
+      <button mat-stroked-button color="primary" (click)="signup()">
+        <div fxFlex></div>
+        <div *ngIf="(busy | async) !==true">SIGN UP</div>
+        <mat-spinner *ngIf="busy | async" [diameter]="35"></mat-spinner>
+        <div fxFlex></div>
+      </button>
+      <div fxFlex></div>
+    </mat-card-actions> -->
+  
+    <p *ngIf="errorMessage | async">{{ errorMessage | async }}</p>
+  
+    <ion-card-content>
+      <ion-card-subtitle>
+        Already signed up? <a routerLink='/login' routerLinkActive="active success" >Sign in</a>
+      </ion-card-subtitle>
+  
+    </ion-card-content>
+  
+  
+  </ion-card>
+  

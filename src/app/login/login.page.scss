@@ -64,15 +64,15 @@
     padding: 0;
   }
 
-  ion-grid{
-    position: relative;
-    top: 25%;
-  }
+  // ion-grid{
+  //   position: relative;
+  //   top: 25%;
+  // }
 
-  ion-img{
-    width: 75%;
-    height: 75%;
-  }
+  // ion-img{
+  //   width: 75%;
+  //   height: 75%;
+  // }
 
   ion-toolbar{
     --background: transparent;
@@ -94,4 +94,9 @@
     font-weight: bold;
     font-size: 150%;
     color: rgb(104, 91, 81);
+  }
+  ion-card{
+    --background: #36363F;
+    margin: 0;
+    padding: 0;
   }

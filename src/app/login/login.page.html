@@ -59,7 +59,7 @@
 
 </div> -->
 
-<ion-content class="ion-padding">
+<!-- <ion-content class="ion-padding">
   <ion-grid>
   
     <ion-row *ngIf='!isNumberSubmitted'>
@@ -122,4 +122,46 @@
   </ion-grid>
  
 
+</ion-content> -->
+<ion-content>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title color="warning">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      Please Sign In
+    </ion-card-title>
+    <ion-card-subtitle>
+      Enter your phone number you registered with and we'll send you a one-time secret sign-in code via SMS. Your phone # is your username.
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <form>
+
+      <ion-label color="success">Phone Number</ion-label>
+    <ion-input placeholder="Phone Number" [formControl]="sms" type="sms" required>
+
+    </ion-input>
+  </form>
+  <ion-button color="warning" (click)="signIn()" [disabled]="(busy | async)">
+SEND SIGN IN CODE
+<ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
+  </ion-button>
+  <p>Not registered yet? <a routerLink='/signup' routerLinkActive="active">Sign up</a></p>
+  </ion-card-content>
+  <ion-button fill="clear" expand="block" routerLink="/tabs/landing" color="medium" routerDirection="forward">Skip for now<ion-icon size="large" slot="end" name="log-in-outline"></ion-icon></ion-button>
+  <p *ngIf="errorMessage | async">{{ errorMessage | async }}</p>
+
+  <ion-grid>
+  <ion-row>
+    <ion-col class="center" size="12">
+      <ion-item class="center" lines="none" color="none">
+        <ion-icon size="large" name="logo-google" color="medium"></ion-icon>
+      </ion-item>
+      <ion-item class="center" lines="none" color="none">
+        <ion-icon size="large" name="logo-facebook" color="medium"></ion-icon>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-card>
 </ion-content>

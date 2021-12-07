@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title color="dark">My ADs</ion-title>
+    <ion-title color="light">My ADs</ion-title>
     <ion-buttons style="
     clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
     background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
@@ -31,7 +31,7 @@
     </ion-refresher-content>
   </ion-refresher>
 
-  <ion-card class="card" *ngFor="let data of data | filter:searchTerm; let i=index" color="light">
+  <ion-card class="myadscard" *ngFor="let data of data | filter:searchTerm; let i=index" >
     <ion-grid>
       <ion-row (click)="presentModal(i)">
         <ion-col class="imgCol" size="6">
@@ -46,11 +46,11 @@
         <ion-col size="6">
           <ion-row color="none">
             <ion-col class="flex" size="12">
-              <ion-toolbar  style="background-color: #36363f;">
+              <ion-toolbar  style="--background: #36363f; color: beige;">
                 <ion-label slot="start" >
                   <ion-icon color="success" slot="start" name="pin-sharp"></ion-icon>{{data.location}}
                 </ion-label>
-                <ion-icon size="large" slot="end" color="primary" name="create-sharp"></ion-icon>
+                <ion-icon size="large" slot="end" color="medium" name="create-sharp"></ion-icon>
               </ion-toolbar>
               <ion-label color="success">Cattle Name: {{data.animalName}}</ion-label>
               <ion-label color="warning">Price: {{data.quotedPrice}}</ion-label>
@@ -62,7 +62,7 @@
           </ion-row>
         </ion-col>
       </ion-row>
-      <ion-item lines="none" style="background-color: #36363F;">
+      <ion-item lines="none" style="--background: #36363f; color: beige;">
         <ion-button color="danger" slot="start" expand="block" (click)="onDelete(i)">
           <ion-icon slot="end" name="trash-bin-sharp"></ion-icon>DISCARD
         </ion-button>

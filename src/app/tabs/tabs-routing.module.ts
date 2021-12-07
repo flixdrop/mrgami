@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from '../services/auth.guard';
+import { AuthGuard, IsAuthenticated } from '../services/auth.guard';
 import { TabsPage } from './tabs.page';
 // import { IntroGuard } from '../guards/intro.guard';
 // import { AutoLoginGuard } from '../guards/auto-login.guard';
@@ -49,6 +49,7 @@ const routes: Routes = [
   {
     path: 'myads',
     loadChildren: () => import('../pages/myads/myads.module').then( m => m.MyadsPageModule),
+    canActivate: [IsAuthenticated]
     // canActivate: [AuthGuard]
   },
   {
@@ -61,7 +62,8 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    loadChildren: () => import('../profile/profile.module').then( m => m.ProfilePageModule)
+    loadChildren: () => import('../profile/profile.module').then( m => m.ProfilePageModule),
+    canActivate: [IsAuthenticated]
   },
   {
     path: 'my-orders',

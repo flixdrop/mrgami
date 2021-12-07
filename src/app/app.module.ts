@@ -26,7 +26,14 @@ import { CartModalPageModule } from './pages/cart-modal/cart-modal.module';
 import { MediaCapture } from '@ionic-native/media-capture/ngx';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { MedModalPage } from './pages/med-modal/med-modal.page';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { AuthGuard, IsAuthenticated, IsNotAuthenticated } from '../app/services/auth.guard';
+import { LoginPage } from './login/login.page';
+import { AnswerChallengePage } from './pages/answer-challenge/answer-challenge.page';
+import { SignupPage } from './signup/signup.page';
+import { LoginPageModule } from './login/login.module';
+import { AnswerChallengePageModule } from './pages/answer-challenge/answer-challenge.module';
+import { SignupPageModule } from './signup/signup.module';
 @NgModule({
   declarations: [AppComponent, SellerFormPipe,],
   entryComponents: [],
@@ -41,6 +48,10 @@ import { MedModalPage } from './pages/med-modal/med-modal.page';
     FormsModule,
     HttpClientModule,
     CartModalPageModule,
+ LoginPageModule,
+ AnswerChallengePageModule,
+ SignupPageModule
+
   ],
   providers: [
     StatusBar,
@@ -51,8 +62,10 @@ import { MedModalPage } from './pages/med-modal/med-modal.page';
     LoginService,
     MediaCapture,
     MedModalPage,
-    FileOpener
+    FileOpener,
+    AuthGuard,IsAuthenticated, IsNotAuthenticated,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

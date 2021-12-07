@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LandingPage } from './landing/landing.page';
 import { LoginPage } from './login/login.page';
-import { AuthGuard } from './services/auth.guard';
+import { AuthGuard, IsNotAuthenticated } from './services/auth.guard';
 
 const routes: Routes = [
   {
@@ -15,7 +15,8 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule),
+    canActivate: [IsNotAuthenticated]
   },
   {
     path: 'cart-modal',
@@ -43,13 +44,20 @@ const routes: Routes = [
   },
   {
     path: 'signup',
-    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule),
+    canActivate: [IsNotAuthenticated]
   },
   {
     path: '',
     redirectTo: '/welcome',
     pathMatch: 'full'
   },
+  {
+    path: 'answer-challenge',
+    loadChildren: () => import('./pages/answer-challenge/answer-challenge.module').then( m => m.AnswerChallengePageModule),
+    canActivate: [IsNotAuthenticated]
+  },
+
   
 
  

@@ -1,0 +1,57 @@
+<ion-content>
+
+
+  <ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      Sign-In
+    </ion-card-title>
+    <ion-card-subtitle>
+      Please enter the secret code you received to complete sign-in
+    </ion-card-subtitle>
+  </ion-card-header>
+  
+  
+    <ion-row >
+  
+       <ion-input class="x" required maxLength="1" [formControl]="digit1" #digit1el >
+       </ion-input>
+       <ion-input class="x" required maxLength="1" [formControl]="digit2" #digit2el >
+       </ion-input>
+       <ion-input class="x"  required maxLength="1" [formControl]="digit3" #digit3el  >
+       </ion-input>
+  
+       <ion-input class="x"  required maxLength="1" [formControl]="digit4" #digit4el  >
+      </ion-input>
+  
+      <ion-input class="x"   required maxLength="1" [formControl]="digit5" #digit5el >
+      </ion-input>
+  
+      <ion-input class="x"   required maxLength="1" [formControl]="digit6" #digit6el>
+      </ion-input>
+  
+  
+    </ion-row>
+    <ion-button  *ngIf="(busy | async) !==true" color="primary" (click)="submit()">
+      CONTINUE
+      <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
+    </ion-button>
+  </ion-card>
+  
+    <!-- <mat-card-actions>
+      <div fxFlex></div>
+      <button mat-stroked-button color="primary" (click)="submit()">
+        <div fxFlex></div>
+        <div *ngIf="(busy | async) !==true">CONTINUE</div>
+        <mat-spinner *ngIf="busy | async" [diameter]="35"></mat-spinner>
+        <div fxFlex></div>
+      </button>
+      <div fxFlex></div>
+    </mat-card-actions> -->
+  
+    <p *ngIf="errorMessage | async">{{ errorMessage | async }}</p>
+  
+  <!-- </mat-card> -->
+  </ion-content>
+  

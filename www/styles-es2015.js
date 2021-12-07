@@ -526,7 +526,7 @@ module.exports = content.locals || {};
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!********************************************************************************************************************************!*\
   !*** multi ./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css ./src/theme/variables.scss ./src/global.scss ***!
   \********************************************************************************************************************************/
@@ -540,5 +540,5 @@ module.exports = __webpack_require__(/*! C:\Users\flixd\Documents\GitHub\mrgami\
 
 /***/ })
 
-},[[3,"runtime"]]]);
+},[[5,"runtime"]]]);
 //# sourceMappingURL=styles-es2015.js.map

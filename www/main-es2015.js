@@ -296,7 +296,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-button class=\"backbtn\" routerLink=\"/welcome\" routerDirection=\"back\">\r\n        <img src=\"../../assets/back.svg\" />\r\n      </ion-button>\r\n    </ion-buttons>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<!-- <ion-content class=\"ion-padding\">\r\n  <div class=\"ion-padding container\">\r\n    <h1>Login</h1>\r\n\r\n    <div class=\"form-container\">\r\n      <ion-item>\r\n        <ion-label position=\"floating\">Email</ion-label>\r\n        <ion-input></ion-input>\r\n      </ion-item>\r\n      <ion-item>\r\n        <ion-label position=\"floating\">Password</ion-label>\r\n        <ion-input type=\"password\"></ion-input>\r\n        <ion-icon name=\"eye\" slot=\"end\"></ion-icon>\r\n      </ion-item>\r\n\r\n      <ion-button expand=\"block\" class=\"main-button\" (click)=\"login()\">Log in</ion-button>\r\n\r\n      <div class=\"sign-up\">\r\n        Don't have an account? <ion-button color=\"dark\" fill=\"clear\" routerLink=\"/signup\" routerDirection=\"forward\">Sign up</ion-button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</ion-content> -->\r\n\r\n\r\n<!-- <div class=\"container\">\r\n<ion-card class=\"card-center\">\r\n  <ng-otp-input  (onInputChange)=\"onOtpChange($event)\"  [config]=\"{length:5}\"></ng-otp-input>\r\n<ion-item>\r\n<ion-button  color=\"primary\">Click Me</ion-button>\r\n</ion-item>\r\n</ion-card>\r\n<button class=\"btn btn-success\">\r\n  Click Me\r\n</button>\r\n\r\n</div> -->\r\n\r\n<!-- <div class=\"card\" style=\"width: 80%;margin: 200px 30px 30px 150px;\">\r\n<div class=\"card-center\" >\r\n  <div>\r\n    <h5  >Login</h5>\r\n    <p >Resend Otp?</p>\r\n    <ng-otp-input  (onInputChange)=\"onOtpChange($event)\"  [config]=\"{length:5}\"></ng-otp-input>\r\n    <ion-button  color=\"primary\">Click Me</ion-button>\r\n  </div>\r\n\r\n</div>\r\n\r\n</div> -->\r\n\r\n<ion-content class=\"ion-padding\">\r\n  <ion-grid>\r\n  \r\n    <ion-row *ngIf='!isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n        <ion-toolbar>\r\n          <ion-item lines=\"full\">\r\n            <ion-label position=\"floating\">NAME</ion-label>\r\n            <ion-input [(ngModel)]='name'></ion-input>\r\n          </ion-item>\r\n        </ion-toolbar>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row *ngIf='!isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n        <ion-toolbar>\r\n          <ion-item lines=\"full\">\r\n            <ion-label position=\"floating\">PHONE NO.</ion-label>\r\n            <ion-input [(ngModel)]='inputNumber'></ion-input>\r\n          </ion-item>\r\n        </ion-toolbar>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row *ngIf='!isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n        <ion-toolbar>\r\n          <ion-button expand=\"block\" (click)=\"onNumberSubmitted()\" color=\"medium\">LOGIN WITH OTP</ion-button>\r\n        </ion-toolbar>\r\n      </ion-col>\r\n    </ion-row>\r\n\r\n    <ion-row *ngIf='isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n            <ng-otp-input (onInputChange)=\"onOtpChange($event)\" [config]=\"{length:6}\"></ng-otp-input>\r\n      </ion-col>\r\n    </ion-row>\r\n\r\n    <ion-row *ngIf='isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n        <ion-toolbar>\r\n          <ion-button expand=\"block\" (click)=\"onLogin()\" color=\"medium\">LOGIN</ion-button>\r\n        </ion-toolbar>\r\n      </ion-col>\r\n    </ion-row>\r\n\r\n    <ion-row>\r\n      <ion-col class=\"center\" size=\"12\">\r\n        <ion-item class=\"center\" lines=\"none\" color=\"none\">\r\n          <ion-icon size=\"large\" name=\"logo-google\" color=\"medium\"></ion-icon>\r\n        </ion-item>\r\n        <ion-item class=\"center\" lines=\"none\" color=\"none\">\r\n          <ion-icon size=\"large\" name=\"logo-facebook\" color=\"medium\"></ion-icon>\r\n        </ion-item>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col class=\"center\" size=\"12\">\r\n          <ion-button fill=\"clear\" expand=\"block\" routerLink=\"/tabs/landing\" color=\"medium\" routerDirection=\"forward\">Skip now<ion-icon size=\"large\" slot=\"end\" name=\"log-in-outline\"></ion-icon></ion-button>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n \r\n\r\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-button class=\"backbtn\" routerLink=\"/welcome\" routerDirection=\"back\">\r\n        <img src=\"../../assets/back.svg\" />\r\n      </ion-button>\r\n    </ion-buttons>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<!-- <ion-content class=\"ion-padding\">\r\n  <div class=\"ion-padding container\">\r\n    <h1>Login</h1>\r\n\r\n    <div class=\"form-container\">\r\n      <ion-item>\r\n        <ion-label position=\"floating\">Email</ion-label>\r\n        <ion-input></ion-input>\r\n      </ion-item>\r\n      <ion-item>\r\n        <ion-label position=\"floating\">Password</ion-label>\r\n        <ion-input type=\"password\"></ion-input>\r\n        <ion-icon name=\"eye\" slot=\"end\"></ion-icon>\r\n      </ion-item>\r\n\r\n      <ion-button expand=\"block\" class=\"main-button\" (click)=\"login()\">Log in</ion-button>\r\n\r\n      <div class=\"sign-up\">\r\n        Don't have an account? <ion-button color=\"dark\" fill=\"clear\" routerLink=\"/signup\" routerDirection=\"forward\">Sign up</ion-button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</ion-content> -->\r\n\r\n\r\n<!-- <div class=\"container\">\r\n<ion-card class=\"card-center\">\r\n  <ng-otp-input  (onInputChange)=\"onOtpChange($event)\"  [config]=\"{length:5}\"></ng-otp-input>\r\n<ion-item>\r\n<ion-button  color=\"primary\">Click Me</ion-button>\r\n</ion-item>\r\n</ion-card>\r\n<button class=\"btn btn-success\">\r\n  Click Me\r\n</button>\r\n\r\n</div> -->\r\n\r\n<!-- <div class=\"card\" style=\"width: 80%;margin: 200px 30px 30px 150px;\">\r\n<div class=\"card-center\" >\r\n  <div>\r\n    <h5  >Login</h5>\r\n    <p >Resend Otp?</p>\r\n    <ng-otp-input  (onInputChange)=\"onOtpChange($event)\"  [config]=\"{length:5}\"></ng-otp-input>\r\n    <ion-button  color=\"primary\">Click Me</ion-button>\r\n  </div>\r\n\r\n</div>\r\n\r\n</div> -->\r\n\r\n<!-- <ion-content class=\"ion-padding\">\r\n  <ion-grid>\r\n  \r\n    <ion-row *ngIf='!isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n        <ion-toolbar>\r\n          <ion-item lines=\"full\">\r\n            <ion-label position=\"floating\">NAME</ion-label>\r\n            <ion-input [(ngModel)]='name'></ion-input>\r\n          </ion-item>\r\n        </ion-toolbar>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row *ngIf='!isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n        <ion-toolbar>\r\n          <ion-item lines=\"full\">\r\n            <ion-label position=\"floating\">PHONE NO.</ion-label>\r\n            <ion-input [(ngModel)]='inputNumber'></ion-input>\r\n          </ion-item>\r\n        </ion-toolbar>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row *ngIf='!isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n        <ion-toolbar>\r\n          <ion-button expand=\"block\" (click)=\"onNumberSubmitted()\" color=\"medium\">LOGIN WITH OTP</ion-button>\r\n        </ion-toolbar>\r\n      </ion-col>\r\n    </ion-row>\r\n\r\n    <ion-row *ngIf='isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n            <ng-otp-input (onInputChange)=\"onOtpChange($event)\" [config]=\"{length:6}\"></ng-otp-input>\r\n      </ion-col>\r\n    </ion-row>\r\n\r\n    <ion-row *ngIf='isNumberSubmitted'>\r\n      <ion-col size=\"12\" class=\"center\">\r\n        <ion-toolbar>\r\n          <ion-button expand=\"block\" (click)=\"onLogin()\" color=\"medium\">LOGIN</ion-button>\r\n        </ion-toolbar>\r\n      </ion-col>\r\n    </ion-row>\r\n\r\n    <ion-row>\r\n      <ion-col class=\"center\" size=\"12\">\r\n        <ion-item class=\"center\" lines=\"none\" color=\"none\">\r\n          <ion-icon size=\"large\" name=\"logo-google\" color=\"medium\"></ion-icon>\r\n        </ion-item>\r\n        <ion-item class=\"center\" lines=\"none\" color=\"none\">\r\n          <ion-icon size=\"large\" name=\"logo-facebook\" color=\"medium\"></ion-icon>\r\n        </ion-item>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col class=\"center\" size=\"12\">\r\n          <ion-button fill=\"clear\" expand=\"block\" routerLink=\"/tabs/landing\" color=\"medium\" routerDirection=\"forward\">Skip now<ion-icon size=\"large\" slot=\"end\" name=\"log-in-outline\"></ion-icon></ion-button>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n \r\n\r\n</ion-content> -->\r\n<ion-content>\r\n<ion-card>\r\n  <ion-card-header>\r\n    <ion-card-title color=\"warning\">\r\n      <ion-icon name=\"lock-closed-outline\"></ion-icon>\r\n      Please Sign In\r\n    </ion-card-title>\r\n    <ion-card-subtitle>\r\n      Enter your phone number you registered with and we'll send you a one-time secret sign-in code via SMS. Your phone # is your username.\r\n    </ion-card-subtitle>\r\n  </ion-card-header>\r\n  <ion-card-content>\r\n    <form>\r\n\r\n      <ion-label color=\"success\">Phone Number</ion-label>\r\n    <ion-input placeholder=\"Phone Number\" [formControl]=\"sms\" type=\"sms\" required>\r\n\r\n    </ion-input>\r\n  </form>\r\n  <ion-button color=\"warning\" (click)=\"signIn()\" [disabled]=\"(busy | async)\">\r\nSEND SIGN IN CODE\r\n<ion-spinner *ngIf=\"busy | async\" name=\"bubbles\"></ion-spinner>\r\n  </ion-button>\r\n  <p>Not registered yet? <a routerLink='/signup' routerLinkActive=\"active\">Sign up</a></p>\r\n  </ion-card-content>\r\n  <ion-button fill=\"clear\" expand=\"block\" routerLink=\"/tabs/landing\" color=\"medium\" routerDirection=\"forward\">Skip for now<ion-icon size=\"large\" slot=\"end\" name=\"log-in-outline\"></ion-icon></ion-button>\r\n  <p *ngIf=\"errorMessage | async\">{{ errorMessage | async }}</p>\r\n\r\n  <ion-grid>\r\n  <ion-row>\r\n    <ion-col class=\"center\" size=\"12\">\r\n      <ion-item class=\"center\" lines=\"none\" color=\"none\">\r\n        <ion-icon size=\"large\" name=\"logo-google\" color=\"medium\"></ion-icon>\r\n      </ion-item>\r\n      <ion-item class=\"center\" lines=\"none\" color=\"none\">\r\n        <ion-icon size=\"large\" name=\"logo-facebook\" color=\"medium\"></ion-icon>\r\n      </ion-item>\r\n    </ion-col>\r\n  </ion-row>\r\n</ion-grid>\r\n</ion-card>\r\n</ion-content>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/answer-challenge/answer-challenge.page.html":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/answer-challenge/answer-challenge.page.html ***!
+  \*********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\n\n\n  <ion-card>\n  <ion-card-header>\n    <ion-card-title>\n      <ion-icon name=\"lock-closed-outline\"></ion-icon>\n      Sign-In\n    </ion-card-title>\n    <ion-card-subtitle>\n      Please enter the secret code you received to complete sign-in\n    </ion-card-subtitle>\n  </ion-card-header>\n  \n  \n    <ion-row >\n  \n       <ion-input class=\"x\" required maxLength=\"1\" [formControl]=\"digit1\" #digit1el >\n       </ion-input>\n       <ion-input class=\"x\" required maxLength=\"1\" [formControl]=\"digit2\" #digit2el >\n       </ion-input>\n       <ion-input class=\"x\"  required maxLength=\"1\" [formControl]=\"digit3\" #digit3el  >\n       </ion-input>\n  \n       <ion-input class=\"x\"  required maxLength=\"1\" [formControl]=\"digit4\" #digit4el  >\n      </ion-input>\n  \n      <ion-input class=\"x\"   required maxLength=\"1\" [formControl]=\"digit5\" #digit5el >\n      </ion-input>\n  \n      <ion-input class=\"x\"   required maxLength=\"1\" [formControl]=\"digit6\" #digit6el>\n      </ion-input>\n  \n  \n    </ion-row>\n    <ion-button  *ngIf=\"(busy | async) !==true\" color=\"primary\" (click)=\"submit()\">\n      CONTINUE\n      <ion-spinner *ngIf=\"busy | async\" name=\"bubbles\"></ion-spinner>\n    </ion-button>\n  </ion-card>\n  \n    <!-- <mat-card-actions>\n      <div fxFlex></div>\n      <button mat-stroked-button color=\"primary\" (click)=\"submit()\">\n        <div fxFlex></div>\n        <div *ngIf=\"(busy | async) !==true\">CONTINUE</div>\n        <mat-spinner *ngIf=\"busy | async\" [diameter]=\"35\"></mat-spinner>\n        <div fxFlex></div>\n      </button>\n      <div fxFlex></div>\n    </mat-card-actions> -->\n  \n    <p *ngIf=\"errorMessage | async\">{{ errorMessage | async }}</p>\n  \n  <!-- </mat-card> -->\n  </ion-content>\n  ");
 
 /***/ }),
 
@@ -322,7 +335,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n  <ion-item lines=\"none\" color=\"light\">\r\n    <ion-icon slot=\"end\" name=\"close\" (click)=\"dismiss()\"></ion-icon>\r\n  </ion-item>\r\n  <ion-card class=\"ion-padding\">\r\n    <ion-card-header>\r\n      {{ name}} \r\n    </ion-card-header>\r\n    <ion-grid>\r\n      <ion-row>\r\n        <ion-col class=\"reverseCenter\" size=\"12\">\r\n          <ion-thumbnail>\r\n            <ion-img src=\"{{image}}\"></ion-img>\r\n          </ion-thumbnail>\r\n        </ion-col>\r\n        \r\n      </ion-row>\r\n      <ion-row>\r\n        <ion-col class=\"reverseCenter\" size=\"12\">\r\n          <ion-label>REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for\r\n            Buffalo,Cow,Cattle,Poultry,\r\n            Goat & Pig (RIGMIN Forte Powder)\r\n          </ion-label>\r\n        </ion-col>\r\n      </ion-row>\r\n    </ion-grid>\r\n    <ion-toolbar color=\"none\">\r\n      <ion-item slot=\"start\" lines=\"none\" color=\"none\">\r\n        <ion-label color=\"success\">{{ price | currency:'INR' }}</ion-label>\r\n      </ion-item>\r\n    </ion-toolbar>\r\n  </ion-card>\r\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n  <ion-item lines=\"none\" color=\"warning\">\r\n    <ion-icon slot=\"end\" name=\"close\" (click)=\"dismiss()\"></ion-icon>\r\n  </ion-item>\r\n  <ion-card class=\"ion-padding\">\r\n    <ion-card-header >\r\n     <ion-label color=\"light\"> {{ name}} </ion-label> \r\n    </ion-card-header>\r\n    <ion-grid>\r\n      <ion-row>\r\n        <ion-col class=\"reverseCenter\" size=\"12\">\r\n          <ion-thumbnail>\r\n            <ion-img src=\"{{image}}\"></ion-img>\r\n          </ion-thumbnail>\r\n        </ion-col>\r\n        \r\n      </ion-row>\r\n      <ion-row>\r\n        <ion-col class=\"reverseCenter\" size=\"12\">\r\n          <ion-label>REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for\r\n            Buffalo,Cow,Cattle,Poultry,\r\n            Goat & Pig (RIGMIN Forte Powder)\r\n          </ion-label>\r\n        </ion-col>\r\n      </ion-row>\r\n    </ion-grid>\r\n    <ion-toolbar color=\"none\">\r\n      <ion-item slot=\"start\" lines=\"none\" color=\"none\">\r\n        <ion-label color=\"success\">{{ price | currency:'INR' }}</ion-label>\r\n      </ion-item>\r\n    </ion-toolbar>\r\n  </ion-card>\r\n</ion-content>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/signup/signup.page.html":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/signup/signup.page.html ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- <ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button class=\"backbtn\" routerLink=\"/welcome\" routerDirection=\"back\">\n        <img src=\"../../assets/back.svg\" />\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"ion-padding\">\n  <div class=\"ion-padding container\">\n    <h1>Signup</h1>\n\n    <div class=\"form-container\">\n      <ion-item>\n        <ion-label position=\"floating\">Name</ion-label>\n        <ion-input></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label position=\"floating\">Email</ion-label>\n        <ion-input></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label position=\"floating\">Password</ion-label>\n        <ion-input type=\"password\"></ion-input>\n        <ion-icon name=\"eye\" slot=\"end\"></ion-icon>\n      </ion-item>\n\n      <ion-button expand=\"block\" class=\"main-button\">Sign Up</ion-button>\n\n      <div class=\"sign-up\">\n        Already have an account? <ion-button color=\"dark\" fill=\"clear\" routerLink=\"/login\" routerDirection=\"forward\">Sign in</ion-button>\n      </div>\n    </div>\n  </div>\n</ion-content> -->\n<ion-card>\n  <ion-card-header>\n    <ion-card-title>\n      Please Sign Up\n    </ion-card-title>\n    <ion-card-subtitle>\n      We'd be happy to have you join our community!\n    </ion-card-subtitle>\n  </ion-card-header>\n  \n    <!-- <mat-card-header>\n      <mat-icon mat-card-avatar>lock</mat-icon>\n      <mat-card-title>Please Sign Up</mat-card-title>\n      <mat-card-subtitle>We'd be happy to have you join our community!</mat-card-subtitle>\n    </mat-card-header> -->\n  \n    <ion-card-content>\n      <form>\n        <ion-label color=\"success\">Full Name</ion-label>\n        <ion-input  placeholder=\"Full Name\" [formControl]=\"fullName\" name=\"name\" required></ion-input>\n        <ion-label color=\"success\">Phone Number</ion-label>\n        <ion-input placeholder=\"Phone Number (e.g. +919999922222)\" [formControl]=\"sms\" name=\"sms\" required></ion-input>\n      </form>\n      <ion-button *ngIf=\"(busy | async) !==true\" color=\"success\" (click)=\"signup()\">\n        SIGN UP<ion-spinner *ngIf=\"busy | async\" name=\"bubbles\">\n        </ion-spinner>\n      </ion-button>\n    </ion-card-content>\n  \n  \n  \n  \n    <!-- <mat-card-content>\n      <form fxLayout=\"column\">\n        <mat-form-field>\n          <input matInput placeholder=\"Full Name\" [formControl]=\"fullName\" name=\"name\" autocomplete=\"name\" required/>\n        </mat-form-field>\n        <mat-form-field>\n          <input matInput placeholder=\"Phone Number (e.g. +12065551211)\" [formControl]=\"sms\" type=\"sms\" sms name=\"sms\"\n            autocomplete=\"username sms\" required/>\n        </mat-form-field>\n      </form>\n    </mat-card-content> -->\n  \n    <!-- <mat-card-actions>\n      <div fxFlex></div>\n      <button mat-stroked-button color=\"primary\" (click)=\"signup()\">\n        <div fxFlex></div>\n        <div *ngIf=\"(busy | async) !==true\">SIGN UP</div>\n        <mat-spinner *ngIf=\"busy | async\" [diameter]=\"35\"></mat-spinner>\n        <div fxFlex></div>\n      </button>\n      <div fxFlex></div>\n    </mat-card-actions> -->\n  \n    <p *ngIf=\"errorMessage | async\">{{ errorMessage | async }}</p>\n  \n    <ion-card-content>\n      <ion-card-subtitle>\n        Already signed up? <a routerLink='/login' routerLinkActive=\"active success\" >Sign in</a>\n      </ion-card-subtitle>\n  \n    </ion-card-content>\n  \n  \n  </ion-card>\n  ");
 
 /***/ }),
 
@@ -341,6 +367,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var _landing_landing_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./landing/landing.page */ "./src/app/landing/landing.page.ts");
 /* harmony import */ var _login_login_page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./login/login.page */ "./src/app/login/login.page.ts");
+/* harmony import */ var _services_auth_guard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./services/auth.guard */ "./src/app/services/auth.guard.ts");
+
 
 
 
@@ -357,7 +385,8 @@ const routes = [
     },
     {
         path: 'login',
-        loadChildren: () => __webpack_require__.e(/*! import() | login-login-module */ "login-login-module").then(__webpack_require__.bind(null, /*! ./login/login.module */ "./src/app/login/login.module.ts")).then(m => m.LoginPageModule)
+        loadChildren: () => Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./login/login.module */ "./src/app/login/login.module.ts")).then(m => m.LoginPageModule),
+        canActivate: [_services_auth_guard__WEBPACK_IMPORTED_MODULE_5__["IsNotAuthenticated"]]
     },
     {
         path: 'cart-modal',
@@ -383,12 +412,18 @@ const routes = [
     },
     {
         path: 'signup',
-        loadChildren: () => __webpack_require__.e(/*! import() | signup-signup-module */ "signup-signup-module").then(__webpack_require__.bind(null, /*! ./signup/signup.module */ "./src/app/signup/signup.module.ts")).then(m => m.SignupPageModule)
+        loadChildren: () => Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./signup/signup.module */ "./src/app/signup/signup.module.ts")).then(m => m.SignupPageModule),
+        canActivate: [_services_auth_guard__WEBPACK_IMPORTED_MODULE_5__["IsNotAuthenticated"]]
     },
     {
         path: '',
         redirectTo: '/welcome',
         pathMatch: 'full'
+    },
+    {
+        path: 'answer-challenge',
+        loadChildren: () => Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./pages/answer-challenge/answer-challenge.module */ "./src/app/pages/answer-challenge/answer-challenge.module.ts")).then(m => m.AnswerChallengePageModule),
+        canActivate: [_services_auth_guard__WEBPACK_IMPORTED_MODULE_5__["IsNotAuthenticated"]]
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -586,6 +621,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @ionic-native/media-capture/ngx */ "./node_modules/@ionic-native/media-capture/__ivy_ngcc__/ngx/index.js");
 /* harmony import */ var _ionic_native_file_opener_ngx__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ionic-native/file-opener/ngx */ "./node_modules/@ionic-native/file-opener/__ivy_ngcc__/ngx/index.js");
 /* harmony import */ var _pages_med_modal_med_modal_page__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/med-modal/med-modal.page */ "./src/app/pages/med-modal/med-modal.page.ts");
+/* harmony import */ var _app_services_auth_guard__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../app/services/auth.guard */ "./src/app/services/auth.guard.ts");
+/* harmony import */ var _login_login_module__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./login/login.module */ "./src/app/login/login.module.ts");
+/* harmony import */ var _pages_answer_challenge_answer_challenge_module__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./pages/answer-challenge/answer-challenge.module */ "./src/app/pages/answer-challenge/answer-challenge.module.ts");
+/* harmony import */ var _signup_signup_module__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./signup/signup.module */ "./src/app/signup/signup.module.ts");
+
+
+
+
+
 
 
 
@@ -625,6 +669,9 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_17__["HttpClientModule"],
             _pages_cart_modal_cart_modal_module__WEBPACK_IMPORTED_MODULE_18__["CartModalPageModule"],
+            _login_login_module__WEBPACK_IMPORTED_MODULE_23__["LoginPageModule"],
+            _pages_answer_challenge_answer_challenge_module__WEBPACK_IMPORTED_MODULE_24__["AnswerChallengePageModule"],
+            _signup_signup_module__WEBPACK_IMPORTED_MODULE_25__["SignupPageModule"]
         ],
         providers: [
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
@@ -635,9 +682,11 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _services_login_service__WEBPACK_IMPORTED_MODULE_16__["LoginService"],
             _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_19__["MediaCapture"],
             _pages_med_modal_med_modal_page__WEBPACK_IMPORTED_MODULE_21__["MedModalPage"],
-            _ionic_native_file_opener_ngx__WEBPACK_IMPORTED_MODULE_20__["FileOpener"]
+            _ionic_native_file_opener_ngx__WEBPACK_IMPORTED_MODULE_20__["FileOpener"],
+            _app_services_auth_guard__WEBPACK_IMPORTED_MODULE_22__["AuthGuard"], _app_services_auth_guard__WEBPACK_IMPORTED_MODULE_22__["IsAuthenticated"], _app_services_auth_guard__WEBPACK_IMPORTED_MODULE_22__["IsNotAuthenticated"],
         ],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
+        schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]],
     })
 ], AppModule);
 
@@ -869,6 +918,92 @@ LandingPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
+/***/ "./src/app/login/login-routing.module.ts":
+/*!***********************************************!*\
+  !*** ./src/app/login/login-routing.module.ts ***!
+  \***********************************************/
+/*! exports provided: LoginPageRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageRoutingModule", function() { return LoginPageRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _login_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./login.page */ "./src/app/login/login.page.ts");
+
+
+
+
+const routes = [
+    {
+        path: '',
+        component: _login_page__WEBPACK_IMPORTED_MODULE_3__["LoginPage"]
+    }
+];
+let LoginPageRoutingModule = class LoginPageRoutingModule {
+};
+LoginPageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]],
+    })
+], LoginPageRoutingModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/login/login.module.ts":
+/*!***************************************!*\
+  !*** ./src/app/login/login.module.ts ***!
+  \***************************************/
+/*! exports provided: LoginPageModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _login_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./login-routing.module */ "./src/app/login/login-routing.module.ts");
+/* harmony import */ var _login_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./login.page */ "./src/app/login/login.page.ts");
+/* harmony import */ var ng_otp_input__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng-otp-input */ "./node_modules/ng-otp-input/__ivy_ngcc__/fesm2015/ng-otp-input.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+
+
+
+
+
+
+
+
+let LoginPageModule = class LoginPageModule {
+};
+LoginPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
+            _login_routing_module__WEBPACK_IMPORTED_MODULE_5__["LoginPageRoutingModule"],
+            ng_otp_input__WEBPACK_IMPORTED_MODULE_7__["NgOtpInputModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClientModule"]
+        ],
+        declarations: [_login_page__WEBPACK_IMPORTED_MODULE_6__["LoginPage"]]
+    })
+], LoginPageModule);
+
+
+
+/***/ }),
+
 /***/ "./src/app/login/login.page.scss":
 /*!***************************************!*\
   !*** ./src/app/login/login.page.scss ***!
@@ -878,7 +1013,7 @@ LandingPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: left;\n}\n\nng-otp-input {\n  color: #f5600a;\n}\n\nion-content {\n  margin: 0;\n  padding: 0;\n}\n\nion-grid {\n  position: relative;\n  top: 25%;\n}\n\nion-img {\n  width: 75%;\n  height: 75%;\n}\n\nion-toolbar {\n  --background: transparent;\n}\n\nion-input {\n  --background: transparent;\n}\n\nion-item {\n  --background: transparent;\n}\n\nng-opt-input {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  font-weight: bold;\n  font-size: 150%;\n  color: #685b51;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vbG9naW4ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWtEQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7QUFqREY7O0FBb0RFO0VBQ0UsY0FBQTtBQWpESjs7QUFvREU7RUFDRSxTQUFBO0VBQ0EsVUFBQTtBQWpESjs7QUFvREU7RUFDRSxrQkFBQTtFQUNBLFFBQUE7QUFqREo7O0FBb0RFO0VBQ0UsVUFBQTtFQUNBLFdBQUE7QUFqREo7O0FBb0RFO0VBQ0UseUJBQUE7QUFqREo7O0FBb0RFO0VBQ0UseUJBQUE7QUFqREo7O0FBb0RFO0VBQ0UseUJBQUE7QUFqREo7O0FBb0RFO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLGlCQUFBO0VBQ0EsZUFBQTtFQUNBLGNBQUE7QUFqREoiLCJmaWxlIjoic3JjL2FwcC9sb2dpbi9sb2dpbi5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvLyAvLyBUaGlzIHdpbGwgcmVtb3ZlIGlPUyBIZWFkZXIgTGluZVxyXG4vLyBpb24tdG9vbGJhciB7XHJcbi8vICAgICAtLWJvcmRlci13aWR0aDogMCAhaW1wb3J0YW50O1xyXG4vLyB9XHJcblxyXG4vLyAvLyBSZW1vdmluZyBBbmRyb2lkIEhlYWRlciBMaW5lXHJcbi8vIC5oZWFkZXItbWQ6OmFmdGVyIHtcclxuLy8gICAgIGJhY2tncm91bmQ6IG5vbmUgIWltcG9ydGFudDtcclxuLy8gfVxyXG5cclxuLy8gLmNvbnRhaW5lciBoMSB7XHJcbi8vICAgICBtYXJnaW4tdG9wOiAwO1xyXG4vLyB9XHJcblxyXG4vLyAuYmFja2J0biB7XHJcbi8vICAgICBtYXJnaW4tbGVmdDogMjBweDtcclxuLy8gfVxyXG5cclxuLy8gLmZvcm0tY29udGFpbmVyIHtcclxuLy8gICAgIG1hcmdpbi10b3A6IDQ4cHg7XHJcbi8vIH1cclxuXHJcbi8vIC5mb3JtLWNvbnRhaW5lciBpb24taXRlbSB7XHJcbi8vICAgICAtLXBhZGRpbmctc3RhcnQ6IDA7XHJcbi8vICAgICAtLWJvcmRlci1jb2xvcjogI0RBREFEQTtcclxuLy8gfVxyXG5cclxuLy8gLmZvcm0tY29udGFpbmVyIGlvbi1pdGVtIGlvbi1sYWJlbCB7XHJcbi8vICAgICBjb2xvcjogI0E2QTZBNjtcclxuLy8gfVxyXG5cclxuLy8gLmZvcm0tY29udGFpbmVyIGlvbi1pdGVtIGlvbi1pY29uIHtcclxuLy8gICAgIG1hcmdpbi10b3A6IGF1dG87XHJcbi8vICAgICBjb2xvcjogI2M2Y2JkNDtcclxuLy8gfVxyXG5cclxuLy8gLmZvcm0tY29udGFpbmVyIGlvbi1idXR0b24ge1xyXG4vLyAgICAgbWFyZ2luLXRvcDogNDhweDtcclxuLy8gfVxyXG5cclxuLy8gLnNpZ24tdXAge1xyXG4vLyAgICAgZGlzcGxheTogZmxleDtcclxuLy8gICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4vLyAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuLy8gfVxyXG5cclxuLy8gLnNpZ24tdXAgaW9uLWJ1dHRvbiB7XHJcbi8vICAgICBtYXJnaW46IDA7XHJcbi8vIH1cclxuXHJcbi5jZW50ZXJ7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgfVxyXG5cclxuICBuZy1vdHAtaW5wdXR7XHJcbiAgICBjb2xvcjogcmdiKDI0NSwgOTYsIDEwKTtcclxuICB9XHJcblxyXG4gIGlvbi1jb250ZW50e1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICB9XHJcblxyXG4gIGlvbi1ncmlke1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgdG9wOiAyNSU7XHJcbiAgfVxyXG5cclxuICBpb24taW1ne1xyXG4gICAgd2lkdGg6IDc1JTtcclxuICAgIGhlaWdodDogNzUlO1xyXG4gIH1cclxuXHJcbiAgaW9uLXRvb2xiYXJ7XHJcbiAgICAtLWJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xyXG4gIH1cclxuICBcclxuICBpb24taW5wdXR7XHJcbiAgICAtLWJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xyXG4gIH1cclxuXHJcbiAgaW9uLWl0ZW17XHJcbiAgICAtLWJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xyXG4gIH1cclxuXHJcbiAgbmctb3B0LWlucHV0e1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgZm9udC1zaXplOiAxNTAlO1xyXG4gICAgY29sb3I6IHJnYigxMDQsIDkxLCA4MSk7XHJcbiAgfSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: left;\n}\n\nng-otp-input {\n  color: #f5600a;\n}\n\nion-content {\n  margin: 0;\n  padding: 0;\n}\n\nion-toolbar {\n  --background: transparent;\n}\n\nion-input {\n  --background: transparent;\n}\n\nion-item {\n  --background: transparent;\n}\n\nng-opt-input {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  font-weight: bold;\n  font-size: 150%;\n  color: #685b51;\n}\n\nion-card {\n  --background: #36363F;\n  margin: 0;\n  padding: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vbG9naW4ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWtEQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7QUFqREY7O0FBb0RFO0VBQ0UsY0FBQTtBQWpESjs7QUFvREU7RUFDRSxTQUFBO0VBQ0EsVUFBQTtBQWpESjs7QUE4REU7RUFDRSx5QkFBQTtBQTNESjs7QUE4REU7RUFDRSx5QkFBQTtBQTNESjs7QUE4REU7RUFDRSx5QkFBQTtBQTNESjs7QUE4REU7RUFDRSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxlQUFBO0VBQ0EsY0FBQTtBQTNESjs7QUE2REU7RUFDRSxxQkFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0FBMURKIiwiZmlsZSI6InNyYy9hcHAvbG9naW4vbG9naW4ucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gLy8gVGhpcyB3aWxsIHJlbW92ZSBpT1MgSGVhZGVyIExpbmVcclxuLy8gaW9uLXRvb2xiYXIge1xyXG4vLyAgICAgLS1ib3JkZXItd2lkdGg6IDAgIWltcG9ydGFudDtcclxuLy8gfVxyXG5cclxuLy8gLy8gUmVtb3ZpbmcgQW5kcm9pZCBIZWFkZXIgTGluZVxyXG4vLyAuaGVhZGVyLW1kOjphZnRlciB7XHJcbi8vICAgICBiYWNrZ3JvdW5kOiBub25lICFpbXBvcnRhbnQ7XHJcbi8vIH1cclxuXHJcbi8vIC5jb250YWluZXIgaDEge1xyXG4vLyAgICAgbWFyZ2luLXRvcDogMDtcclxuLy8gfVxyXG5cclxuLy8gLmJhY2tidG4ge1xyXG4vLyAgICAgbWFyZ2luLWxlZnQ6IDIwcHg7XHJcbi8vIH1cclxuXHJcbi8vIC5mb3JtLWNvbnRhaW5lciB7XHJcbi8vICAgICBtYXJnaW4tdG9wOiA0OHB4O1xyXG4vLyB9XHJcblxyXG4vLyAuZm9ybS1jb250YWluZXIgaW9uLWl0ZW0ge1xyXG4vLyAgICAgLS1wYWRkaW5nLXN0YXJ0OiAwO1xyXG4vLyAgICAgLS1ib3JkZXItY29sb3I6ICNEQURBREE7XHJcbi8vIH1cclxuXHJcbi8vIC5mb3JtLWNvbnRhaW5lciBpb24taXRlbSBpb24tbGFiZWwge1xyXG4vLyAgICAgY29sb3I6ICNBNkE2QTY7XHJcbi8vIH1cclxuXHJcbi8vIC5mb3JtLWNvbnRhaW5lciBpb24taXRlbSBpb24taWNvbiB7XHJcbi8vICAgICBtYXJnaW4tdG9wOiBhdXRvO1xyXG4vLyAgICAgY29sb3I6ICNjNmNiZDQ7XHJcbi8vIH1cclxuXHJcbi8vIC5mb3JtLWNvbnRhaW5lciBpb24tYnV0dG9uIHtcclxuLy8gICAgIG1hcmdpbi10b3A6IDQ4cHg7XHJcbi8vIH1cclxuXHJcbi8vIC5zaWduLXVwIHtcclxuLy8gICAgIGRpc3BsYXk6IGZsZXg7XHJcbi8vICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuLy8gICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbi8vIH1cclxuXHJcbi8vIC5zaWduLXVwIGlvbi1idXR0b24ge1xyXG4vLyAgICAgbWFyZ2luOiAwO1xyXG4vLyB9XHJcblxyXG4uY2VudGVye1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gIH1cclxuXHJcbiAgbmctb3RwLWlucHV0e1xyXG4gICAgY29sb3I6IHJnYigyNDUsIDk2LCAxMCk7XHJcbiAgfVxyXG5cclxuICBpb24tY29udGVudHtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgfVxyXG5cclxuICAvLyBpb24tZ3JpZHtcclxuICAvLyAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAvLyAgIHRvcDogMjUlO1xyXG4gIC8vIH1cclxuXHJcbiAgLy8gaW9uLWltZ3tcclxuICAvLyAgIHdpZHRoOiA3NSU7XHJcbiAgLy8gICBoZWlnaHQ6IDc1JTtcclxuICAvLyB9XHJcblxyXG4gIGlvbi10b29sYmFye1xyXG4gICAgLS1iYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcclxuICB9XHJcbiAgXHJcbiAgaW9uLWlucHV0e1xyXG4gICAgLS1iYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcclxuICB9XHJcblxyXG4gIGlvbi1pdGVte1xyXG4gICAgLS1iYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcclxuICB9XHJcblxyXG4gIG5nLW9wdC1pbnB1dHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGZvbnQtc2l6ZTogMTUwJTtcclxuICAgIGNvbG9yOiByZ2IoMTA0LCA5MSwgODEpO1xyXG4gIH1cclxuICBpb24tY2FyZHtcclxuICAgIC0tYmFja2dyb3VuZDogIzM2MzYzRjtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgfSJdfQ== */");
 
 /***/ }),
 
@@ -895,9 +1030,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-/* harmony import */ var _services_login_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/login.service */ "./src/app/services/login.service.ts");
-/* harmony import */ var _util_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../util.service */ "./src/app/util.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 // import { Component, OnInit } from '@angular/core';
 // import { NavController } from '@ionic/angular';
 // import { UtilService } from '../util.service';
@@ -920,60 +1055,347 @@ __webpack_require__.r(__webpack_exports__);
 //     this.navCtrl.navigateRoot('landing', { animationDirection: 'forward' });
 //   }
 // }
+//Twillio based login
+// import { Component } from "@angular/core";
+// import { Router } from "@angular/router";
+// import { NavController } from "@ionic/angular";
+// import { LoginService } from "../services/login.service";
+// import { UtilService } from "../util.service";
+// @Component({
+//   selector: "app-login",
+//   templateUrl: "./login.page.html",
+//   styleUrls: ["./login.page.scss"],
+// })
+// export class LoginPage {
+//   inputNumber;
+//   isNumberSubmitted: boolean;
+//   name;
+//   otpreceived = "889963";
+//   otp: any;
+//   constructor(
+//     private navCtrl: NavController,
+//     private router: Router,
+//     private login: LoginService,
+//     private util: UtilService
+//   ) {}
+//   onOtpChange(otp) {
+//     this.otp = otp;
+//     console.log(otp);
+//   }
+//   onLogin() {
+//     //this.isNumberSubmitted =true;
+//     this.login.validateOtp(this.name, this.inputNumber, this.otp).subscribe(
+//       (response) => {
+//         //this.isNumberSubmitted =true;
+//         console.log("onLogin with OTP", response);
+//         //this.router.navigate(['welcome']);
+//         this.navCtrl.navigateRoot("tabs/landing", { animationDirection: "forward" });
+//         this.util.setMenuState(true);
+//         console.log("Clicked");
+//       },
+//       (error) => {
+//         //this.isNumberSubmitted = false;
+//         console.log("Error in onLogin()", error);
+//       }
+//     );
+//   }
+//   onNumberSubmitted() {
+//     this.login.generateOtp(this.name, this.inputNumber).subscribe(
+//       (response) => {
+//         this.isNumberSubmitted = true;
+//         console.log("NumberSubmitted", response);
+//         localStorage.setItem("isLoggedIn", "true");
+//       },
+//       (error) => {
+//         this.isNumberSubmitted = false;
+//       }
+//     );
+//   }
+// }
 
 
 
 
 
 let LoginPage = class LoginPage {
-    constructor(navCtrl, router, login, util) {
-        this.navCtrl = navCtrl;
+    constructor(router, auth) {
         this.router = router;
-        this.login = login;
-        this.util = util;
-        this.otpreceived = "889963";
+        this.auth = auth;
+        this.sms = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('+919860067118');
+        this.busy_ = new rxjs__WEBPACK_IMPORTED_MODULE_5__["BehaviorSubject"](false);
+        this.busy = this.busy_.asObservable();
+        this.errorMessage_ = new rxjs__WEBPACK_IMPORTED_MODULE_5__["BehaviorSubject"]('');
+        this.errorMessage = this.errorMessage_.asObservable();
     }
-    onOtpChange(otp) {
-        this.otp = otp;
-        console.log(otp);
-    }
-    onLogin() {
-        //this.isNumberSubmitted =true;
-        this.login.validateOtp(this.name, this.inputNumber, this.otp).subscribe((response) => {
-            //this.isNumberSubmitted =true;
-            console.log("onLogin with OTP", response);
-            //this.router.navigate(['welcome']);
-            this.navCtrl.navigateRoot("tabs/landing", { animationDirection: "forward" });
-            this.util.setMenuState(true);
-            console.log("Clicked");
-        }, (error) => {
-            //this.isNumberSubmitted = false;
-            console.log("Error in onLogin()", error);
-        });
-    }
-    onNumberSubmitted() {
-        this.login.generateOtp(this.name, this.inputNumber).subscribe((response) => {
-            this.isNumberSubmitted = true;
-            console.log("NumberSubmitted", response);
-            localStorage.setItem("isLoggedIn", "true");
-        }, (error) => {
-            this.isNumberSubmitted = false;
+    signIn() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            console.log('In SignIn', this.sms.value);
+            this.busy_.next(true);
+            //this.errorMessage_.next('');
+            try {
+                yield this.auth.signIn(this.sms.value);
+                console.log(this.sms.value);
+                this.router.navigate(['/answer-challenge']);
+            }
+            catch (err) {
+                this.errorMessage_.next(err.message || err);
+            }
+            finally {
+                this.busy_.next(false);
+            }
         });
     }
 };
 LoginPage.ctorParameters = () => [
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-    { type: _services_login_service__WEBPACK_IMPORTED_MODULE_4__["LoginService"] },
-    { type: _util_service__WEBPACK_IMPORTED_MODULE_5__["UtilService"] }
+    { type: _services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"] }
 ];
 LoginPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: "app-login",
         template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./login.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.page.html")).default,
+        changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
         styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./login.page.scss */ "./src/app/login/login.page.scss")).default]
     })
 ], LoginPage);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/answer-challenge/answer-challenge-routing.module.ts":
+/*!***************************************************************************!*\
+  !*** ./src/app/pages/answer-challenge/answer-challenge-routing.module.ts ***!
+  \***************************************************************************/
+/*! exports provided: AnswerChallengePageRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnswerChallengePageRoutingModule", function() { return AnswerChallengePageRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _answer_challenge_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./answer-challenge.page */ "./src/app/pages/answer-challenge/answer-challenge.page.ts");
+
+
+
+
+const routes = [
+    {
+        path: '',
+        component: _answer_challenge_page__WEBPACK_IMPORTED_MODULE_3__["AnswerChallengePage"]
+    }
+];
+let AnswerChallengePageRoutingModule = class AnswerChallengePageRoutingModule {
+};
+AnswerChallengePageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]],
+    })
+], AnswerChallengePageRoutingModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/answer-challenge/answer-challenge.module.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/pages/answer-challenge/answer-challenge.module.ts ***!
+  \*******************************************************************/
+/*! exports provided: AnswerChallengePageModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnswerChallengePageModule", function() { return AnswerChallengePageModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _answer_challenge_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./answer-challenge-routing.module */ "./src/app/pages/answer-challenge/answer-challenge-routing.module.ts");
+/* harmony import */ var _answer_challenge_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./answer-challenge.page */ "./src/app/pages/answer-challenge/answer-challenge.page.ts");
+
+
+
+
+
+
+
+let AnswerChallengePageModule = class AnswerChallengePageModule {
+};
+AnswerChallengePageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+            _answer_challenge_routing_module__WEBPACK_IMPORTED_MODULE_5__["AnswerChallengePageRoutingModule"]
+        ],
+        declarations: [_answer_challenge_page__WEBPACK_IMPORTED_MODULE_6__["AnswerChallengePage"]]
+    })
+], AnswerChallengePageModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/answer-challenge/answer-challenge.page.scss":
+/*!*******************************************************************!*\
+  !*** ./src/app/pages/answer-challenge/answer-challenge.page.scss ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".digit-input {\n  text-align: center;\n  font-size: 1.7em;\n}\n\n.x {\n  color: antiquewhite;\n  background-color: #ffae00;\n  padding-left: 15px;\n  letter-spacing: 42px;\n  border-radius: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYW5zd2VyLWNoYWxsZW5nZS9hbnN3ZXItY2hhbGxlbmdlLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0EsZ0JBQUE7QUFDSjs7QUFDRTtFQUNFLG1CQUFBO0VBQ0EseUJBQUE7RUFDQSxrQkFBQTtFQUNBLG9CQUFBO0VBQ0EsbUJBQUE7QUFFSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Fuc3dlci1jaGFsbGVuZ2UvYW5zd2VyLWNoYWxsZW5nZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZGlnaXQtaW5wdXQge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgZm9udC1zaXplOiAxLjdlbTtcclxuICB9XHJcbiAgLnh7XHJcbiAgICBjb2xvcjogYW50aXF1ZXdoaXRlO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMTc0LCAwKTtcclxuICAgIHBhZGRpbmctbGVmdDogMTVweDtcclxuICAgIGxldHRlci1zcGFjaW5nOiA0MnB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuICB9XHJcbiAgIl19 */");
+
+/***/ }),
+
+/***/ "./src/app/pages/answer-challenge/answer-challenge.page.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/pages/answer-challenge/answer-challenge.page.ts ***!
+  \*****************************************************************/
+/*! exports provided: AnswerChallengePage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnswerChallengePage", function() { return AnswerChallengePage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* eslint-disable @typescript-eslint/member-ordering */
+/* eslint-disable no-underscore-dangle */
+
+
+
+
+
+
+
+let AnswerChallengePage = class AnswerChallengePage {
+    constructor(auth, router) {
+        this.auth = auth;
+        this.router = router;
+        this.digit1 = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('');
+        this.digit2 = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('');
+        this.digit3 = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('');
+        this.digit4 = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('');
+        this.digit5 = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('');
+        this.digit6 = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('');
+        this.errorMessage_ = new rxjs__WEBPACK_IMPORTED_MODULE_5__["BehaviorSubject"]('');
+        this.errorMessage = this.errorMessage_.asObservable();
+        this.busy_ = new rxjs__WEBPACK_IMPORTED_MODULE_5__["BehaviorSubject"](false);
+        this.busy = this.busy_.asObservable();
+        this.allSubscriptions = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Subscription"]();
+        this.sms_ = new rxjs__WEBPACK_IMPORTED_MODULE_5__["BehaviorSubject"]('');
+        this.sms = this.sms_.asObservable();
+    }
+    ngOnInit() {
+        // Get e-mail address the code was sent to
+        // It is a public challenge parameter so let's try it that way
+        this.auth.getPublicChallengeParameters()
+            .then(param => this.sms_.next(param.sms));
+        // Move focus to next field upon entry of a digit
+        [2, 3, 4, 5, 6].forEach(digit => {
+            const prev = this[`digit${digit - 1}`];
+            const next = this[`digit${digit}element`];
+            console.log(next);
+            this.allSubscriptions.add(prev.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["tap"])(() => {
+                if (prev.value) {
+                    console.log(prev.value, prev, next);
+                    //  console.log('BeforesetTimeout');
+                    //  setTimeout(() => {
+                    console.log(next.nativeElement);
+                    next.nativeElement.focus();
+                    next.nativeElement.setSelectionRange(0, 1);
+                    console.log(next.nativeElement);
+                    //  }, 5000);
+                }
+            })).subscribe());
+        });
+        // If the user copy pastes the code into the first digit field
+        // we'll be so kind to cut it in 6 pieces and distribute it to the right fields
+        this.allSubscriptions.add(this.digit1.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["tap"])(value => {
+            if (value && value.length > 1) {
+                const digits = value.split('').slice(0, 6);
+                this.digit1.setValue(digits[0]);
+                this.digit2.setValue(digits[1]);
+                this.digit3.setValue(digits[2]);
+                this.digit4.setValue(digits[3]);
+                this.digit5.setValue(digits[4]);
+                this.digit6.setValue(digits[5]);
+            }
+        })).subscribe());
+    }
+    ngOnDestroy() {
+        this.allSubscriptions.unsubscribe();
+    }
+    ngAfterContentInit() {
+        if (1) {
+            try {
+                this.digit1element.nativeElement.focus();
+                console.log('Hello TRY ngAfterContentInit');
+            }
+            catch (_a) {
+                console.log('Hello Catch ngAfterContentInit');
+            }
+        }
+    }
+    submit() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            try {
+                this.errorMessage_.next('');
+                this.busy_.next(true);
+                const answer = [1, 2, 3, 4, 5, 6]
+                    .map(digit => this[`digit${digit}`].value)
+                    .join('');
+                const loginSucceeded = yield this.auth.answerCustomChallenge(answer);
+                if (loginSucceeded) {
+                    this.router.navigate(['/tabs/landing']);
+                }
+                else {
+                    this.errorMessage_.next('That\'s not the right code');
+                }
+            }
+            catch (err) {
+                this.errorMessage_.next(err.message || err);
+            }
+            finally {
+                this.busy_.next(false);
+            }
+        });
+    }
+};
+AnswerChallengePage.ctorParameters = () => [
+    { type: _services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+];
+AnswerChallengePage.propDecorators = {
+    digit1element: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"], args: ['digit1el', { read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },] }],
+    digit2element: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"], args: ['digit2el', { read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },] }],
+    digit3element: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"], args: ['digit3el', { read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },] }],
+    digit4element: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"], args: ['digit4el', { read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },] }],
+    digit5element: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"], args: ['digit5el', { read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },] }],
+    digit6element: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"], args: ['digit6el', { read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },] }]
+};
+AnswerChallengePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-answer-challenge',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./answer-challenge.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/answer-challenge/answer-challenge.page.html")).default,
+        changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./answer-challenge.page.scss */ "./src/app/pages/answer-challenge/answer-challenge.page.scss")).default]
+    })
+], AnswerChallengePage);
 
 
 
@@ -1317,6 +1739,219 @@ SellerFormPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
+/***/ "./src/app/services/auth.guard.ts":
+/*!****************************************!*\
+  !*** ./src/app/services/auth.guard.ts ***!
+  \****************************************/
+/*! exports provided: AuthGuard, IsAuthenticated, IsNotAuthenticated */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsAuthenticated", function() { return IsAuthenticated; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IsNotAuthenticated", function() { return IsNotAuthenticated; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/auth.service */ "./src/app/services/auth.service.ts");
+// import { Injectable } from '@angular/core';
+// import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
+// import { Observable } from 'rxjs';
+// import { AuthService } from './auth.service';
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class AuthGuard implements CanActivate {
+//   constructor(private auth: AuthService, private router: Router){}
+//   canActivate(){
+//     if(this.auth.isLoggedIn()){
+//       return true;
+//     }
+//     this.router.navigate(['/login']);
+//     return false;
+//     }
+// }
+
+
+
+let AuthGuard = class AuthGuard {
+    canActivate(route, state) {
+        return true;
+    }
+};
+AuthGuard = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], AuthGuard);
+
+let IsAuthenticated = class IsAuthenticated {
+    constructor(auth, router) {
+        this.auth = auth;
+        this.router = router;
+    }
+    canActivate() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            if (yield this.auth.isAuthenticated()) {
+                return true;
+            }
+            this.router.navigate(['/login']);
+            return false;
+        });
+    }
+};
+IsAuthenticated.ctorParameters = () => [
+    { type: _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+];
+IsAuthenticated = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], IsAuthenticated);
+
+let IsNotAuthenticated = class IsNotAuthenticated {
+    constructor(auth, router) {
+        this.auth = auth;
+        this.router = router;
+    }
+    canActivate() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            if (!(yield this.auth.isAuthenticated())) {
+                return true;
+            }
+            this.router.navigateByUrl('/tabs/landing');
+            return false;
+        });
+    }
+};
+IsNotAuthenticated.ctorParameters = () => [
+    { type: _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+];
+IsNotAuthenticated = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], IsNotAuthenticated);
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/auth.service.ts":
+/*!******************************************!*\
+  !*** ./src/app/services/auth.service.ts ***!
+  \******************************************/
+/*! exports provided: AuthService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var aws_amplify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! aws-amplify */ "./node_modules/aws-amplify/lib-esm/index.js");
+// import { Injectable } from '@angular/core';
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class AuthService {
+//   constructor() { }
+//   isLoggedIn(){
+//     return !!localStorage.getItem("isLoggedIn");
+//   }
+// }
+
+
+
+let AuthService = class AuthService {
+    constructor(document) {
+        this.document = document;
+        this.window = this.document.defaultView;
+    }
+    signIn(sms) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            console.log('Service', sms, aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"]);
+            this.cognitoUser = yield aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].signIn(sms);
+            console.log('Service this.cognitoUser', this.cognitoUser);
+        });
+    }
+    signOut() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            yield aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].signOut();
+        });
+    }
+    answerCustomChallenge(answer) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.cognitoUser = yield aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].sendCustomChallengeAnswer(this.cognitoUser, answer);
+            return this.isAuthenticated();
+        });
+    }
+    getPublicChallengeParameters() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            return this.cognitoUser.challengeParam;
+        });
+    }
+    signUp(sms, fullName) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const params = {
+                username: sms,
+                password: this.getRandomString(30),
+                attributes: {
+                    name: fullName
+                }
+            };
+            yield aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].signUp(params);
+        });
+    }
+    getRandomString(bytes) {
+        const randomValues = new Uint8Array(bytes);
+        this.window.crypto.getRandomValues(randomValues);
+        return Array.from(randomValues).map(this.intToHex).join('');
+    }
+    intToHex(nr) {
+        return nr.toString(16).padStart(2, '0');
+    }
+    // eslint-disable-next-line @typescript-eslint/member-ordering
+    isAuthenticated() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            try {
+                yield aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].currentSession();
+                return true;
+            }
+            catch (_a) {
+                return false;
+            }
+        });
+    }
+    // eslint-disable-next-line @typescript-eslint/member-ordering
+    getUserDetails() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            if (!this.cognitoUser) {
+                this.cognitoUser = yield aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].currentAuthenticatedUser();
+            }
+            return yield aws_amplify__WEBPACK_IMPORTED_MODULE_3__["Auth"].userAttributes(this.cognitoUser);
+        });
+    }
+};
+AuthService.ctorParameters = () => [
+    { type: Document, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["DOCUMENT"],] }] }
+];
+AuthService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], AuthService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/cart.service.ts":
 /*!******************************************!*\
   !*** ./src/app/services/cart.service.ts ***!
@@ -1553,6 +2188,171 @@ LoginService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
+/***/ "./src/app/signup/signup-routing.module.ts":
+/*!*************************************************!*\
+  !*** ./src/app/signup/signup-routing.module.ts ***!
+  \*************************************************/
+/*! exports provided: SignupPageRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPageRoutingModule", function() { return SignupPageRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _signup_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./signup.page */ "./src/app/signup/signup.page.ts");
+
+
+
+
+const routes = [
+    {
+        path: '',
+        component: _signup_page__WEBPACK_IMPORTED_MODULE_3__["SignupPage"]
+    }
+];
+let SignupPageRoutingModule = class SignupPageRoutingModule {
+};
+SignupPageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]],
+    })
+], SignupPageRoutingModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/signup/signup.module.ts":
+/*!*****************************************!*\
+  !*** ./src/app/signup/signup.module.ts ***!
+  \*****************************************/
+/*! exports provided: SignupPageModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPageModule", function() { return SignupPageModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _signup_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./signup-routing.module */ "./src/app/signup/signup-routing.module.ts");
+/* harmony import */ var _signup_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./signup.page */ "./src/app/signup/signup.page.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+
+
+
+
+
+
+
+let SignupPageModule = class SignupPageModule {
+};
+SignupPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
+            _signup_routing_module__WEBPACK_IMPORTED_MODULE_5__["SignupPageRoutingModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"]
+        ],
+        declarations: [_signup_page__WEBPACK_IMPORTED_MODULE_6__["SignupPage"]]
+    })
+], SignupPageModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/signup/signup.page.scss":
+/*!*****************************************!*\
+  !*** ./src/app/signup/signup.page.scss ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("ion-toolbar {\n  --border-width: 0 !important;\n}\n\n.header-md::after {\n  background: none !important;\n}\n\n.container h1 {\n  margin-top: 0;\n}\n\n.backbtn {\n  margin-left: 20px;\n}\n\n.form-container {\n  margin-top: 48px;\n}\n\n.form-container ion-item {\n  --padding-start: 0;\n  --border-color: #40454d;\n}\n\n.form-container ion-item ion-label {\n  color: #A6A6A6;\n}\n\n.form-container ion-item ion-icon {\n  margin-top: auto;\n  color: #40454d;\n}\n\n.form-container ion-button {\n  margin-top: 48px;\n}\n\n.sign-up {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.sign-up ion-button {\n  margin: 0;\n}\n\nion-input {\n  color: #dddcdc;\n}\n\nion-card {\n  --background:#36363F;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2lnbnVwL3NpZ251cC5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0E7RUFDSSw0QkFBQTtBQUFKOztBQUlBO0VBQ0ksMkJBQUE7QUFESjs7QUFJQTtFQUNJLGFBQUE7QUFESjs7QUFJQTtFQUNJLGlCQUFBO0FBREo7O0FBSUE7RUFDSSxnQkFBQTtBQURKOztBQUlBO0VBQ0ksa0JBQUE7RUFDQSx1QkFBQTtBQURKOztBQUlBO0VBQ0ksY0FBQTtBQURKOztBQUlBO0VBQ0ksZ0JBQUE7RUFDQSxjQUFBO0FBREo7O0FBSUE7RUFDSSxnQkFBQTtBQURKOztBQUlBO0VBQ0ksYUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7QUFESjs7QUFJQTtFQUNJLFNBQUE7QUFESjs7QUFHQTtFQUNJLGNBQUE7QUFBSjs7QUFFQTtFQUNJLG9CQUFBO0FBQ0oiLCJmaWxlIjoic3JjL2FwcC9zaWdudXAvc2lnbnVwLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIFRoaXMgd2lsbCByZW1vdmUgaU9TIEhlYWRlciBMaW5lXG5pb24tdG9vbGJhciB7XG4gICAgLS1ib3JkZXItd2lkdGg6IDAgIWltcG9ydGFudDtcbn1cblxuLy8gUmVtb3ZpbmcgQW5kcm9pZCBIZWFkZXIgTGluZVxuLmhlYWRlci1tZDo6YWZ0ZXIge1xuICAgIGJhY2tncm91bmQ6IG5vbmUgIWltcG9ydGFudDtcbn1cblxuLmNvbnRhaW5lciBoMSB7XG4gICAgbWFyZ2luLXRvcDogMDtcbn1cblxuLmJhY2tidG4ge1xuICAgIG1hcmdpbi1sZWZ0OiAyMHB4O1xufVxuXG4uZm9ybS1jb250YWluZXIge1xuICAgIG1hcmdpbi10b3A6IDQ4cHg7XG59XG5cbi5mb3JtLWNvbnRhaW5lciBpb24taXRlbSB7XG4gICAgLS1wYWRkaW5nLXN0YXJ0OiAwO1xuICAgIC0tYm9yZGVyLWNvbG9yOiAjNDA0NTRkO1xufVxuXG4uZm9ybS1jb250YWluZXIgaW9uLWl0ZW0gaW9uLWxhYmVsIHtcbiAgICBjb2xvcjogI0E2QTZBNjtcbn1cblxuLmZvcm0tY29udGFpbmVyIGlvbi1pdGVtIGlvbi1pY29uIHtcbiAgICBtYXJnaW4tdG9wOiBhdXRvO1xuICAgIGNvbG9yOiAjNDA0NTRkO1xufVxuXG4uZm9ybS1jb250YWluZXIgaW9uLWJ1dHRvbiB7XG4gICAgbWFyZ2luLXRvcDogNDhweDtcbn1cblxuLnNpZ24tdXAge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLnNpZ24tdXAgaW9uLWJ1dHRvbiB7XG4gICAgbWFyZ2luOiAwO1xufVxuaW9uLWlucHV0e1xuICAgIGNvbG9yOiAjZGRkY2RjO1xufVxuaW9uLWNhcmR7XG4gICAgLS1iYWNrZ3JvdW5kOiMzNjM2M0Y7XG59Il19 */");
+
+/***/ }),
+
+/***/ "./src/app/signup/signup.page.ts":
+/*!***************************************!*\
+  !*** ./src/app/signup/signup.page.ts ***!
+  \***************************************/
+/*! exports provided: SignupPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPage", function() { return SignupPage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/auth.service */ "./src/app/services/auth.service.ts");
+
+
+
+
+
+
+let SignupPage = class SignupPage {
+    constructor(router, auth) {
+        this.router = router;
+        this.auth = auth;
+        this.sms = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('');
+        this.fullName = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('');
+        this.busy_ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](false);
+        this.busy = this.busy_.asObservable();
+        this.errorMessage_ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"]('');
+        this.errorMessage = this.errorMessage_.asObservable();
+    }
+    signup() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.errorMessage_.next('');
+            this.busy_.next(true);
+            try {
+                yield this.auth.signUp(this.sms.value, this.fullName.value);
+                yield this.auth.signIn(this.sms.value);
+                this.router.navigate(['/answer-challenge']);
+            }
+            catch (err) {
+                console.log(err);
+                this.errorMessage_.next(err.message || err);
+            }
+            finally {
+                this.busy_.next(false);
+            }
+        });
+    }
+};
+SignupPage.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _services_auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"] }
+];
+SignupPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-signup',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./signup.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/signup/signup.page.html")).default,
+        changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./signup.page.scss */ "./src/app/signup/signup.page.scss")).default]
+    })
+], SignupPage);
+
+
+
+/***/ }),
+
 /***/ "./src/app/util.service.ts":
 /*!*********************************!*\
   !*** ./src/app/util.service.ts ***!
@@ -1607,7 +2407,10 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 const environment = {
-    production: false
+    production: false,
+    region: 'ap-south-1',
+    userPoolId: 'ap-south-1_n3TvdnvWf',
+    userPoolWebClientId: '7e3uugo9ggktsv6nrcmlethb1r',
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -1634,6 +2437,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/__ivy_ngcc__/fesm2015/platform-browser-dynamic.js");
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var aws_amplify__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! aws-amplify */ "./node_modules/aws-amplify/lib-esm/index.js");
+
 
 
 
@@ -1641,6 +2446,14 @@ __webpack_require__.r(__webpack_exports__);
 if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
 }
+aws_amplify__WEBPACK_IMPORTED_MODULE_4__["default"].configure({
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    Auth: {
+        region: _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].region,
+        userPoolId: _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].userPoolId,
+        userPoolWebClientId: _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].userPoolWebClientId,
+    }
+});
 Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
     .catch(err => console.log(err));
 
@@ -1656,6 +2469,28 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 
 module.exports = __webpack_require__(/*! C:\Users\flixd\Documents\GitHub\mrgami\src\main.ts */"./src/main.ts");
 
+
+/***/ }),
+
+/***/ 1:
+/*!********************!*\
+  !*** fs (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 2:
+/*!********************!*\
+  !*** fs (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ })
 
