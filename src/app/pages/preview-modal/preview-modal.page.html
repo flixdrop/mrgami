@@ -1,0 +1,71 @@
+
+<ion-content>
+<ion-card>
+  <ion-toolbar class="title-toolbar">
+    <ion-text slot="start">Animal Details</ion-text>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-text slot="start">Animal Name- </ion-text>
+    <ion-text slot="end">{{data.animalDetails.animalName}}</ion-text>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-text slot="start">Animal Type- </ion-text>
+    <ion-text slot="end">{{data.type}}</ion-text>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-text slot="start">Animal Breed- </ion-text>
+    <ion-text slot="end">{{data.animalDetails.breed}}</ion-text>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-text slot="start">Decription about the Animal- </ion-text>
+    <ion-text slot="end">{{data.animalDetails.description}}</ion-text>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-text slot="start">Asking Price- </ion-text>
+    <ion-text slot="end">{{data.animalDetails.askingPrice}}</ion-text>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-text slot="start">Animal wieght- </ion-text>
+    <ion-text slot="end">{{data.animalDetails.wieght}}</ion-text>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-text slot="start">Lactation- </ion-text>
+    <ion-text slot="end">{{data.animalDetails.lactationNumber}}</ion-text>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-text slot="start">Milk Per Day- </ion-text>
+    <ion-text slot="end">{{data.animalDetails.milkPerDay}}</ion-text>
+  </ion-toolbar>
+
+  <hr>
+
+  <ion-toolbar class="title-toolbar">
+    <ion-text slot="start">Seller Details</ion-text>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-text slot="start">Owner Name- </ion-text>
+    <ion-text slot="end">{{data.sellerInformation.ownerName}}</ion-text>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-img src="{{data.imageUrls.imagesList}}"></ion-img>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-text slot="start">Phone No.- </ion-text>
+    <ion-text slot="end">{{data.sellerInformation.phone}}</ion-text>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-text slot="start">District- </ion-text>
+    <ion-text slot="end">{{data.sellerInformation.district}}</ion-text>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-text slot="start">State- </ion-text>
+    <ion-text slot="end">{{data.sellerInformation.state}}</ion-text>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-text slot="start">Town- </ion-text>
+    <ion-text slot="end">{{data.sellerInformation.town}}</ion-text>
+  </ion-toolbar>
+</ion-card>
+<ion-button size="small" ></ion-button>
+</ion-content>

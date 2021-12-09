@@ -1,5 +1,4 @@
-<ion-content>
-
+<!-- <ion-content>
 
   <ion-card>
   <ion-card-header>
@@ -11,7 +10,6 @@
       Please enter the secret code you received to complete sign-in
     </ion-card-subtitle>
   </ion-card-header>
-  
   
     <ion-row >
   
@@ -30,28 +28,66 @@
   
       <ion-input class="x"   required maxLength="1" [formControl]="digit6" #digit6el>
       </ion-input>
-  
-  
+
     </ion-row>
     <ion-button  *ngIf="(busy | async) !==true" color="primary" (click)="submit()">
       CONTINUE
       <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
     </ion-button>
-  </ion-card>
-  
-    <!-- <mat-card-actions>
-      <div fxFlex></div>
-      <button mat-stroked-button color="primary" (click)="submit()">
-        <div fxFlex></div>
-        <div *ngIf="(busy | async) !==true">CONTINUE</div>
-        <mat-spinner *ngIf="busy | async" [diameter]="35"></mat-spinner>
-        <div fxFlex></div>
-      </button>
-      <div fxFlex></div>
-    </mat-card-actions> -->
-  
+  </ion-card>  
     <p *ngIf="errorMessage | async">{{ errorMessage | async }}</p>
-  
-  <!-- </mat-card> -->
   </ion-content>
-  
+   -->
+
+   <ion-card class="backgroundCard"></ion-card>
+
+<ion-content class="ion-padding">
+
+  <ion-card class="otpCard">
+    <ion-toolbar color="none">
+      <ion-item class="title" lines="full" color="none">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        Sign-In
+      </ion-item>
+    </ion-toolbar>
+    <ion-toolbar color="none">
+      <ion-text>
+        Please enter the secret code you received to complete sign-in
+      </ion-text>
+    </ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="flex" size="12">
+          <ion-input class="input" name="a" #a (keyup)="moveFocus($event,b,'')" type="tel" maxlength="1">
+          </ion-input>
+          <ion-input class="input" name="b" #b (keyup)="moveFocus($event,c,a)" type="tel" maxlength="1">
+          </ion-input>
+          <ion-input class="input" name="c" #c (keyup)="moveFocus($event,d,b)" type="tel" maxlength="1">
+          </ion-input>
+          <ion-input class="input" name="d" #d (keyup)="moveFocus($event,e,c)" type="tel" maxlength="1">
+          </ion-input>
+          <ion-input class="input" name="e" #e (keyup)="moveFocus($event,f,d)" type="tel" maxlength="1">
+          </ion-input>
+          <ion-input class="input" name="f" #f (keyup)="moveFocus($event,f,e)" type="tel" maxlength="1">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-button *ngIf="(busy | async) !==true" size="small" color="success" expand="block" (click)="submit()">
+            Continue
+            <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="errmsg" size="12">
+          <ion-text color="warning">{{answer_1}}</ion-text>
+          <ion-text color="danger" *ngIf="errorMessage | async">{{ errorMessage | async }}</ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-card>
+
+</ion-content>

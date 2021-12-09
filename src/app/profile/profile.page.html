@@ -20,15 +20,10 @@
 
   <ion-card class="profileCard">
 
-
-
     <form [formGroup]="userDetailsForm" >
       <div *ngFor="let detail of (userDetails | async)" >
-
               <ion-input matInput readonly placeholder="{{ detail.Name }}" [formControlName]="detail.Name"></ion-input>
-
       </div>
-
 
           <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
 

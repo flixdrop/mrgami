@@ -52,94 +52,94 @@
 //     font-weight: normal;
 //     src: url('./assets/fonts/Segoe\ UI\ Italic.ttf');
 // }
-@font-face {
-    font-family: 'Arima Madurai';
-    src: url('./assets/fonts/Arima_Madurai/ArimaMadurai-Medium.ttf');
-}
-@import "~animate.css/animate.css";
-.cart-modal {
-    --height: 75%;
-    --border-radius: 3%;
-    padding: 5%;
-  }
+// @font-face {
+//     font-family: 'Arima Madurai';
+//     src: url('./assets/fonts/Arima_Madurai/ArimaMadurai-Medium.ttf');
+// }
+// @import "~animate.css/animate.css";
+// .cart-modal {
+//     --height: 75%;
+//     --border-radius: 3%;
+//     padding: 5%;
+//   }
 
-* {
-    font-family: 'Arima Madurai';
-    //color: rgb(255, 255, 255);
-   // color: rgb(255, 255, 255);
-}
+// * {
+//     font-family: 'Arima Madurai';
+//     //color: rgb(255, 255, 255);
+//    // color: rgb(255, 255, 255);
+// }
 
-.main-button {
-   // --background: linear-gradient(90deg, rgba(45, 128, 7, 0.842) 0%, rgb(53, 133, 0) 100%);
-   --background:#FF5555;
-   --box-shadow: none;
-    position: relative;
-    height: 50px;
-    margin-bottom: 15px;
-}
+// .main-button {
+//    // --background: linear-gradient(90deg, rgba(45, 128, 7, 0.842) 0%, rgb(53, 133, 0) 100%);
+//    --background:#FF5555;
+//    --box-shadow: none;
+//     position: relative;
+//     height: 50px;
+//     margin-bottom: 15px;
+// }
 
-.main-button::after {
-    content: " ";
-    position: absolute;
-    width: 80%;
-    right: 10%;
-    bottom: 0;
-    top: 10px;
-    height: 40px;
-    z-index: -1;
-    box-shadow: 0px 20px 20px -17px rgb(221, 247, 174);
-}
+// .main-button::after {
+//     content: " ";
+//     position: absolute;
+//     width: 80%;
+//     right: 10%;
+//     bottom: 0;
+//     top: 10px;
+//     height: 40px;
+//     z-index: -1;
+//     box-shadow: 0px 20px 20px -17px rgb(221, 247, 174);
+// }
 
-// Removing ion-button focus outline
-ion-button:focus {
-    outline: none !important;
-}
+// // Removing ion-button focus outline
+// ion-button:focus {
+//     outline: none !important;
+// }
 
-ion-buttons:focus {
-    outline: none !important;
-}
+// ion-buttons:focus {
+//     outline: none !important;
+// }
 
-// Removing iOS and Android Header line for entire app
-ion-toolbar {
-    --border-width: 0 !important;
-    --background: #FF5555;
-   // --background: linear-gradient(90deg, rgb(255, 61, 61) 0%, rgb(255, 129, 11) 100%);
-}
+// // Removing iOS and Android Header line for entire app
+// ion-toolbar {
+//     --border-width: 0 !important;
+//     --background: #FF5555;
+//    // --background: linear-gradient(90deg, rgb(255, 61, 61) 0%, rgb(255, 129, 11) 100%);
+// }
 
-.header-md::after {
-    background: none;
-}
+// .header-md::after {
+//     background: none;
+// }
 
-.notification {
-    span {
-        background-color: #F5576C;
-        border-radius: 50%;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        top: 10%;
-        right: 10%;
-    }
-}
-ion-content{
---ion-background-color:#1F1F29;
+// .notification {
+//     span {
+//         background-color: #F5576C;
+//         border-radius: 50%;
+//         width: 10px;
+//         height: 10px;
+//         position: absolute;
+//         top: 10%;
+//         right: 10%;
+//     }
+// }
+// ion-content{
+// --ion-background-color:#1F1F29;
 
-}
+// }
 
-// Customizing Product Slider Bullets
+// // Customizing Product Slider Bullets
 
-.product-slider {
-    .swiper-pagination {
-        text-align: left;
-        padding-left: 20px;
+// .product-slider {
+//     .swiper-pagination {
+//         text-align: left;
+//         padding-left: 20px;
 
-        .swiper-pagination-bullet {
-            background: #ffffff;
-            opacity: 1;
-        }
+//         .swiper-pagination-bullet {
+//             background: #ffffff;
+//             opacity: 1;
+//         }
 
-        .swiper-pagination-bullet-active {
-            background: var(--ion-color-primary);
-        }
-    }
-}
+//         .swiper-pagination-bullet-active {
+//             background: var(--ion-color-primary);
+//         }
+//     }
+// }

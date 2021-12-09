@@ -32,17 +32,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/med-modal/med-modal.module').then( m => m.MedModalPageModule)
   },
   {
-    path: 'login/:id',
-   component:LoginPage,
-    children:[
-      {
-        path: 'landing',
-        component:LandingPage
-      },
-    ]
-
-  },
-  {
     path: 'signup',
     loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule),
     canActivate: [IsNotAuthenticated]
@@ -57,10 +46,25 @@ const routes: Routes = [
     loadChildren: () => import('./pages/answer-challenge/answer-challenge.module').then( m => m.AnswerChallengePageModule),
     canActivate: [IsNotAuthenticated]
   },
+  {
+    path: 'preview-modal',
+    loadChildren: () => import('./pages/preview-modal/preview-modal.module').then( m => m.PreviewModalPageModule)
+  },
+  {
+    path: 'login/:id',
+   component:LoginPage,
+    children:[
+      {
+        path: 'landing',
+        component:LandingPage
+      },
+    ]
 
-  
+  },  {
+    path: 'onboarding-page',
+    loadChildren: () => import('./pages/onboarding-page/onboarding-page.module').then( m => m.OnboardingPagePageModule)
+  },
 
- 
 
 ];
 

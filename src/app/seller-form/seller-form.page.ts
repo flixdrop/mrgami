@@ -8,6 +8,7 @@ import { ModalController, AlertController } from '@ionic/angular';
 import { GetAnimalData, SellerFormApiService } from '../services/seller-form-api.service';
 import { DataService } from '../data.service';
 import JsonFile from '../services/adform.json';
+import { PreviewModalPage } from '../pages/preview-modal/preview-modal.page';
 //const { Camer } = CameraPlugin;
 
 // export interface Options{
@@ -262,6 +263,7 @@ export class SellerFormPage implements OnInit {
         });
         this.myForm.reset();
         this.presentToast();
+        this.presentModal(adformData);
         this.flag = false;
         // return await this.modalCtrl.dismiss();
   }
@@ -516,5 +518,16 @@ console.log("After Imagepath",this.imagePath);
 
     const { role } = await toast.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
+  }
+
+  async presentModal(adformdata) {
+    console.log('adformdata in modal- ', adformdata);
+    const modal = await this.modalCtrl.create({
+      component: PreviewModalPage,
+      componentProps: {
+       data: adformdata
+      }
+    });
+    return await modal.present();
   }
 }

@@ -128,9 +128,9 @@ export class LoginPage   {
       this.router.navigate(['/answer-challenge']);
     } catch (err) {
       this.errorMessage_.next(err.message || err);
+      this.router.navigate(['/signup']);
     } finally {
       this.busy_.next(false);
     }
   }
-
 }

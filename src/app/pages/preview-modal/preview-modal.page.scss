@@ -1,0 +1,17 @@
+ion-toolbar{
+    --background: transparent;
+    padding: 0% 5%;
+}
+
+.title-toolbar{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-img{
+    padding: 5%;
+    height: 25%;
+    width: 100%;
+}

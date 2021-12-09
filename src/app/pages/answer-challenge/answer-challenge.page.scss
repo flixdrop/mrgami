@@ -1,12 +1,32 @@
-.digit-input {
+// .digit-input {
+//     text-align: center;
+//     font-size: 1.7em;
+//   }
+  .input{
+    border: 1px solid black;
+    border-radius: 5%;
+    font-weight: bold;
+    margin: 1%;
+    color: black;
+    background-color: white;
     text-align: center;
-    font-size: 1.7em;
   }
-  .x{
-    color: antiquewhite;
-    background-color: rgb(255, 174, 0);
-    padding-left: 15px;
-    letter-spacing: 42px;
-    border-radius: 10px;
-  }
+
+  .flex{
+    display: flex;
+    }
+
+    .errmsg{
+      text-align: left;
+    }
   
+    .title{
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .otpCard{
+      margin: 0;
+      padding: 0;
+    }
