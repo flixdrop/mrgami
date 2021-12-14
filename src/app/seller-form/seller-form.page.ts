@@ -9,6 +9,8 @@ import { GetAnimalData, SellerFormApiService } from '../services/seller-form-api
 import { DataService } from '../data.service';
 import JsonFile from '../services/adform.json';
 import { PreviewModalPage } from '../pages/preview-modal/preview-modal.page';
+import { HttpClient } from '@angular/common/http';
+import { stat } from 'fs';
 //const { Camer } = CameraPlugin;
 
 // export interface Options{
@@ -36,9 +38,12 @@ export interface FormControlObject{
 
 export class SellerFormPage implements OnInit {
 
+  stateList: any;
   adForm: any = JsonFile;
   public myForm: FormGroup = this.fb.group({});
   animalTypeSelected: any;
+  stateSelected: any;
+  stateIndex: any;
   flag: boolean = false;
 
   @ViewChild(IonContent, { static: true }) ionContent: IonContent;
@@ -161,7 +166,8 @@ export class SellerFormPage implements OnInit {
     private sellerFormApiService: SellerFormApiService,
     public toastController: ToastController,
     private dataService:DataService, 
-    private fb: FormBuilder) {
+    private fb: FormBuilder,
+    private http: HttpClient) {
   }
 
   ngOnInit() {
@@ -169,6 +175,10 @@ export class SellerFormPage implements OnInit {
     if(this.flag === false){
       this.createForm(this.adForm.form_1);
     } 
+    this.http.get('https://gist.githubusercontent.com/Dhaneshmonds/1b0ca257b1c34e4842528dcb826ee880/raw/3a7d98354cc43158162eb47d990073105788f348/IndianStatesDistricts.json').subscribe(res => {
+      console.log('res- ', res);
+      this.stateList = res;
+    });
     this.buildSlides();
     this.states = ['Karnatak', 'Maharasthra', 'Tamilnadu', 'Kerla', 'UP'];
     this.districts = ['Bangalore', 'Mumbai', 'Tuticorin', 'Amravati', 'Lucknow'];
@@ -180,6 +190,16 @@ export class SellerFormPage implements OnInit {
   onSelectAnimalType(event){
     this.animalTypeSelected = event.detail.value;
     console.log('animalTypeSelected- ', this.animalTypeSelected);
+  }
+
+  onSelectState(event){
+    console.log('event- ', event);
+    this.stateSelected = event.detail.value;
+    for(var key in this.stateList.states){
+      if(this.stateList.states[key].name === this.stateSelected){
+        this.stateIndex = key;
+      }
+    }
   }
 
   createForm(controls: Array<FormControlObject>){

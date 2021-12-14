@@ -47,6 +47,10 @@ const routes: Routes = [
     loadChildren: () => import('../pages/medicines/medicines.module').then( m => m.MedicinesPageModule),
   },
   {
+    path: 'animal-feeds',
+    loadChildren: () => import('../pages/animal-feeds/animal-feeds.module').then( m => m.AnimalFeedsPageModule)
+  },
+  {
     path: 'myads',
     loadChildren: () => import('../pages/myads/myads.module').then( m => m.MyadsPageModule),
     canActivate: [IsAuthenticated]

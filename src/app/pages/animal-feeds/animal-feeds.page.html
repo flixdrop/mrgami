@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons style="
+    clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
+    background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
+      <ion-buttons routerLink="/tabs/landing" routerDirection="back">
+        <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
+      </ion-buttons>
+      <span style="color: azure;">BACK</span>
+    </ion-buttons>
+    <ion-title color="light">Animal Feeds</ion-title>
+    <!-- <ion-buttons slot="end">
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-item lines="full" color="dark">
+      <ion-searchbar [(ngModel)]="searchTerm" color="dark" mode="md"></ion-searchbar>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="top" horizontal="end" slot="fixed" edge="true">
+    <ion-fab-button style="--background: #0fd15dc5 ;" (click)="openCart()" #cart>
+      <div class="cart-length">{{ cartItemCount | async }}</div>
+      <ion-icon name="cart" class="cart-icon"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-refresher class="center" slot="fixed" pullMin="120" pullMax="50" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
+      refreshingText="Please Wait...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+    <ion-card class="ion-padding" *ngFor="let p of products | filter:searchTerm; let i=index">
+      <ion-card-header>
+        {{ p.name }}     
+      </ion-card-header>
+      <ion-grid (click)="medModal(p)">
+        <ion-row>
+          <ion-col class="reverseCenter" size="6">
+            <ion-thumbnail>
+              <ion-img src="{{p.image}}"></ion-img>
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col class="reverseCenter" size="6">
+            <ion-label>REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for
+              Buffalo,Cow,Cattle,Poultry,
+              Goat & Pig (RIGMIN Forte Powder)
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-toolbar color="none">
+        <ion-item slot="start" lines="none" color="none">
+          <ion-label color="success">{{ p.price | currency:'INR' }}</ion-label>
+        </ion-item>
+          <ion-button slot="end" color="danger" size="small" expand="block" (click)="addToCart(p)">
+            Add to cart
+          </ion-button>
+      </ion-toolbar>
+    </ion-card>
+  </ion-content>

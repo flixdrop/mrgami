@@ -9,20 +9,18 @@
     {
       "animaltype": ["cow", "buffalo", "ox"],
       "name": "type",
-      "label": "Animal type",
+      "label": "Select Animal type",
       "value": "",
-      "type": "select",
-      "placeholder": "type of animal."
+      "type": "select"
   },
     {
         "cow": ["cow 1", "cow 2", "cow 3"],
         "buffalo": ["buffalo 1", "buffalo 2", "buffalo 3"],
         "ox": ["ox 1", "ox 2", "ox 3"],
         "name": "breed",
-        "label": "Animal breed",
+        "label": "Select Animal breed",
         "value": "",
-        "type": "select",
-        "placeholder": "breed of animal."
+        "type": "select"
     },
     {
         "name": "description",
@@ -113,31 +111,29 @@
         }},
         {
             "name": "state",
-            "label": "State",
+            "label": "Select Your State",
             "value": "",
             "type": "select",
-            "placeholder": "select your state.",
             "validators": {
                 "required": true,
                 "minLength": 10
             }},
             {
+                "name": "district",
+                "label": "Select Your District",
+                "value": "",
+                "type": "select"
+            },
+            {
                 "name": "town",
                 "label": "Town",
                 "value": "",
-                "type": "select",
-                "placeholder": "select your town.",
+                "type": "text",
+                "placeholder": "enter your town name.",
                 "validators": {
                     "required": true,
                     "minLength": 10
                 }},
-                {
-                    "name": "district",
-                    "label": "District",
-                    "value": "",
-                    "type": "select",
-                    "placeholder": "select your district."
-                },
                     {
                         "name": "imagesList",
                         "label": "Upload Images",

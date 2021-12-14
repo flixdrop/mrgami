@@ -38,12 +38,23 @@ export class CartService {
     { id: 2, name: 'Medicine3', price: 100, image:'../../assets/products/medicine3.jpg', amount: 0 },
     { id: 3, name: 'Medicine4', price: 200, image:'../../assets/products/medicine4.jpg',  amount: 0 }
   ];
+
+  data_1: Product[] = [
+    { id: 0, name: 'Feed1', price: 250, image:'../../assets/animal-feed/feed_1.jpg', amount: 0 },
+    { id: 1, name: 'Feed2', price: 350, image:'../../assets/animal-feed/feed_2.jpg', amount: 0 },
+    { id: 2, name: 'Feed3', price: 400, image:'../../assets/animal-feed/feed_3.jpg', amount: 0 },
+    { id: 3, name: 'Feed4', price: 500, image:'../../assets/animal-feed/feed_4.jpg',  amount: 0 }
+  ];
  
   private cart = [];
   private cartItemCount = new BehaviorSubject(0);
 
   getProducts() {
     return this.data;
+  }
+
+  getAnimalFeed(){
+    return this.data_1;
   }
  
   getCart() {
@@ -68,7 +79,7 @@ export class CartService {
       this.cart.push(product);
     }
     this.cartItemCount.next(this.cartItemCount.value + 1);
-  }
+  }  
  
   decreaseProduct(product: Product) {
     for (let [index, p] of this.cart.entries()) {
@@ -90,7 +101,6 @@ export class CartService {
       }
     }
   }
-
 
   getTodaysOffers(): any[] {
     let todaysOffers = [];

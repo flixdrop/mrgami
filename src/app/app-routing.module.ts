@@ -60,9 +60,14 @@ const routes: Routes = [
       },
     ]
 
-  },  {
+  },
+  {
     path: 'onboarding-page',
     loadChildren: () => import('./pages/onboarding-page/onboarding-page.module').then( m => m.OnboardingPagePageModule)
+  },
+  {
+    path: 'feed-modal',
+    loadChildren: () => import('./pages/feed-modal/feed-modal.module').then( m => m.FeedModalPageModule)
   },
 
 
