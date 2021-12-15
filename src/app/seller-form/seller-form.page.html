@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button class="backbtn" routerLink="/tabs/home" routerDirection="back">
-        <img src="../../assets/back.svg"/>
-      </ion-button>
+    <ion-buttons style="
+    clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
+    background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
+      <ion-buttons routerLink="/tabs/home" routerDirection="back">
+        <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
+      </ion-buttons>
+      <span style="color: azure;">BACK</span>
     </ion-buttons>
     <ion-title>Publish ADs</ion-title>
   </ion-toolbar>
@@ -52,10 +55,10 @@
         *ngIf="['ownerName','phone', 'town'].includes(control.name)"
         [type]="control.type" [formControlName]="control.name" [value]="control.value"></ion-input>
          
-        <ion-select slot="end" (ionChange)="onSelectState($event)" *ngIf="['state'].includes(control.name)" interface="action-sheet" [formControlName]="control.name" [placeholder]="control.placeholder">
+        <ion-select slot="end" (ionChange)="onSelectState($event)" *ngIf="control.name === 'state'" interface="action-sheet" [formControlName]="control.name" [placeholder]="control.placeholder">
           <ion-select-option *ngFor="let state of stateList.states; let i=index" [value]="state.name">{{state.name}}</ion-select-option>
         </ion-select>
-        <ion-select slot="end" *ngIf="['district'].includes(control.name)" interface="action-sheet" [formControlName]="control.name" [placeholder]="control.placeholder">
+        <ion-select slot="end" *ngIf="control.name === 'district'" interface="action-sheet" [formControlName]="control.name" [placeholder]="control.placeholder">
           <ion-select-option *ngFor="let district of stateList.states[stateIndex].districts" [value]="district.name">{{district.name}}</ion-select-option>
         </ion-select>
         <!-- <ion-select slot="end" *ngIf="['town'].includes(control.name)" interface="action-sheet" [formControlName]="control.name" [placeholder]="control.placeholder">

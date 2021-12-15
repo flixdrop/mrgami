@@ -88,10 +88,7 @@
     padding: 0;
     margin: 10%;
     top: 10%;
-    background-color: brown;
-    --background: url('../../assets//theme.png') !important;
-
-    // --background: #293c2ab4;
+    // --background: url('../../assets//theme.png') !important;
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 10%;
@@ -100,7 +97,7 @@
   .loginButton{
 // --background: rgb(28, 221, 255);
 //border: 2px solid black;
- box-shadow: 10px 5px 15px   rgb(255, 255, 255);
+//  box-shadow: 10px 5px 15px   rgb(255, 255, 255);
   }
   .content
   {
