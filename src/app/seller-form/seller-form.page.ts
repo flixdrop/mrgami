@@ -11,15 +11,6 @@ import JsonFile from '../services/adform.json';
 import { PreviewModalPage } from '../pages/preview-modal/preview-modal.page';
 import { HttpClient } from '@angular/common/http';
 import { stat } from 'fs';
-//const { Camer } = CameraPlugin;
-
-// export interface Options{
-//  label?: string;
-//  placeholder?: string;
-//  required?: boolean;
-//  type?: string;
-//  children?: Array<FormControlObject>;
-// }
 
 export interface FormControlObject{
   name: string;

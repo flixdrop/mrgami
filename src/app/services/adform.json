@@ -222,6 +222,14 @@
         "required": true,
         "minLength": 10
     }
-    }]
+    }],
+    "address":[
+        {
+            "name": "address",
+            "label": "Address",
+            "value": "",
+            "type": "textarea"
+        }
+    ]
 }
 

@@ -65,7 +65,7 @@
 
   </ion-content> -->
 
-  <ion-content>
+  <ion-content *ngIf="flag === false">
     <ion-toolbar>
       <ion-icon (click)="close()" size="large" name="close" slot="end"></ion-icon>
     </ion-toolbar>
@@ -164,9 +164,37 @@
       <ion-label slot="end" color="warning">{{ getTotal() | currency:'INR' }}</ion-label>
     </ion-item>
   </ion-toolbar>
+
+  <ion-button expand="block" color="success" (click)="nextAddress()"><ion-icon slot="end" name="checkmark-done-sharp"></ion-icon>PLACE ORDER!</ion-button>
 </ion-content>
 
-  <ion-footer>
+<ion-content *ngIf="flag === true" class="ion-padding">
+  <ion-toolbar>
+    <ion-item lines="full">
+      <ion-label class="title">Provide your address</ion-label>
+    </ion-item>
+  </ion-toolbar>
+
+  <ion-card class="ion-card">
+    <form [formGroup]="addressForm">
+      <ion-toolbar color="none">
+        <ion-item lines="none" *ngFor="let control of jsonform.address">
+          <ion-label position="floating" color="danger">{{control.label}}</ion-label>
+          <ion-input [type]="control.type" [formControlName]="control.name" [value]="control.value"></ion-input>
+        </ion-item>
+      </ion-toolbar>
+      </form>
+    </ion-card>
+
+  <ion-button expand="full" size="small" color="danger" (click)="makePayment()">
+    <ion-icon slot="end" name="tick" color="light"></ion-icon>
+    <ion-label color="light">PROCEED PAYMENT</ion-label>
+  </ion-button>
+
+</ion-content>
+
+
+  <!-- <ion-footer>
     <ion-button expand="block" color="success" (click)="close()" (click)="makePayment()"><ion-icon slot="end" name="checkmark-done-sharp"></ion-icon>PLACE ORDER!</ion-button>
-  </ion-footer>
+  </ion-footer> -->
   

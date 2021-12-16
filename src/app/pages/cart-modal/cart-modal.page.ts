@@ -1,13 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Product, CartService } from './../../services/cart.service';
 import { ModalController, AlertController } from '@ionic/angular';
 import { BehaviorSubject } from 'rxjs';
 import { MedModalPage } from '../med-modal/med-modal.page';
+import JsonFile from '../../services/adform.json';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormControlObject } from 'src/app/seller-form/seller-form.page';
+
 
 @Component({
   selector: 'app-cart-modal',
   templateUrl: './cart-modal.page.html',
   styleUrls: ['./cart-modal.page.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CartModalPage implements OnInit {
 
@@ -16,12 +21,24 @@ export class CartModalPage implements OnInit {
   setPayment = false;
   amount: number;
   totalAmount: number;
+  jsonform: any = JsonFile;
+  public addressForm: FormGroup = this.fb.group({});
+  flag: boolean = false;
 
-  constructor(private cartService: CartService, private modalCtrl: ModalController, private alertCtrl: AlertController) { }
+  constructor(private fb: FormBuilder, private cartService: CartService, private modalCtrl: ModalController, private alertCtrl: AlertController) { }
  
   ngOnInit() {
+    this.addressForm = this.fb.group({});
+    this.createForm(this.jsonform.address); 
     this.cart = this.cartService.getCart();
     this.invokeStripe();
+  }
+
+  createForm(controls: Array<FormControlObject>){
+    for(let control of controls){
+      const formControl = new FormControl();
+      this.addressForm.addControl(control.name, formControl);
+    }
   }
  
   decreaseCartItem(product: Product) {
@@ -40,8 +57,9 @@ export class CartModalPage implements OnInit {
     return this.cart.reduce((i, j) => i + j.price * j.amount, 0);
   }
  
-  close() {
-    this.modalCtrl.dismiss();
+  nextAddress() {
+    this.flag = true;
+    // this.modalCtrl.dismiss();
   }
  
 //Payment gateway integration
@@ -51,6 +69,7 @@ onPayClick(){
   console.log(this.setPayment);
 }
 makePayment() {
+  this.addressForm.reset();
   const am = this.getTotal();
   console.log('am',am);
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
@@ -72,6 +91,8 @@ makePayment() {
     description: 'Medicine',
     amount: am * 100,
   });
+  this.cartService.resetCartItemCount();
+  this.modalCtrl.dismiss();
 }
   invokeStripe() {
     if(!window.document.getElementById('stripe-script')) {

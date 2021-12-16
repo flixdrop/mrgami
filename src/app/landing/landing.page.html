@@ -2,11 +2,12 @@
   <ion-toolbar color="none">
     <ion-buttons slot="start">
       <ion-menu-button>
-        <ion-icon size="large" name="menu" color="danger"></ion-icon>
+        <ion-icon name="menu-outline" color="danger"></ion-icon>
       </ion-menu-button>
     </ion-buttons>
     <ion-searchbar class="searchbar" slot="start" placeholder="Search Cattles" mode="md" color="none"></ion-searchbar>
-    <ion-icon size="large" slot="end" name="notifications" color="danger"></ion-icon>
+    <ion-icon size="large" slot="start" name="notifications-outline" color="danger"></ion-icon>
+    <ion-icon size="large" slot="end" color="danger" name="log-out-outline"></ion-icon>
     <!-- <ion-button size="large" slot="end" class="notification" color="none" fill="clear"> -->
       <!-- <span>&nbsp;</span> -->
     <!-- </ion-button> -->
@@ -59,7 +60,6 @@
 
 
 <ion-card class="backgroundCard"></ion-card>
-
 <ion-content class="content ion-padding" [fullscreen]="true">
 
   <!-- <ion-toolbar color="none">
@@ -69,6 +69,7 @@
   </ion-toolbar> -->
 
   <ion-grid>
+    <div class="center">
     <ion-row (click)="goToBuy()" class="bigBtn gradient">
       <ion-col class="reverseCenter" size="6">
         <ion-item lines="none" color="none">
@@ -86,8 +87,9 @@
         </span>
       </ion-col>
     </ion-row>
+  </div>
 
-    <ion-row (click)="goToFeed()" class="bigBtn gradient">
+    <!-- <ion-row (click)="goToFeed()" class="bigBtn gradient">
       <ion-col class="reverseCenter" size="6">
         <ion-item lines="none" color="none">
           <ion-thumbnail>
@@ -105,7 +107,6 @@
       </ion-col>
     </ion-row>
 
-
     <ion-row (click)="goToMedicine()" class="bigBtn gradient">
       <ion-col class="reverseCenter" size="6">
         <ion-item lines="none" color="none">
@@ -122,10 +123,9 @@
           <ion-label color="light">ANIMAL MEDICINES</ion-label>
         </span>
       </ion-col>
-    </ion-row>
+    </ion-row> -->
 
-
-    <!-- <ion-row class="smallBtn">
+    <ion-row class="smallBtn">
       <ion-col (click)="goToFeed()" class="reverseCenter gradient" size="5.5">
         <ion-item lines="none" color="none">
           <ion-thumbnail>
@@ -152,7 +152,7 @@
           <ion-label color="light">MEDICINE</ion-label>
         </span>
       </ion-col>
-    </ion-row> -->
+    </ion-row>
   </ion-grid>
 
   <ion-toolbar class="center toolbar" color="none">
@@ -182,27 +182,14 @@
   </ion-card>
 
 </ion-content>
-
+<!-- 
 <ion-footer>
   <ion-toolbar color="none">
     <ion-button size="large" expand="full" color="light" (click)="recordAudio()">
       <ion-label color="danger">FREE VET DOCTOR 24/7</ion-label>
     </ion-button>
   </ion-toolbar>
-</ion-footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</ion-footer> -->
 
 <!-- <ion-card class="card">
      <ion-card-title>Today's Offers</ion-card-title>

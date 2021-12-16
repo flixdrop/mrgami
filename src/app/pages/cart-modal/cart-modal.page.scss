@@ -51,4 +51,83 @@ ion-text{
     font-size: 10px;
     font-weight: lighter;
   }
+
+
+  .center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  p{
+    font-size: 70%;
+  }
+  
+  .ion-card{
+    --background: #5757a8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ion-toolbar{
+    ion-item{
+      --background: #36363F;
+    }
+    --background: #36363F;
+  }
+  
+  ion-grid{
+    margin: 0;
+    padding: 0;
+  }
+  
+  ion-row{
+    margin: 0;
+    padding: 0;
+  }
+  
+  ion-col{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pager{
+    border-bottom: 1px solid silver;
+  }
+  
+  .form{
+    margin: 0;
+    padding: 0;
+  }
+  
+  ion-slides{
+    margin: 0;
+    padding: 0;
+  }
+  
+  ion-slide{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .form-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  ion-title{
+    color: white;
+  }
+  
+  ion-input{
+    color: white;
+  }
+  
+  ion-select{
+    width: 100%;
+    --ion-text-color: white !important;
+    --background: white !important;
+  }
   

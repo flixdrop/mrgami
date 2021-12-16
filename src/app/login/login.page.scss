@@ -87,8 +87,9 @@
     margin: 0;
     padding: 0;
     margin: 10%;
+    padding-top: 25%;
     top: 10%;
-    // --background: url('../../assets//theme.png') !important;
+    --background: url('../../assets/bg_2.png') !important;
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 10%;
@@ -102,7 +103,8 @@
   .content
   {
     z-index: 1;
-    --background: transparent !important;
+    --background: url('../../assets/bg_1.png') !important;
+    // --background: transparent !important;
     // --background: url('../../assets//theme.png') !important;
     background-repeat: no-repeat;
     background-size: cover;
