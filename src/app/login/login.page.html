@@ -117,7 +117,8 @@
 
 </ion-content> -->
 
-<ion-card class="loginCard">
+<ion-content class="content ion-padding">
+<ion-card class="loginCard" color="none">
   <!-- <ion-toolbar class="title-toolbar">
     <ion-icon name="lock-closed-outline"></ion-icon>
     <ion-label>Sign In</ion-label>
@@ -127,15 +128,15 @@
     <ion-row>
       <ion-col class="center col_1" size="12">
         <form>
-          <ion-label>Phone Number</ion-label>
+          <ion-label class="phno" color="medium">Phone Number</ion-label>
           <ion-input placeholder="enter 10-digits phone no." [formControl]="sms" type="sms" required></ion-input>
         </form>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col class="center" size="12">
-        <ion-button size="small" class="loginButton" expand="block" color="medium" (click)="signIn()" [disabled]="(busy | async)">
-          GET OTP
+        <ion-button class="loginButton" size="small" color="medium" expand="block"(click)="signIn()" [disabled]="(busy | async)">
+          <ion-label>GET OTP</ion-label>
           <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
         </ion-button>
         <!-- <ion-item lines="none">
@@ -163,3 +164,4 @@
     </ion-row> -->
   </ion-grid>
 </ion-card>
+</ion-content>

@@ -24,6 +24,7 @@ export class CartModalPage implements OnInit {
   jsonform: any = JsonFile;
   public addressForm: FormGroup = this.fb.group({});
   flag: boolean = false;
+  addressData: any = [];
 
   constructor(private fb: FormBuilder, private cartService: CartService, private modalCtrl: ModalController, private alertCtrl: AlertController) { }
  
@@ -59,7 +60,19 @@ export class CartModalPage implements OnInit {
  
   nextAddress() {
     this.flag = true;
-    // this.modalCtrl.dismiss();
+  }
+
+  onSelectAddress(event){
+    console.log('event- ', event);
+  }
+
+  addAddress(){
+    this.addressData.push(this.addressForm.get('address').value);
+    this.addressForm.reset();
+  }
+
+  deleteAddress(i){
+    this.addressData.splice(i,1);
   }
  
 //Payment gateway integration
@@ -68,6 +81,11 @@ onPayClick(){
   this.setPayment=true;
   console.log(this.setPayment);
 }
+
+close(){
+  this.modalCtrl.dismiss();
+}
+
 makePayment() {
   this.addressForm.reset();
   const am = this.getTotal();

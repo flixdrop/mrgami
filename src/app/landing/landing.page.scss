@@ -369,12 +369,13 @@
   
   .gradient{
     border-radius: 10px;
-    background: linear-gradient(180deg,  #1777AD 95%, rgba(25, 125, 175, 0) 100%);
+    background: linear-gradient(180deg,  #1777AD 50%, rgba(25, 125, 175, 0) 100%);
   }
   
   ion-grid{
     margin: 0;
     padding: 0;
+    margin-top: 30%;
   }
   
   ion-item{
@@ -385,12 +386,18 @@
   .bigBtn{
     width: 80%;
     margin: 5% 0%;
-    font-weight: bolder;
+    font-weight: bold;
   }
   
   .smallBtn{
+    ion-thumbnail{
+      height: 70px;
+      width: 100%;
+    }
+    font-size: 75%;
     margin: 0;
     padding: 0;
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
   }

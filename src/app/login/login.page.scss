@@ -81,61 +81,28 @@
   }
 
   .loginCard{
-    position: fixed;
-    z-index: 3;
-    height: 70%;
-    margin: 0;
-    padding: 0;
-    margin: 10%;
-    padding-top: 25%;
+    // font-size: 175%;
     top: 10%;
-    --background: url('../../assets/bg_2.png') !important;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: 10%;
-    box-shadow: 10px 5px 15px #13131a;
-  }
-  .loginButton{
-// --background: rgb(28, 221, 255);
-//border: 2px solid black;
-//  box-shadow: 10px 5px 15px   rgb(255, 255, 255);
-  }
-  .content
-  {
-    z-index: 1;
-    --background: url('../../assets/bg_1.png') !important;
-    // --background: transparent !important;
-    // --background: url('../../assets//theme.png') !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .background_1
-  {
+    height: 75%;
     margin: 0;
     padding: 0;
-    position: fixed;
-    background-color: #3d563c;
+    padding-top: 50%;
+    background-image: url('../../assets/bg_2.png') !important;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    clip-path: circle(30% at 0 0);
-    z-index: 2;
+    }
+
+  .loginButton{
+    color: black;
+  --background: white;
   }
 
-  .background_2{
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    --background: transparent;
+  .content
+  {
+    position: absolute;
+    --background: url('../../assets/bg_1.png') !important;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    background-color: #3d563c9c;
-    clip-path: circle(30% at 100% 100%);
-    z-index: 2;
   }
 
   .center{
@@ -156,7 +123,6 @@
   .col_4{
     margin: 0;
     padding: 0;
-    margin-top: 15%;
   }
 
   .title-toolbar{
@@ -168,7 +134,18 @@
   }
 
   ion-grid{
-    font-size: 150%;
+    margin: 0;
+    padding: 0;
     font-weight: bold;
     color: white;
+  }
+
+  .phno{
+    font-size: 175%;
+  }
+
+  ion-label{
+    font-weight: bolder;
+    color: white;
+    text-shadow: 3px 3px 5px black;
   }

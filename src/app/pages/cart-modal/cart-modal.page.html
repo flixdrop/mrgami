@@ -183,7 +183,41 @@
           <ion-input [type]="control.type" [formControlName]="control.name" [value]="control.value"></ion-input>
         </ion-item>
       </ion-toolbar>
-      </form>
+    </form>
+    <ion-button [disabled]="!addressForm.get('address').dirty" expand="full" fill="clear" size="small" color="success" (click)="addAddress()">Add Address</ion-button>
+
+      <ion-list>
+        <ion-radio-group value="address-1" (ionChange)="onSelectAddress($event)">
+          <ion-list-header>
+            <ion-label>Select from existing addresses</ion-label>
+          </ion-list-header>
+      
+          <ion-item>
+            <ion-text>Address 1</ion-text>
+            <ion-radio slot="start" value="address-1"></ion-radio>
+            <ion-icon slot="end" name="close"></ion-icon>
+          </ion-item>
+      
+          <ion-item>
+            <ion-text>Address 2</ion-text>
+            <ion-radio slot="start" value="address-2"></ion-radio>
+            <ion-icon slot="end" name="close"></ion-icon>
+          </ion-item>
+      
+          <ion-item>
+            <ion-text>Address 3</ion-text>
+            <ion-radio slot="start" value="address-3"></ion-radio>
+            <ion-icon slot="end" name="close"></ion-icon>
+          </ion-item>
+
+          <ion-item *ngFor="let address of addressData; let i=index">
+            <ion-text>{{address}}</ion-text>
+            <ion-radio slot="start" value="{{address}}"></ion-radio>
+            <ion-icon class="del-icon" slot="end" name="close" (click)="deleteAddress(i)"></ion-icon>
+          </ion-item>
+
+        </ion-radio-group>
+      </ion-list>
     </ion-card>
 
   <ion-button expand="full" size="small" color="danger" (click)="makePayment()">

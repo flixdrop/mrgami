@@ -64,8 +64,11 @@ ion-text{
     font-size: 70%;
   }
   
+  .del-icon{
+    z-index: 2;
+  }
+  
   .ion-card{
-    --background: #5757a8;
     margin: 0;
     padding: 0;
   }
