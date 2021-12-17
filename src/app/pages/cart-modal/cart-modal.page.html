@@ -170,10 +170,13 @@
 
 <ion-content *ngIf="flag === true" class="ion-padding">
   <ion-toolbar>
+    <ion-icon (click)="close()" size="large" name="close" slot="end"></ion-icon>
+  </ion-toolbar>
+  <!-- <ion-toolbar>
     <ion-item lines="full">
       <ion-label class="title">Provide your address</ion-label>
     </ion-item>
-  </ion-toolbar>
+  </ion-toolbar> -->
 
   <ion-card class="ion-card">
     <form [formGroup]="addressForm">
@@ -187,28 +190,10 @@
     <ion-button [disabled]="!addressForm.get('address').dirty" expand="full" fill="clear" size="small" color="success" (click)="addAddress()">Add Address</ion-button>
 
       <ion-list>
-        <ion-radio-group value="address-1" (ionChange)="onSelectAddress($event)">
-          <ion-list-header>
-            <ion-label>Select from existing addresses</ion-label>
-          </ion-list-header>
-      
-          <ion-item>
-            <ion-text>Address 1</ion-text>
-            <ion-radio slot="start" value="address-1"></ion-radio>
-            <ion-icon slot="end" name="close"></ion-icon>
-          </ion-item>
-      
-          <ion-item>
-            <ion-text>Address 2</ion-text>
-            <ion-radio slot="start" value="address-2"></ion-radio>
-            <ion-icon slot="end" name="close"></ion-icon>
-          </ion-item>
-      
-          <ion-item>
-            <ion-text>Address 3</ion-text>
-            <ion-radio slot="start" value="address-3"></ion-radio>
-            <ion-icon slot="end" name="close"></ion-icon>
-          </ion-item>
+        <ion-radio-group value="{{addressData[0]}}" (ionChange)="onSelectAddress($event)">
+          <!-- <ion-list-header>
+            <ion-label>{{ addressData ? '':'Select from existing addresses'}}</ion-label>
+          </ion-list-header> -->
 
           <ion-item *ngFor="let address of addressData; let i=index">
             <ion-text>{{address}}</ion-text>

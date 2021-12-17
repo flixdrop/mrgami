@@ -375,7 +375,7 @@
   ion-grid{
     margin: 0;
     padding: 0;
-    margin-top: 30%;
+    margin-top: 10%;
   }
   
   ion-item{
@@ -415,7 +415,7 @@
   }
 
   .backgroundCard{
-    opacity: 80%;
+    opacity: 70%;
     margin: 0;
     padding: 0;
     position: fixed;
@@ -435,4 +435,6 @@
     --box-shadow: none !important;
   }
   
-
+.white{
+  color: white;
+}

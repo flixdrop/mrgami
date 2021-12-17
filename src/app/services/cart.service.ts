@@ -67,6 +67,7 @@ export class CartService {
 
   resetCartItemCount() {
     this.cartItemCount.next(0);
+    this.cart = [];
   }
  
   addProduct(product: Product) {

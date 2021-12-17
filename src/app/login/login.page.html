@@ -116,9 +116,11 @@
 <!-- <ion-content class="content">
 
 </ion-content> -->
-
+<img class="content-bg" src="../../assets/bg_1.png"/>
 <ion-content class="content ion-padding">
-<ion-card class="loginCard" color="none">
+  <ion-card class="ion-padding loginCard" color="none">
+  <img class="card-img" src="../../assets/bg_2.png"/>
+  <!-- <ion-img class="card-img" src="../../assets/bg_2.png"></ion-img> -->
   <!-- <ion-toolbar class="title-toolbar">
     <ion-icon name="lock-closed-outline"></ion-icon>
     <ion-label>Sign In</ion-label>
@@ -128,14 +130,14 @@
     <ion-row>
       <ion-col class="center col_1" size="12">
         <form>
-          <ion-label class="phno" color="medium">Phone Number</ion-label>
+          <ion-label class="phno">Phone Number</ion-label>
           <ion-input placeholder="enter 10-digits phone no." [formControl]="sms" type="sms" required></ion-input>
         </form>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col class="center" size="12">
-        <ion-button class="loginButton" size="small" color="medium" expand="block"(click)="signIn()" [disabled]="(busy | async)">
+        <ion-button class="loginButton" color="medium" expand="block"(click)="signIn()" [disabled]="(busy | async)">
           <ion-label>GET OTP</ion-label>
           <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
         </ion-button>

@@ -81,28 +81,40 @@
   }
 
   .loginCard{
-    // font-size: 175%;
-    top: 10%;
-    height: 75%;
+    top: 15%;
     margin: 0;
     padding: 0;
-    padding-top: 50%;
-    background-image: url('../../assets/bg_2.png') !important;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 75%;
+    width: 100%;
+    --box-shadow: none !important;
+    }
+
+    .card-img{
+      position: fixed;
+      top: 0%;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+    }
+
+    .content
+    {
+      --background: transparent;
+    }
+    
+    .content-bg{
+      position: fixed;
+      top: 0;
+      z-index: 0;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
     }
 
   .loginButton{
     color: black;
   --background: white;
-  }
-
-  .content
-  {
-    position: absolute;
-    --background: url('../../assets/bg_1.png') !important;
-    background-repeat: no-repeat;
-    background-size: cover;
+  --box-shadow: 2px 2px 2px black;
   }
 
   .center{
@@ -134,14 +146,20 @@
   }
 
   ion-grid{
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
+    position: fixed;
+    z-index: 2;
+    top: 50%;
     font-weight: bold;
     color: white;
   }
 
   .phno{
     font-size: 175%;
+    font-weight: bolder;
   }
 
   ion-label{
