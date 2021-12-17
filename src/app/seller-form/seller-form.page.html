@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="toolbar-color">
     <ion-buttons style="
     clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
     background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
@@ -12,13 +12,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <ion-card class="ion-card">
+<ion-content class="ion-padding content-color">
+  <ion-card class="ion-card card-color">
     <form [formGroup]="myForm" (ngSubmit)="onClickPublish()">
 
       <ion-toolbar>
         <ion-item lines="full" color="none">
-          <ion-label class="title">{{ flag===true ? 'Seller Form':'Animal Form'}}</ion-label>
+          <ion-label class="center">{{ flag===true ? 'Seller Form':'Animal Form'}}</ion-label>
         </ion-item>
       </ion-toolbar>
 
@@ -72,8 +72,8 @@
         </ion-button> -->
       </ion-item>
     </ion-toolbar>
-      <ion-button *ngIf="flag === false" expand="block" color="light" (click)="onClickNext()">Next</ion-button>
-      <ion-button *ngIf="flag === true" expand="block" color="light" type="submit">Preview</ion-button>
+      <ion-button *ngIf="flag === false" size="small" expand="block" color="primary" (click)="onClickNext()">Next</ion-button>
+      <ion-button *ngIf="flag === true" size="small" expand="block" color="primary" type="submit">Preview</ion-button>
     </form>
   </ion-card>
 </ion-content>

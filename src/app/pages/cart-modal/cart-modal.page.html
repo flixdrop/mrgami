@@ -65,13 +65,14 @@
 
   </ion-content> -->
 
-  <ion-content *ngIf="flag === false">
-    <ion-toolbar>
-      <ion-icon (click)="close()" size="large" name="close" slot="end"></ion-icon>
-    </ion-toolbar>
-  <ion-card class="card" color="none">
-    <ion-list class="list" color="none" *ngFor="let c of cart; let i=index">
-      <ion-toolbar color="none">
+  <ion-content class="ion-padding content-color" *ngIf="flag === false">
+   
+  <ion-card class="card-color">
+    <ion-item lines="none" color="none">
+      <ion-icon (click)="close()" size="large" name="close" color="medium" slot="end"></ion-icon>
+    </ion-item>
+    <ion-list class="list" *ngFor="let c of cart; let i=index">
+      <ion-toolbar class="card-color">
         <ion-grid (click)="medModal(c)">
           <ion-row>
             <ion-col class="itemDetails" size="12">
@@ -115,7 +116,9 @@
           </ion-row>
         </ion-grid>
       </ion-toolbar>
-      <ion-button shape="round" expand="block" color="light">You have a Promo Code? Apply Here</ion-button>
+      <ion-toolbar class="card-color">
+        <ion-button shape="round" expand="block" size="small" color="medium">You have a Promo Code? Apply Here</ion-button>
+      </ion-toolbar>
     </ion-list>
     <!-- <ion-toolbar color="none">
       <ion-item lines="full" color="none">
@@ -141,12 +144,12 @@
       </ion-item>
     </ion-toolbar> -->
   </ion-card>
-  <ion-toolbar color="none">
+  <ion-toolbar class="card-color">
     <ion-item lines="full" color="none">
       <ion-label slot="start" color="primary">PRICE DETAILS</ion-label>
     </ion-item>
   </ion-toolbar>
-  <ion-toolbar class="priceTable" color="none">
+  <ion-toolbar class="priceTable card-color">
     <!-- <ion-item lines="none" color="none">
       <ion-label slot="start" color="primary">PRICE</ion-label>
       <ion-label slot="end"></ion-label>
@@ -165,49 +168,43 @@
     </ion-item>
   </ion-toolbar>
 
-  <ion-button expand="block" color="success" (click)="nextAddress()"><ion-icon slot="end" name="checkmark-done-sharp"></ion-icon>PLACE ORDER!</ion-button>
+  <ion-button size="small" expand="block" color="success" (click)="nextAddress()"><ion-icon size="small" slot="end" name="checkmark-done-sharp"></ion-icon>PLACE ORDER!</ion-button>
 </ion-content>
 
-<ion-content *ngIf="flag === true" class="ion-padding">
-  <ion-toolbar>
-    <ion-icon (click)="close()" size="large" name="close" slot="end"></ion-icon>
-  </ion-toolbar>
+<ion-content *ngIf="flag === true" class="ion-padding content-color">
   <!-- <ion-toolbar>
     <ion-item lines="full">
       <ion-label class="title">Provide your address</ion-label>
     </ion-item>
   </ion-toolbar> -->
-
-  <ion-card class="ion-card">
+  <ion-card class="card-color">
+    <ion-item lines="none" color="none">
+      <ion-icon (click)="close()" size="large" name="close" color="medium" slot="end"></ion-icon>
+    </ion-item>
     <form [formGroup]="addressForm">
-      <ion-toolbar color="none">
-        <ion-item lines="none" *ngFor="let control of jsonform.address">
+      <ion-toolbar class="card-color">
+        <ion-item lines="full" color="none" *ngFor="let control of jsonform.address">
           <ion-label position="floating" color="danger">{{control.label}}</ion-label>
           <ion-input [type]="control.type" [formControlName]="control.name" [value]="control.value"></ion-input>
         </ion-item>
       </ion-toolbar>
     </form>
-    <ion-button [disabled]="!addressForm.get('address').dirty" expand="full" fill="clear" size="small" color="success" (click)="addAddress()">Add Address</ion-button>
+    <ion-button [disabled]="!addressForm.get('address').dirty" expand="full" fill="clear" size="small" color="primary" (click)="addAddress()">Add Address<ion-icon size="small" slot="end" color="primary" name="add"></ion-icon></ion-button>
 
       <ion-list>
         <ion-radio-group value="{{addressData[0]}}" (ionChange)="onSelectAddress($event)">
-          <!-- <ion-list-header>
-            <ion-label>{{ addressData ? '':'Select from existing addresses'}}</ion-label>
-          </ion-list-header> -->
-
-          <ion-item *ngFor="let address of addressData; let i=index">
+          <ion-item lines="full" color="none" *ngFor="let address of addressData; let i=index">
             <ion-text>{{address}}</ion-text>
             <ion-radio slot="start" value="{{address}}"></ion-radio>
             <ion-icon class="del-icon" slot="end" name="close" (click)="deleteAddress(i)"></ion-icon>
           </ion-item>
-
         </ion-radio-group>
       </ion-list>
     </ion-card>
 
-  <ion-button expand="full" size="small" color="danger" (click)="makePayment()">
-    <ion-icon slot="end" name="tick" color="light"></ion-icon>
-    <ion-label color="light">PROCEED PAYMENT</ion-label>
+  <ion-button expand="full" size="small" color="success" (click)="makePayment()">
+    <ion-icon size="small" slot="end" name="tick"></ion-icon>
+    <ion-label size="small" expand="block">PROCEED PAYMENT</ion-label>
   </ion-button>
 
 </ion-content>

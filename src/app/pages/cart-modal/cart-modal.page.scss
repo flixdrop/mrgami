@@ -68,17 +68,12 @@ ion-text{
     z-index: 2;
   }
   
-  .ion-card{
-    margin: 0;
-    padding: 0;
-  }
-  
-  ion-toolbar{
-    ion-item{
-      --background: #36363F;
-    }
-    --background: #36363F;
-  }
+  // ion-toolbar{
+  //   ion-item{
+  //     --background: #36363F;
+  //   }
+  //   --background: #36363F;
+  // }
   
   ion-grid{
     margin: 0;

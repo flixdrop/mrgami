@@ -1,16 +1,21 @@
 <ion-header>
-  <ion-toolbar color="danger">
+  <ion-toolbar class="toolbar-color">
+    <ion-buttons style="
+    clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
+    background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
+      <ion-buttons routerLink="/tabs/landing" routerDirection="back">
+        <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
+      </ion-buttons>
+      <span style="color: azure;">BACK</span>
+    </ion-buttons>
     <ion-title>User Profile</ion-title>
-      <ion-button slot="start" color="danger" class="backbtn" routerLink="/home" routerDirection="back">
-        <img src='../../assets/back-dark.svg' />
-      </ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding content-color">
   <ion-toolbar>
     <ion-item lines="full" color="none">
-      <ion-label class="title">User Profile</ion-label>
+      <ion-label class="center">User Profile</ion-label>
       <ion-button fill="clear" slot="end">
         edit 
         <ion-icon name="create-outline"></ion-icon>
@@ -18,7 +23,7 @@
     </ion-item>
   </ion-toolbar>
 
-  <ion-card class="profileCard">
+  <ion-card class="card-color">
 
     <form [formGroup]="userDetailsForm" >
       <div *ngFor="let detail of (userDetails | async)" >
@@ -26,8 +31,6 @@
       </div>
 
           <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
-
-
   </form>
 
     <!-- <ion-toolbar>
@@ -59,9 +62,9 @@
   </ion-toolbar> -->
   </ion-card>
 
-  <ion-button expand="full" size="small" color="danger" (click)="onClickLogout()">
-    <ion-icon slot="end" name="power-outline" color="light"></ion-icon>
-    <ion-label color="light">Logout</ion-label>
+  <ion-button expand="block" size="small" color="danger" (click)="onClickLogout()">
+    <ion-icon slot="end" name="power-outline"></ion-icon>
+    <ion-label>Logout</ion-label>
   </ion-button>
 
 </ion-content>

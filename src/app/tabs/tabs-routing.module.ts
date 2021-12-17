@@ -67,7 +67,7 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('../profile/profile.module').then( m => m.ProfilePageModule),
-    canActivate: [IsAuthenticated]
+    // canActivate: [IsAuthenticated]
   },
   {
     path: 'my-orders',

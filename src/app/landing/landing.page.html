@@ -60,15 +60,15 @@
 
 
 <ion-card class="backgroundCard"></ion-card>
+<ion-card class="transparent-bg"></ion-card>
 <ion-content class="content ion-padding" [fullscreen]="true">
 
-  <ion-toolbar color="none">
-    <ion-button size="large" expand="block" color="light" (click)="recordAudio()">
-      <ion-label color="danger">FREE VET DOCTOR 24/7</ion-label>
-    </ion-button>
-  </ion-toolbar>
-
   <ion-grid>
+    <ion-toolbar color="none">
+      <ion-button size="large" expand="block" color="light" (click)="recordAudio()">
+        <ion-label color="danger">FREE VET DOCTOR 24/7</ion-label>
+      </ion-button>
+    </ion-toolbar>
     <div class="center">
     <ion-row (click)="goToBuy()" class="bigBtn gradient">
       <ion-col class="reverseCenter" size="8">
@@ -126,7 +126,7 @@
     </ion-row> -->
 
     <ion-row class="smallBtn">
-      <ion-col (click)="goToFeed()" class="reverseCenter gradient" size="5.5">
+      <ion-col (click)="goToFeed()" class="reverseCenter gradient" size="5.7">
         <ion-item lines="none" color="none">
           <ion-thumbnail>
             <ion-img class="btnImg" src="../../assets/icon/animal-feed.png"></ion-img>
@@ -139,7 +139,7 @@
           <ion-label class="white">FEED</ion-label>
         </span>
       </ion-col>
-      <ion-col (click)="goToMedicine()" class="reverseCenter gradient" size="5.5">
+      <ion-col (click)="goToMedicine()" class="reverseCenter gradient" size="5.7">
         <ion-item lines="none" color="none">
           <ion-thumbnail>
             <ion-img class="btnImg" src="../../assets/icon/cow-medicine.png"></ion-img>

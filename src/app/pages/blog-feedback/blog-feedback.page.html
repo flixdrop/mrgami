@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="toolbar-color">
     <ion-buttons style="
     clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
     background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
@@ -12,11 +12,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <ion-card class="card">
-    <ion-card-header>
-      <ion-label color="warning">ARTICLE TITLE</ion-label>
-    </ion-card-header>
+<ion-content class="ion-padding content-color">
+  <ion-card class="custom-card card-color">
+    <ion-label color="primary">ARTICLE TITLE</ion-label>
     <ion-grid>
       <ion-row>
         <ion-col size="12">
@@ -25,7 +23,7 @@
       </ion-row>
       <ion-row>
       <ion-col size="12">
-        SUB TITLE OF THE ARTICLE
+         <ion-text>SUB TITLE OF THE ARTICLE</ion-text>
         <ion-button class="accordion" fill="clear" size="small" expand="full" color="light" (click)="onClickReadMore()"><ion-icon slot="end" size="large" name="{{expand === true ?'chevron-up':'chevron-down'}}"></ion-icon>{{ expand === true ? 'READ LESS' : 'READ MORE...'}}</ion-button>
         <div class="panel">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat repudiandae illum, blanditiis quidem obcaecati, enim error quibusdam corrupti aliquam, nemo voluptate ullam sed? Quia labore, dolorem eaque perspiciatis repellat natus.

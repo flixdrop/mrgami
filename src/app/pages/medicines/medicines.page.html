@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="toolbar-color">
     <ion-buttons style="
     clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
     background-color: #727283;width:80px; height: 40px; border-radius: 5%; " slot="start">
@@ -15,14 +15,14 @@
       </ion-button>
     </ion-buttons> -->
   </ion-toolbar>
-  <ion-toolbar color="dark">
-    <ion-item lines="full" color="dark">
-      <ion-searchbar [(ngModel)]="searchTerm" color="dark" mode="md"></ion-searchbar>
+  <ion-toolbar color="none">
+    <ion-item lines="none" color="none">
+      <ion-searchbar [(ngModel)]="searchTerm" lines="full" color="none" mode="md"></ion-searchbar>
     </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding content-color">
   <ion-fab vertical="top" horizontal="end" slot="fixed" edge="true">
     <ion-fab-button style="--background: #0fd15dc5 ;" (click)="openCart()" #cart>
       <div class="cart-length">{{ cartItemCount | async }}</div>
@@ -36,10 +36,8 @@
     </ion-refresher-content>
   </ion-refresher>
 
-    <ion-card class="ion-padding" *ngFor="let p of products | filter:searchTerm; let i=index">
-      <ion-card-header>
-        {{ p.name }}     
-      </ion-card-header>
+    <ion-card class="card-color" *ngFor="let p of products | filter:searchTerm; let i=index">
+      <ion-label>{{p.name}}</ion-label>
       <ion-grid (click)="medModal(p)">
         <ion-row>
           <ion-col class="reverseCenter" size="6">
@@ -55,11 +53,11 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-      <ion-toolbar color="none">
-        <ion-item slot="start" lines="none" color="none">
+      <ion-toolbar color="card-color">
+        <ion-item lines="none" slot="start" lines="none" color="none">
           <ion-label color="success">{{ p.price | currency:'INR' }}</ion-label>
         </ion-item>
-          <ion-button slot="end" color="danger" size="small" expand="block" (click)="addToCart(p)">
+          <ion-button slot="end" color="primary" size="small" expand="block" (click)="addToCart(p)">
             Add to cart
           </ion-button>
       </ion-toolbar>
