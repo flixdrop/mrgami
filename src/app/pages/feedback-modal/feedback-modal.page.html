@@ -1,0 +1,36 @@
+<ion-content class="ion-padding content-color">
+<ion-grid>
+  <ion-row>
+    <ion-col size="12">
+      <ion-item lines="none" color="none">
+        <ion-icon slot="end" name="close" color="medium" (click)="dismiss()"></ion-icon>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <ion-label>{{'From- '+name}}</ion-label>
+      <!-- <ion-label>id</ion-label> -->
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <form [formGroup]="feedbackForm" (ngSubmit)="onClickSubmit()">
+        <ion-toolbar class="card-color">
+          <ion-item lines="full" color="none">
+            <ion-label color="danger" for="email" position="floating">E-Mail</ion-label>
+            <ion-input type="textarea" formControlName="email" placeholder="enter your email."></ion-input>
+          </ion-item>
+        </ion-toolbar>
+        <ion-toolbar class="card-color">
+          <ion-item lines="full" color="none">
+            <ion-label color="danger" for="feedback" position="floating">Give Feedback</ion-label>
+            <ion-input type="email" formControlName="feedback" placeholder="write your feedback..."></ion-input>
+          </ion-item>
+        </ion-toolbar>
+        <ion-button [disabled]="!feedbackForm.get('feedback').dirty" size="small" color="success" expand="block" type="submit">Send Feedback</ion-button>
+      </form>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

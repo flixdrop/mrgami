@@ -68,7 +68,11 @@ const routes: Routes = [
   {
     path: 'feed-modal',
     loadChildren: () => import('./pages/feed-modal/feed-modal.module').then( m => m.FeedModalPageModule)
+  },  {
+    path: 'feedback-modal',
+    loadChildren: () => import('./pages/feedback-modal/feedback-modal.module').then( m => m.FeedbackModalPageModule)
   },
+
 
 
 ];

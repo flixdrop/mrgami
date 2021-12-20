@@ -1,4 +1,10 @@
 import { Component, OnInit } from "@angular/core";
+import { FormControl, FormGroup } from "@angular/forms";
+import { Router } from "@angular/router";
+import { ModalController } from "@ionic/angular";
+import { BehaviorSubject, Observable } from "rxjs";
+import { AuthService } from "src/app/services/auth.service";
+import { FeedbackModalPage } from "../feedback-modal/feedback-modal.page";
 
 @Component({
   selector: "app-blog-feedback",
@@ -9,7 +15,7 @@ export class BlogFeedbackPage implements OnInit {
 
   expand: boolean = false;
 
-  constructor() {}
+  constructor(private modalCtrl: ModalController) { }
 
   ngOnInit() {
     this.expand= false;
@@ -30,4 +36,17 @@ export class BlogFeedbackPage implements OnInit {
   onClickReadMore(){
     this.expand = !this.expand;
   }
+
+  async feedbackModal(){
+    let modal = await this.modalCtrl.create({
+      component: FeedbackModalPage,
+      cssClass: "cart-modal",
+    });
+    modal.present();
+  }
+
+  onClickFeedback(){
+    this.feedbackModal();
+  }
+
 }

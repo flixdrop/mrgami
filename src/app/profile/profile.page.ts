@@ -26,7 +26,6 @@ export class ProfilePage implements OnInit {
     this.getUserDetails();
   }
 
-
   public async getUserDetails() {
     this.busy_.next(true);
     this.errorMessage_.next('');
@@ -37,9 +36,11 @@ export class ProfilePage implements OnInit {
         this.userDetailsForm.addControl(detail.getName(), control);
       });
       this.userDetails_.next(userDetails);
+      console.log('user-details- ', userDetails);
     } catch (err) {
       this.errorMessage_.next(err.message || err);
     } finally {
+      console.log('user-details- ', this.userDetails);
       this.busy_.next(false);
     }
   }

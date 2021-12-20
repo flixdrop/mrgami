@@ -22,7 +22,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding content-color">
+<ion-content class="content-color">
   <ion-fab vertical="top" horizontal="end" slot="fixed" edge="true">
     <ion-fab-button style="--background: #0fd15dc5 ;" (click)="openCart()" #cart>
       <div class="cart-length">{{ cartItemCount | async }}</div>
@@ -36,30 +36,41 @@
     </ion-refresher-content>
   </ion-refresher>
 
-    <ion-card class="card-color" *ngFor="let p of products | filter:searchTerm; let i=index">
-      <ion-label>{{p.name}}</ion-label>
-      <ion-grid (click)="medModal(p)">
-        <ion-row>
-          <ion-col class="reverseCenter" size="6">
-            <ion-thumbnail>
-              <ion-img src="{{p.image}}"></ion-img>
-            </ion-thumbnail>
-          </ion-col>
-          <ion-col class="reverseCenter" size="6">
-            <ion-label>REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for
-              Buffalo,Cow,Cattle,Poultry,
-              Goat & Pig (RIGMIN Forte Powder)
-            </ion-label>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-      <ion-toolbar class="card-color">
-        <ion-item slot="start" lines="none" color="none">
-          <ion-label color="success">{{ p.price | currency:'INR' }}</ion-label>
-        </ion-item>
-          <ion-button size="small" slot="end" color="primary" expand="block" (click)="addToCart(p)">
-            Add to cart
-          </ion-button>
-      </ion-toolbar>
-    </ion-card>
-  </ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">
+
+        <ion-card class="custom-card card-color" *ngFor="let p of products | filter:searchTerm; let i=index">
+          <ion-grid (click)="medModal(p)">
+            <ion-row>
+              <ion-col class="reverseCenter" size="6">
+                <ion-label>{{p.name}}</ion-label>
+                <ion-thumbnail>
+                  <ion-img src="{{p.image}}"></ion-img>
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col class="reverseCenter" size="6">
+                <ion-label>REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for
+                  Buffalo,Cow,Cattle,Poultry,
+                  Goat & Pig (RIGMIN Forte Powder)
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-toolbar class="card-color">
+            <ion-item slot="start" lines="none" color="none">
+              <ion-label color="success">{{ p.price | currency:'INR' }}</ion-label>
+            </ion-item>
+            <ion-button size="small" slot="end" color="primary" expand="block" (click)="addToCart(p)">
+              Add to cart
+            </ion-button>
+          </ion-toolbar>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

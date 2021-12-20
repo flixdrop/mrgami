@@ -41,12 +41,30 @@
 
 ion-menu{
   opacity: 95%;
-  --width: 60% !important;
+  --width: 50% !important;
   --ion-background-color: #36363F;
   ion-item{
     --background: transparent;
   }
   ion-list {
     background: transparent;
+  }
+}
+
+@media (min-width: 400px){
+  ion-menu{
+    --width: 40% !important;
+  }
+}
+
+@media (min-width: 600px){
+  ion-menu{
+    --width: 30% !important;
+  }
+}
+
+@media (min-width: 800px){
+  ion-menu{
+    --width: 20% !important;
   }
 }

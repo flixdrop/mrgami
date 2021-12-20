@@ -29,3 +29,27 @@
   a{
       text-decoration: underline;
   }
+
+  .center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ion-content{
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: 500px) {
+    .custom-card{
+        width: 75%;
+    }      
+  }
+
+  @media (min-width: 700px) {
+    .custom-card{
+        width: 50%;
+    }      
+  }
