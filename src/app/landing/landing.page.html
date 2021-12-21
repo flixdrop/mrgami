@@ -59,31 +59,32 @@
 </ion-content> -->
 
 
-<ion-card class="backgroundCard"></ion-card>
-<ion-card class="transparent-bg"></ion-card>
+  <ion-card class="backgroundCard"></ion-card>
+  <ion-card class="transparent-bg"></ion-card>
+  
 <ion-content class="content ion-padding" [fullscreen]="true">
 
   <ion-grid>
     <ion-toolbar color="none">
-      <ion-button size="large" expand="block" color="light" (click)="recordAudio()">
-        <ion-label color="danger">FREE VET DOCTOR 24/7</ion-label>
+      <ion-button class="glow-on-hover" color="light" size="large" expand="block" (click)="recordAudio()">
+        <ion-label class="text-over" color="danger">FREE VET DOCTOR 24/7</ion-label>
       </ion-button>
     </ion-toolbar>
     <div class="center">
     <ion-row (click)="goToBuy()" class="bigBtn gradient">
       <ion-col class="reverseCenter" size="8">
-        <ion-item lines="none" color="none">
+        <ion-item checked="true" lines="none" color="none">
           <ion-thumbnail>
             <ion-img class="btnImg" src="../../assets/icon/sell-cow-icon.png"></ion-img>
           </ion-thumbnail>
         </ion-item>
       </ion-col>
-      <ion-col class="reverseCenter" size="4">
+      <ion-col class="round-btn reverseCenter" size="4">
         <span>
-          <ion-label color="success">BUY</ion-label>
+          <ion-label class="green">BUY/SELL</ion-label>
         </span>
         <span>
-          <ion-label class="white">ANIMAL</ion-label>
+          <ion-label class=" white">ANIMAL</ion-label>
         </span>
       </ion-col>
     </ion-row>
@@ -126,31 +127,35 @@
     </ion-row> -->
 
     <ion-row class="smallBtn">
-      <ion-col (click)="goToFeed()" class="reverseCenter gradient" size="5.7">
+      <ion-col (click)="goToFeed()" class="reverseCenter gradient" size="5.8">
         <ion-item lines="none" color="none">
           <ion-thumbnail>
             <ion-img class="btnImg" src="../../assets/icon/animal-feed.png"></ion-img>
           </ion-thumbnail>
         </ion-item>
-        <span class="reverseCenter">
-          <ion-label color="success">BUY ANIMAL</ion-label>
-        </span>
-        <span class="reverseCenter">
+        <div class="round-btn">
+          <span class="block">
+            <ion-label class="green">VET</ion-label>
+          </span>
+          <span class="block">
           <ion-label class="white">FEED</ion-label>
         </span>
+      </div>
       </ion-col>
-      <ion-col (click)="goToMedicine()" class="reverseCenter gradient" size="5.7">
+      <ion-col (click)="goToMedicine()" class="reverseCenter gradient" size="5.8">
         <ion-item lines="none" color="none">
           <ion-thumbnail>
             <ion-img class="btnImg" src="../../assets/icon/cow-medicine.png"></ion-img>
           </ion-thumbnail>
         </ion-item>
-        <span class="reverseCenter">
-          <ion-label color="success">BUY ANIMAL</ion-label>
-        </span>
-        <span class="reverseCenter">
-          <ion-label class="white">MEDICINE</ion-label>
-        </span>
+        <div class="round-btn">
+          <span class="block">
+            <ion-label class="green">VET</ion-label>
+          </span>
+          <span class="block">
+            <ion-label class="white">MEDICINE</ion-label>
+          </span>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -158,21 +163,21 @@
   <ion-toolbar class="center toolbar" color="none">
       <ion-chip color="none">
         <ion-icon size="large" name="alarm-sharp" color="medium"></ion-icon>
-        <ion-label color="medium">TODAY's OFFERS</ion-label>
+        <ion-label class="text-shadow" color="medium">TODAY's OFFERS</ion-label>
       </ion-chip>
   </ion-toolbar>
 
-  <ion-card class="card">
+  <ion-card class="custom-card">
     <ion-slides #slides [options]="slideOpts">
       <ion-slide *ngFor="let img of images; let i=index">
           <ion-grid>
             <ion-row>
-              <ion-col class="offersSlide" size="12" offset="sm-0 md-0 lg-2 xl-3">
+              <ion-col class="offersSlide" size="12">
                 <ion-img class="offersImg" src="{{img}}" class="img"></ion-img>
               </ion-col>
             </ion-row>
             <ion-row>
-              <ion-col class="offersSlide" size="12" offset="sm-0 md-0 lg-2 xl-3">
+              <ion-col class="offersSlide" size="12">
                 <ion-label color="dark">Offer Details</ion-label>
               </ion-col>
             </ion-row>
@@ -180,7 +185,6 @@
       </ion-slide>
     </ion-slides>
   </ion-card>
-
 </ion-content>
 <!-- 
 <ion-footer>

@@ -137,7 +137,7 @@
     </ion-row>
     <ion-row>
       <ion-col class="center" size="12">
-        <ion-button class="loginButton" color="medium" expand="block"(click)="signIn()" [disabled]="(busy | async)">
+        <ion-button class="loginButton" expand="block"(click)="signIn()" [disabled]="(busy | async)">
           <ion-label>GET OTP</ion-label>
           <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
         </ion-button>

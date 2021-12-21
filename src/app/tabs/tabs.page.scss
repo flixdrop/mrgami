@@ -19,7 +19,7 @@ ion-fab-button.background{
     --background: transparent;
 }
 
-ion-tab-bar.ion-no-border{
+ion-tab-bar.tab-bar{
     clip-path: polygon(50% 0, 100% 17%, 100% 99%, 0 100%, 0 17%);
     height: 10%;
     --background: #7B7B7E;
@@ -41,9 +41,29 @@ ion-tab-bar.ion-no-border{
     // }
 }
 
+.footer{
+    display: none;
+}
+
+.custon-toolbar{
+    padding-left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black; 
+}
+
 ion-fab-button{
     border-radius: 50%;
     border: 1px solid white;
 }
 
-
+@media (min-width: 700px){
+    .tab-bar{
+        display: none;
+    }
+    .footer{
+        display: block;
+    }
+}

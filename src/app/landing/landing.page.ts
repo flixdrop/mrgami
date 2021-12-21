@@ -24,7 +24,7 @@ export class LandingPage implements OnInit {
     speed: 500,
   };
   audio: any;
-  keys: string[] = [];
+  keys: string[] = [];  
 
   constructor(
     private util: UtilService,

@@ -24,8 +24,8 @@
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs> -->
-<ion-tabs slot="bottom" class="tabsbg">
-  <ion-tab-bar class="ion-no-border">
+<ion-tabs class="tabsbg">
+  <ion-tab-bar slot="bottom" class="tab-bar">
       <!-- <ion-fab vertical="top" edge="true" horizontal="center" translucent="true">
       <ion-fab-button color="light" class="background" (click)=popSellerForm()>
         <ion-icon name="add"></ion-icon>
@@ -46,8 +46,9 @@
       <!-- <ion-badge *ngIf="new_message">{{new_message}}</ion-badge> -->
     </ion-tab-button>
     
+    
     <ion-tab-button tab="blog-feedback">
-      <ion-fab vertical="center" horizontal="center" translucent="true">
+      <ion-fab vertical="center" horizontal="center" edge="true" translucent="true">
         <ion-fab-button color="light" class="background" >  <!-- (click)=popSellerForm() -->
           <ion-icon size="large" name="book"></ion-icon>
         </ion-fab-button>
@@ -69,4 +70,10 @@
       <ion-label color="light">PROFILE</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
+
+  <ion-footer class="footer">
+    <ion-toolbar class="custon-toolbar card-color">
+      <ion-text color="danger">MRGAMI Technologies PVT. LTD. 2014-2021 &#169;</ion-text>
+    </ion-toolbar>
+  </ion-footer>
 </ion-tabs>
