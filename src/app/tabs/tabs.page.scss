@@ -44,6 +44,11 @@ ion-tab-bar.tab-bar{
 .footer{
     display: none;
 }
+.header{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: none;
+}
 
 .custon-toolbar{
     padding-left: 2%;
@@ -59,11 +64,46 @@ ion-fab-button{
     border: 1px solid white;
 }
 
+.navbar{
+    ion-label{
+        cursor: pointer;
+        color: white;
+        padding: 2%;
+        text-shadow: 2px 2px 2px black;
+    }
+    ion-label:active{
+        color: #FF5555;
+    }
+    ion-icon{
+        padding: 1%;
+    }
+    display: flex;
+    text-align: right;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+ion-thumbnail{
+    margin: 0;
+    padding: 0;
+    margin-left: 5%;
+    height: 7%;
+    width: 7%;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
 @media (min-width: 700px){
     .tab-bar{
         display: none;
     }
     .footer{
+        display: block;
+    }
+    .header{
         display: block;
     }
 }

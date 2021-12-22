@@ -190,6 +190,7 @@ ion-slides {
   }
 
   ion-searchbar{
+    color: white;
     border: none;
     border-radius: 0;
     --background: transparent;
@@ -197,3 +198,16 @@ ion-slides {
     border-bottom: 1px solid silver;
     z-index: 2;
   }
+
+  .web-view{
+    width: 100%;
+  }
+
+@media (min-width: 700px){
+  .web-view{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+}

@@ -52,6 +52,8 @@
 //     font-weight: normal;
 //     src: url('./assets/fonts/Segoe\ UI\ Italic.ttf');
 // }
+
+
 // @font-face {
 //     font-family: 'Arima Madurai';
 //     src: url('./assets/fonts/Arima_Madurai/ArimaMadurai-Medium.ttf');
@@ -63,8 +65,15 @@
 //     padding: 5%;
 //   }
 
-// * {
-//     font-family: 'Arima Madurai';
+//   @font-face {
+//     font-family: 'Laila', sans-serif;    
+//     font-style: italic;
+//     font-weight: normal;
+//     src: url('./assets/fonts/laila/Laila-SemiBold.ttf');
+// }
+
+// *{
+//     font-family: 'Laila', sans-serif;
 //     //color: rgb(255, 255, 255);
 //    // color: rgb(255, 255, 255);
 // }
@@ -144,6 +153,19 @@
 //     }
 // }
 
+@font-face {
+    font-family: 'Laila', sans-serif;    
+    font-style: italic;
+    font-weight: normal;
+    src: url('./assets/fonts/laila/Laila-SemiBold.ttf');
+}
+
+*{
+    font-family: 'Laila', sans-serif;
+    //color: rgb(255, 255, 255);
+   // color: rgb(255, 255, 255);
+}
+
 .toolbar-color{
     --background: #FF5555;
 }
@@ -154,4 +176,22 @@
 
   .card-color{
     --background: #36363F;
+  }
+
+  body{
+    font-family: 'Laila', sans-serif;
+  }
+
+  ion-content{
+      margin: 0;
+      padding: 0;
+  }
+
+  ion-card{
+      margin: 0;
+      padding: 0;
+  }
+
+  ion-label{
+    font-family: 'Laila', sans-serif;
   }

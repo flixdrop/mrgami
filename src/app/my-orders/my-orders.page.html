@@ -1,69 +1,105 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button color="primary" class="backbtn" routerLink="/home" routerDirection="back">
-        <img src='../../assets/back-dark.svg' />
-      </ion-button>
+  <ion-toolbar class="toolbar-color">
+    <ion-buttons style="
+    clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
+    background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
+      <ion-buttons routerLink="/tabs/home" routerDirection="back">
+        <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
+      </ion-buttons>
+      <span style="color: azure;">BACK</span>
     </ion-buttons>
-
-    <ion-buttons slot="end">
-      <ion-button class="notification">
-        <ion-icon name="notifications-outline" color="dark"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+    <ion-title>My Orders</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <h1 class="title">My Orders</h1>
+<ion-content class="content-color">
+  <ion-toolbar class="center" color="none">
+    <ion-text color="danger">MY ORDERS</ion-text>
+  </ion-toolbar>
 
-  <div class="order-items">
-    <ion-card mode="ios">
-      <ion-card-content>
-        <div class="item-img">
-          <img src='../../assets/cart/cart1.png' />
-        </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">
 
-        <div class="item-info">
-          <p>Cow</p>
-          <p>Bengaluru</p>
-          <p>Rs 50000</p>
+        <ion-card class="web-view card-color">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                <ion-thumbnail><img src="../../assets/cart/cart1.png" /></ion-thumbnail>
+              </ion-col>
+              <ion-col class="left-align" size="6">
+                <ion-text>Ox</ion-text>
+                <ion-text>Bengaluru</ion-text>
+                <ion-text>Rs 60000</ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12">
+                <ion-button size="small" expand="block" color="primary">Order Again</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-          <ion-button expand="block" class="main-button">Order Again</ion-button>
-        </div>
-      </ion-card-content>
-    </ion-card>
-    <ion-card mode="ios">
-      <ion-card-content>
-        <div class="item-img">
-          <img src='../../assets/cart/cart2.png' />
-        </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">
 
-        <div class="item-info">
-          <p>Ox</p>
-          <p>Bengaluru</p>
-          <p>Rs 50000</p>
+        <ion-card class="web-view card-color">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                <ion-thumbnail><img src="../../assets/cart/cart2.png" /></ion-thumbnail>
+              </ion-col>
+              <ion-col class="left-align" size="6">
+                <ion-text>Ox</ion-text>
+                <ion-text>Bengaluru</ion-text>
+                <ion-text>Rs 60000</ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12">
+                <ion-button size="small" expand="block" color="primary">Order Again</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-          <ion-button expand="block" class="main-button">Order Again</ion-button>
-        </div>
-      </ion-card-content>
-    </ion-card>
-    <ion-card mode="ios">
-      <ion-card-content>
-        <div class="item-img">
-          <img src='../../assets/cart/cart3.png' />
-        </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">
 
-        <div class="item-info">
-          <p>Goat</p>
-          <p>Bengaluru</p>
-          <p>Rs 20000</p>
+        <ion-card class="web-view card-color">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                <ion-thumbnail><img src="../../assets/cart/cart3.png" /></ion-thumbnail>
+              </ion-col>
+              <ion-col class="left-align" size="6">
+                <ion-text>Ox</ion-text>
+                <ion-text>Bengaluru</ion-text>
+                <ion-text>Rs 60000</ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12">
+                <ion-button size="small" expand="block" color="primary">Order Again</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-          <ion-button expand="block" class="main-button">Order Again</ion-button>
-        </div>
-      </ion-card-content>
-    </ion-card>
-    <!-- <ion-card mode="ios">
+
+  <!-- <ion-card mode="ios">
       <ion-card-content>
         <div class="item-img">
           <img src='../../assets/cart/cart4.png' />
@@ -78,7 +114,7 @@
         </div>
       </ion-card-content>
     </ion-card> -->
-    <!-- <ion-card mode="ios">
+  <!-- <ion-card mode="ios">
       <ion-card-content>
         <div class="item-img">
           <img src='../../assets/cart/cart5.png' />
@@ -93,5 +129,4 @@
         </div>
       </ion-card-content>
     </ion-card> -->
-  </div>
 </ion-content>

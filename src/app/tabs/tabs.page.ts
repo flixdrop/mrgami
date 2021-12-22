@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { SellerFormPage } from '../seller-form/seller-form.page';
 
@@ -10,7 +11,8 @@ import { SellerFormPage } from '../seller-form/seller-form.page';
 export class TabsPage {
   addSellerForm=[];
 
-  constructor(public modalCntrl:ModalController) {}
+  constructor(public modalCntrl:ModalController, private router: Router) {}
+
   async popSellerForm(){
     console.log("Seller-Form-Popped Up");
     const modal = await this.modalCntrl.create({
@@ -23,5 +25,9 @@ export class TabsPage {
     });
   
     modal.present();
+  }
+
+  navigateTO(link){
+    this.router.navigateByUrl('/tabs/'+link);
   }
 }

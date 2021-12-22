@@ -1,3 +1,26 @@
+
+
+<ion-header class="header">
+  <ion-toolbar class="navbar" color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <ion-icon size="large" name="menu" color="danger"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-thumbnail slot="start">
+      <img src="../../assets/welcome.png" />
+    </ion-thumbnail>
+    <ion-label (click)="navigateTO('home')">HOME</ion-label>
+    <ion-label (click)="navigateTO('profile')">PROFILE</ion-label>
+    <ion-label (click)="navigateTO('my-cart')">MY CART</ion-label>
+    <ion-label (click)="navigateTO('favorite')">FAVORITE</ion-label>
+    <ion-label (click)="navigateTO('my-orders')">ORDERS</ion-label>
+
+    <ion-icon size="large" slot="end" name="notifications" color="danger"></ion-icon>
+    <ion-icon size="large" slot="end" color="danger" name="log-out"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
 <!-- <ion-tabs>
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="buy">
@@ -25,7 +48,7 @@
   </ion-tab-bar>
 </ion-tabs> -->
 <ion-tabs class="tabsbg">
-  <ion-tab-bar slot="bottom" class="tab-bar">
+  <ion-tab-bar slot="bottom" color="dark" class="tab-bar">
       <!-- <ion-fab vertical="top" edge="true" horizontal="center" translucent="true">
       <ion-fab-button color="light" class="background" (click)=popSellerForm()>
         <ion-icon name="add"></ion-icon>
@@ -45,7 +68,6 @@
       <!-- <ion-icon name="cafe"></ion-icon> -->
       <!-- <ion-badge *ngIf="new_message">{{new_message}}</ion-badge> -->
     </ion-tab-button>
-    
     
     <ion-tab-button tab="blog-feedback">
       <ion-fab vertical="center" horizontal="center" edge="true" translucent="true">

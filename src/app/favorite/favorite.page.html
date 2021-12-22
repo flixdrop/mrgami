@@ -1,52 +1,116 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button color="primary" class="backbtn" routerLink="/home" routerDirection="back">
-        <img src='../../assets/back-dark.svg' />
-      </ion-button>
+  <ion-toolbar class="toolbar-color">
+    <ion-buttons style="
+    clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
+    background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
+      <ion-buttons routerLink="/tabs/home" routerDirection="back">
+        <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
+      </ion-buttons>
+      <span style="color: azure;">BACK</span>
     </ion-buttons>
-
-    <ion-buttons slot="end">
-      <ion-button class="notification">
-        <ion-icon name="notifications-outline" color="dark"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+    <ion-title>Favorites</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <h1 class="title">Favorite</h1>
+<ion-content class="content-color">
+  <ion-toolbar class="center" color="none">
+    <ion-text color="danger">FAVORITES</ion-text>
+  </ion-toolbar>
 
-  <ion-row class="favorite-items">
-    <ion-col size="6" class="ion-text-left padding-left0">
-      <img src="../../assets/products/prod-1.png" />
-      <p>Rs 40000</p>
-      <h6>Cow</h6>
-    </ion-col>
-    <ion-col size="6" class="ion-text-left padding-right0">
-      <img src="../../assets/products/prod-2.png" />
-      <p>Rs 60000</p>
-      <h6>Ox</h6>
-    </ion-col>
-    <ion-col size="6" class="ion-text-left padding-left0">
-      <img src="../../assets/products/prod-3.png" />
-      <p>Rs 20000</p>
-      <h6>Goat</h6>
-    </ion-col>
-    <ion-col size="6" class="ion-text-left padding-right0">
-      <img src="../../assets/products/prod-4.png" />
-      <p>Rs 80000</p>
-      <h6>Cow</h6>
-    </ion-col>
-    <ion-col size="6" class="ion-text-left padding-left0">
-      <img src="../../assets/products/prod-5.png" />
-      <p>Rs 60000</p>
-      <h6>Buffalo</h6>
-    </ion-col>
-    <ion-col size="6" class="ion-text-left padding-right0">
-      <img src="../../assets/products/prod-6.png" />
-      <p>Rs 20000</p>
-      <h6>Cow</h6>
-    </ion-col>
-  </ion-row>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">
+        <ion-card class="web-view card-color">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                <ion-thumbnail><img src="../../assets/products/prod-1.png"/></ion-thumbnail>
+              </ion-col>
+              <ion-col class="left-align" size="6">
+                <ion-text>Rs 40000</ion-text>
+                <ion-text>Cow</ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">
+        <ion-card class="web-view card-color">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                <ion-thumbnail><img src="../../assets/products/prod-2.png"/></ion-thumbnail>
+              </ion-col>
+              <ion-col class="left-align" size="6">
+                <ion-text>Rs 40000</ion-text>
+                <ion-text>Cow</ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">
+        <ion-card class="web-view card-color">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                <ion-thumbnail><img src="../../assets/products/prod-3.png"/></ion-thumbnail>
+              </ion-col>
+              <ion-col class="left-align" size="6">
+                <ion-text>Rs 40000</ion-text>
+                <ion-text>Cow</ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">
+        <ion-card class="web-view card-color">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                <ion-thumbnail><img src="../../assets/products/prod-4.png"/></ion-thumbnail>
+              </ion-col>
+              <ion-col class="left-align" size="6">
+                <ion-text>Rs 40000</ion-text>
+                <ion-text>Cow</ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">
+        <ion-card class="web-view card-color">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                <ion-thumbnail><img src="../../assets/products/prod-5.png"/></ion-thumbnail>
+              </ion-col>
+              <ion-col class="left-align" size="6">
+                <ion-text>Rs 40000</ion-text>
+                <ion-text>Cow</ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
