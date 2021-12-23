@@ -4,7 +4,7 @@
 //   }
   .input{
     border: 1px solid black;
-    border-radius: 5%;
+    border-radius: 5px;
     font-weight: bold;
     margin: 1%;
     color: black;
@@ -13,20 +13,25 @@
   }
 
   .flex{
-    display: flex;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
-    .errmsg{
-      text-align: left;
+    .content{
+      margin: 0;
+      padding: 0;
+      --background: transparent;
     }
-  
-    .title{
-      text-align: center;
+
+    .vertical-center{
       display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
     }
 
-    .otpCard{
-      margin: 0;
-      padding: 0;
+    .custom-card{
+      top: 30%
     }

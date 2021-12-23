@@ -25,7 +25,6 @@
 
 // }
 
-
 //Twillio based login
 // import { Component } from "@angular/core";
 // import { Router } from "@angular/router";
@@ -86,14 +85,13 @@
 //   }
 // }
 
-
-
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormControl } from '@angular/forms';
-import { AuthService } from '../services/auth.service';
-import { BehaviorSubject } from 'rxjs';
-
+import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { Router } from "@angular/router";
+import { FormControl } from "@angular/forms";
+import { AuthService } from "../services/auth.service";
+import { BehaviorSubject } from "rxjs";
+import { ModalController } from "@ionic/angular";
+import { SignupPage } from "../signup/signup.page";
 
 @Component({
   selector: "app-login",
@@ -102,35 +100,45 @@ import { BehaviorSubject } from 'rxjs';
 
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoginPage   {
-
-
-    public sms=new FormControl('+919860067118');
-
-
+export class LoginPage {
+  public sms = new FormControl("+919860067118");
   private busy_ = new BehaviorSubject(false);
   public busy = this.busy_.asObservable();
 
-  private errorMessage_ = new BehaviorSubject('');
+  private errorMessage_ = new BehaviorSubject("");
   public errorMessage = this.errorMessage_.asObservable();
 
-  constructor(private router: Router, private auth: AuthService,
-    ) { }
-
+  constructor(
+    private router: Router,
+    private auth: AuthService,
+    private modalCtrl: ModalController
+  ) {}
 
   public async signIn() {
-    console.log('In SignIn',   this.sms.value);
+    console.log("In SignIn", this.sms.value);
     this.busy_.next(true);
     //this.errorMessage_.next('');
     try {
       await this.auth.signIn(this.sms.value);
       console.log(this.sms.value);
-      this.router.navigate(['/answer-challenge']);
+      this.router.navigate(["/answer-challenge"]);
     } catch (err) {
       this.errorMessage_.next(err.message || err);
-      this.router.navigate(['/signup']);
+      this.nonUsers(this.sms.value);
+      // this.router.navigate(['/signup']);
     } finally {
       this.busy_.next(false);
     }
+  }
+
+  async nonUsers(phno) {
+    let modal = await this.modalCtrl.create({
+      component: SignupPage,
+      cssClass: "cart-modal",
+      componentProps: {
+        "phno": phno
+      },
+    });
+    modal.present();
   }
 }

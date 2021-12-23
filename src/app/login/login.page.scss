@@ -66,49 +66,15 @@
 // }
 
 
-  ion-toolbar{
-    --background: transparent;
-  }
-  
   ion-input{
-    color: silver;
+    color: white;
     --background: transparent;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid white;
   }
-
-  ion-item{
-    --background: transparent;
-  }
-
-  .loginCard{
-    top: 15%;
-    margin: 0;
-    padding: 0;
-    height: 75%;
-    width: 100%;
-    --box-shadow: none !important;
-    }
-
     .card-img{
-      position: fixed;
       top: 0%;
-      z-index: 1;
       height: 100%;
       width: 100%;
-    }
-
-    .content
-    {
-      --background: transparent;
-    }
-    
-    .content-bg{
-      position: fixed;
-      top: 0;
-      z-index: 0;
-      height: 100%;
-      width: 100%;
-      background-size: cover;
     }
 
   .loginButton{
@@ -120,47 +86,26 @@
 
   .center{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .flex{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .col_4{
-    margin: 0;
-    padding: 0;
-  }
-
-  .title-toolbar{
-    display: flex;
-    --background: transparent;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
 
   ion-grid{
+    position: fixed;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    position: fixed;
-    z-index: 2;
     top: 50%;
     font-weight: bold;
     color: white;
   }
 
   .phno{
-    font-size: 175%;
-    font-weight: bolder;
+    font-size: 125%;
+    color: white;
+    font-weight: normal;
   }
 
   ion-label{
@@ -168,3 +113,19 @@
     color: white;
     text-shadow: 3px 3px 5px black;
   }
+
+  .content
+    {
+    --background: transparent !important;
+    background-image: url('../../assets/bg_2.png')!important;
+    background-size: 90% 70%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    }
+
+    @media (min-width: 700px){
+      .content
+    {
+      background-size: 45% 70%;
+    }
+    }

@@ -1,8 +1,10 @@
 .app{
-  // background-color: #1F1F29;
-  background-image: url('../assets/bg_1.png') !important;
+  --background: #1F1F29;
+  // background-image: url('../assets/bg_1.png') !important;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
+  background-clip: border-box;
 }
 
 .main-list {

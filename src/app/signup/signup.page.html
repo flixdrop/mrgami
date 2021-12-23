@@ -35,15 +35,11 @@
     </div>
   </div>
 </ion-content> -->
-<ion-card>
-  <ion-card-header>
-    <ion-card-title>
-      Please Sign Up
-    </ion-card-title>
-    <ion-card-subtitle>
-      We'd be happy to have you join our community!
-    </ion-card-subtitle>
-  </ion-card-header>
+<ion-content class="content-color ion-padding">
+<ion-card class="card-color vertical-center custom-card">
+    <ion-text color="warning">Please Sign Up</ion-text>
+    <ion-text>We'd be happy to have you join our community!</ion-text>
+    <ion-text>You are almost there!</ion-text>
   
     <!-- <mat-card-header>
       <mat-icon mat-card-avatar>lock</mat-icon>
@@ -51,21 +47,17 @@
       <mat-card-subtitle>We'd be happy to have you join our community!</mat-card-subtitle>
     </mat-card-header> -->
   
-    <ion-card-content>
-      <form>
-        <ion-label color="success">Full Name</ion-label>
-        <ion-input  placeholder="Full Name" [formControl]="fullName" name="name" required></ion-input>
-        <ion-label color="success">Phone Number</ion-label>
-        <ion-input placeholder="Phone Number (e.g. +919999922222)" [formControl]="sms" name="sms" required></ion-input>
+      <form [formGroup]="signup_form">
+
+          <ion-label position="fixed" color="danger">Full Name</ion-label>
+          <ion-input  placeholder="enter your name." formControlName="fullname" required></ion-input>
+      
+          <ion-label position="fixed" color="danger">Phone Number</ion-label>
+          <ion-input formControlName="sms" [value]="phno"></ion-input>
       </form>
-      <ion-button *ngIf="(busy | async) !==true" color="success" (click)="signup()">
-        SIGN UP<ion-spinner *ngIf="busy | async" name="bubbles">
-        </ion-spinner>
+      <ion-button *ngIf="(busy | async) !==true" expand="block" size="small" color="success" (click)="signup()">
+        SIGN UP<ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
       </ion-button>
-    </ion-card-content>
-  
-  
-  
   
     <!-- <mat-card-content>
       <form fxLayout="column">
@@ -90,15 +82,10 @@
       <div fxFlex></div>
     </mat-card-actions> -->
   
-    <p *ngIf="errorMessage | async">{{ errorMessage | async }}</p>
-  
-    <ion-card-content>
-      <ion-card-subtitle>
-        Already signed up? <a routerLink='/login' routerLinkActive="active success" >Sign in</a>
-      </ion-card-subtitle>
-  
-    </ion-card-content>
-  
+    <ion-text *ngIf="errorMessage | async">{{ errorMessage | async }}</ion-text>
+    <ion-text>
+      Already signed up? <a routerLink='/login' routerLinkActive="active success">Sign in</a>
+    </ion-text>
   
   </ion-card>
-  
+</ion-content>

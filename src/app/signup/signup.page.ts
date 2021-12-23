@@ -1,6 +1,7 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
 import { BehaviorSubject } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
@@ -10,10 +11,17 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./signup.page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SignupPage  {
+export class SignupPage implements OnInit{
 
-  sms = new FormControl('');
-  fullName = new FormControl('');
+  @Input() phno: any;
+  signup_form: FormGroup;
+  
+  ngOnInit(){
+    this.signup_form = new FormGroup({
+    fullname: new FormControl(),
+    sms: new FormControl( this.phno, [Validators.minLength(10), Validators.maxLength(10)])
+    });
+  }
 
   private busy_ = new BehaviorSubject(false);
   public busy = this.busy_.asObservable();
@@ -21,14 +29,15 @@ export class SignupPage  {
   private errorMessage_ = new BehaviorSubject('');
   public errorMessage = this.errorMessage_.asObservable();
 
-  constructor(private router: Router, private auth: AuthService) { }
+  constructor(private router: Router, private auth: AuthService, private modalCtrl: ModalController) { }
 
   public async signup() {
     this.errorMessage_.next('');
     this.busy_.next(true);
     try {
-      await this.auth.signUp(this.sms.value, this.fullName.value);
-      await this.auth.signIn(this.sms.value);
+      await this.auth.signUp(this.signup_form.get('sms').value, this.signup_form.get('fullname').value);
+      await this.auth.signIn(this.signup_form.get('sms').value);
+      this.modalCtrl.dismiss();
       this.router.navigate(['/answer-challenge']);
     } catch (err) {
       console.log(err);

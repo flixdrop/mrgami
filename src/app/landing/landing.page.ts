@@ -20,7 +20,7 @@ export class LandingPage implements OnInit {
   slideOpts = {
     initialSlide: 0,
     slidesPerView: 3,
-    spaceBetween: 25,
+    spaceBetween: 10,
     speed: 500,
   };
   audio: any;
