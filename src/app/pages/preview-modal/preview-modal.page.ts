@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -14,9 +15,10 @@ export class PreviewModalPage implements OnInit {
     console.log('data- ', this.data);
   }
 
-  constructor(public modalController: ModalController) {}
+  constructor(public modalController: ModalController, private router: Router) {}
 
   dismiss() {
+    this.router.navigateByUrl('tabs/landing');
     this.modalController.dismiss({
       'dismissed': true
     });

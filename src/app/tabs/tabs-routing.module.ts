@@ -54,7 +54,6 @@ const routes: Routes = [
     path: 'myads',
     loadChildren: () => import('../pages/myads/myads.module').then( m => m.MyadsPageModule),
     canActivate: [IsAuthenticated]
-    // canActivate: [AuthGuard]
   },
   {
     path: 'landing',

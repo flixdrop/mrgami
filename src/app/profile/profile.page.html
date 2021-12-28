@@ -14,22 +14,21 @@
 
 <ion-content class="ion-padding content-color">
   <ion-toolbar class="card-color">
-    <ion-item lines="full" color="none">
+    <!-- <ion-item lines="full" color="none"> -->
       <ion-label class="center">User Profile</ion-label>
       <ion-button fill="clear" slot="end">
         edit 
         <ion-icon name="create-outline"></ion-icon>
       </ion-button>
-    </ion-item>
+    <!-- </ion-item> -->
   </ion-toolbar>
 
   <ion-card class="card-color">
 
     <form [formGroup]="userDetailsForm" >
-      <div *ngFor="let detail of (userDetails | async)" >
+      <div *ngFor="let detail of (userDetails | async)">
             <ion-input matInput readonly placeholder="{{ detail.Name }}" [formControlName]="detail.Name"></ion-input>
       </div>
-
           <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
   </form>
 

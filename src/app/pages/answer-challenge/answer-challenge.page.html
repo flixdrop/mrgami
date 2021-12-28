@@ -44,12 +44,12 @@
     <ion-toolbar color="card-color">
       <ion-item class="title" lines="full" color="none">
         <ion-icon name="lock-closed-outline"></ion-icon>
-        Sign-In
+        {{doTranslation('Sign-In')}}
       </ion-item>
     </ion-toolbar>
     <ion-toolbar color="none">
       <ion-text>
-        Please enter the secret code you received to complete sign-in
+        {{doTranslation('Please enter the secret code you received to complete sign-in')}}
       </ion-text>
     </ion-toolbar>
     <ion-grid>
@@ -72,7 +72,7 @@
       <ion-row>
         <ion-col size="12">
           <ion-button *ngIf="(busy | async) !==true" size="small" color="success" expand="block" (click)="submit()">
-            Continue
+            {{doTranslation('Continue')}}
             <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
           </ion-button>
         </ion-col>

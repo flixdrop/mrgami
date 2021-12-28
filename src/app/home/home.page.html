@@ -19,7 +19,7 @@
     </ion-buttons> -->
     <ion-title>Buy Animal</ion-title>
   </ion-toolbar>
-  <ion-toolbar color="none">
+  <ion-toolbar class="search-color">
     <ion-searchbar [(ngModel)]="searchTerm" placeholder="Search Cattles" mode="md">
       <ion-icon slot="end" name="funnel-outline" color="medium"></ion-icon>
     </ion-searchbar>
@@ -136,9 +136,9 @@
 
 </ion-content>
 
-<ion-fab vertical="bottom" horizontal="right" translucent="true">
-  <ion-fab-button size="small" (click)="onClickFab()" color="medium">
-    <ion-icon name="add"></ion-icon>
+<ion-fab slot="fixed" vertical="bottom" horizontal="start" translucent="true">
+  <ion-fab-button size="small" (click)="onClickFab()" color="light">
+    <ion-icon size="large" name="add"></ion-icon>
   </ion-fab-button>
-  <ion-label color="medium">New AD</ion-label>
+  <ion-label class="center" color="dark">New AD</ion-label>
 </ion-fab>

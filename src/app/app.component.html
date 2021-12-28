@@ -2,14 +2,14 @@
   <ion-split-pane contentId="main-content" when="sm md lg xl">
     <ion-menu contentId="main-content" type="overlay" [disabled]="!isMenuEnabled">
       <ion-header>
-        <ion-toolbar color="danger">
+        <ion-toolbar class="toolbar-color">
           <ion-buttons style="
     clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
     background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
       <ion-buttons routerDirection="back">
         <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;" (click)="close()"></ion-icon>
       </ion-buttons>
-      <span style="color: azure;">BACK</span>
+      <span style="color: azure;">{{doTranslation('BACK')}}</span>
     </ion-buttons>
         </ion-toolbar>
       </ion-header>
@@ -19,35 +19,35 @@
               <ion-item lines="full" (click)="navigate('/tabs/home', 1)" detail="false" class="ion-text-center"
                 [class.selected]="selectedIndex == 1">
                 <ion-icon color="medium" name="home"></ion-icon>
-                <ion-text color="medium">Home</ion-text>
+                <ion-text color="medium">{{doTranslation('HOME')}}</ion-text>
               </ion-item>
             </ion-menu-toggle>
             <ion-menu-toggle auto-hide="false">
               <ion-item lines="full" (click)="navigate('/tabs/profile', 2)" detail="false" class="ion-text-center"
                 [class.selected]="selectedIndex == 2">
                 <ion-icon color="medium" name="person-sharp"></ion-icon>
-                <ion-text color="medium">Profile</ion-text>
+                <ion-text color="medium">{{doTranslation('PROFILE')}}</ion-text>
               </ion-item>
             </ion-menu-toggle>
             <ion-menu-toggle auto-hide="false">
               <ion-item lines="full" (click)="navigate('/tabs/my-cart', 3)" detail="false" class="ion-text-center"
                 [class.selected]="selectedIndex == 3">
                 <ion-icon size="large" color="medium" name="cart-sharp"></ion-icon>
-                <ion-text color="medium">My Cart</ion-text>
+                <ion-text color="medium">{{doTranslation('MY CART')}}</ion-text>
               </ion-item>
             </ion-menu-toggle>
             <ion-menu-toggle auto-hide="false">
               <ion-item lines="full" (click)="navigate('/tabs/favorite', 4)" detail="false" class="ion-text-center"
                 [class.selected]="selectedIndex == 4">
                 <ion-icon color="medium" name="star"></ion-icon>
-                <ion-text color="medium">Favorites</ion-text>
+                <ion-text color="medium">{{doTranslation('FAVORITE')}}</ion-text>
               </ion-item>
             </ion-menu-toggle>
             <ion-menu-toggle auto-hide="false">
               <ion-item lines="none" (click)="navigate('/tabs/my-orders', 5)" detail="false" class="ion-text-center"
                 [class.selected]="selectedIndex == 5">
                 <ion-icon color="medium" name="card"></ion-icon>
-                <ion-text color="medium">Orders</ion-text>
+                <ion-text color="medium">{{doTranslation('ORDERS')}}</ion-text>
               </ion-item>
             </ion-menu-toggle>
           </ion-list>
@@ -56,6 +56,5 @@
 
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
-
 </ion-app>
 

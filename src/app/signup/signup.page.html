@@ -35,31 +35,13 @@
     </div>
   </div>
 </ion-content> -->
-<ion-content class="content-color ion-padding">
-<ion-card class="card-color vertical-center custom-card">
-    <ion-text color="warning">Please Sign Up</ion-text>
-    <ion-text>We'd be happy to have you join our community!</ion-text>
-    <ion-text>You are almost there!</ion-text>
-  
-    <!-- <mat-card-header>
-      <mat-icon mat-card-avatar>lock</mat-icon>
-      <mat-card-title>Please Sign Up</mat-card-title>
-      <mat-card-subtitle>We'd be happy to have you join our community!</mat-card-subtitle>
-    </mat-card-header> -->
-  
-      <form [formGroup]="signup_form">
+<!-- <mat-card-header>
+  <mat-icon mat-card-avatar>lock</mat-icon>
+  <mat-card-title>Please Sign Up</mat-card-title>
+  <mat-card-subtitle>We'd be happy to have you join our community!</mat-card-subtitle>
+</mat-card-header> -->
 
-          <ion-label position="fixed" color="danger">Full Name</ion-label>
-          <ion-input  placeholder="enter your name." formControlName="fullname" required></ion-input>
-      
-          <ion-label position="fixed" color="danger">Phone Number</ion-label>
-          <ion-input formControlName="sms" [value]="phno"></ion-input>
-      </form>
-      <ion-button *ngIf="(busy | async) !==true" expand="block" size="small" color="success" (click)="signup()">
-        SIGN UP<ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
-      </ion-button>
-  
-    <!-- <mat-card-content>
+<!-- <mat-card-content>
       <form fxLayout="column">
         <mat-form-field>
           <input matInput placeholder="Full Name" [formControl]="fullName" name="name" autocomplete="name" required/>
@@ -70,8 +52,8 @@
         </mat-form-field>
       </form>
     </mat-card-content> -->
-  
-    <!-- <mat-card-actions>
+
+<!-- <mat-card-actions>
       <div fxFlex></div>
       <button mat-stroked-button color="primary" (click)="signup()">
         <div fxFlex></div>
@@ -81,11 +63,46 @@
       </button>
       <div fxFlex></div>
     </mat-card-actions> -->
-  
-    <ion-text *ngIf="errorMessage | async">{{ errorMessage | async }}</ion-text>
-    <ion-text>
-      Already signed up? <a routerLink='/login' routerLinkActive="active success">Sign in</a>
-    </ion-text>
-  
+
+<ion-content class="content-color ion-padding">
+  <ion-card class="card-color custom-card">
+    <ion-toolbar class="center" color="none">
+      <ion-text color="warning">{{doTranslation('Please Sign Up')}}</ion-text>
+    </ion-toolbar>
+    <ion-toolbar class="center" color="none">
+      <ion-text>{{doTranslation("We'd be happy to have you join our community!")}}</ion-text>
+    </ion-toolbar>
+    <ion-toolbar class="center" color="none">
+      <ion-text color="primary">{{doTranslation('You are almost there!')}}</ion-text>
+    </ion-toolbar>
+
+    <form [formGroup]="signup_form">
+      <ion-toolbar color="none">
+        <ion-item lines="none" color="none">
+          <ion-label position="floating" color="danger">{{doTranslation('Full Name')}}</ion-label>
+          <ion-input placeholder="enter your name." formControlName="fullname" required></ion-input>
+        </ion-item>
+      </ion-toolbar>
+      <ion-toolbar color="none">
+        <ion-item lines="none" color="none">
+          <ion-label position="floating" color="danger">{{doTranslation('Phone Number')}}</ion-label>
+          <ion-input formControlName="sms" [value]="phno"></ion-input>
+        </ion-item>
+        </ion-toolbar>
+    </form>
+    <ion-button *ngIf="(busy | async) !==true" expand="block" size="small" color="success" (click)="signup()">
+      {{doTranslation('SIGN UP')}}<ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
+    </ion-button>
+    <ion-button size="small" color="primary" expand="block" (click)="dismiss()">{{doTranslation('Continue without login')}}</ion-button>
+
+    <ion-toolbar color="none">
+      <ion-text *ngIf="errorMessage | async">{{ errorMessage | async }}</ion-text>
+    </ion-toolbar>
+    <ion-toolbar color="none">
+      <ion-text>
+        {{doTranslation('Already signed up?')}}<a routerLink='/login' routerLinkActive="active success">{{doTranslation('Sign in')}}</a>
+      </ion-text>
+    </ion-toolbar>
+
   </ion-card>
 </ion-content>

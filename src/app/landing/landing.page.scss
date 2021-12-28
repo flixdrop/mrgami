@@ -335,7 +335,7 @@
   }
 
   .top-space{
-    margin: 35% 0% 15% 0%;
+    margin: 5% 0%;
   }
 
   .bottom-center{
@@ -353,8 +353,8 @@
   .gradient{
     box-shadow: 0px 3px  #000;
     border-radius: 5px;
-    // background: linear-gradient( 180deg,  #1777AD 80%, rgba(25, 125, 175, .2) 100%);
-    background: linear-gradient(180deg, #1777AD 10.94%, rgba(23, 119, 173, 0) 100%);
+    background: linear-gradient(180deg, #1777AD 100%, rgba(23, 119, 173, 0) 100%);
+    // background: linear-gradient(180deg, #1777AD 10.94%, rgba(23, 119, 173, 0) 100%);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
   
@@ -377,7 +377,6 @@
     }
     margin: 0;
     padding: 0;
-    // font-size: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -386,9 +385,6 @@
 
   .offer-img-bg{
     padding: 10%;
-    background-color: #1778AE;
-    mix-blend-mode: color;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   .inline-flex{
@@ -401,7 +397,7 @@
   .button-img{
     background-size: 100% 100%; 
     background-repeat: no-repeat;
-    background-clip: content-box; 
+    background-clip: border-box; 
     background-position: center center;
   }
 
@@ -414,44 +410,21 @@
     color: white;
   }
 
-  .content{
-    position: absolute;
+  .background{
+    border-radius: 0px;
+    position: relative;
     --background: transparent !important;
-    background-image: url('../../assets/bgapp.png') !important;
-    background-size: 100% 50%;
+    background-image: url('../../assets/new-bg.png') !important;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: top left;
     background-clip: border-box;
-  }
-
-  .transparent-bg{
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    z-index: -1; 
-    top: 20%;
-    left: 0;
-    height: 60%;
-    width: 100%;
-    --background: white;
-    opacity: 25%;
-    border-radius: 0;
-    border-bottom-right-radius: 10%;
-    border-bottom-left-radius: 10%;
-  }
-
-  ion-grid{
-    z-index: 2;
-    width: 100%;
-    height: inherit;
+    background-attachment: scroll;
   }
 
   .header{
-    z-index: 2;
-    --background: transparent;
-    margin: 0;
-    padding: 0;
-    padding: 2%;
+    --background: #36363F; 
+    background-color: #36363F;
   }
 
   ion-searchbar{
@@ -460,7 +433,7 @@
   }
 
   .glow-on-hover {
-    --background: rgb(255, 255, 255, 0.4);
+    --background: rgb(255, 255, 255, 0.5);
     background-clip: padding-box;
     width: 100%;
     height: 50px;
@@ -522,7 +495,7 @@
 }
 
 .searchbar-webview{
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid rgb(156, 141, 141);
 }
 
 @keyframes glowing {
@@ -571,6 +544,10 @@
   }
   .row-size{
     height: 125px;
+  }
+  .background{
+    background-size: 50% 100%;
+    background-position: top center;
   }
 }
 

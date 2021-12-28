@@ -15,7 +15,7 @@
       </ion-button>
     </ion-buttons> -->
   </ion-toolbar>
-  <ion-toolbar color="none">
+  <ion-toolbar class="search-color">
     <ion-item lines="none" color="none">
       <ion-searchbar [(ngModel)]="searchTerm" lines="full" color="none" mode="md"></ion-searchbar>
     </ion-item>
@@ -35,8 +35,7 @@
       refreshingText="Please Wait...">
     </ion-refresher-content>
   </ion-refresher>
-
-
+  
   <ion-grid>
     <ion-row>
       <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">

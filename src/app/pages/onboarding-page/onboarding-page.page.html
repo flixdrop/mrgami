@@ -1,9 +1,45 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>onboarding-page</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <ion-slides pager="true" [options]="slideOpts" zoom="true" #mySlider>
+    <ion-slide class="slide">
+        <ion-item lines="none" color="none">
+          <ion-label>Language</ion-label>
+          <ion-select class="content-color" interface="action-sheet" (ionChange)="onLanguageChanged($event)" [(ngModel)]="selectedLanguage">
+            <ion-select-option value="english">English</ion-select-option>
+            <ion-select-option value="kannada">Kannada</ion-select-option>
+          </ion-select>
+        </ion-item>
+      <ion-toolbar color="none">
+        <ion-icon color="primary" [hidden]="mySlider.isBeginning()" size="large" slot="start"
+          name="chevron-back-outline" (click)="prev()"></ion-icon>
+        <ion-icon color="primary" size="large" slot="end" name="chevron-forward-outline" (click)="next()"></ion-icon>
+      </ion-toolbar>
+    </ion-slide>
+    <ion-slide class="slide">
+      <img class="img" src="../../../assets/Screen 1.png"/>
+      <ion-text>{{doTranslation('Sell your cattle at the best price online.')}}</ion-text>
+      <ion-text>{{doTranslation('Buy your preferred breed of cattle from wide range in just one click')}}</ion-text>
+      <ion-toolbar color="none">
+        <ion-icon color="primary" [hidden]="mySlider.isBeginning()" size="large" slot="start"
+          name="chevron-back-outline" (click)="prev()"></ion-icon>
+        <ion-icon color="primary" size="large" slot="end" name="chevron-forward-outline" (click)="next()"></ion-icon>
+      </ion-toolbar>
+    </ion-slide>
+    <ion-slide class="slide">
+      <img class="img" src="../../../assets/Screen 2.png"/>
+      <ion-text>{{doTranslation('Order Animal Medicine at huge discount by ‘search’ or by ‘uploading doctor’s prescription’. Get Home Delivery')}}</ion-text>
+      <ion-toolbar color="none">
+        <ion-icon color="primary" size="large" slot="start" name="chevron-back-outline" (click)="prev()"></ion-icon>
+        <ion-icon color="primary" size="large" slot="end" name="chevron-forward-outline" (click)="next()"></ion-icon>
+      </ion-toolbar>
+    </ion-slide>
+    <ion-slide class="slide">
+      <img class="img" src="../../../assets/Screen 3.png"/>
+      <ion-text>{{doTranslation('Order best Cattle Feeds from famous suppliers at anywhere in India. Increase Milk yield.')}}</ion-text>
+      <ion-toolbar color="none">
+        <ion-icon color="primary" size="large" slot="start" name="chevron-back-outline" (click)="prev()"></ion-icon>
+        <ion-button expand="block" color="primary" size="small" slot="end" name="chevron-forward-outline" (click)="onClickFinish()">Finish</ion-button>
+      </ion-toolbar>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
+

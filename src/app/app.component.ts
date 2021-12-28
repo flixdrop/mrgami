@@ -7,6 +7,7 @@ import { UtilService } from './util.service';
 import { menuController } from '@ionic/core';
 import { Router } from '@angular/router';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms'; 
+import { TranslateService } from './services/translate.service';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit {
     private statusBar: StatusBar,
     private util: UtilService,
     private router: Router,
+    private translateService: TranslateService
   ) {
     this.initializeApp();
   }
@@ -52,5 +54,10 @@ export class AppComponent implements OnInit {
 
   close() {
     menuController.toggle();
+  }
+
+  doTranslation(text){
+    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+    return translateText;
   }
 }

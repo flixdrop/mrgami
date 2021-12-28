@@ -92,6 +92,7 @@ import { AuthService } from "../services/auth.service";
 import { BehaviorSubject } from "rxjs";
 import { ModalController } from "@ionic/angular";
 import { SignupPage } from "../signup/signup.page";
+import { TranslateService } from "../services/translate.service";
 
 @Component({
   selector: "app-login",
@@ -111,7 +112,8 @@ export class LoginPage {
   constructor(
     private router: Router,
     private auth: AuthService,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    private translateService: TranslateService
   ) {}
 
   public async signIn() {
@@ -124,8 +126,8 @@ export class LoginPage {
       this.router.navigate(["/answer-challenge"]);
     } catch (err) {
       this.errorMessage_.next(err.message || err);
+      this.router.navigateByUrl('/tabs/landing');
       this.nonUsers(this.sms.value);
-      // this.router.navigate(['/signup']);
     } finally {
       this.busy_.next(false);
     }
@@ -140,5 +142,10 @@ export class LoginPage {
       },
     });
     modal.present();
+  }
+
+  doTranslation(text){
+    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+    return translateText;
   }
 }

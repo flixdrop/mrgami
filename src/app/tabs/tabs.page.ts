@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { SellerFormPage } from '../seller-form/seller-form.page';
+import { TranslateService } from '../services/translate.service';
 
 @Component({
   selector: 'app-tabs',
@@ -11,7 +12,7 @@ import { SellerFormPage } from '../seller-form/seller-form.page';
 export class TabsPage {
   addSellerForm=[];
 
-  constructor(public modalCntrl:ModalController, private router: Router) {}
+  constructor(public modalCntrl:ModalController, private router: Router, private translateService: TranslateService) {}
 
   async popSellerForm(){
     console.log("Seller-Form-Popped Up");
@@ -29,5 +30,10 @@ export class TabsPage {
 
   navigateTO(link){
     this.router.navigateByUrl('/tabs/'+link);
+  }
+
+  doTranslation(text){
+    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+    return translateText;
   }
 }

@@ -24,6 +24,7 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import "~animate.css/animate.css";
 
 // @font-face {
 //     font-family: 'SegoeUI';
@@ -58,12 +59,7 @@
 //     font-family: 'Arima Madurai';
 //     src: url('./assets/fonts/Arima_Madurai/ArimaMadurai-Medium.ttf');
 // }
-// @import "~animate.css/animate.css";
-// .cart-modal {
-//     --height: 75%;
-//     --border-radius: 3%;
-//     padding: 5%;
-//   }
+
 
 //   @font-face {
 //     font-family: 'Laila', sans-serif;    
@@ -153,6 +149,8 @@
 //     }
 // }
 
+
+
 @font-face {
     font-family: 'Laila', sans-serif;    
     font-style: italic;
@@ -162,9 +160,11 @@
 
 *{
     font-family: 'Laila', sans-serif;
-    //color: rgb(255, 255, 255);
-   // color: rgb(255, 255, 255);
 }
+
+.cart-modal {
+    --background: transparent !important;
+  }
 
 .toolbar-color{
     --background: #FF5555;
@@ -178,6 +178,25 @@
     --background: #36363F;
   }
 
+  .search-color{
+    --background: #36363F; 
+    background-color: #36363F;
+  }
+
+  .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .vertical-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   body{
     font-family: 'Laila', sans-serif;
   }
@@ -188,6 +207,7 @@
   }
 
   ion-card{
+      border-radius: 0;
       margin: 0;
       padding: 0;
   }

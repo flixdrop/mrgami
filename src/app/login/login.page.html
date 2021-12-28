@@ -124,21 +124,25 @@
   <ion-label>Sign In</ion-label>
 </ion-toolbar> -->
 
-<ion-content class="content">
-  <ion-grid>
+<ion-content class="card-color">
+  <div class="div vertical-center">
+    <!-- <ion-thumbnail> -->
+      <img src="../../assets/welcome.png" />
+    <!-- </ion-thumbnail> -->
+    <ion-grid class="content vertical-center">
     <ion-row>
-      <ion-col class="center" size="12">
-        <form>
-          <ion-label class="phno" position="fixed">Phone Number</ion-label>
-          <ion-input placeholder="enter 10-digits phone no." [formControl]="sms" type="sms" required></ion-input>
-        </form>
+      <ion-col class="vertical-center phno" size="12">
+            <ion-label color="tertiary">{{doTranslation('Phone Number')}}</ion-label>
+            <ion-item lines="full" color="none">
+              <ion-input placeholder="enter 10-digits phone no." size="large" color="medium" [formControl]="sms" type="sms" required></ion-input>
+            </ion-item>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col class="center" size="12">
-        <ion-button class="loginButton" expand="block" (click)="signIn()" [disabled]="(busy | async)">
-          <ion-label>GET OTP</ion-label>
-          <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
+        <ion-button class="loginButton" expand="block" color="tertiary" (click)="signIn()" [disabled]="(busy | async)">
+          <ion-label>{{doTranslation('GET OTP')}}</ion-label>
+          <ion-spinner *ngIf="busy | async" name="lines"></ion-spinner>
         </ion-button>
         <!-- <ion-item lines="none">
           <ion-text>Not registered yet?</ion-text><ion-button size="small" fill="clear" color="medium" routerLink='/signup' routerLinkActive="active primary">Sign up</ion-button>
@@ -164,4 +168,6 @@
       </ion-col>
     </ion-row> -->
   </ion-grid>
+</div>
+
 </ion-content>

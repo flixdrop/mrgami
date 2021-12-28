@@ -1,5 +1,3 @@
-
-
 <ion-header class="header">
   <ion-toolbar class="navbar" color="dark">
     <ion-buttons slot="start">
@@ -8,13 +6,13 @@
       </ion-menu-button>
     </ion-buttons>
     <ion-thumbnail slot="start">
-      <img src="../../assets/welcome.png" />
+      <img src="../../assets/welcome.png"/>
     </ion-thumbnail>
-    <ion-label (click)="navigateTO('home')">HOME</ion-label>
-    <ion-label (click)="navigateTO('profile')">PROFILE</ion-label>
-    <ion-label (click)="navigateTO('my-cart')">MY CART</ion-label>
-    <ion-label (click)="navigateTO('favorite')">FAVORITE</ion-label>
-    <ion-label (click)="navigateTO('my-orders')">ORDERS</ion-label>
+    <ion-label (click)="navigateTO('home')">{{doTranslation('HOME')}}</ion-label>
+    <ion-label (click)="navigateTO('profile')">{{doTranslation('PROFILE')}}</ion-label>
+    <ion-label (click)="navigateTO('my-cart')">{{doTranslation('MY CART')}}</ion-label>
+    <ion-label (click)="navigateTO('favorite')">{{doTranslation('FAVORITE')}}</ion-label>
+    <ion-label (click)="navigateTO('my-orders')">{{doTranslation('ORDERS')}}</ion-label>
 
     <ion-icon size="large" slot="end" name="notifications" color="danger"></ion-icon>
     <ion-icon size="large" slot="end" color="danger" name="log-out"></ion-icon>
@@ -47,31 +45,22 @@
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs> -->
-<ion-tabs class="tabsbg">
-  <ion-tab-bar slot="bottom" color="dark" class="tab-bar">
-      <!-- <ion-fab vertical="top" edge="true" horizontal="center" translucent="true">
-      <ion-fab-button color="light" class="background" (click)=popSellerForm()>
-        <ion-icon name="add"></ion-icon>
-      </ion-fab-button>
-    </ion-fab> -->
-    <ion-tab-button tab="landing"> 
+
+<ion-tabs class="none">
+    <ion-tab-bar class="content-color" slot="bottom">
+    <ion-tab-button tab="landing">
       <ion-icon size="large" name="home" color="danger"></ion-icon>
-      <ion-label color="danger">HOME</ion-label>
-      <!-- <ion-icon name="cart" ></ion-icon> -->
-      <!-- <img style="height: 30px; width: 30px;" src="../../assets/icon/home.png"/> -->
+      <ion-label color="danger">{{doTranslation('HOME')}}</ion-label>
     </ion-tab-button>
-    
-    <ion-tab-button  tab="myads">
+
+    <ion-tab-button tab="myads">
       <ion-icon size="large" name="newspaper" color="success"></ion-icon>
-      <ion-label color="success">MY ADs</ion-label>
-      <!-- <img style="height: 30px; width: 30px; " src="../../assets/icon/ad.png"/> -->
-      <!-- <ion-icon name="cafe"></ion-icon> -->
-      <!-- <ion-badge *ngIf="new_message">{{new_message}}</ion-badge> -->
+      <ion-label color="success">{{doTranslation('MY ADs')}}</ion-label>
     </ion-tab-button>
     
     <ion-tab-button tab="blog-feedback">
       <ion-fab vertical="center" horizontal="center" edge="true" translucent="true">
-        <ion-fab-button color="light" class="background" >  <!-- (click)=popSellerForm() -->
+        <ion-fab-button color="medium" class="background">  <!-- (click)=popSellerForm() -->
           <ion-icon size="large" name="book"></ion-icon>
         </ion-fab-button>
       </ion-fab>
@@ -81,21 +70,19 @@
     
     <ion-tab-button tab="medicines">
       <ion-icon size="large" name="medkit" color="success"></ion-icon>
-      <ion-label color="success">VET PHARMA</ion-label>
-      <!-- <ion-icon name="bandage"></ion-icon> -->
-      <!-- <img style="height: 30px; width: 30px;" src="../../assets/icon/old-purchase.png"/> -->
-      <!-- <ion-badge *ngIf="new_activities">{{new_activities}}</ion-badge> -->
+      <ion-label color="success">{{doTranslation('VET PHARMA')}}</ion-label>
     </ion-tab-button>
     
     <ion-tab-button tab="profile">
       <ion-icon size="large" color="light" name="person-circle"></ion-icon>
-      <ion-label color="light">PROFILE</ion-label>
+      <ion-label color="light">{{doTranslation('PROFILE')}}</ion-label>
     </ion-tab-button>
+    
   </ion-tab-bar>
-
-  <ion-footer class="footer">
-    <ion-toolbar class="custon-toolbar card-color">
-      <ion-text color="danger">MRGAMI Technologies PVT. LTD. 2014-2021 &#169;</ion-text>
-    </ion-toolbar>
-  </ion-footer>
 </ion-tabs>
+
+<ion-footer class="footer">
+  <ion-toolbar class="custom-toolbar card-color">
+    <ion-text color="danger">MRGAMI Technologies PVT. LTD. 2014-2021 &#169;</ion-text>
+  </ion-toolbar>
+</ion-footer>

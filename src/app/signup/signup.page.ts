@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { BehaviorSubject } from 'rxjs';
 import { AuthService } from '../services/auth.service';
+import { TranslateService } from '../services/translate.service';
 
 @Component({
   selector: 'app-signup',
@@ -29,7 +30,9 @@ export class SignupPage implements OnInit{
   private errorMessage_ = new BehaviorSubject('');
   public errorMessage = this.errorMessage_.asObservable();
 
-  constructor(private router: Router, private auth: AuthService, private modalCtrl: ModalController) { }
+  constructor(private router: Router, private auth: AuthService, private modalCtrl: ModalController,
+      private translateService: TranslateService
+    ) { }
 
   public async signup() {
     this.errorMessage_.next('');
@@ -45,6 +48,15 @@ export class SignupPage implements OnInit{
     } finally {
       this.busy_.next(false);
     }
+  }
+
+  dismiss(){
+    this.modalCtrl.dismiss();
+  }
+
+  doTranslation(text){
+    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+    return translateText;
   }
 
 }

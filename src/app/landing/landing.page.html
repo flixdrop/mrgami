@@ -1,13 +1,15 @@
 <ion-header class="ion-padding header">
-  <ion-toolbar color="none">
+  <ion-toolbar class="header">
     <ion-buttons slot="start">
       <ion-menu-button>
         <ion-icon size="large" name="menu-outline" color="danger"></ion-icon>
       </ion-menu-button>
     </ion-buttons>
-    <ion-searchbar class="searchbar" slot="start" placeholder="Search Cattles" mode="md" color="none"></ion-searchbar>
-    <ion-icon size="large" slot="end" name="notifications-outline" color="danger"></ion-icon>
-    <ion-icon size="large" slot="end" color="danger" name="log-out-outline"></ion-icon>
+    <ion-searchbar slot="start" placeholder="{{doTranslation('Search Cattles')}}" mode="md" color="none"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-icon size="large" slot="end" name="notifications" color="danger"></ion-icon>
+      <ion-icon *ngIf="isAuthenticated !== undefined" size="large" slot="end" color="danger" name="log-out" (click)="onClickLogout()"></ion-icon>
+    </ion-buttons>   
     <!-- <ion-button size="large" slot="end" class="notification" color="none" fill="clear"> -->
       <!-- <span>&nbsp;</span> -->
     <!-- </ion-button> -->
@@ -58,12 +60,12 @@
   </div>
 </ion-content> -->
 
-<ion-content class="content ion-padding" [fullscreen]="true">
-  <ion-card class="transparent-bg"></ion-card>
-  <ion-grid class="mobile-view">
+<ion-content class="content-color" [fullscreen]="true">
+  <!-- <div class="background"> -->
+  <ion-grid class="background mobile-view">
     <ion-toolbar class="top-space" color="none">
       <ion-button class="glow-on-hover" size="large" expand="block" (click)="recordAudio()">
-        <ion-label color="danger">FREE VET DOCTOR 24/7</ion-label>
+        <ion-label color="danger">{{doTranslation('FREE VET DOCTOR 24/7')}}</ion-label>
       </ion-button>
     </ion-toolbar>
 
@@ -72,8 +74,8 @@
       <ion-col class="button-img" size="8" style="background-image: url('../../assets/icon/sell-cow-icon.png');">
       </ion-col>
       <ion-col class="vertical-flex" size="4">
-          <ion-label class="green">BUY/SELL</ion-label>
-          <ion-label class=" white">ANIMAL</ion-label>
+          <ion-label class="green">{{doTranslation('BUY/SELL')}}</ion-label>
+          <ion-label class=" white">{{doTranslation('ANIMAL')}}</ion-label>
       </ion-col>
     </ion-row>
   </div>
@@ -81,8 +83,8 @@
   <div class="inline-flex">
     <ion-row class="row-size gradient">
       <ion-col class="bottom-center button-img" (click)="goToFeed()" size="12" style="background-image: url('../../assets/icon/animal-feed.png');">
-        <ion-label class="green">VET</ion-label>
-        <ion-label class="white">FEED</ion-label>
+        <ion-label class="green">{{doTranslation('VET')}}</ion-label>
+        <ion-label class="white">{{doTranslation('FEED')}}</ion-label>
       </ion-col>
      
       <!-- <ion-col size="6" class="vertical-flex">
@@ -92,8 +94,8 @@
     </ion-row>
     <ion-row class="row-size gradient">
         <ion-col class="bottom-center button-img" (click)="goToMedicine()" size="12" style="background-image: url('../../assets/icon/cow-medicine.png');">
-          <ion-label class="green">VET</ion-label>
-            <ion-label class="white">MEDICINE</ion-label>
+          <ion-label class="green">{{doTranslation('VET')}}</ion-label>
+            <ion-label class="white">{{doTranslation('MEDICINE')}}</ion-label>
         </ion-col>
         <!-- <ion-col size="6" class="vertical-flex">
             <ion-label class="green">VET</ion-label>
@@ -103,7 +105,7 @@
   </div>
   </ion-grid>
 
-  <ion-grid class="top-space web-view">
+  <ion-grid class="background top-space web-view">
     <ion-row>
       <ion-col size="12" offset="sm-0 md-0 lg-2 xl-3">
         <ion-toolbar class="searchbar-webview" color="none">
@@ -117,8 +119,8 @@
         <ion-col class="button-img" size="8" style="background-image: url('../../assets/icon/sell-cow-icon.png');">
         </ion-col>
         <ion-col class="vertical-flex" size="4">
-            <ion-label class="green">BUY/SELL</ion-label>
-            <ion-label class=" white">ANIMAL</ion-label>
+          <ion-label class="green">{{doTranslation('BUY/SELL')}}</ion-label>
+          <ion-label class=" white">{{doTranslation('ANIMAL')}}</ion-label>
         </ion-col>
       </ion-row>
   
@@ -126,16 +128,16 @@
         <ion-col class="button-img" (click)="goToFeed()" size="8" style="background-image: url('../../assets/icon/animal-feed.png');">
         </ion-col>
         <ion-col size="4" class="vertical-flex">
-          <ion-label class="green">VET</ion-label>
-          <ion-label class="white">FEED</ion-label>
+          <ion-label class="green">{{doTranslation('VET')}}</ion-label>
+        <ion-label class="white">{{doTranslation('FEED')}}</ion-label>
         </ion-col>
       </ion-row>
       <ion-row class="row-size gradient">
           <ion-col class="button-img" (click)="goToMedicine()" size="8" style="background-image: url('../../assets/icon/cow-medicine.png');">
           </ion-col>
           <ion-col size="4" class="vertical-flex">
-              <ion-label class="green">VET</ion-label>
-              <ion-label class="white">MEDICINE</ion-label>
+            <ion-label class="green">{{doTranslation('VET')}}</ion-label>
+            <ion-label class="white">{{doTranslation('MEDICINE')}}</ion-label>
           </ion-col>
       </ion-row>
   </ion-grid>
@@ -146,7 +148,7 @@
   <ion-toolbar class="inline-flex" color="none">
       <ion-chip color="none">
         <ion-icon size="large" name="alarm-sharp" color="medium"></ion-icon>
-        <ion-label class="text-shadow" color="medium">TODAY's OFFERS</ion-label>
+        <ion-label class="text-shadow" color="medium">{{doTranslation("TODAY's OFFERS")}}</ion-label>
       </ion-chip>
   </ion-toolbar>
 </ion-col>
@@ -158,9 +160,9 @@
         <ion-slide *ngFor="let img of images; let i=index">
             <ion-grid>
               <ion-row>
-                <ion-col class="vertical-flex offer-img-bg" size="12">
+                <ion-col class="vertical-flex gradient offer-img-bg" size="12">
                   <ion-img src="{{img}}" class="img"></ion-img>
-                  <ion-label class="white">Offer Details</ion-label>
+                  <ion-label class="white">{{doTranslation('Offer Details')}}</ion-label>
                 </ion-col>
               </ion-row>
               <!-- <ion-row>
@@ -174,6 +176,13 @@
   </ion-col>
 </ion-row>
 </ion-grid>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end" translucent="true">
+  <ion-fab-button size="large" (click)="onClickChatbot()" color="success">
+    <ion-icon size="large" name="logo-android" color="dark"></ion-icon></ion-fab-button>
+    <ion-label class="center" color="success">{{doTranslation('HELP')}}</ion-label>
+</ion-fab>
+<!-- </div> -->
 </ion-content>
 <!-- 
 <ion-footer>

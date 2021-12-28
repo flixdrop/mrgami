@@ -1,0 +1,48 @@
+<ion-header class="content-color">
+  <ion-toolbar class="content-color">
+    <ion-icon slot="end" size="large" color="medium" name="close" (click)="dismiss()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-color ion-padding">
+  <ion-text class="center" color="warning">BOT-CHAT ASSISTANCE</ion-text>
+  <ion-grid>
+    <ion-row *ngFor="let message of messages">
+      <ion-col *ngIf="currentUser !== message.user" class="person-1 vertical-flex" size="9">
+        <ion-toolbar color="none">
+          <ion-label color="warning">{{message.user}}</ion-label>
+        </ion-toolbar>
+        <ion-text>{{message.msg}}</ion-text>
+        <ion-toolbar color="none">
+          <ion-text slot="end" color="primary">{{message.createdAt | date:'short'}}</ion-text>
+        </ion-toolbar>
+      </ion-col>
+      <ion-col *ngIf="currentUser === message.user" class="person-2 vertical-flex" offset="3" size="9">
+        <ion-toolbar color="none">
+          <ion-label color="warning">{{message.user}}</ion-label>
+        </ion-toolbar>
+        <ion-text>{{message.msg}}</ion-text>
+        <ion-toolbar color="none">
+          <ion-text slot="end" color="primary">{{message.createdAt | date:'short'}}</ion-text>
+        </ion-toolbar>      
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer class="content-color">
+  <ion-toolbar class="search-color">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="10">
+          <textarea autosize maxRows="4" [(ngModel)]="newMsg"></textarea>
+        </ion-col>
+        <ion-col class="vertical-center" size="2">
+          <ion-button size="small" fill="clear" expand="block" color="primary" [disabled]="newMsg === ''" (click)="sendMessage()">
+            <ion-icon slot="icon-only" size="large" name="send"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

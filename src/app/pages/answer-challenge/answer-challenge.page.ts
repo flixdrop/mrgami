@@ -128,6 +128,7 @@ import { FormControl } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import {  BehaviorSubject, Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { TranslateService } from 'src/app/services/translate.service';
 @Component({
   selector: 'app-answer-challenge',
   templateUrl: './answer-challenge.page.html',
@@ -174,7 +175,7 @@ export class AnswerChallengePage
   // private sms_ = new BehaviorSubject('');
   // public sms = this.sms_.asObservable();
 
-  constructor(private auth: AuthService, private router: Router) { }
+  constructor(private auth: AuthService, private router: Router, private translateService: TranslateService) { }
 
   //  ngOnInit() {
 
@@ -296,6 +297,11 @@ export class AnswerChallengePage
     } finally {
       this.busy_.next(false);
     }
+  }
+
+  doTranslation(text){
+    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+    return translateText;
   }
 
 }

@@ -1,5 +1,6 @@
 .app{
-  --background: #1F1F29;
+  --background: #36363F;
+  background-color: #1F1F29;
   // background-image: url('../assets/bg_1.png') !important;
   background-repeat: no-repeat;
   background-size: cover;
@@ -58,19 +59,19 @@ ion-menu{
 
 @media (min-width: 400px){
   ion-menu{
-    --width: 40% !important;
+    --width: 50% !important;
   }
 }
 
 @media (min-width: 600px){
   ion-menu{
-    --width: 30% !important;
+    --width: 40% !important;
   }
 }
 
 @media (min-width: 800px){
   ion-menu{
-    --width: 20% !important;
+    --width: 30% !important;
   }
 }
 
