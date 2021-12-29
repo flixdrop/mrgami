@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { throwError } from 'rxjs';
+import { BehaviorSubject, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 export interface AnimalData
@@ -87,28 +87,37 @@ export interface GetAnimalData{
   @Injectable({
     providedIn: 'root'
   })
-export class SellerFormApiService {
+
+export class SellerFormApiService{
 
 // private baseUrl = 'http://localhost:8080/api/v1/ads';
 private baseUrl = 'http://mrgami-env.eba-e7nbfgvg.ap-south-1.elasticbeanstalk.com/api/v1/ads';
 
+userId: any = new BehaviorSubject<any>('');
+
 constructor(private http: HttpClient) {}
+
  saveData(dat): Observable<any>{
- 
+
   const headers = { 'content-type': 'application/json'};
   const body = dat;
 console.log(dat['imageUrls']);
 console.log('bodyline63',body);
   
    return this.http.post<AnimalData>(this.baseUrl+'/ad', body, {headers});
-  // return this.data;
  }
+
  getData(): Observable<any>{
-   console.log('getdata line 48',this.http.get<any>(this.baseUrl + '/all'));
+  console.log('getdata line 48',this.http.get<any>(this.baseUrl + '/all'));
+  // return this.http.get<any>(this.baseUrl + '/all');
+  return this.http.get<any>(this.baseUrl+'/'+this.userId.value);
+}
+ 
+//  getData(): Observable<any>{
+//    console.log('getdata line 48',this.http.get<any>(this.baseUrl + '/all'));
 
-   return this.http.get<any>(this.baseUrl + '/all');
- }
-
+//    return this.http.get<any>(this.baseUrl + '/all');
+//  }
 
  private handleError(error: HttpErrorResponse) {
   if (error.status === 0) {

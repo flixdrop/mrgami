@@ -45,6 +45,10 @@ export class TranslateService {
     "MY ADs": "ನನ್ನ ಜಾಹೀರಾತು",
     "VET PHARMA": "ಪಶುವೈದ್ಯಕೀಯ ಔಷಧಿ",
     "BACK": "ಹಿಂದೆ",
+    "Blogs and Feedback": "ಬ್ಲಾಗ್‌ಗಳು ಮತ್ತು ಪ್ರತಿಕ್ರಿಯೆ",
+    "ARTICLE TITLE": "ಲೇಖನ ಶೀರ್ಷಿಕೆ",
+    "SUB TITLE OF THE ARTICLE": "ಲೇಖನದ ಉಪಶೀರ್ಷಿಕೆ",
+    "Give Feedback...": "ಪ್ರತಿಕ್ರಿಯೆ ನೀಡಿ..."
   },
   };
 

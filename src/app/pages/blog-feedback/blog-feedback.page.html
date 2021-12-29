@@ -1,14 +1,10 @@
 <ion-header>
-  <ion-toolbar class="toolbar-color">
-    <ion-buttons style="
-    clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
-    background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
-      <ion-buttons routerLink="/tabs/landing" routerDirection="back">
-        <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
-      </ion-buttons>
-      <span style="color: azure;">BACK</span>
+  <ion-toolbar color="danger">
+    <ion-buttons class="btn-shape" slot="start" routerLink="/tabs/landing" routerDirection="back">
+        <ion-icon name="chevron-back-outline" size="large" color="success"></ion-icon>
+        <ion-label color="danger">BACK</ion-label>
     </ion-buttons>
-    <ion-title color="light">Blogs and Feedback</ion-title>
+    <ion-title color="light">BLOG PAGE</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -19,7 +15,7 @@
       <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">
 
   <ion-card class="custom-card card-color">
-    <ion-label color="primary">ARTICLE TITLE</ion-label>
+    <ion-label color="primary">{{doTranslation('ARTICLE TITLE')}}</ion-label>
     <ion-grid>
       <ion-row>
         <ion-col size="12">
@@ -28,7 +24,7 @@
       </ion-row>
       <ion-row>
       <ion-col size="12">
-         <ion-text>SUB TITLE OF THE ARTICLE</ion-text>
+         <ion-text>{{doTranslation('SUB TITLE OF THE ARTICLE')}}</ion-text>
         <ion-button class="accordion" fill="clear" size="small" expand="full" color="light" (click)="onClickReadMore()"><ion-icon slot="end" size="large" name="{{expand === true ?'chevron-up':'chevron-down'}}"></ion-icon>{{ expand === true ? 'READ LESS' : 'READ MORE...'}}</ion-button>
         <div class="panel">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat repudiandae illum, blanditiis quidem obcaecati, enim error quibusdam corrupti aliquam, nemo voluptate ullam sed? Quia labore, dolorem eaque perspiciatis repellat natus.
@@ -44,7 +40,7 @@
       </ion-row>
       <ion-row>
         <ion-col size="12">
-          <ion-button size="small" color="light" expand="full" (click)="onClickFeedback()">Give Feedback...</ion-button>
+          <ion-button size="small" color="light" expand="full" (click)="onClickFeedback()">{{doTranslation('Give Feedback...')}}</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

@@ -2,15 +2,11 @@
   <ion-split-pane contentId="main-content" when="sm md lg xl">
     <ion-menu contentId="main-content" type="overlay" [disabled]="!isMenuEnabled">
       <ion-header>
-        <ion-toolbar class="toolbar-color">
-          <ion-buttons style="
-    clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
-    background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
-      <ion-buttons routerDirection="back">
-        <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;" (click)="close()"></ion-icon>
-      </ion-buttons>
-      <span style="color: azure;">{{doTranslation('BACK')}}</span>
-    </ion-buttons>
+        <ion-toolbar color="danger">
+          <ion-buttons (click)="close()" class="btn-shape" slot="start">
+              <ion-icon name="chevron-back-outline" size="large" color="success"></ion-icon>
+              <ion-label color="danger">BACK</ion-label>
+          </ion-buttons>
         </ion-toolbar>
       </ion-header>
       <ion-content class="content">

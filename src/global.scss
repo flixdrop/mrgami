@@ -149,8 +149,6 @@
 //     }
 // }
 
-
-
 @font-face {
     font-family: 'Laila', sans-serif;    
     font-style: italic;
@@ -168,6 +166,15 @@
 
 .toolbar-color{
     --background: #FF5555;
+}
+
+.btn-shape{
+  clip-path: ellipse(100% 50% at 0% 50%); 
+  background-color: #36363f; 
+  width:80px; 
+  height: 40px; 
+  border-radius: 5%;
+  font-weight: bold;
 }
 
 .content-color{
@@ -197,10 +204,6 @@
     justify-content: center;
   }
 
-  body{
-    font-family: 'Laila', sans-serif;
-  }
-
   ion-content{
       margin: 0;
       padding: 0;
@@ -210,8 +213,4 @@
       border-radius: 0;
       margin: 0;
       padding: 0;
-  }
-
-  ion-label{
-    font-family: 'Laila', sans-serif;
   }

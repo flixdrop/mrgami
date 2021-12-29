@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard, IsAuthenticated } from '../services/auth.guard';
+import { IsAuthenticated } from '../services/auth.guard';
 import { TabsPage } from './tabs.page';
 // import { IntroGuard } from '../guards/intro.guard';
 // import { AutoLoginGuard } from '../guards/auto-login.guard';

@@ -1,23 +1,10 @@
 <ion-header>
-  <ion-toolbar class="toolbar-color">
-    <ion-buttons style="
-    clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
-    background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
-      <ion-buttons routerLink="/tabs/landing" routerDirection="back">
-        <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
-      </ion-buttons>
-      <span style="color: azure;">BACK</span>
+  <ion-toolbar color="danger">
+    <ion-buttons class="btn-shape" slot="start" routerLink="/tabs/landing" routerDirection="back">
+        <ion-icon name="chevron-back-outline" size="large" color="success"></ion-icon>
+        <ion-label color="danger">BACK</ion-label>
     </ion-buttons>
-    <!-- <ion-buttons slot="end">
-      <ion-button class="notification">
-        <ion-icon name="notifications-outline" color="dark"></ion-icon>
-        <span>&nbsp;</span>
-      </ion-button>
-      <ion-button class="filter">
-        <ion-icon name="funnel-outline" color="dark"></ion-icon>
-      </ion-button>
-    </ion-buttons> -->
-    <ion-title>Buy Animal</ion-title>
+    <ion-title color="light">BUY ANIMALS</ion-title>
   </ion-toolbar>
   <ion-toolbar class="search-color">
     <ion-searchbar [(ngModel)]="searchTerm" placeholder="Search Cattles" mode="md">

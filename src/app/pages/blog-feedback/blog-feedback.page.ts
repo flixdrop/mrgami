@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { ModalController } from "@ionic/angular";
 import { BehaviorSubject, Observable } from "rxjs";
 import { AuthService } from "src/app/services/auth.service";
+import { TranslateService } from "src/app/services/translate.service";
 import { FeedbackModalPage } from "../feedback-modal/feedback-modal.page";
 
 @Component({
@@ -15,7 +16,7 @@ export class BlogFeedbackPage implements OnInit {
 
   expand: boolean = false;
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController, private translateService: TranslateService) { }
 
   ngOnInit() {
     this.expand= false;
@@ -47,6 +48,11 @@ export class BlogFeedbackPage implements OnInit {
 
   onClickFeedback(){
     this.feedbackModal();
+  }
+
+  doTranslation(text){
+    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+    return translateText;
   }
 
 }

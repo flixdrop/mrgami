@@ -4,6 +4,10 @@ import { MyadsService } from '../../services/myads.service';
 import { MyadsModalPage } from '../../pages/myads-modal/myads-modal.page';
 import { Router } from '@angular/router';
 import { SellerFormApiService } from 'src/app/services/seller-form-api.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { LoginService } from 'src/app/services/login.service';
+import { HttpClient } from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
 
 @Component({
   selector: 'app-myads',
@@ -20,15 +24,28 @@ export class MyadsPage implements OnInit {
   };
   viewEntered: boolean;
   searchTerm: any;
+  userId: any;
+  username: any;
+  phno: any;
 
-  constructor(public service: MyadsService, public modalController: ModalController,
+  constructor(
+    public service: MyadsService, 
+    public modalController: ModalController,
     public router: Router,
-    public sellerFormApiService:SellerFormApiService ) {}
+    public sellerFormApiService: SellerFormApiService,
+    private auth: AuthService,
+    private loginService: LoginService
+    ) {}
 
   ngOnInit(){
     this.getAllads();
-    
+    const userDetails = this.auth.getUserDetails();
+    userDetails.then(detail => {
+      this.sellerFormApiService.userId.next(detail[0]['Value']);
+      console.log('userId from service- ', this.sellerFormApiService.userId.value);
+    });
   }
+
   ionViewDidEnter() {
     this.viewEntered = true;
 }
@@ -36,7 +53,6 @@ export class MyadsPage implements OnInit {
 getAllads() {
   this.sellerFormApiService.getData().subscribe((result) => {
     this.data = result;
-    console.log('data- ', this.data);
   });
   // console.log('27lines',this.sellerFormApiService.data);
 }

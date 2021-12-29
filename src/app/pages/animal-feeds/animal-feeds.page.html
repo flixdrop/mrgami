@@ -1,19 +1,10 @@
 <ion-header>
-  <ion-toolbar class="toolbar-color">
-    <ion-buttons style="
-    clip-path: ellipse(100% 54% at 0% 50%); background-color: #36363f;
-    background-color: #36363f;width:80px; height: 40px; border-radius: 5%; " slot="start">
-      <ion-buttons routerLink="/tabs/landing" routerDirection="back">
-        <ion-icon name="chevron-back-outline" style="color: #3CF185; width: 30px; height: 200px;"></ion-icon>
-      </ion-buttons>
-      <span style="color: azure;">BACK</span>
+  <ion-toolbar color="danger">
+    <ion-buttons class="btn-shape" slot="start" routerLink="/tabs/landing" routerDirection="back">
+        <ion-icon name="chevron-back-outline" size="large" color="success"></ion-icon>
+        <ion-label color="danger">BACK</ion-label>
     </ion-buttons>
-    <ion-title color="light">Animal Feeds</ion-title>
-    <!-- <ion-buttons slot="end">
-      <ion-button class="notification">
-        <ion-icon name="notifications-outline" color="dark"></ion-icon>
-      </ion-button>
-    </ion-buttons> -->
+    <ion-title color="light">ANIMAL FEEDS</ion-title>
   </ion-toolbar>
   <ion-toolbar class="search-color">
     <ion-item lines="none" color="none">
@@ -38,30 +29,28 @@
   
   <ion-grid>
     <ion-row>
-      <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">
+      <ion-col class="vertical-center" size="12" offset="sm-0 md-0 lg-2 xl-3">
 
-        <ion-card class="custom-card card-color" *ngFor="let p of products | filter:searchTerm; let i=index">
+        <ion-card class="card-color custom-card" *ngFor="let p of products | filter:searchTerm; let i=index">
           <ion-grid (click)="medModal(p)">
             <ion-row>
-              <ion-col class="reverseCenter" size="6">
-                <ion-label>{{p.name}}</ion-label>
+              <ion-col class="vertical-center" size="6">
                 <ion-thumbnail>
                   <ion-img src="{{p.image}}"></ion-img>
                 </ion-thumbnail>
               </ion-col>
-              <ion-col class="reverseCenter" size="6">
-                <ion-label>REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for
+              <ion-col class="vertical-center" size="6">
+                <ion-label color="primary">{{p.name}}</ion-label>
+                <ion-text color="light">REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for
                   Buffalo,Cow,Cattle,Poultry,
                   Goat & Pig (RIGMIN Forte Powder)
-                </ion-label>
+                </ion-text>
+                <ion-label color="success">{{ p.price | currency:'INR' }}</ion-label>
               </ion-col>
             </ion-row>
           </ion-grid>
-          <ion-toolbar class="card-color">
-            <ion-item slot="start" lines="none" color="none">
-              <ion-label color="success">{{ p.price | currency:'INR' }}</ion-label>
-            </ion-item>
-            <ion-button size="small" slot="end" color="primary" expand="block" (click)="addToCart(p)">
+          <ion-toolbar class="no-padding" color="none">
+            <ion-button class="bottom" color="primary" size="small" expand="block" (click)="addToCart(p)">
               Add to cart
             </ion-button>
           </ion-toolbar>

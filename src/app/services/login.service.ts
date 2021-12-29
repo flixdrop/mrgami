@@ -14,8 +14,8 @@ export class LoginService {
 //PostRequest to generate OTP
   generateOtp(username,mobilenumber){
     const headers = { 'content-type': 'application/json'};
-    const body = JSON.stringify({name:username, phone:mobilenumber});
-    console.log('Body',body);
+    const body = JSON.stringify({name: username, phone: mobilenumber});
+    console.log('Body', body);
     return this.http.post(this.baseUrl + 'generate', body, {headers})
      .pipe(
         catchError(this.handleError)

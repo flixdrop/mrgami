@@ -2,7 +2,7 @@
   <ion-toolbar class="header">
     <ion-buttons slot="start">
       <ion-menu-button>
-        <ion-icon size="large" name="menu-outline" color="danger"></ion-icon>
+        <ion-icon size="large" name="menu" color="danger"></ion-icon>
       </ion-menu-button>
     </ion-buttons>
     <ion-searchbar slot="start" placeholder="{{doTranslation('Search Cattles')}}" mode="md" color="none"></ion-searchbar>
@@ -10,21 +10,21 @@
       <ion-icon size="large" slot="end" name="notifications" color="danger"></ion-icon>
       <ion-icon *ngIf="isAuthenticated !== undefined" size="large" slot="end" color="danger" name="log-out" (click)="onClickLogout()"></ion-icon>
     </ion-buttons>   
-    <!-- <ion-button size="large" slot="end" class="notification" color="none" fill="clear"> -->
-      <!-- <span>&nbsp;</span> -->
-    <!-- </ion-button> -->
-    <!-- <ion-buttons slot="start">
-      <ion-button color="primary" class="backbtn" routerLink="/home" routerDirection="back">
-      </ion-button>
-    </ion-buttons> -->
-    <!-- <ion-buttons>
-      <ion-button>
-        <ion-icon name="search-outline" color="dark"></ion-icon>
-      </ion-button>
-    </ion-buttons> -->
   </ion-toolbar>
 </ion-header>
 
+<!-- <ion-button size="large" slot="end" class="notification" color="none" fill="clear"> -->
+  <!-- <span>&nbsp;</span> -->
+<!-- </ion-button> -->
+<!-- <ion-buttons slot="start">
+  <ion-button color="primary" class="backbtn" routerLink="/home" routerDirection="back">
+  </ion-button>
+</ion-buttons> -->
+<!-- <ion-buttons>
+  <ion-button>
+    <ion-icon name="search-outline" color="dark"></ion-icon>
+  </ion-button>
+</ion-buttons> -->
 <!-- <ion-content>
    <ion-grid>
      <ion-row>

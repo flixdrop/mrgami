@@ -20,6 +20,8 @@ export class ProfilePage implements OnInit {
   private errorMessage_ = new BehaviorSubject('');
   public errorMessage = this.errorMessage_.asObservable();
 
+  userId: any;
+
   constructor(private auth: AuthService, private router: Router) { }
 
   ngOnInit() {
@@ -34,6 +36,7 @@ export class ProfilePage implements OnInit {
       userDetails.forEach(detail => {
         const control = new FormControl(detail.getValue());
         this.userDetailsForm.addControl(detail.getName(), control);
+        console.log('form-data- ', this.userDetailsForm);
       });
       this.userDetails_.next(userDetails);
       console.log('user-details- ', userDetails);
