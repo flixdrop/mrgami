@@ -2,12 +2,12 @@
   <ion-toolbar color="danger">
     <ion-buttons class="btn-shape" slot="start" routerLink="/tabs/landing" routerDirection="back">
         <ion-icon name="chevron-back-outline" size="large" color="success"></ion-icon>
-        <ion-label color="danger">BACK</ion-label>
+        <ion-label color="danger">{{doTranslation('BACK')}}</ion-label>
     </ion-buttons>
-    <ion-title color="light">BUY ANIMALS</ion-title>
+    <ion-title color="light">{{doTranslation('BUY ANIMALS')}}</ion-title>
   </ion-toolbar>
   <ion-toolbar class="search-color">
-    <ion-searchbar [(ngModel)]="searchTerm" placeholder="Search Cattles" mode="md">
+    <ion-searchbar [(ngModel)]="searchTerm" placeholder="{{doTranslation('Search Cattles')}}" mode="md">
       <ion-icon slot="end" name="funnel-outline" color="medium"></ion-icon>
     </ion-searchbar>
   </ion-toolbar>
@@ -17,7 +17,7 @@
 
   <ion-refresher class="center" slot="fixed" pullMin="120" pullMax="50" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
-      refreshingText="Please Wait...">
+      refreshingText="{{doTranslation('Please Wait...')}}">
     </ion-refresher-content>
   </ion-refresher>
 
@@ -28,8 +28,8 @@
 
         <ion-toolbar class="web-view" color="none">
           <ion-item lines="full" color="none">
-            <ion-label slot="start" color="warning">Type of Cattles</ion-label>
-            <a slot="end" color="medium">See all</a>
+            <ion-label slot="start" color="warning">{{doTranslation('Type of Cattles')}}</ion-label>
+            <a slot="end" color="medium">{{doTranslation('See all')}}</a>
           </ion-item>
         </ion-toolbar>
 
@@ -61,8 +61,8 @@
 
         <ion-toolbar class="web-view" color="none">
           <ion-item lines="full" color="none">
-            <ion-label slot="start" color="warning">Featured</ion-label>
-            <a slot="end" color="medium">See all</a>
+            <ion-label slot="start" color="warning">{{doTranslation('Featured')}}</ion-label>
+            <a slot="end" color="medium">{{doTranslation('See all')}}</a>
           </ion-item>
         </ion-toolbar>
 
@@ -95,8 +95,8 @@
 
         <ion-toolbar class="web-view" color="none">
           <ion-item lines="full" color="none">
-            <ion-label slot="start" color="warning">Best Sell</ion-label>
-            <a slot="end" color="medium">See all</a>
+            <ion-label slot="start" color="warning">{{doTranslation('Best Sell')}}</ion-label>
+            <a slot="end" color="medium">{{doTranslation('See all')}}</a>
           </ion-item>
         </ion-toolbar>
 
@@ -127,5 +127,5 @@
   <ion-fab-button size="small" (click)="onClickFab()" color="light">
     <ion-icon size="large" name="add"></ion-icon>
   </ion-fab-button>
-  <ion-label class="center" color="dark">New AD</ion-label>
+  <ion-label class="center" color="dark">{{doTranslation('New AD')}}</ion-label>
 </ion-fab>

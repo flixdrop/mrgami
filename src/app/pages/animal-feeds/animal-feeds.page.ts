@@ -5,6 +5,7 @@ import { DataService } from "../../data.service";
 import { CartService } from "../../services/cart.service";
 import { ModalController } from "@ionic/angular";
 import { BehaviorSubject } from "rxjs";
+import { TranslateService } from 'src/app/services/translate.service';
 
 @Component({
   selector: 'app-animal-feeds',
@@ -22,7 +23,8 @@ export class AnimalFeedsPage implements OnInit {
   constructor(
     private data: DataService,
     private cartService: CartService,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    private translateService: TranslateService
   ) {}
 
   ngOnInit() {
@@ -84,5 +86,10 @@ export class AnimalFeedsPage implements OnInit {
       console.log("Async operation has ended");
       event.target.complete();
     }, 2500);
+  }
+
+  doTranslation(text){
+    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+    return translateText;
   }
 }

@@ -33,11 +33,9 @@ geoencoderOptions: NativeGeocoderOptions = {
 constructor(
   private geolocation: Geolocation,
   private nativeGeocoder: NativeGeocoder
-) {
-}
+) {}
 
- ngOnInit() {}
-
+ngOnInit() {}
 
  //Get current coordinates of device
  getGeolocation() {
@@ -77,11 +75,11 @@ generateAddress(addressObj) {
   obj.reverse();
   for (const val in obj) {
     if (obj[val].length)
-      {address += obj[val] + ', ';}
+      {
+        address += obj[val] + ', ';
+    }
   }
   return address.slice(0, -2);
 }
-
-
 
 }

@@ -9,7 +9,7 @@
     {
       "animaltype": ["cow", "buffalo", "ox"],
       "name": "type",
-      "label": "Select Animal type",
+      "label": "Animal Type",
       "value": "",
       "type": "select"
   },
@@ -18,13 +18,13 @@
         "buffalo": ["buffalo 1", "buffalo 2", "buffalo 3"],
         "ox": ["ox 1", "ox 2", "ox 3"],
         "name": "breed",
-        "label": "Select Animal breed",
+        "label": "Animal Breed",
         "value": "",
         "type": "select"
     },
     {
         "name": "description",
-        "label": "Description about the animal.",
+        "label": "Description about the Animal",
         "value": "",
         "type": "textarea",
         "placeholder": "describe your animal.",
@@ -35,7 +35,7 @@
     },
     {
       "name": "quotedPrice",
-      "label": "Asking price",
+      "label": "Asking Price",
       "value": "",
       "type": "number",
       "placeholder": "enter expected price.",
@@ -46,7 +46,7 @@
   },
   {
     "name": "weight",
-    "label": "Animal weight",
+    "label": "Animal Weight",
     "value": "",
     "type": "number",
     "placeholder": "enter animal wieght.",
@@ -57,7 +57,7 @@
 },
 {
   "name": "age",
-  "label": "Animal age",
+  "label": "Animal Age",
   "value": "",
   "type": "number",
   "placeholder": "enter animal age.",
@@ -111,7 +111,7 @@
         }},
         {
             "name": "state",
-            "label": "Select Your State",
+            "label": "State",
             "value": "",
             "type": "select",
             "validators": {
@@ -120,7 +120,7 @@
             }},
             {
                 "name": "district",
-                "label": "Select Your District",
+                "label": "District",
                 "value": "",
                 "type": "select"
             },

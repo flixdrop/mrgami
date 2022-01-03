@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '../services/translate.service';
 
 @Component({
   selector: 'app-my-cart',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class MyCartPage implements OnInit {
   num: number;
 
-  constructor() { }
+  constructor(private translateService: TranslateService) { }
 
   ngOnInit() {
   }
@@ -29,5 +30,10 @@ export class MyCartPage implements OnInit {
     else{
     this.num+=1;
     }
+  }
+
+  doTranslation(text){
+    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+    return translateText;
   }
 }

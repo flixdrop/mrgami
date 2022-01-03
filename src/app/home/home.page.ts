@@ -6,6 +6,7 @@ import { CartModalPage } from "../pages/cart-modal/cart-modal.page";
 import { BehaviorSubject } from "rxjs";
 import { Router } from "@angular/router";
 import { SellerFormApiService } from "../services/seller-form-api.service";
+import { TranslateService } from "../services/translate.service";
 
 @Component({
   selector: "app-home",
@@ -21,13 +22,18 @@ export class HomePage implements OnInit {
     slidesPerView: 3,
     spaceBetween: 10,
     speed: 500,
-    zoom: false, 
-    grabCursor: true
+    zoom: false,
+    grabCursor: true,
   };
   searchTerm: any;
   getApiData: any;
 
-  constructor(private data: DataService, private router: Router, private sellerFormApiService: SellerFormApiService) {}
+  constructor(
+    private data: DataService,
+    private router: Router,
+    private sellerFormApiService: SellerFormApiService,
+    private translateService: TranslateService
+  ) {}
 
   ngOnInit() {
     // this.categories = this.data.getCategories();
@@ -39,7 +45,7 @@ export class HomePage implements OnInit {
   getAllads() {
     this.sellerFormApiService.getData().subscribe((result) => {
       this.getApiData = result;
-      console.log('getApiData- ', this.getApiData);
+      console.log("getApiData- ", this.getApiData);
     });
   }
 
@@ -52,8 +58,15 @@ export class HomePage implements OnInit {
     }, 2500);
   }
 
-  onClickFab(){
-    this.router.navigateByUrl('/tabs/seller-form');
+  onClickFab() {
+    this.router.navigateByUrl("/tabs/seller-form");
   }
 
+  doTranslation(text) {
+    var translateText = this.translateService.doTranslation(
+      text,
+      this.translateService.currentLanguage.value
+    );
+    return translateText;
+  }
 }

@@ -1,11 +1,14 @@
-<ion-header class="content-color">
-  <ion-toolbar class="content-color">
-    <ion-icon slot="end" size="large" color="medium" name="close" (click)="dismiss()"></ion-icon>
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons (click)="dismiss()" class="btn-shape" slot="start">
+        <ion-icon name="chevron-back-outline" size="large" color="success"></ion-icon>
+        <ion-label color="danger">{{doTranslation('BACK')}}</ion-label>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="content-color">
-  <ion-text class="center" color="warning">BOT-CHAT ASSISTANCE</ion-text>
+  <ion-text class="center" color="warning">{{doTranslation('BOT-CHAT ASSISTANCE')}}</ion-text>
   <ion-grid>
     <ion-row *ngFor="let message of messages">
       <ion-col *ngIf="currentUser !== message.user" class="person-1 vertical-flex" size="9">

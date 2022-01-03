@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { BehaviorSubject } from 'rxjs';
 import { FormGroup, FormControl } from '@angular/forms';
+import { TranslateService } from '../services/translate.service';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.page.html',
@@ -22,7 +23,7 @@ export class ProfilePage implements OnInit {
 
   userId: any;
 
-  constructor(private auth: AuthService, private router: Router) { }
+  constructor(private auth: AuthService, private router: Router, private translateService: TranslateService) { }
 
   ngOnInit() {
     this.getUserDetails();
@@ -53,4 +54,8 @@ export class ProfilePage implements OnInit {
     this.router.navigateByUrl('/tabs/landing');
   }
 
+  doTranslation(text){
+    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+    return translateText;
+  }
 }

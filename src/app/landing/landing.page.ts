@@ -13,6 +13,7 @@ import { FeedModalPage } from "../pages/feed-modal/feed-modal.page";
 import { ChatbotPage } from "../pages/chatbot/chatbot.page";
 import { TranslateService } from "../services/translate.service";
 import { AuthService } from "../services/auth.service";
+import { GeoLocationService } from "../services/geo-location.service";
 
 @Component({
   selector: "app-landing",
@@ -42,6 +43,7 @@ export class LandingPage implements OnInit {
     private modalCtrl: ModalController,
     private translateService: TranslateService,
     private auth: AuthService, 
+    private locService: GeoLocationService
   ) {}
 
   ngOnInit() {
@@ -61,6 +63,8 @@ export class LandingPage implements OnInit {
       console.log('data- ', data);
       this.isAuthenticated = data;
     });
+    
+    this.locService.getGeolocation();
   }
 
   goToBuy() {

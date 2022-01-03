@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonContent, ModalController } from '@ionic/angular';
+import { TranslateService } from 'src/app/services/translate.service';
 
 @Component({
   selector: 'app-chatbot',
@@ -23,7 +24,7 @@ export class ChatbotPage implements OnInit {
   currentUser: any = 'vaishnao';
   newMsg: string = '';
   @ViewChild(IonContent) content: IonContent;
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController, private translateService: TranslateService) { }
 
   ngOnInit() {
   }
@@ -40,5 +41,10 @@ export class ChatbotPage implements OnInit {
     });
     this.newMsg = '';
     this.content.scrollToBottom(250);
+  }
+
+  doTranslation(text){
+    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+    return translateText;
   }
 }

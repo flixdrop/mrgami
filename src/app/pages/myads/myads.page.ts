@@ -8,6 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { LoginService } from 'src/app/services/login.service';
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
+import { TranslateService } from 'src/app/services/translate.service';
 
 @Component({
   selector: 'app-myads',
@@ -34,7 +35,8 @@ export class MyadsPage implements OnInit {
     public router: Router,
     public sellerFormApiService: SellerFormApiService,
     private auth: AuthService,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private translateService: TranslateService
     ) {}
 
   ngOnInit(){
@@ -84,5 +86,10 @@ getAllads() {
       console.log('Async operation has ended');
       event.target.complete();
     }, 2500);
+  }
+
+  doTranslation(text){
+    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+    return translateText;
   }
 }

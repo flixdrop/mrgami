@@ -17,13 +17,13 @@
       <form [formGroup]="feedbackForm" (ngSubmit)="onClickSubmit()">
         <ion-toolbar class="card-color">
           <ion-item lines="full" color="none">
-            <ion-label color="danger" for="email" position="floating">E-Mail</ion-label>
+            <ion-label color="danger" for="email" position="floating">{{doTranslation('E-Mail')}}</ion-label>
             <ion-input type="textarea" formControlName="email" placeholder="enter your email."></ion-input>
           </ion-item>
         </ion-toolbar>
         <ion-toolbar class="card-color">
           <ion-item lines="full" color="none">
-            <ion-label color="danger" for="feedback" position="floating">Give Feedback</ion-label>
+            <ion-label color="danger" for="feedback" position="floating">{{doTranslation('Give Feedback')}}</ion-label>
             <ion-input type="email" formControlName="feedback" placeholder="write your feedback..."></ion-input>
           </ion-item>
         </ion-toolbar>

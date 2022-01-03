@@ -2,15 +2,15 @@
   <ion-toolbar color="danger">
     <ion-buttons class="btn-shape" slot="start" routerLink="/tabs/landing" routerDirection="back">
         <ion-icon name="chevron-back-outline" size="large" color="success"></ion-icon>
-        <ion-label color="danger">BACK</ion-label>
+        <ion-label color="danger">{{doTranslation('BACK')}}</ion-label>
     </ion-buttons>
-    <ion-title color="light">MY ORDERS</ion-title>
+    <ion-title color="light">{{doTranslation('MY ORDERS')}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="content-color">
   <ion-toolbar class="center" color="none">
-    <ion-text color="danger">MY ORDERS</ion-text>
+    <ion-text color="danger">{{doTranslation('MY ORDERS')}}</ion-text>
   </ion-toolbar>
 
   <ion-grid>
@@ -31,7 +31,7 @@
             </ion-row>
             <ion-row>
               <ion-col size="12">
-                <ion-button size="small" expand="block" color="primary">Order Again</ion-button>
+                <ion-button size="small" expand="block" color="primary">{{doTranslation('Order Again')}}</ion-button>
               </ion-col>
             </ion-row>
           </ion-grid>
@@ -58,7 +58,7 @@
             </ion-row>
             <ion-row>
               <ion-col size="12">
-                <ion-button size="small" expand="block" color="primary">Order Again</ion-button>
+                <ion-button size="small" expand="block" color="primary">{{doTranslation('Order Again')}}</ion-button>
               </ion-col>
             </ion-row>
           </ion-grid>
@@ -85,7 +85,7 @@
             </ion-row>
             <ion-row>
               <ion-col size="12">
-                <ion-button size="small" expand="block" color="primary">Order Again</ion-button>
+                <ion-button size="small" expand="block" color="primary">{{doTranslation('Order Again')}}</ion-button>
               </ion-col>
             </ion-row>
           </ion-grid>

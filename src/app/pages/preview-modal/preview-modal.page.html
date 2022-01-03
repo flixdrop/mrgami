@@ -2,71 +2,71 @@
 <ion-content class="ion-padding content-color">
 <ion-card class="card-color">
   <ion-toolbar class="title-toolbar">
-    <ion-text slot="start">Animal Details</ion-text>
+    <ion-text slot="start">{{doTranslation('Animal Details')}}</ion-text>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-text slot="start">Animal Name- </ion-text>
+    <ion-text slot="start">{{doTranslation('Animal Name')}}</ion-text>
     <ion-text slot="end">{{data.animalDetails.animalName}}</ion-text>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-text slot="start">Animal Type- </ion-text>
+    <ion-text slot="start">{{doTranslation('Animal Type')}}</ion-text>
     <ion-text slot="end">{{data.type}}</ion-text>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-text slot="start">Animal Breed- </ion-text>
+    <ion-text slot="start">{{doTranslation('Animal Breed')}}</ion-text>
     <ion-text slot="end">{{data.animalDetails.breed}}</ion-text>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-text slot="start">Decription about the Animal- </ion-text>
+    <ion-text slot="start">{{doTranslation('Description about the Animal')}}</ion-text>
     <ion-text slot="end">{{data.animalDetails.description}}</ion-text>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-text slot="start">Asking Price- </ion-text>
+    <ion-text slot="start">{{doTranslation('Asking Price')}}</ion-text>
     <ion-text slot="end">{{data.animalDetails.askingPrice}}</ion-text>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-text slot="start">Animal wieght- </ion-text>
+    <ion-text slot="start">{{doTranslation('Animal Wieght')}}</ion-text>
     <ion-text slot="end">{{data.animalDetails.wieght}}</ion-text>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-text slot="start">Lactation- </ion-text>
+    <ion-text slot="start">{{doTranslation('Lactation')}}</ion-text>
     <ion-text slot="end">{{data.animalDetails.lactationNumber}}</ion-text>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-text slot="start">Milk Per Day- </ion-text>
+    <ion-text slot="start">{{doTranslation('Milk Per Day')}}</ion-text>
     <ion-text slot="end">{{data.animalDetails.milkPerDay}}</ion-text>
   </ion-toolbar>
 
   <hr>
 
   <ion-toolbar class="title-toolbar">
-    <ion-text slot="start">Seller Details</ion-text>
+    <ion-text slot="start">{{doTranslation('Seller Details')}}</ion-text>
   </ion-toolbar>
 
   <ion-toolbar>
-    <ion-text slot="start">Owner Name- </ion-text>
+    <ion-text slot="start">{{doTranslation('Owner Name')}}</ion-text>
     <ion-text slot="end">{{data.sellerInformation.ownerName}}</ion-text>
   </ion-toolbar>
   <ion-toolbar>
     <ion-img src="{{data.imageUrls.imagesList}}"></ion-img>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-text slot="start">Phone No.- </ion-text>
+    <ion-text slot="start">{{doTranslation('Phone No.')}}</ion-text>
     <ion-text slot="end">{{data.sellerInformation.phone}}</ion-text>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-text slot="start">District- </ion-text>
+    <ion-text slot="start">{{doTranslation('District')}}</ion-text>
     <ion-text slot="end">{{data.sellerInformation.district}}</ion-text>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-text slot="start">State- </ion-text>
+    <ion-text slot="start">{{doTranslation('State')}}</ion-text>
     <ion-text slot="end">{{data.sellerInformation.state}}</ion-text>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-text slot="start">Town- </ion-text>
+    <ion-text slot="start">{{doTranslation('Town')}}</ion-text>
     <ion-text slot="end">{{data.sellerInformation.town}}</ion-text>
   </ion-toolbar>
   
-  <ion-button size="small" color="success" expand="block" (click)="dismiss()">Save</ion-button>
+  <ion-button size="small" color="success" expand="block" (click)="dismiss()">{{doTranslation('Save')}}</ion-button>
 </ion-card>
 </ion-content>

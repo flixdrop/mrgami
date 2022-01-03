@@ -2,15 +2,15 @@
   <ion-toolbar color="danger">
     <ion-buttons class="btn-shape" slot="start" routerLink="/tabs/landing" routerDirection="back">
         <ion-icon name="chevron-back-outline" size="large" color="success"></ion-icon>
-        <ion-label color="danger">BACK</ion-label>
+        <ion-label color="danger">{{doTranslation('BACK')}}</ion-label>
     </ion-buttons>
-    <ion-title color="light">MY CART</ion-title>
+    <ion-title color="light">{{doTranslation('MY CART')}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="content-color">
   <ion-toolbar class="center" color="none">
-    <ion-text color="danger">CART ITEMS</ion-text>
+    <ion-text color="danger">{{doTranslation('CART ITEMS')}}</ion-text>
   </ion-toolbar>
 
   <ion-grid>
@@ -75,7 +75,7 @@
     <ion-row>
       <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">
         <ion-button size="small" expand="block" routerLink="/checkout" color="primary" routerDirection="forward">
-          Continue
+          {{doTranslation('Continue')}}
         </ion-button>
       </ion-col>
     </ion-row>

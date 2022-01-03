@@ -2,9 +2,9 @@
   <ion-toolbar color="danger">
     <ion-buttons class="btn-shape" slot="start" routerLink="/tabs/home" routerDirection="back">
         <ion-icon name="chevron-back-outline" size="large" color="success"></ion-icon>
-        <ion-label color="danger">BACK</ion-label>
+        <ion-label color="danger">{{doTranslation('BACK')}}</ion-label>
     </ion-buttons>
-    <ion-title color="light">PUBLISH ADs</ion-title>
+    <ion-title color="light">{{doTranslation('PUBLISH ADs')}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,21 +14,21 @@
 
       <ion-toolbar color="none">
         <ion-item lines="full" color="none">
-          <ion-label class="center">{{ flag===true ? 'Seller Form':'Animal Form'}}</ion-label>
+          <ion-label class="center">{{ flag===true ? doTranslation('Seller Form'): doTranslation('Animal Form')}}</ion-label>
         </ion-item>
       </ion-toolbar>
 
       <ion-toolbar color="none" *ngIf="flag === false">
       <ion-item lines="full" *ngFor="let control of adForm.form_1">
-        <ion-text slot="start" color="danger" position="fixed" *ngIf="['select'].includes(control.type)">{{control.label}}</ion-text>
-        <ion-label color="danger" *ngIf="['textarea'].includes(control.type)" position="floating">{{control.label}}</ion-label>
-        <ion-label color="danger" position="{{['text', 'number'].includes(control.type)? 'floating':'stacked'}}" *ngIf="['animalName','quotedPrice', 'weight', 'age'].includes(control.name)">{{control.label}}</ion-label>
+        <ion-text slot="start" color="danger" position="fixed" *ngIf="['select'].includes(control.type)">{{doTranslation(control.label)}}</ion-text>
+        <ion-label color="danger" *ngIf="['textarea'].includes(control.type)" position="floating">{{doTranslation(control.label)}}</ion-label>
+        <ion-label color="danger" position="{{['text', 'number'].includes(control.type)? 'floating':'stacked'}}" *ngIf="['animalName','quotedPrice', 'weight', 'age'].includes(control.name)">{{doTranslation(control.label)}}</ion-label>
         <ion-input
         *ngIf="['animalName', 'description', 'quotedPrice', 'weight', 'age'].includes(control.name)"
         [type]="control.type" [formControlName]="control.name" [value]="control.value"></ion-input>
         <ion-textarea
         *ngIf="control.type === 'textarea'" [formControlName]="control.name" [value]="control.value"></ion-textarea>
-        <ion-label color="danger" position="{{['text', 'number'].includes(control.type)? 'floating':'stacked'}}" *ngIf="['lactationNumber', 'milkPerDay'].includes(control.name) && animalTypeSelected !== 'ox'">{{control.label}}</ion-label>
+        <ion-label color="danger" position="{{['text', 'number'].includes(control.type)? 'floating':'stacked'}}" *ngIf="['lactationNumber', 'milkPerDay'].includes(control.name) && animalTypeSelected !== 'ox'">{{doTranslation(control.label)}}</ion-label>
         <ion-input
         *ngIf="['lactationNumber', 'milkPerDay'].includes(control.name) && animalTypeSelected !== 'ox'"
         [type]="control.type" [formControlName]="control.name" [value]="control.value" ></ion-input>
@@ -45,8 +45,8 @@
 
     <ion-toolbar color="none" *ngIf="flag === true">
       <ion-item lines="full" *ngFor="let control of adForm.form_2">
-        <ion-text slot="start" color="danger" position="fixed" *ngIf="['select'].includes(control.type)">{{control.label}}</ion-text>
-        <ion-label color="danger" position="{{['text', 'number'].includes(control.type) ? 'floating':'stacked'}}" *ngIf="['ownerName', 'phone', 'imagesList', 'town'].includes(control.name)">{{control.label}}</ion-label>
+        <ion-text slot="start" color="danger" position="fixed" *ngIf="['select'].includes(control.type)">{{doTranslation(control.label)}}</ion-text>
+        <ion-label color="danger" position="{{['text', 'number'].includes(control.type) ? 'floating':'stacked'}}" *ngIf="['ownerName', 'phone', 'imagesList', 'town'].includes(control.name)">{{doTranslation(control.label)}}</ion-label>
         <ion-input
         *ngIf="['ownerName','phone', 'town'].includes(control.name)"
         [type]="control.type" [formControlName]="control.name" [value]="control.value"></ion-input>
@@ -68,8 +68,8 @@
         </ion-button> -->
       </ion-item>
     </ion-toolbar>
-      <ion-button *ngIf="flag === false" size="small" expand="block" color="primary" (click)="onClickNext()">Next</ion-button>
-      <ion-button *ngIf="flag === true" size="small" expand="block" color="primary" type="submit">Preview</ion-button>
+      <ion-button *ngIf="flag === false" size="small" expand="block" color="primary" (click)="onClickNext()">{{doTranslation('Next')}}</ion-button>
+      <ion-button *ngIf="flag === true" size="small" expand="block" color="primary" type="submit">{{doTranslation('Preview')}}</ion-button>
     </form>
   </ion-card>
 </ion-content>

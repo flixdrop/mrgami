@@ -5,6 +5,7 @@ import { ModalController } from "@ionic/angular";
 import { CartModalPage } from "../../pages/cart-modal/cart-modal.page";
 import { BehaviorSubject } from "rxjs";
 import { MedModalPage } from "../med-modal/med-modal.page";
+import { TranslateService } from "src/app/services/translate.service";
 @Component({
   selector: "app-medicines",
   templateUrl: "./medicines.page.html",
@@ -20,7 +21,8 @@ export class MedicinesPage implements OnInit {
   constructor(
     private data: DataService,
     private cartService: CartService,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    private translateService: TranslateService
   ) {}
 
   ngOnInit() {
@@ -82,5 +84,10 @@ export class MedicinesPage implements OnInit {
       console.log("Async operation has ended");
       event.target.complete();
     }, 2500);
+  }
+
+  doTranslation(text){
+    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+    return translateText;
   }
 }

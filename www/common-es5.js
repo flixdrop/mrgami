@@ -846,6 +846,46 @@
     },
 
     /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/feed-modal/feed-modal.page.html":
+    /*!*********************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/feed-modal/feed-modal.page.html ***!
+      \*********************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppPagesFeedModalFeedModalPageHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<ion-content class=\"ion-padding content-color\">\n  <ion-card class=\"card-color\">\n    <ion-item lines=\"none\" color=\"none\">\n      <ion-icon slot=\"end\" name=\"close\" color=\"medium\" (click)=\"dismiss()\"></ion-icon>\n    </ion-item>\n    <ion-card-header>\n     <ion-label color=\"light\"> {{name}} </ion-label> \n    </ion-card-header>\n    <ion-grid>\n      <ion-row>\n        <ion-col class=\"reverseCenter\" size=\"12\">\n          <ion-thumbnail>\n            <ion-img src=\"{{image}}\"></ion-img>\n          </ion-thumbnail>\n        </ion-col>\n        \n      </ion-row>\n      <ion-row>\n        <ion-col class=\"reverseCenter\" size=\"12\">\n          <ion-label>REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for\n            Buffalo,Cow,Cattle,Poultry,\n            Goat & Pig (RIGMIN Forte Powder)\n          </ion-label>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n    <ion-toolbar color=\"none\">\n      <ion-item slot=\"start\" lines=\"none\" color=\"none\">\n        <ion-label color=\"success\">{{ price | currency:'INR' }}</ion-label>\n      </ion-item>\n    </ion-toolbar>\n  </ion-card>\n</ion-content>\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/feedback-modal/feedback-modal.page.html":
+    /*!*****************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/feedback-modal/feedback-modal.page.html ***!
+      \*****************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppPagesFeedbackModalFeedbackModalPageHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<ion-content class=\"ion-padding content-color\">\n<ion-grid>\n  <ion-row>\n    <ion-col size=\"12\">\n      <ion-item lines=\"none\" color=\"none\">\n        <ion-icon slot=\"end\" name=\"close\" color=\"medium\" (click)=\"dismiss()\"></ion-icon>\n      </ion-item>\n    </ion-col>\n  </ion-row>\n  <ion-row>\n    <ion-col size=\"12\">\n      <ion-label>{{'From- '+name}}</ion-label>\n    </ion-col>\n  </ion-row>\n  <ion-row>\n    <ion-col size=\"12\">\n      <form [formGroup]=\"feedbackForm\" (ngSubmit)=\"onClickSubmit()\">\n        <ion-toolbar class=\"card-color\">\n          <ion-item lines=\"full\" color=\"none\">\n            <ion-label color=\"danger\" for=\"email\" position=\"floating\">{{doTranslation('E-Mail')}}</ion-label>\n            <ion-input type=\"textarea\" formControlName=\"email\" placeholder=\"enter your email.\"></ion-input>\n          </ion-item>\n        </ion-toolbar>\n        <ion-toolbar class=\"card-color\">\n          <ion-item lines=\"full\" color=\"none\">\n            <ion-label color=\"danger\" for=\"feedback\" position=\"floating\">{{doTranslation('Give Feedback')}}</ion-label>\n            <ion-input type=\"email\" formControlName=\"feedback\" placeholder=\"write your feedback...\"></ion-input>\n          </ion-item>\n        </ion-toolbar>\n        <ion-button [disabled]=\"!feedbackForm.get('feedback').dirty\" size=\"small\" color=\"success\" expand=\"block\" type=\"submit\">Send Feedback</ion-button>\n      </form>\n    </ion-col>\n  </ion-row>\n</ion-grid>\n</ion-content>\n";
+      /***/
+    },
+
+    /***/
     "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/myads-modal/myads-modal.page.html":
     /*!***********************************************************************************************!*\
       !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/myads-modal/myads-modal.page.html ***!
@@ -861,7 +901,294 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-content>\n  <ion-card class=\"card\">\n    <ion-grid>\n      <ion-row>\n        <ion-col class=\"imgCol\" size=\"4\"  >\n        \n            <ion-slides pager=\"true\" [options]=\"slideOpts\"  *ngIf=\"viewEntered\" zoom=\"true\">\n              <ion-slide *ngFor=\"let img of imgUrl\">\n                <ion-img style=\"background-image: url('{{img}}');\" class=\"img\"></ion-img>\n              </ion-slide>\n            </ion-slides>\n        \n        </ion-col>\n        <ion-col size=\"8\">\n          <ion-row>\n            <ion-col class=\"cardTitle\">\n              <ion-label color=\"success\">ANIMAL: {{animal}}</ion-label>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col size=\"6\">\n              <ion-label class=\"subLabels\">Breed: {{breed}}</ion-label>\n            </ion-col>\n            <ion-col size=\"6\">\n              <ion-label class=\"subLabels\">Locaction: {{location}}</ion-label>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col size=\"6\">\n              <ion-label class=\"subLabels\">Status: {{status}}</ion-label>\n            </ion-col>\n            <ion-col size=\"6\">\n              <ion-label class=\"subLabels\">Milk/Day: {{milkPerDay}}</ion-label>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col size=\"6\">\n              <ion-label class=\"subLabels\">Age: {{age}}</ion-label>\n            </ion-col>\n            <ion-col size=\"6\">\n              <ion-label class=\"subLabels\">Calf: {{calf}}</ion-label>\n            </ion-col>\n          </ion-row>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-card>\n  <ion-item class=\"successMsg\">\n    <ion-label>\n      SUCCESSFULLY POSTED!\n    </ion-label>\n  </ion-item>\n</ion-content>\n\n<ion-footer>\n  <ion-button  expand=\"full\" color=\"success\" (click)=\"dismiss()\">\n    <ion-label class=\"subLabels\">OK!</ion-label></ion-button>\n</ion-footer>";
+      __webpack_exports__["default"] = "<ion-content>\r\n  <ion-card class=\"card\">\r\n    <ion-grid>\r\n      <ion-row>\r\n        <ion-col class=\"imgCol\" size=\"4\"  >\r\n        \r\n            <ion-slides pager=\"true\" [options]=\"slideOpts\"  *ngIf=\"viewEntered\" zoom=\"true\">\r\n              <ion-slide *ngFor=\"let img of imgUrl\">\r\n                <ion-img style=\"background-image: url('{{img}}');\" class=\"img\"></ion-img>\r\n              </ion-slide>\r\n            </ion-slides>\r\n        \r\n        </ion-col>\r\n        <ion-col size=\"8\">\r\n          <ion-row>\r\n            <ion-col class=\"cardTitle\">\r\n              <ion-label color=\"success\">{{doTranslation('ANIMAL')}}: {{animal}}</ion-label>\r\n            </ion-col>\r\n          </ion-row>\r\n          <ion-row>\r\n            <ion-col size=\"6\">\r\n              <ion-label class=\"subLabels\">{{doTranslation('Breed')}}: {{breed}}</ion-label>\r\n            </ion-col>\r\n            <ion-col size=\"6\">\r\n              <ion-label class=\"subLabels\">{{doTranslation('Lactation')}}: {{location}}</ion-label>\r\n            </ion-col>\r\n          </ion-row>\r\n          <ion-row>\r\n            <ion-col size=\"6\">\r\n              <ion-label class=\"subLabels\">{{doTranslation('Status')}}: {{status}}</ion-label>\r\n            </ion-col>\r\n            <ion-col size=\"6\">\r\n              <ion-label class=\"subLabels\">{{doTranslation('Milk/Day')}}: {{milkPerDay}}</ion-label>\r\n            </ion-col>\r\n          </ion-row>\r\n          <ion-row>\r\n            <ion-col size=\"6\">\r\n              <ion-label class=\"subLabels\">{{doTranslation('Age')}}: {{age}}</ion-label>\r\n            </ion-col>\r\n            <ion-col size=\"6\">\r\n              <ion-label class=\"subLabels\">{{doTranslation('Calf')}}: {{calf}}</ion-label>\r\n            </ion-col>\r\n          </ion-row>\r\n        </ion-col>\r\n      </ion-row>\r\n    </ion-grid>\r\n  </ion-card>\r\n  <ion-item class=\"successMsg\">\r\n    <ion-label>\r\n      {{doTranslation('SUCCESSFULLY POSTED!')}}\r\n    </ion-label>\r\n  </ion-item>\r\n</ion-content>\r\n\r\n<ion-footer>\r\n  <ion-button  expand=\"full\" color=\"success\" (click)=\"dismiss()\">\r\n    <ion-label class=\"subLabels\">{{doTranslation('OK!')}}</ion-label></ion-button>\r\n</ion-footer>";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/preview-modal/preview-modal.page.html":
+    /*!***************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/preview-modal/preview-modal.page.html ***!
+      \***************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppPagesPreviewModalPreviewModalPageHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n<ion-content class=\"ion-padding content-color\">\n<ion-card class=\"card-color\">\n  <ion-toolbar class=\"title-toolbar\">\n    <ion-text slot=\"start\">{{doTranslation('Animal Details')}}</ion-text>\n  </ion-toolbar>\n  <ion-toolbar>\n    <ion-text slot=\"start\">{{doTranslation('Animal Name')}}</ion-text>\n    <ion-text slot=\"end\">{{data.animalDetails.animalName}}</ion-text>\n  </ion-toolbar>\n  <ion-toolbar>\n    <ion-text slot=\"start\">{{doTranslation('Animal Type')}}</ion-text>\n    <ion-text slot=\"end\">{{data.type}}</ion-text>\n  </ion-toolbar>\n  <ion-toolbar>\n    <ion-text slot=\"start\">{{doTranslation('Animal Breed')}}</ion-text>\n    <ion-text slot=\"end\">{{data.animalDetails.breed}}</ion-text>\n  </ion-toolbar>\n  <ion-toolbar>\n    <ion-text slot=\"start\">{{doTranslation('Description about the Animal')}}</ion-text>\n    <ion-text slot=\"end\">{{data.animalDetails.description}}</ion-text>\n  </ion-toolbar>\n  <ion-toolbar>\n    <ion-text slot=\"start\">{{doTranslation('Asking Price')}}</ion-text>\n    <ion-text slot=\"end\">{{data.animalDetails.askingPrice}}</ion-text>\n  </ion-toolbar>\n  <ion-toolbar>\n    <ion-text slot=\"start\">{{doTranslation('Animal Wieght')}}</ion-text>\n    <ion-text slot=\"end\">{{data.animalDetails.wieght}}</ion-text>\n  </ion-toolbar>\n  <ion-toolbar>\n    <ion-text slot=\"start\">{{doTranslation('Lactation')}}</ion-text>\n    <ion-text slot=\"end\">{{data.animalDetails.lactationNumber}}</ion-text>\n  </ion-toolbar>\n  <ion-toolbar>\n    <ion-text slot=\"start\">{{doTranslation('Milk Per Day')}}</ion-text>\n    <ion-text slot=\"end\">{{data.animalDetails.milkPerDay}}</ion-text>\n  </ion-toolbar>\n\n  <hr>\n\n  <ion-toolbar class=\"title-toolbar\">\n    <ion-text slot=\"start\">{{doTranslation('Seller Details')}}</ion-text>\n  </ion-toolbar>\n\n  <ion-toolbar>\n    <ion-text slot=\"start\">{{doTranslation('Owner Name')}}</ion-text>\n    <ion-text slot=\"end\">{{data.sellerInformation.ownerName}}</ion-text>\n  </ion-toolbar>\n  <ion-toolbar>\n    <ion-img src=\"{{data.imageUrls.imagesList}}\"></ion-img>\n  </ion-toolbar>\n  <ion-toolbar>\n    <ion-text slot=\"start\">{{doTranslation('Phone No.')}}</ion-text>\n    <ion-text slot=\"end\">{{data.sellerInformation.phone}}</ion-text>\n  </ion-toolbar>\n  <ion-toolbar>\n    <ion-text slot=\"start\">{{doTranslation('District')}}</ion-text>\n    <ion-text slot=\"end\">{{data.sellerInformation.district}}</ion-text>\n  </ion-toolbar>\n  <ion-toolbar>\n    <ion-text slot=\"start\">{{doTranslation('State')}}</ion-text>\n    <ion-text slot=\"end\">{{data.sellerInformation.state}}</ion-text>\n  </ion-toolbar>\n  <ion-toolbar>\n    <ion-text slot=\"start\">{{doTranslation('Town')}}</ion-text>\n    <ion-text slot=\"end\">{{data.sellerInformation.town}}</ion-text>\n  </ion-toolbar>\n  \n  <ion-button size=\"small\" color=\"success\" expand=\"block\" (click)=\"dismiss()\">{{doTranslation('Save')}}</ion-button>\n</ion-card>\n</ion-content>\n";
+      /***/
+    },
+
+    /***/
+    "./src/app/pages/feed-modal/feed-modal.page.scss":
+    /*!*******************************************************!*\
+      !*** ./src/app/pages/feed-modal/feed-modal.page.scss ***!
+      \*******************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppPagesFeedModalFeedModalPageScss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "ion-thumbnail {\n  width: 100%;\n  height: 100%;\n}\n\nion-card {\n  margin: 0;\n  padding: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvZmVlZC1tb2RhbC9mZWVkLW1vZGFsLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFdBQUE7RUFDQSxZQUFBO0FBQ0o7O0FBRUU7RUFDRSxTQUFBO0VBQ0EsVUFBQTtBQUNKIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvZmVlZC1tb2RhbC9mZWVkLW1vZGFsLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi10aHVtYm5haWx7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICB9XHJcblxyXG4gIGlvbi1jYXJke1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICB9XHJcbiJdfQ== */";
+      /***/
+    },
+
+    /***/
+    "./src/app/pages/feed-modal/feed-modal.page.ts":
+    /*!*****************************************************!*\
+      !*** ./src/app/pages/feed-modal/feed-modal.page.ts ***!
+      \*****************************************************/
+
+    /*! exports provided: FeedModalPage */
+
+    /***/
+    function srcAppPagesFeedModalFeedModalPageTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "FeedModalPage", function () {
+        return FeedModalPage;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @ionic/angular */
+      "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+
+      var FeedModalPage = /*#__PURE__*/function () {
+        function FeedModalPage(modalController) {
+          _classCallCheck(this, FeedModalPage);
+
+          this.modalController = modalController;
+        }
+
+        _createClass(FeedModalPage, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            console.log('name- ', this.name);
+            console.log('image- ', this.image);
+            console.log('price- ', this.price);
+          }
+        }, {
+          key: "dismiss",
+          value: function dismiss() {
+            // using the injected ModalController this page
+            // can "dismiss" itself and optionally pass back data
+            this.modalController.dismiss({
+              'dismissed': true
+            });
+          }
+        }]);
+
+        return FeedModalPage;
+      }();
+
+      FeedModalPage.ctorParameters = function () {
+        return [{
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
+        }];
+      };
+
+      FeedModalPage.propDecorators = {
+        name: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        image: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }],
+        price: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      };
+      FeedModalPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-feed-modal',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! raw-loader!./feed-modal.page.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/feed-modal/feed-modal.page.html"))["default"],
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! ./feed-modal.page.scss */
+        "./src/app/pages/feed-modal/feed-modal.page.scss"))["default"]]
+      })], FeedModalPage);
+      /***/
+    },
+
+    /***/
+    "./src/app/pages/feedback-modal/feedback-modal.page.scss":
+    /*!***************************************************************!*\
+      !*** ./src/app/pages/feedback-modal/feedback-modal.page.scss ***!
+      \***************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppPagesFeedbackModalFeedbackModalPageScss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "ion-content {\n  margin: 0;\n  padding: 0;\n}\n\nion-input {\n  color: white;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvZmVlZGJhY2stbW9kYWwvZmVlZGJhY2stbW9kYWwucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksU0FBQTtFQUNBLFVBQUE7QUFDSjs7QUFFQTtFQUNJLFlBQUE7QUFDSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2ZlZWRiYWNrLW1vZGFsL2ZlZWRiYWNrLW1vZGFsLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1jb250ZW50e1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxufVxyXG5cclxuaW9uLWlucHV0e1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gIH0iXX0= */";
+      /***/
+    },
+
+    /***/
+    "./src/app/pages/feedback-modal/feedback-modal.page.ts":
+    /*!*************************************************************!*\
+      !*** ./src/app/pages/feedback-modal/feedback-modal.page.ts ***!
+      \*************************************************************/
+
+    /*! exports provided: FeedbackModalPage */
+
+    /***/
+    function srcAppPagesFeedbackModalFeedbackModalPageTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "FeedbackModalPage", function () {
+        return FeedbackModalPage;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @ionic/angular */
+      "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+      /* harmony import */
+
+
+      var src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/services/auth.service */
+      "./src/app/services/auth.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_translate_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/services/translate.service */
+      "./src/app/services/translate.service.ts");
+
+      var FeedbackModalPage = /*#__PURE__*/function () {
+        function FeedbackModalPage(auth, router, modalCtrl, translateService) {
+          _classCallCheck(this, FeedbackModalPage);
+
+          this.auth = auth;
+          this.router = router;
+          this.modalCtrl = modalCtrl;
+          this.translateService = translateService;
+        }
+
+        _createClass(FeedbackModalPage, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            var _this = this;
+
+            this.auth.getUserDetails().then(function (res) {
+              console.log('res- ', res);
+              _this.name = res[1]['Value'];
+            });
+            this.feedbackForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
+              feedback: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
+              email: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('')
+            });
+          }
+        }, {
+          key: "dismiss",
+          value: function dismiss() {
+            this.modalCtrl.dismiss();
+          }
+        }, {
+          key: "onClickSubmit",
+          value: function onClickSubmit() {
+            console.log('feedback- ', this.feedbackForm.value);
+            this.modalCtrl.dismiss();
+          }
+        }, {
+          key: "doTranslation",
+          value: function doTranslation(text) {
+            var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+            return translateText;
+          }
+        }]);
+
+        return FeedbackModalPage;
+      }();
+
+      FeedbackModalPage.ctorParameters = function () {
+        return [{
+          type: src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ModalController"]
+        }, {
+          type: src_app_services_translate_service__WEBPACK_IMPORTED_MODULE_6__["TranslateService"]
+        }];
+      };
+
+      FeedbackModalPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-feedback-modal',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! raw-loader!./feedback-modal.page.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/feedback-modal/feedback-modal.page.html"))["default"],
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! ./feedback-modal.page.scss */
+        "./src/app/pages/feedback-modal/feedback-modal.page.scss"))["default"]]
+      })], FeedbackModalPage);
       /***/
     },
 
@@ -881,7 +1208,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = ".cardTitle {\n  text-align: center;\n  color: darkgreen;\n  font-weight: bold;\n}\n\n.card {\n  background-color: #36363F;\n}\n\n.cardButtons {\n  --background: #36363F !important;\n  color: white;\n  font-weight: bold;\n}\n\n.imgCol {\n  padding: 0;\n  text-align: center;\n  align-items: center;\n}\n\n.my-custom-class {\n  --background: #36363F;\n}\n\n.successMsg {\n  --background: #36363F;\n  font-weight: bold;\n  color: green;\n  text-align: center;\n  justify-content: center;\n}\n\n.subLabels {\n  color: white;\n  font-weight: bold;\n}\n\n.img {\n  margin: 0;\n  padding: 0;\n  height: 100%;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\nion-slides {\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbXlhZHMtbW9kYWwvbXlhZHMtbW9kYWwucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQUE7RUFDQSxnQkFBQTtFQUNBLGlCQUFBO0FBQ0Y7O0FBRUE7RUFDRSx5QkFBQTtBQUNGOztBQUVBO0VBQ0UsZ0NBQUE7RUFDQSxZQUFBO0VBQ0EsaUJBQUE7QUFDRjs7QUFFQTtFQUNFLFVBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0FBQ0Y7O0FBRUE7RUFDRSxxQkFBQTtBQUNGOztBQUVBO0VBQ0UscUJBQUE7RUFDQSxpQkFBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtFQUNBLHVCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxZQUFBO0VBQ0EsaUJBQUE7QUFDRjs7QUFFQTtFQUNFLFNBQUE7RUFDQSxVQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7RUFDQSw0QkFBQTtFQUNBLHNCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxZQUFBO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9teWFkcy1tb2RhbC9teWFkcy1tb2RhbC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZFRpdGxle1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGNvbG9yOiBkYXJrZ3JlZW47XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4uY2FyZHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzM2MzYzRjtcbn1cblxuLmNhcmRCdXR0b25ze1xuICAtLWJhY2tncm91bmQ6ICMzNjM2M0YgIWltcG9ydGFudDtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmltZ0NvbHtcbiAgcGFkZGluZzogMDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4ubXktY3VzdG9tLWNsYXNzIHtcbiAgLS1iYWNrZ3JvdW5kOiAjMzYzNjNGO1xufVxuXG4uc3VjY2Vzc01zZ3tcbiAgLS1iYWNrZ3JvdW5kOiAjMzYzNjNGO1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgY29sb3I6IGdyZWVuO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuXG4uc3ViTGFiZWxze1xuICBjb2xvcjogd2hpdGU7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4uaW1ne1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG4gIGhlaWdodDogMTAwJTtcbiAgd2lkdGg6IDEwMCU7XG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG59XG5cbmlvbi1zbGlkZXMge1xuICBoZWlnaHQ6IDEwMCU7XG59XG4gIFxuICAiXX0= */";
+      __webpack_exports__["default"] = ".cardTitle {\n  text-align: center;\n  color: darkgreen;\n  font-weight: bold;\n}\n\n.card {\n  background-color: #36363F;\n}\n\n.cardButtons {\n  --background: #36363F !important;\n  color: white;\n  font-weight: bold;\n}\n\n.imgCol {\n  padding: 0;\n  text-align: center;\n  align-items: center;\n}\n\n.my-custom-class {\n  --background: #36363F;\n}\n\n.successMsg {\n  --background: #36363F;\n  font-weight: bold;\n  color: green;\n  text-align: center;\n  justify-content: center;\n}\n\n.subLabels {\n  color: white;\n  font-weight: bold;\n}\n\n.img {\n  margin: 0;\n  padding: 0;\n  height: 100%;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\nion-slides {\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbXlhZHMtbW9kYWwvbXlhZHMtbW9kYWwucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQUE7RUFDQSxnQkFBQTtFQUNBLGlCQUFBO0FBQ0Y7O0FBRUE7RUFDRSx5QkFBQTtBQUNGOztBQUVBO0VBQ0UsZ0NBQUE7RUFDQSxZQUFBO0VBQ0EsaUJBQUE7QUFDRjs7QUFFQTtFQUNFLFVBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0FBQ0Y7O0FBRUE7RUFDRSxxQkFBQTtBQUNGOztBQUVBO0VBQ0UscUJBQUE7RUFDQSxpQkFBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtFQUNBLHVCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxZQUFBO0VBQ0EsaUJBQUE7QUFDRjs7QUFFQTtFQUNFLFNBQUE7RUFDQSxVQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7RUFDQSw0QkFBQTtFQUNBLHNCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxZQUFBO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9teWFkcy1tb2RhbC9teWFkcy1tb2RhbC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZFRpdGxle1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBjb2xvcjogZGFya2dyZWVuO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4uY2FyZHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzYzNjNGO1xyXG59XHJcblxyXG4uY2FyZEJ1dHRvbnN7XHJcbiAgLS1iYWNrZ3JvdW5kOiAjMzYzNjNGICFpbXBvcnRhbnQ7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4uaW1nQ29se1xyXG4gIHBhZGRpbmc6IDA7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5teS1jdXN0b20tY2xhc3Mge1xyXG4gIC0tYmFja2dyb3VuZDogIzM2MzYzRjtcclxufVxyXG5cclxuLnN1Y2Nlc3NNc2d7XHJcbiAgLS1iYWNrZ3JvdW5kOiAjMzYzNjNGO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gIGNvbG9yOiBncmVlbjtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuXHJcbi5zdWJMYWJlbHN7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4uaW1ne1xyXG4gIG1hcmdpbjogMDtcclxuICBwYWRkaW5nOiAwO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICB3aWR0aDogMTAwJTtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuXHJcbmlvbi1zbGlkZXMge1xyXG4gIGhlaWdodDogMTAwJTtcclxufVxyXG4gIFxyXG4gICJdfQ== */";
       /***/
     },
 
@@ -922,12 +1249,19 @@
       var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @ionic/angular */
       "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+      /* harmony import */
+
+
+      var src_app_services_translate_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/services/translate.service */
+      "./src/app/services/translate.service.ts");
 
       var MyadsModalPage = /*#__PURE__*/function () {
-        function MyadsModalPage(modalController) {
+        function MyadsModalPage(modalController, translateService) {
           _classCallCheck(this, MyadsModalPage);
 
           this.modalController = modalController;
+          this.translateService = translateService;
           this.slideOpts = {
             initialSlide: 1,
             speed: 400
@@ -938,7 +1272,7 @@
           key: "ngOnInit",
           value: function ngOnInit() {
             this.imgUrl.trim();
-            console.log('imgUrl- ', this.imgUrl);
+            console.log("imgUrl- ", this.imgUrl);
           }
         }, {
           key: "ionViewDidEnter",
@@ -949,8 +1283,14 @@
           key: "dismiss",
           value: function dismiss() {
             this.modalController.dismiss({
-              'dismissed': true
+              dismissed: true
             });
+          }
+        }, {
+          key: "doTranslation",
+          value: function doTranslation(text) {
+            var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+            return translateText;
           }
         }]);
 
@@ -960,6 +1300,8 @@
       MyadsModalPage.ctorParameters = function () {
         return [{
           type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
+        }, {
+          type: src_app_services_translate_service__WEBPACK_IMPORTED_MODULE_3__["TranslateService"]
         }];
       };
 
@@ -990,7 +1332,7 @@
         }]
       };
       MyadsModalPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-myads-modal',
+        selector: "app-myads-modal",
         template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
         /*! raw-loader!./myads-modal.page.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/myads-modal/myads-modal.page.html"))["default"],
@@ -998,6 +1340,136 @@
         /*! ./myads-modal.page.scss */
         "./src/app/pages/myads-modal/myads-modal.page.scss"))["default"]]
       })], MyadsModalPage);
+      /***/
+    },
+
+    /***/
+    "./src/app/pages/preview-modal/preview-modal.page.scss":
+    /*!*************************************************************!*\
+      !*** ./src/app/pages/preview-modal/preview-modal.page.scss ***!
+      \*************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppPagesPreviewModalPreviewModalPageScss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "ion-toolbar {\n  --background: transparent;\n}\n\n.title-toolbar {\n  display: flex;\n  text-align: center;\n  align-items: center;\n  justify-content: center;\n}\n\nion-img {\n  height: 25%;\n  width: 100%;\n}\n\nion-content {\n  margin: 0;\n  padding: 0;\n}\n\nion-content ion-card {\n  margin: 0;\n  padding: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvcHJldmlldy1tb2RhbC9wcmV2aWV3LW1vZGFsLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHlCQUFBO0FBQ0o7O0FBRUE7RUFDSSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0FBQ0o7O0FBRUE7RUFDSSxXQUFBO0VBQ0EsV0FBQTtBQUNKOztBQUVBO0VBQ0ksU0FBQTtFQUNBLFVBQUE7QUFDSjs7QUFDSTtFQUNJLFNBQUE7RUFDQSxVQUFBO0FBQ1IiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9wcmV2aWV3LW1vZGFsL3ByZXZpZXctbW9kYWwucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLXRvb2xiYXJ7XHJcbiAgICAtLWJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xyXG59XHJcblxyXG4udGl0bGUtdG9vbGJhcntcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuXHJcbmlvbi1pbWd7XHJcbiAgICBoZWlnaHQ6IDI1JTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG5pb24tY29udGVudHtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcblxyXG4gICAgaW9uLWNhcmR7XHJcbiAgICAgICAgbWFyZ2luOiAwO1xyXG4gICAgICAgIHBhZGRpbmc6IDA7XHJcbiAgICB9XHJcbn0iXX0= */";
+      /***/
+    },
+
+    /***/
+    "./src/app/pages/preview-modal/preview-modal.page.ts":
+    /*!***********************************************************!*\
+      !*** ./src/app/pages/preview-modal/preview-modal.page.ts ***!
+      \***********************************************************/
+
+    /*! exports provided: PreviewModalPage */
+
+    /***/
+    function srcAppPagesPreviewModalPreviewModalPageTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "PreviewModalPage", function () {
+        return PreviewModalPage;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @ionic/angular */
+      "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+      /* harmony import */
+
+
+      var src_app_services_translate_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/services/translate.service */
+      "./src/app/services/translate.service.ts");
+
+      var PreviewModalPage = /*#__PURE__*/function () {
+        function PreviewModalPage(modalController, router, translateService) {
+          _classCallCheck(this, PreviewModalPage);
+
+          this.modalController = modalController;
+          this.router = router;
+          this.translateService = translateService;
+        }
+
+        _createClass(PreviewModalPage, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            console.log('data- ', this.data);
+          }
+        }, {
+          key: "dismiss",
+          value: function dismiss() {
+            this.router.navigateByUrl('tabs/landing');
+            this.modalController.dismiss({
+              'dismissed': true
+            });
+          }
+        }, {
+          key: "doTranslation",
+          value: function doTranslation(text) {
+            var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+            return translateText;
+          }
+        }]);
+
+        return PreviewModalPage;
+      }();
+
+      PreviewModalPage.ctorParameters = function () {
+        return [{
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+        }, {
+          type: src_app_services_translate_service__WEBPACK_IMPORTED_MODULE_4__["TranslateService"]
+        }];
+      };
+
+      PreviewModalPage.propDecorators = {
+        data: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }]
+      };
+      PreviewModalPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-preview-modal',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! raw-loader!./preview-modal.page.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/preview-modal/preview-modal.page.html"))["default"],
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! ./preview-modal.page.scss */
+        "./src/app/pages/preview-modal/preview-modal.page.scss"))["default"]]
+      })], PreviewModalPage);
       /***/
     }
   }]);

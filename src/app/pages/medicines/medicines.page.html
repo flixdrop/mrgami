@@ -2,13 +2,13 @@
   <ion-toolbar color="danger">
     <ion-buttons class="btn-shape" slot="start" routerLink="/tabs/landing" routerDirection="back">
         <ion-icon name="chevron-back-outline" size="large" color="success"></ion-icon>
-        <ion-label color="danger">BACK</ion-label>
+        <ion-label color="danger">{{doTranslation('BACK')}}</ion-label>
     </ion-buttons>
-    <ion-title color="light">MEDICINES</ion-title>
+    <ion-title color="light">{{doTranslation('MEDICINES')}}</ion-title>
   </ion-toolbar>
   <ion-toolbar class="search-color">
     <ion-item lines="none" color="none">
-      <ion-searchbar [(ngModel)]="searchTerm" color="none" mode="md"></ion-searchbar>
+      <ion-searchbar placeholder="{{doTranslation('Search medicines')}}" [(ngModel)]="searchTerm" color="none" mode="md"></ion-searchbar>
     </ion-item>
   </ion-toolbar>
 </ion-header>
@@ -23,7 +23,7 @@
 
   <ion-refresher class="center" slot="fixed" pullMin="120" pullMax="50" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
-      refreshingText="Please Wait...">
+      refreshingText="{{doTranslation('Please Wait...')}}">
     </ion-refresher-content>
   </ion-refresher>
 
@@ -52,7 +52,7 @@
           </ion-grid>
           <ion-toolbar class="no-padding" color="none">
             <ion-button class="bottom" color="primary" size="small" expand="block" (click)="addToCart(p)">
-              Add to cart
+              {{doTranslation('Add to cart')}}
             </ion-button>
           </ion-toolbar>
         </ion-card>

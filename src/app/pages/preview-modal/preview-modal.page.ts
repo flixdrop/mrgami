@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
+import { TranslateService } from 'src/app/services/translate.service';
 
 @Component({
   selector: 'app-preview-modal',
@@ -15,12 +16,17 @@ export class PreviewModalPage implements OnInit {
     console.log('data- ', this.data);
   }
 
-  constructor(public modalController: ModalController, private router: Router) {}
+  constructor(public modalController: ModalController, private router: Router, private translateService: TranslateService) {}
 
   dismiss() {
     this.router.navigateByUrl('tabs/landing');
     this.modalController.dismiss({
       'dismissed': true
     });
+  }
+
+  doTranslation(text){
+    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+    return translateText;
   }
 }

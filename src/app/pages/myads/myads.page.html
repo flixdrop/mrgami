@@ -2,14 +2,14 @@
   <ion-toolbar color="danger">
     <ion-buttons class="btn-shape" slot="start" routerLink="/tabs/landing" routerDirection="back">
         <ion-icon name="chevron-back-outline" size="large" color="success"></ion-icon>
-        <ion-label color="danger">BACK</ion-label>
+        <ion-label color="danger">{{doTranslation('BACK')}}</ion-label>
     </ion-buttons>
-    <ion-title color="light">MY ADs</ion-title>
+    <ion-title color="light">{{doTranslation('MY ADs')}}</ion-title>
   </ion-toolbar>
 
   <ion-toolbar class="search-color">
     <ion-item lines="none" color="none">
-      <ion-searchbar [(ngModel)]="searchTerm" color="none" mode="md"></ion-searchbar>
+      <ion-searchbar placeholder="{{doTranslation('Search my ADs')}}" [(ngModel)]="searchTerm" color="none" mode="md"></ion-searchbar>
     </ion-item>
   </ion-toolbar>
 </ion-header>
@@ -18,7 +18,7 @@
 
   <ion-refresher class="center" slot="fixed" pullMin="170" pullMax="50" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
-      refreshingText="Please Wait...">
+      refreshingText="{{doTranslation('Please Wait...')}}">
     </ion-refresher-content>
   </ion-refresher>
 
@@ -43,22 +43,22 @@
                 </ion-label>
                 <ion-icon size="large" slot="end" color="medium" name="create-sharp"></ion-icon>
               </ion-toolbar>
-              <ion-label color="success">Cattle Name: {{data.animalName}}</ion-label>
-              <ion-label color="warning">Price: {{data.quotedPrice}}</ion-label>
-              <ion-label class="subLabels">Breed: {{data.breed}}</ion-label>
-              <ion-label class="subLabels">Lactation: {{data.lactationNumber}}</ion-label>
-              <ion-label class="subLabels">Milk/Day: {{data.milkPerDay}}</ion-label>
-              <ion-label class="subLabels">Age: {{data.age}}</ion-label>
+              <ion-label color="success">{{doTranslation('Cattle Name')}}: {{data.animalName}}</ion-label>
+              <ion-label color="warning">{{doTranslation('Price')}}: {{data.quotedPrice}}</ion-label>
+              <ion-label class="subLabels">{{doTranslation('Breed')}}: {{data.breed}}</ion-label>
+              <ion-label class="subLabels">{{doTranslation('Lactation')}}: {{data.lactationNumber}}</ion-label>
+              <ion-label class="subLabels">{{doTranslation('Milk/Day')}}: {{data.milkPerDay}}</ion-label>
+              <ion-label class="subLabels">{{doTranslation('Age')}}: {{data.age}}</ion-label>
             </ion-col>
           </ion-row>
         </ion-col>
       </ion-row>
       <ion-item lines="none" style="--background: #36363f; color: beige;">
         <ion-button color="danger" slot="start" expand="block" (click)="onDelete(i)">
-          <ion-icon slot="end" name="trash-bin-sharp"></ion-icon>DISCARD
+          <ion-icon slot="end" name="trash-bin-sharp"></ion-icon>{{doTranslation('DISCARD')}}
         </ion-button>
         <ion-button color="success" slot="end" expand="block" (click)="onPost(i)">
-          <ion-icon slot="end" name="pencil-sharp"></ion-icon>POST THIS
+          <ion-icon slot="end" name="pencil-sharp"></ion-icon>{{doTranslation('POST THIS')}}
         </ion-button>
       </ion-item>
     </ion-grid>

@@ -22,7 +22,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-button class=\"backbtn\" routerLink=\"/tabs/landing\" routerDirection=\"back\">\r\n        <img src=\"../../assets/back.svg\" />\r\n      </ion-button>\r\n    </ion-buttons>\r\n    <ion-title color=\"light\">Blogs and Feedback</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"ion-padding\">\r\n  <ion-card class=\"card\">\r\n    <ion-card-header>\r\n      <ion-label color=\"warning\">ARTICLE TITLE</ion-label>\r\n    </ion-card-header>\r\n    <ion-grid>\r\n      <ion-row>\r\n        <ion-col size=\"12\">\r\n          <ion-img src=\"../../assets/blogimg.jpg\"></ion-img>\r\n        </ion-col>\r\n      </ion-row>\r\n      <ion-row>\r\n      <ion-col size=\"12\">\r\n        SUB TITLE OF THE ARTICLE\r\n        <ion-button class=\"accordion\" fill=\"clear\" size=\"small\" expand=\"full\" color=\"light\" (click)=\"onClickReadMore()\"><ion-icon slot=\"end\" size=\"large\" name=\"{{expand === true ?'chevron-up':'chevron-down'}}\"></ion-icon>{{ expand === true ? 'READ LESS' : 'READ MORE...'}}</ion-button>\r\n        <div class=\"panel\">\r\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat repudiandae illum, blanditiis quidem obcaecati, enim error quibusdam corrupti aliquam, nemo voluptate ullam sed? Quia labore, dolorem eaque perspiciatis repellat natus.\r\n              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum minus exercitationem laboriosam, laudantium obcaecati ut illum similique fugiat voluptates. Quisquam exercitationem nulla doloremque expedita corporis pariatur nemo dolores laboriosam alias.\r\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde animi nobis fugit quia non sequi maxime, autem ad molestias repellendus nostrum voluptatum ipsa blanditiis veritatis nesciunt totam quibusdam? Neque, optio.\r\n              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet similique ad eius libero ut? Quis at perspiciatis, assumenda nam hic officia quae exercitationem ullam, sapiente nemo soluta tenetur, ipsam laborum?\r\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque quos veniam soluta at? Cumque, temporibus qui consequuntur saepe deserunt, repudiandae sint vel id ullam tempore hic perspiciatis voluptates illum.\r\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus amet nulla unde hic aliquam laborum deleniti maiores, quos harum sapiente eum animi eligendi fugit neque incidunt optio laboriosam rerum illo.\r\n              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit recusandae tempore similique, cumque veniam neque saepe pariatur natus ut mollitia velit, error ratione vel libero sint autem. Veniam, nisi molestias?\r\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quis nobis cupiditate voluptate illo, porro cumque autem sapiente quasi eaque obcaecati alias harum officia excepturi earum provident dolorem, ipsam beatae!\r\n            </div>\r\n        </ion-col>\r\n      </ion-row>\r\n    </ion-grid>\r\n  </ion-card>\r\n</ion-content>";
+      __webpack_exports__["default"] = "<ion-header>\r\n  <ion-toolbar color=\"danger\">\r\n    <ion-buttons class=\"btn-shape\" slot=\"start\" routerLink=\"/tabs/landing\" routerDirection=\"back\">\r\n        <ion-icon name=\"chevron-back-outline\" size=\"large\" color=\"success\"></ion-icon>\r\n        <ion-label color=\"danger\">{{doTranslation('BACK')}}</ion-label>\r\n    </ion-buttons>\r\n    <ion-title color=\"light\">{{doTranslation('BLOG PAGE')}}</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"ion-padding content-color\">\r\n\r\n  <ion-grid>\r\n    <ion-row>\r\n      <ion-col class=\"center\" size=\"12\" offset=\"sm-0 md-0 lg-2 xl-3\">\r\n\r\n  <ion-card class=\"custom-card card-color\">\r\n    <ion-label color=\"primary\">{{doTranslation('ARTICLE TITLE')}}</ion-label>\r\n    <ion-grid>\r\n      <ion-row>\r\n        <ion-col size=\"12\">\r\n          <ion-img src=\"../../assets/blogimg.jpg\"></ion-img>\r\n        </ion-col>\r\n      </ion-row>\r\n      <ion-row>\r\n      <ion-col size=\"12\">\r\n         <ion-text>{{doTranslation('SUB TITLE OF THE ARTICLE')}}</ion-text>\r\n        <ion-button class=\"accordion\" fill=\"clear\" size=\"small\" expand=\"full\" color=\"light\" (click)=\"onClickReadMore()\"><ion-icon slot=\"end\" size=\"large\" name=\"{{expand === true ?'chevron-up':'chevron-down'}}\"></ion-icon>{{ expand === true ? doTranslation('READ LESS') : doTranslation('READ MORE...')}}</ion-button>\r\n        <div class=\"panel\">\r\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat repudiandae illum, blanditiis quidem obcaecati, enim error quibusdam corrupti aliquam, nemo voluptate ullam sed? Quia labore, dolorem eaque perspiciatis repellat natus.\r\n              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum minus exercitationem laboriosam, laudantium obcaecati ut illum similique fugiat voluptates. Quisquam exercitationem nulla doloremque expedita corporis pariatur nemo dolores laboriosam alias.\r\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde animi nobis fugit quia non sequi maxime, autem ad molestias repellendus nostrum voluptatum ipsa blanditiis veritatis nesciunt totam quibusdam? Neque, optio.\r\n              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet similique ad eius libero ut? Quis at perspiciatis, assumenda nam hic officia quae exercitationem ullam, sapiente nemo soluta tenetur, ipsam laborum?\r\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque quos veniam soluta at? Cumque, temporibus qui consequuntur saepe deserunt, repudiandae sint vel id ullam tempore hic perspiciatis voluptates illum.\r\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus amet nulla unde hic aliquam laborum deleniti maiores, quos harum sapiente eum animi eligendi fugit neque incidunt optio laboriosam rerum illo.\r\n              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit recusandae tempore similique, cumque veniam neque saepe pariatur natus ut mollitia velit, error ratione vel libero sint autem. Veniam, nisi molestias?\r\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quis nobis cupiditate voluptate illo, porro cumque autem sapiente quasi eaque obcaecati alias harum officia excepturi earum provident dolorem, ipsam beatae!\r\n            </div>\r\n        </ion-col>\r\n      </ion-row>\r\n      <ion-row>\r\n        <ion-col size=\"12\">\r\n          <ion-button size=\"small\" color=\"light\" expand=\"full\" (click)=\"onClickFeedback()\">{{doTranslation('Give Feedback...')}}</ion-button>\r\n        </ion-col>\r\n      </ion-row>\r\n    </ion-grid>\r\n  </ion-card>\r\n\r\n</ion-col>\r\n</ion-row>\r\n</ion-grid>\r\n\r\n</ion-content>";
       /***/
     },
 
@@ -175,7 +175,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = ".card {\n  width: 100%;\n  height: inherit;\n  margin: 0;\n  padding: 0;\n}\n\n.accordion {\n  width: 100%;\n  text-align: left;\n  border: none;\n  outline: none;\n  transition: 0.5s;\n}\n\n.panel {\n  display: none;\n  overflow: hidden;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n  color: burlywood;\n}\n\n.center {\n  display: flex;\n  justify-content: left;\n  align-items: left;\n}\n\na {\n  text-decoration: underline;\n}\n\nion-card {\n  background-color: #41414b;\n}\n\nion-grid {\n  margin: 0;\n  padding: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYmxvZy1mZWVkYmFjay9ibG9nLWZlZWRiYWNrLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFdBQUE7RUFDQSxlQUFBO0VBQ0EsU0FBQTtFQUNBLFVBQUE7QUFDSjs7QUFFQTtFQUNJLFdBQUE7RUFDQSxnQkFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0EsZ0JBQUE7QUFDSjs7QUFFRTtFQUNFLGFBQUE7RUFDQSxnQkFBQTtFQUNBLFdBQUE7RUFDQSxTQUFBO0VBQ0EsVUFBQTtFQUNBLGdCQUFBO0FBQ0o7O0FBRUU7RUFDSSxhQUFBO0VBRUEscUJBQUE7RUFDQSxpQkFBQTtBQUFOOztBQUdFO0VBQ0ksMEJBQUE7QUFBTjs7QUFHRTtFQUNFLHlCQUFBO0FBQUo7O0FBR0U7RUFDRSxTQUFBO0VBQ0EsVUFBQTtBQUFKIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvYmxvZy1mZWVkYmFjay9ibG9nLWZlZWRiYWNrLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJke1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IGluaGVyaXQ7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG59XHJcblxyXG4uYWNjb3JkaW9uIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIG91dGxpbmU6IG5vbmU7XHJcbiAgICB0cmFuc2l0aW9uOiAwLjVzO1xyXG4gIH1cclxuICBcclxuICAucGFuZWx7XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIGNvbG9yOiBidXJseXdvb2Q7XHJcbiAgfVxyXG5cclxuICAuY2VudGVye1xyXG4gICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgLy8gICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGxlZnQ7XHJcbiAgICAgIGFsaWduLWl0ZW1zOiBsZWZ0O1xyXG4gIH1cclxuXHJcbiAgYXtcclxuICAgICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XHJcbiAgfVxyXG5cclxuICBpb24tY2FyZHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICM0MTQxNGI7XHJcbiAgfVxyXG5cclxuICBpb24tZ3JpZHtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgICAvLyBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcclxuICB9Il19 */";
+      __webpack_exports__["default"] = ".custom-card {\n  width: 100%;\n  height: inherit;\n  margin: 0;\n  padding: 0;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n\n.accordion {\n  width: 100%;\n  text-align: left;\n  border: none;\n  outline: none;\n  transition: 0.5s;\n}\n\n.panel {\n  display: none;\n  overflow: hidden;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n  text-align: justify;\n}\n\na {\n  text-decoration: underline;\n}\n\n.center {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n\nion-content {\n  margin: 0;\n  padding: 0;\n}\n\n@media (min-width: 500px) {\n  .custom-card {\n    width: 75%;\n  }\n}\n\n@media (min-width: 700px) {\n  .custom-card {\n    width: 50%;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYmxvZy1mZWVkYmFjay9ibG9nLWZlZWRiYWNrLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFdBQUE7RUFDQSxlQUFBO0VBQ0EsU0FBQTtFQUNBLFVBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0FBQ0o7O0FBRUE7RUFDSSxXQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLGdCQUFBO0FBQ0o7O0FBRUU7RUFDRSxhQUFBO0VBQ0EsZ0JBQUE7RUFDQSxXQUFBO0VBQ0EsU0FBQTtFQUNBLFVBQUE7RUFDQSxtQkFBQTtBQUNKOztBQUVFO0VBQ0ksMEJBQUE7QUFDTjs7QUFFRTtFQUNFLGFBQUE7RUFDQSxzQkFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7QUFDSjs7QUFFRTtFQUNFLFNBQUE7RUFDQSxVQUFBO0FBQ0o7O0FBRUU7RUFDRTtJQUNJLFVBQUE7RUFDTjtBQUNGOztBQUVFO0VBQ0U7SUFDSSxVQUFBO0VBQU47QUFDRiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Jsb2ctZmVlZGJhY2svYmxvZy1mZWVkYmFjay5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY3VzdG9tLWNhcmR7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogaW5oZXJpdDtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG5cclxuLmFjY29yZGlvbiB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgICBvdXRsaW5lOiBub25lO1xyXG4gICAgdHJhbnNpdGlvbjogMC41cztcclxuICB9XHJcbiAgXHJcbiAgLnBhbmVse1xyXG4gICAgZGlzcGxheTogbm9uZTtcclxuICAgIG92ZXJmbG93OiBoaWRkZW47XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xyXG4gIH1cclxuXHJcbiAgYXtcclxuICAgICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XHJcbiAgfVxyXG5cclxuICAuY2VudGVye1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgfVxyXG5cclxuICBpb24tY29udGVudHtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgfVxyXG5cclxuICBAbWVkaWEgKG1pbi13aWR0aDogNTAwcHgpIHtcclxuICAgIC5jdXN0b20tY2FyZHtcclxuICAgICAgICB3aWR0aDogNzUlO1xyXG4gICAgfSAgICAgIFxyXG4gIH1cclxuXHJcbiAgQG1lZGlhIChtaW4td2lkdGg6IDcwMHB4KSB7XHJcbiAgICAuY3VzdG9tLWNhcmR7XHJcbiAgICAgICAgd2lkdGg6IDUwJTtcclxuICAgIH0gICAgICBcclxuICB9Il19 */";
       /***/
     },
 
@@ -210,11 +210,31 @@
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
       "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @ionic/angular */
+      "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+      /* harmony import */
+
+
+      var src_app_services_translate_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/services/translate.service */
+      "./src/app/services/translate.service.ts");
+      /* harmony import */
+
+
+      var _feedback_modal_feedback_modal_page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! ../feedback-modal/feedback-modal.page */
+      "./src/app/pages/feedback-modal/feedback-modal.page.ts");
 
       var BlogFeedbackPage = /*#__PURE__*/function () {
-        function BlogFeedbackPage() {
+        function BlogFeedbackPage(modalCtrl, translateService) {
           _classCallCheck(this, BlogFeedbackPage);
 
+          this.modalCtrl = modalCtrl;
+          this.translateService = translateService;
           this.expand = false;
         }
 
@@ -242,13 +262,55 @@
           value: function onClickReadMore() {
             this.expand = !this.expand;
           }
+        }, {
+          key: "feedbackModal",
+          value: function feedbackModal() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+              var modal;
+              return regeneratorRuntime.wrap(function _callee$(_context) {
+                while (1) {
+                  switch (_context.prev = _context.next) {
+                    case 0:
+                      _context.next = 2;
+                      return this.modalCtrl.create({
+                        component: _feedback_modal_feedback_modal_page__WEBPACK_IMPORTED_MODULE_4__["FeedbackModalPage"],
+                        cssClass: "cart-modal"
+                      });
+
+                    case 2:
+                      modal = _context.sent;
+                      modal.present();
+
+                    case 4:
+                    case "end":
+                      return _context.stop();
+                  }
+                }
+              }, _callee, this);
+            }));
+          }
+        }, {
+          key: "onClickFeedback",
+          value: function onClickFeedback() {
+            this.feedbackModal();
+          }
+        }, {
+          key: "doTranslation",
+          value: function doTranslation(text) {
+            var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+            return translateText;
+          }
         }]);
 
         return BlogFeedbackPage;
       }();
 
       BlogFeedbackPage.ctorParameters = function () {
-        return [];
+        return [{
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
+        }, {
+          type: src_app_services_translate_service__WEBPACK_IMPORTED_MODULE_3__["TranslateService"]
+        }];
       };
 
       BlogFeedbackPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

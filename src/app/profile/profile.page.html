@@ -2,17 +2,17 @@
   <ion-toolbar color="danger">
     <ion-buttons class="btn-shape" slot="start" routerLink="/tabs/landing" routerDirection="back">
         <ion-icon name="chevron-back-outline" size="large" color="success"></ion-icon>
-        <ion-label color="danger">BACK</ion-label>
+        <ion-label color="danger">{{doTranslation('BACK')}}</ion-label>
     </ion-buttons>
-    <ion-title color="light">USER PROFILE</ion-title>
+    <ion-title color="light">{{doTranslation('USER PROFILE')}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding content-color">
   <ion-toolbar class="card-color">
-      <ion-label class="center">User Profile</ion-label>
+      <ion-label class="center">{{doTranslation('User Profile')}}</ion-label>
       <ion-button fill="clear" slot="end">
-        edit 
+        {{doTranslation('edit')}} 
         <ion-icon name="create-outline"></ion-icon>
       </ion-button>
   </ion-toolbar>
@@ -57,7 +57,7 @@
 
   <ion-button expand="block" size="small" color="danger" (click)="onClickLogout()">
     <ion-icon slot="end" name="power-outline"></ion-icon>
-    <ion-label>Logout</ion-label>
+    <ion-label>{{doTranslation('Logout')}}</ion-label>
   </ion-button>
 
 </ion-content>
