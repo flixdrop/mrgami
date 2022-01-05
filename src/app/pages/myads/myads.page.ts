@@ -40,12 +40,8 @@ export class MyadsPage implements OnInit {
     ) {}
 
   ngOnInit(){
-    this.getAllads();
-    const userDetails = this.auth.getUserDetails();
-    userDetails.then(detail => {
-      this.sellerFormApiService.userId.next(detail[0]['Value']);
-      console.log('userId from service- ', this.sellerFormApiService.userId.value);
-    });
+      this.getAllads();
+      console.log('data- ', this.data);
   }
 
   ionViewDidEnter() {

@@ -14,13 +14,11 @@
 </ion-header>
 
 <ion-content class="ion-padding content-color">
-
   <ion-refresher class="center" slot="fixed" pullMin="120" pullMax="50" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
       refreshingText="{{doTranslation('Please Wait...')}}">
     </ion-refresher-content>
   </ion-refresher>
-
 
   <ion-grid>
     <ion-row>
@@ -124,8 +122,9 @@
 </ion-content>
 
 <ion-fab slot="fixed" vertical="bottom" horizontal="start" translucent="true">
-  <ion-fab-button size="small" (click)="onClickFab()" color="light">
+  <ion-fab-button size="small" (click)="onClickFab()" color="dark">
     <ion-icon size="large" name="add"></ion-icon>
   </ion-fab-button>
-  <ion-label class="center" color="dark">{{doTranslation('New AD')}}</ion-label>
+  <ion-text class="center">{{doTranslation('New AD')}}</ion-text>
 </ion-fab>
+

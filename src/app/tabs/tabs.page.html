@@ -47,7 +47,7 @@
 </ion-tabs> -->
 
 <ion-tabs class="none">
-    <ion-tab-bar class="content-color" slot="bottom">
+    <ion-tab-bar slot="bottom">
     <ion-tab-button tab="landing">
       <ion-icon size="large" name="home" color="danger"></ion-icon>
       <ion-label color="danger">{{doTranslation('HOME')}}</ion-label>
@@ -60,17 +60,17 @@
     
     <ion-tab-button tab="blog-feedback">
       <ion-fab vertical="center" horizontal="center" edge="true" translucent="true">
-        <ion-fab-button color="medium" class="background">  <!-- (click)=popSellerForm() -->
-          <ion-icon size="large" name="book"></ion-icon>
+        <ion-fab-button color="dark" class="background">  <!-- (click)=popSellerForm() -->
+          <ion-icon size="large" name="book" color="medium"></ion-icon>
         </ion-fab-button>
       </ion-fab>
     </ion-tab-button>
     
     <!-- <svg height="50" viewBox="0 0 100 50" width="100" xmlns="http://www.w3.org/2000/svg"><path d="M100 0v50H0V0c.543 27.153 22.72 49 50 49S99.457 27.153 99.99 0h.01z" fill="#1f1f1f" fill-rule="evenodd"></path></svg> -->
     
-    <ion-tab-button tab="medicines">
+    <ion-tab-button tab="my-orders">
       <ion-icon size="large" name="medkit" color="success"></ion-icon>
-      <ion-label color="success">{{doTranslation('VET PHARMA')}}</ion-label>
+      <ion-label color="success">{{doTranslation('ORDERS')}}</ion-label>
     </ion-tab-button>
     
     <ion-tab-button tab="profile">

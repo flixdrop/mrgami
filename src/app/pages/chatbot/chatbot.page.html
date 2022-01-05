@@ -4,11 +4,11 @@
         <ion-icon name="chevron-back-outline" size="large" color="success"></ion-icon>
         <ion-label color="danger">{{doTranslation('BACK')}}</ion-label>
     </ion-buttons>
+    <ion-title class="center" color="warning">{{doTranslation('BOT-CHAT')}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="content-color">
-  <ion-text class="center" color="warning">{{doTranslation('BOT-CHAT ASSISTANCE')}}</ion-text>
   <ion-grid>
     <ion-row *ngFor="let message of messages">
       <ion-col *ngIf="currentUser !== message.user" class="person-1 vertical-flex" size="9">
@@ -38,11 +38,11 @@
     <ion-grid>
       <ion-row>
         <ion-col size="10">
-          <textarea class="search-color" autosize maxRows="4" [(ngModel)]="newMsg"></textarea>
+          <textarea class="card-color" autosize maxRows="4" [(ngModel)]="newMsg"></textarea>
         </ion-col>
         <ion-col class="vertical-center" size="2">
-          <ion-button size="small" fill="clear" expand="block" color="primary" [disabled]="newMsg === ''" (click)="sendMessage()">
-            <ion-icon slot="icon-only" size="large" name="send"></ion-icon>
+          <ion-button size="small" fill="clear" expand="block" [disabled]="newMsg === ''" (click)="sendMessage()">
+            <ion-icon slot="icon-only" size="large" name="send" color="primary"></ion-icon>
           </ion-button>
         </ion-col>
       </ion-row>

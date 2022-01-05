@@ -22,7 +22,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-content>\n  <ion-slides pager=\"true\" [options]=\"slideOpts\" zoom=\"true\" #mySlider>\n    <ion-slide class=\"slide\">\n        <ion-item lines=\"none\" color=\"none\">\n          <ion-label>Language</ion-label>\n          <ion-select class=\"content-color\" interface=\"action-sheet\" (ionChange)=\"onLanguageChanged($event)\" [(ngModel)]=\"selectedLanguage\">\n            <ion-select-option value=\"english\">English</ion-select-option>\n            <ion-select-option value=\"kannada\">Kannada</ion-select-option>\n          </ion-select>\n        </ion-item>\n      <ion-toolbar color=\"none\">\n        <ion-icon color=\"primary\" [hidden]=\"mySlider.isBeginning()\" size=\"large\" slot=\"start\"\n          name=\"chevron-back-outline\" (click)=\"prev()\"></ion-icon>\n        <ion-icon color=\"primary\" size=\"large\" slot=\"end\" name=\"chevron-forward-outline\" (click)=\"next()\"></ion-icon>\n      </ion-toolbar>\n    </ion-slide>\n    <ion-slide class=\"slide\">\n      <img class=\"img\" src=\"../../../assets/Screen 1.png\"/>\n      <ion-text>{{doTranslation('Sell your cattle at the best price online.')}}</ion-text>\n      <ion-text>{{doTranslation('Buy your preferred breed of cattle from wide range in just one click')}}</ion-text>\n      <ion-toolbar color=\"none\">\n        <ion-icon color=\"primary\" [hidden]=\"mySlider.isBeginning()\" size=\"large\" slot=\"start\"\n          name=\"chevron-back-outline\" (click)=\"prev()\"></ion-icon>\n        <ion-icon color=\"primary\" size=\"large\" slot=\"end\" name=\"chevron-forward-outline\" (click)=\"next()\"></ion-icon>\n      </ion-toolbar>\n    </ion-slide>\n    <ion-slide class=\"slide\">\n      <img class=\"img\" src=\"../../../assets/Screen 2.png\"/>\n      <ion-text>{{doTranslation('Order Animal Medicine at huge discount by ‘search’ or by ‘uploading doctor’s prescription’. Get Home Delivery')}}</ion-text>\n      <ion-toolbar color=\"none\">\n        <ion-icon color=\"primary\" size=\"large\" slot=\"start\" name=\"chevron-back-outline\" (click)=\"prev()\"></ion-icon>\n        <ion-icon color=\"primary\" size=\"large\" slot=\"end\" name=\"chevron-forward-outline\" (click)=\"next()\"></ion-icon>\n      </ion-toolbar>\n    </ion-slide>\n    <ion-slide class=\"slide\">\n      <img class=\"img\" src=\"../../../assets/Screen 3.png\"/>\n      <ion-text>{{doTranslation('Order best Cattle Feeds from famous suppliers at anywhere in India. Increase Milk yield.')}}</ion-text>\n      <ion-toolbar color=\"none\">\n        <ion-icon color=\"primary\" size=\"large\" slot=\"start\" name=\"chevron-back-outline\" (click)=\"prev()\"></ion-icon>\n        <ion-button expand=\"block\" color=\"primary\" size=\"small\" slot=\"end\" name=\"chevron-forward-outline\" (click)=\"onClickFinish()\">{{doTranslation('FINISH')}}</ion-button>\n      </ion-toolbar>\n    </ion-slide>\n  </ion-slides>\n</ion-content>\n\n";
+      __webpack_exports__["default"] = "<ion-content>\n  <ion-slides pager=\"true\" [options]=\"slideOpts\" zoom=\"true\" #mySlider>\n    <ion-slide class=\"slide\">\n      <div class=\"top-pos\">\n        <img class=\"logo-img\" src=\"../../../assets/logo-green.png\"/>\n      </div>\n      <div class=\"bottom-pos center\">\n          <ion-label color=\"dark\">Language</ion-label>\n          <ion-select class=\"content-color\" interface=\"action-sheet\" (ionChange)=\"onLanguageChanged($event)\" [(ngModel)]=\"selectedLanguage\">\n            <ion-select-option value=\"english\">English</ion-select-option>\n            <ion-select-option value=\"ಕನ್ನಡ\">ಕನ್ನಡ</ion-select-option>\n          </ion-select>\n      </div>\n      <ion-toolbar color=\"none\">\n        <ion-icon color=\"primary\" [hidden]=\"mySlider.isBeginning()\" size=\"large\" slot=\"start\"\n          name=\"chevron-back-outline\" (click)=\"prev()\"></ion-icon>\n        <ion-icon color=\"primary\" size=\"large\" slot=\"end\" name=\"chevron-forward-outline\" (click)=\"next()\"></ion-icon>\n      </ion-toolbar>\n    </ion-slide>\n    <ion-slide class=\"slide\">\n      <img class=\"img\" src=\"../../../assets/Screen 1.png\"/>\n      <ion-text>{{doTranslation('Sell your cattle at the best price online.')}}</ion-text>\n      <ion-text>{{doTranslation('Buy your preferred breed of cattle from wide range in just one click')}}</ion-text>\n      <ion-toolbar color=\"none\">\n        <ion-icon color=\"primary\" size=\"large\" slot=\"start\"\n          name=\"chevron-back-outline\" (click)=\"prev()\"></ion-icon>\n        <ion-icon color=\"primary\" size=\"large\" slot=\"end\" name=\"chevron-forward-outline\" (click)=\"next()\"></ion-icon>\n      </ion-toolbar>\n    </ion-slide>\n    <ion-slide class=\"slide\">\n      <img class=\"img\" src=\"../../../assets/Screen 2.png\"/>\n      <ion-text>{{doTranslation('Order Animal Medicine at huge discount by ‘search’ or by ‘uploading doctor’s prescription’. Get Home Delivery')}}</ion-text>\n      <ion-toolbar color=\"none\">\n        <ion-icon color=\"primary\" size=\"large\" slot=\"start\" name=\"chevron-back-outline\" (click)=\"prev()\"></ion-icon>\n        <ion-icon color=\"primary\" size=\"large\" slot=\"end\" name=\"chevron-forward-outline\" (click)=\"next()\"></ion-icon>\n      </ion-toolbar>\n    </ion-slide>\n    <ion-slide class=\"slide\">\n      <img class=\"img\" src=\"../../../assets/Screen 3.png\"/>\n      <ion-text>{{doTranslation('Order best Cattle Feeds from famous suppliers at anywhere in India. Increase Milk yield.')}}</ion-text>\n      <ion-toolbar color=\"none\">\n        <ion-icon color=\"primary\" size=\"large\" slot=\"start\" name=\"chevron-back-outline\" (click)=\"prev()\"></ion-icon>\n        <ion-button expand=\"block\" color=\"primary\" size=\"small\" slot=\"end\" name=\"chevron-forward-outline\" (click)=\"onClickFinish()\">{{doTranslation('FINISH')}}</ion-button>\n      </ion-toolbar>\n    </ion-slide>\n  </ion-slides>\n</ion-content>\n\n";
       /***/
     },
 
@@ -175,7 +175,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = ".slide {\n  margin: 0;\n  padding: 0;\n  padding-top: 100%;\n  background-color: white;\n  color: silver;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  height: 100%;\n  width: 100%;\n}\n\nion-slides {\n  margin: 0;\n  padding: 0;\n  height: 100%;\n  width: 100%;\n}\n\nion-toolbar {\n  position: fixed;\n  bottom: 5%;\n  padding: 0% 7%;\n}\n\n.img {\n  position: fixed;\n  top: 0;\n  z-index: 0;\n  height: 75%;\n  width: 100%;\n}\n\nion-label {\n  z-index: 2;\n}\n\nion-text {\n  z-index: 2;\n  color: black;\n  opacity: 75%;\n  font-size: 125%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvb25ib2FyZGluZy1wYWdlL29uYm9hcmRpbmctcGFnZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxTQUFBO0VBQ0EsVUFBQTtFQUNBLGlCQUFBO0VBR0EsdUJBQUE7RUFDQSxhQUFBO0VBQ0EsYUFBQTtFQUNBLHNCQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0FBREo7O0FBSUU7RUFDRSxTQUFBO0VBQ0EsVUFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0FBREo7O0FBSUU7RUFDRSxlQUFBO0VBQ0EsVUFBQTtFQUNBLGNBQUE7QUFESjs7QUFJRTtFQUNFLGVBQUE7RUFDQSxNQUFBO0VBQ0EsVUFBQTtFQUNBLFdBQUE7RUFDQSxXQUFBO0FBREo7O0FBSUU7RUFDRSxVQUFBO0FBREo7O0FBSUU7RUFDRSxVQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0FBREoiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9vbmJvYXJkaW5nLXBhZ2Uvb25ib2FyZGluZy1wYWdlLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zbGlkZXtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgICBwYWRkaW5nLXRvcDogMTAwJTtcclxuICAgIC8vIGJhY2tncm91bmQtY29sb3I6ICMxRjFGMjk7XHJcbiAgICAvLyBiYWNrZ3JvdW5kLWNvbG9yOiAjMzYzNjNGO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XHJcbiAgICBjb2xvcjogc2lsdmVyO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgfVxyXG4gIFxyXG4gIGlvbi1zbGlkZXN7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgfVxyXG4gIFxyXG4gIGlvbi10b29sYmFye1xyXG4gICAgcG9zaXRpb246IGZpeGVkO1xyXG4gICAgYm90dG9tOiA1JTtcclxuICAgIHBhZGRpbmc6IDAlIDclO1xyXG4gIH1cclxuICBcclxuICAuaW1ne1xyXG4gICAgcG9zaXRpb246IGZpeGVkO1xyXG4gICAgdG9wOiAwO1xyXG4gICAgei1pbmRleDogMDtcclxuICAgIGhlaWdodDogNzUlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgfVxyXG4gIFxyXG4gIGlvbi1sYWJlbHtcclxuICAgIHotaW5kZXg6IDI7XHJcbiAgfVxyXG4gIFxyXG4gIGlvbi10ZXh0e1xyXG4gICAgei1pbmRleDogMjtcclxuICAgIGNvbG9yOiBibGFjaztcclxuICAgIG9wYWNpdHk6IDc1JTtcclxuICAgIGZvbnQtc2l6ZTogMTI1JTtcclxuICB9XHJcbiAgIl19 */";
+      __webpack_exports__["default"] = ".slide {\n  margin: 0;\n  padding: 0;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  background-color: white;\n  height: 100%;\n  width: 100%;\n}\n\n.top-pos {\n  position: fixed;\n  top: 15%;\n}\n\n.bottom-pos {\n  position: fixed;\n  bottom: 15%;\n}\n\nion-slides {\n  margin: 0;\n  padding: 0;\n  height: 100%;\n  width: 100%;\n}\n\nion-toolbar {\n  position: fixed;\n  bottom: 5%;\n  padding: 0% 7%;\n}\n\n.logo-img {\n  height: 30%;\n  width: 70%;\n}\n\nion-label {\n  z-index: 2;\n}\n\nion-text {\n  z-index: 2;\n  color: black;\n  opacity: 75%;\n  font-size: 125%;\n}\n\nion-select {\n  width: 100%;\n  color: black;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvb25ib2FyZGluZy1wYWdlL29uYm9hcmRpbmctcGFnZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxTQUFBO0VBQ0EsVUFBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFHQSx1QkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0FBREo7O0FBSUU7RUFDRSxlQUFBO0VBQ0EsUUFBQTtBQURKOztBQUlFO0VBQ0UsZUFBQTtFQUNBLFdBQUE7QUFESjs7QUFJRTtFQUNFLFNBQUE7RUFDQSxVQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7QUFESjs7QUFJRTtFQUNFLGVBQUE7RUFDQSxVQUFBO0VBQ0EsY0FBQTtBQURKOztBQUlFO0VBQ0UsV0FBQTtFQUNBLFVBQUE7QUFESjs7QUFJRTtFQUNFLFVBQUE7QUFESjs7QUFJRTtFQUNFLFVBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7QUFESjs7QUFJRTtFQUNFLFdBQUE7RUFDQSxZQUFBO0FBREoiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9vbmJvYXJkaW5nLXBhZ2Uvb25ib2FyZGluZy1wYWdlLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zbGlkZXtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIC8vIGJhY2tncm91bmQtY29sb3I6ICMxRjFGMjk7XHJcbiAgICAvLyBiYWNrZ3JvdW5kLWNvbG9yOiAjMzYzNjNGO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbiAgXHJcbiAgLnRvcC1wb3N7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICB0b3A6IDE1JTtcclxuICB9XHJcblxyXG4gIC5ib3R0b20tcG9ze1xyXG4gICAgcG9zaXRpb246IGZpeGVkO1xyXG4gICAgYm90dG9tOiAxNSU7XHJcbiAgfVxyXG5cclxuICBpb24tc2xpZGVze1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gIH1cclxuICBcclxuICBpb24tdG9vbGJhcntcclxuICAgIHBvc2l0aW9uOiBmaXhlZDtcclxuICAgIGJvdHRvbTogNSU7XHJcbiAgICBwYWRkaW5nOiAwJSA3JTtcclxuICB9XHJcbiAgXHJcbiAgLmxvZ28taW1ne1xyXG4gICAgaGVpZ2h0OiAzMCU7XHJcbiAgICB3aWR0aDogNzAlO1xyXG4gIH1cclxuICBcclxuICBpb24tbGFiZWx7XHJcbiAgICB6LWluZGV4OiAyO1xyXG4gIH1cclxuICBcclxuICBpb24tdGV4dHtcclxuICAgIHotaW5kZXg6IDI7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICBvcGFjaXR5OiA3NSU7XHJcbiAgICBmb250LXNpemU6IDEyNSU7XHJcbiAgfVxyXG4gIFxyXG4gIGlvbi1zZWxlY3R7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGNvbG9yOiBibGFjaztcclxuICB9Il19 */";
       /***/
     },
 
@@ -219,24 +219,48 @@
       /* harmony import */
 
 
-      var _services_translate_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var src_app_services_geo_location_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/services/geo-location.service */
+      "./src/app/services/geo-location.service.ts");
+      /* harmony import */
+
+
+      var _services_translate_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! ../../services/translate.service */
       "./src/app/services/translate.service.ts");
 
       var OnboardingPagePage = /*#__PURE__*/function () {
-        function OnboardingPagePage(router, service) {
+        function OnboardingPagePage(router, translateService, locService) {
           _classCallCheck(this, OnboardingPagePage);
 
           this.router = router;
-          this.service = service;
+          this.translateService = translateService;
+          this.locService = locService;
           this.slideOpts = {
             initialSlide: 0,
             speed: 400
           };
-          this.selectedLanguage = "english";
+          this.selectedLanguage = ''; // this.locService.getGeolocation();
+          // console.log('current-location in onboarding page- ', this.locService.currentLocation.value);
+          // if(this.locService.currentLocation.value === "Karnataka"){
+          //   this.selectedLanguage = "kannada";
+          // }
         }
 
         _createClass(OnboardingPagePage, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            console.log('Timeout started'); // this.locService.getGeolocation();
+
+            console.log('current-location in onboarding page- ', this.locService.currentLocation.value);
+
+            if (this.locService.currentLocation.value === "Karnataka") {
+              this.selectedLanguage = "ಕನ್ನಡ";
+            }
+
+            console.log('Timeout ended');
+          }
+        }, {
           key: "next",
           value: function next() {
             this.slides.slideNext();
@@ -255,12 +279,12 @@
           key: "onLanguageChanged",
           value: function onLanguageChanged(event) {
             this.selectedLanguage = event.detail.value;
-            this.service.currentLanguage.next(this.selectedLanguage);
+            this.translateService.currentLanguage.next(this.selectedLanguage);
           }
         }, {
           key: "doTranslation",
           value: function doTranslation(text) {
-            var translateText = this.service.doTranslation(text, this.selectedLanguage);
+            var translateText = this.translateService.doTranslation(text, this.selectedLanguage);
             return translateText;
           }
         }]);
@@ -272,7 +296,9 @@
         return [{
           type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
         }, {
-          type: _services_translate_service__WEBPACK_IMPORTED_MODULE_3__["TranslateService"]
+          type: _services_translate_service__WEBPACK_IMPORTED_MODULE_4__["TranslateService"]
+        }, {
+          type: src_app_services_geo_location_service__WEBPACK_IMPORTED_MODULE_3__["GeoLocationService"]
         }];
       };
 

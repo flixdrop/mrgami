@@ -152,7 +152,11 @@
 // }
 
 ion-searchbar{
-    --box-shadow: none !important;
+  color: white;
+  font-weight: bold;
+  --background: transparent;
+  background-color: transparent;
+  --box-shadow: none !important;
   }
 
   ion-thumbnail{
@@ -162,7 +166,6 @@ ion-searchbar{
 
   .custom-card{
     margin: 1% 0%;
-    padding: 0% 2%;
   }
 
   .bottom{
@@ -174,6 +177,10 @@ ion-searchbar{
   .no-padding{
     margin: 0;
     padding: 0;
+  }
+
+  .horizontal-margin{
+    margin: 0% 4%;
   }
 
   @media (min-width: 500px) {

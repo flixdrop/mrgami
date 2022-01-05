@@ -8,6 +8,7 @@ import { menuController } from '@ionic/core';
 import { Router } from '@angular/router';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms'; 
 import { TranslateService } from './services/translate.service';
+import { GeoLocationService } from './services/geo-location.service';
 
 @Component({
   selector: 'app-root',
@@ -18,14 +19,15 @@ export class AppComponent implements OnInit {
   public isMenuEnabled:boolean = true;
   public selectedIndex = 0;
   form = new FormGroup({});
-
+  selectedLanguage: any = '';
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private util: UtilService,
     private router: Router,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    private locService: GeoLocationService,
   ) {
     this.initializeApp();
   }
@@ -45,6 +47,7 @@ export class AppComponent implements OnInit {
     this.util.getMenuState().subscribe(menuState => {
       this.isMenuEnabled = menuState;
     });
+    this.locService.getGeolocation();
   }
 
   navigate(path, selectedId) {

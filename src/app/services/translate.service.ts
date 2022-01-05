@@ -9,8 +9,10 @@ export class TranslateService {
   currentLanguage: any = new BehaviorSubject<string>('');
 
   languages = {
-   kannada :{
+    ಕನ್ನಡ :{
+    "PHONE NUMBER": "ದೂರವಾಣಿ ಸಂಖ್ಯೆ",
     "Phone Number": "ದೂರವಾಣಿ ಸಂಖ್ಯೆ",
+    "enter 10-digits phone no.": "ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು.",
     "GET OTP": "ಒಟಿಪಿ ಪಡೆಯಿರಿ",
     "Please Sign Up": "ದಯವಿಟ್ಟು ಸೈನ್ ಅಪ್ ಮಾಡಿ",
     "We'd be happy to have you join our community!": "ನೀವು ನಮ್ಮ ಸಮುದಾಯವನ್ನು ಸೇರಲು ನಾವು ಸಂತೋಷಪಡುತ್ತೇವೆ!",
@@ -73,7 +75,7 @@ export class TranslateService {
     "Add to cart": "ಕಾರ್ಟ್ಗೆ ಸೇರಿಸಿ",
     "Save for later": "ನಂತರಕ್ಕೆ ಉಳಿಸು",
     "You have a Promo Code? Apply Here": "ನೀವು ಪ್ರೋಮೋ ಕೋಡ್ ಹೊಂದಿದ್ದೀರಾ? ಇಲ್ಲಿ ಅನ್ವಯಿಸಿ",
-    "BOT-CHAT ASSISTANCE": "ಸಂದೇಶ ಸಹಾಯಕ",
+    "BOT-CHAT": "ಸಂದೇಶ ಸಹಾಯಕ",
     "E-Mail": "ಇಮೇಲ್",
     "Give Feedback": "ಪ್ರತಿಕ್ರಿಯೆ ನೀಡಿ",
     "Send Feedback": "ಪ್ರತಿಕ್ರಿಯೆ ಕಳುಹಿಸಿ",
@@ -120,9 +122,6 @@ export class TranslateService {
 
   doTranslation(text, value){
     let val = value;
-    if(val === null){
-      val = "en";
-    }
     let languageObj = this.languages[val];
     if(languageObj !== undefined){
       if(languageObj[text] !== undefined){

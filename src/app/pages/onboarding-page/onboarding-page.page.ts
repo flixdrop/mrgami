@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonSlides } from '@ionic/angular';
+import { GeoLocationService } from 'src/app/services/geo-location.service';
 import { TranslateService } from '../../services/translate.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { TranslateService } from '../../services/translate.service';
   templateUrl: './onboarding-page.page.html',
   styleUrls: ['./onboarding-page.page.scss'],
 })
-export class OnboardingPagePage{
+export class OnboardingPagePage implements OnInit{
 
   data: any;
   @ViewChild('mySlider') slides: IonSlides;
@@ -16,9 +17,25 @@ export class OnboardingPagePage{
     initialSlide: 0,
     speed: 400,
   };
-  selectedLanguage: any = "english";
+  selectedLanguage: any = '';
 
-  constructor(public router: Router, private service: TranslateService){}
+  constructor(public router: Router, private translateService: TranslateService, private locService: GeoLocationService){
+    // this.locService.getGeolocation();
+    // console.log('current-location in onboarding page- ', this.locService.currentLocation.value);
+    // if(this.locService.currentLocation.value === "Karnataka"){
+    //   this.selectedLanguage = "kannada";
+    // }
+  }
+
+  ngOnInit(){
+      console.log('Timeout started');
+      // this.locService.getGeolocation();
+      console.log('current-location in onboarding page- ', this.locService.currentLocation.value);
+      if(this.locService.currentLocation.value === "Karnataka"){
+      this.selectedLanguage = "ಕನ್ನಡ";
+      }
+      console.log('Timeout ended');
+  }
 
   next() {
     this.slides.slideNext();
@@ -34,11 +51,11 @@ export class OnboardingPagePage{
 
   onLanguageChanged(event){
     this.selectedLanguage = event.detail.value;
-    this.service.currentLanguage.next(this.selectedLanguage);
+    this.translateService.currentLanguage.next(this.selectedLanguage);
   }
 
   doTranslation(text){
-    var translateText = this.service.doTranslation(text, this.selectedLanguage);
+    var translateText = this.translateService.doTranslation(text, this.selectedLanguage);
     return translateText;
   }
 }

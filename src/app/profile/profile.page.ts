@@ -41,6 +41,7 @@ export class ProfilePage implements OnInit {
       });
       this.userDetails_.next(userDetails);
       console.log('user-details- ', userDetails);
+      console.log('userId- ', userDetails[0]['Value']);
     } catch (err) {
       this.errorMessage_.next(err.message || err);
     } finally {
@@ -52,6 +53,7 @@ export class ProfilePage implements OnInit {
   async onClickLogout(){
     await this.auth.signOut();
     this.router.navigateByUrl('/tabs/landing');
+    
   }
 
   doTranslation(text){

@@ -22,7 +22,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header>\r\n  <ion-toolbar color=\"danger\">\r\n    <ion-buttons class=\"btn-shape\" slot=\"start\" routerLink=\"/tabs/landing\" routerDirection=\"back\">\r\n        <ion-icon name=\"chevron-back-outline\" size=\"large\" color=\"success\"></ion-icon>\r\n        <ion-label color=\"danger\">{{doTranslation('BACK')}}</ion-label>\r\n    </ion-buttons>\r\n    <ion-title color=\"light\">{{doTranslation('USER PROFILE')}}</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"ion-padding content-color\">\r\n  <ion-toolbar class=\"card-color\">\r\n      <ion-label class=\"center\">{{doTranslation('User Profile')}}</ion-label>\r\n      <ion-button fill=\"clear\" slot=\"end\">\r\n        {{doTranslation('edit')}} \r\n        <ion-icon name=\"create-outline\"></ion-icon>\r\n      </ion-button>\r\n  </ion-toolbar>\r\n\r\n  <ion-card class=\"card-color\">\r\n\r\n    <form [formGroup]=\"userDetailsForm\" >\r\n      <div *ngFor=\"let detail of (userDetails | async)\">\r\n            <ion-input matInput readonly placeholder=\"{{ detail.Name }}\" [formControlName]=\"detail.Name\"></ion-input>\r\n      </div>\r\n          <ion-spinner *ngIf=\"busy | async\" name=\"bubbles\"></ion-spinner>\r\n  </form>\r\n\r\n    <!-- <ion-toolbar>\r\n\r\n      <ion-item>\r\n        <ion-label position=\"floating\" color=\"danger\">Name</ion-label>\r\n        <ion-input value=\"Flixdrop User\"></ion-input>\r\n      </ion-item>\r\n      <ion-item>\r\n        <ion-label position=\"floating\" color=\"danger\">Address Lane</ion-label>\r\n        <ion-input value=\"Bengaluru\"></ion-input>\r\n      </ion-item>\r\n      <ion-item>\r\n        <ion-label position=\"floating\" color=\"danger\">City</ion-label>\r\n        <ion-input value=\"Bengaluru\"></ion-input>\r\n    </ion-item>\r\n    <ion-item>\r\n      <ion-label position=\"floating\" color=\"danger\">Gender</ion-label>\r\n      <ion-input value=\"Male\"></ion-input>\r\n    </ion-item>\r\n    <ion-item>\r\n      <ion-label position=\"floating\" color=\"danger\">Email</ion-label>\r\n      <ion-input value=\"flix@flixdrop.com\"></ion-input>\r\n    </ion-item>\r\n    <ion-item>\r\n      <ion-label position=\"floating\" color=\"danger\">Phone Number</ion-label>\r\n      <ion-input value=\"+91 1236547892\"></ion-input>\r\n    </ion-item>\r\n  </ion-toolbar> -->\r\n  </ion-card>\r\n\r\n  <ion-button expand=\"block\" size=\"small\" color=\"danger\" (click)=\"onClickLogout()\">\r\n    <ion-icon slot=\"end\" name=\"power-outline\"></ion-icon>\r\n    <ion-label>{{doTranslation('Logout')}}</ion-label>\r\n  </ion-button>\r\n\r\n</ion-content>\r\n";
+      __webpack_exports__["default"] = "<ion-header>\r\n  <ion-toolbar color=\"danger\">\r\n    <ion-buttons class=\"btn-shape\" slot=\"start\" routerLink=\"/tabs/landing\" routerDirection=\"back\">\r\n        <ion-icon name=\"chevron-back-outline\" size=\"large\" color=\"success\"></ion-icon>\r\n        <ion-label color=\"danger\">{{doTranslation('BACK')}}</ion-label>\r\n    </ion-buttons>\r\n    <ion-title color=\"light\">{{doTranslation('USER PROFILE')}}</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"ion-padding content-color\">\r\n  <ion-toolbar class=\"card-color\">\r\n      <ion-label class=\"center\">{{doTranslation('User Profile')}}</ion-label>\r\n      <ion-button fill=\"clear\" slot=\"end\">\r\n        {{doTranslation('edit')}} \r\n        <ion-icon name=\"create-outline\"></ion-icon>\r\n      </ion-button>\r\n  </ion-toolbar>\r\n\r\n  <ion-card class=\"card-color custom-card\">\r\n\r\n\r\n    <div *ngFor=\"let detail of (userDetails | async)\">\r\n      <ion-toolbar color=\"none\">\r\n        <ion-text>{{detail.Value}}</ion-text>\r\n        <ion-spinner *ngIf=\"busy | async\" name=\"bubbles\"></ion-spinner>\r\n      </ion-toolbar>\r\n    </div>\r\n\r\n    <!-- <form [formGroup]=\"userDetailsForm\" >\r\n      <div *ngFor=\"let detail of (userDetails | async)\">\r\n            <ion-input matInput readonly placeholder=\"{{ detail.Name }}\" [formControlName]=\"detail.Name\"></ion-input>\r\n      </div>\r\n          <ion-spinner *ngIf=\"busy | async\" name=\"bubbles\"></ion-spinner>\r\n  </form> -->\r\n\r\n    <!-- <ion-toolbar>\r\n\r\n      <ion-item>\r\n        <ion-label position=\"floating\" color=\"danger\">Name</ion-label>\r\n        <ion-input value=\"Flixdrop User\"></ion-input>\r\n      </ion-item>\r\n      <ion-item>\r\n        <ion-label position=\"floating\" color=\"danger\">Address Lane</ion-label>\r\n        <ion-input value=\"Bengaluru\"></ion-input>\r\n      </ion-item>\r\n      <ion-item>\r\n        <ion-label position=\"floating\" color=\"danger\">City</ion-label>\r\n        <ion-input value=\"Bengaluru\"></ion-input>\r\n    </ion-item>\r\n    <ion-item>\r\n      <ion-label position=\"floating\" color=\"danger\">Gender</ion-label>\r\n      <ion-input value=\"Male\"></ion-input>\r\n    </ion-item>\r\n    <ion-item>\r\n      <ion-label position=\"floating\" color=\"danger\">Email</ion-label>\r\n      <ion-input value=\"flix@flixdrop.com\"></ion-input>\r\n    </ion-item>\r\n    <ion-item>\r\n      <ion-label position=\"floating\" color=\"danger\">Phone Number</ion-label>\r\n      <ion-input value=\"+91 1236547892\"></ion-input>\r\n    </ion-item>\r\n  </ion-toolbar> -->\r\n  </ion-card>\r\n\r\n  <ion-button expand=\"block\" size=\"small\" color=\"danger\" (click)=\"onClickLogout()\">\r\n    <ion-icon slot=\"end\" name=\"power-outline\"></ion-icon>\r\n    <ion-label>{{doTranslation('Logout')}}</ion-label>\r\n  </ion-button>\r\n\r\n</ion-content>\r\n";
       /***/
     },
 
@@ -175,7 +175,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = ".backbtn {\n  margin-left: 15px;\n}\n\n.notification {\n  margin-right: 15px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvZmlsZS9wcm9maWxlLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFrQkE7RUFDSSxpQkFBQTtBQWpCSjs7QUFvQkE7RUFDSSxrQkFBQTtBQWpCSiIsImZpbGUiOiJzcmMvYXBwL3Byb2ZpbGUvcHJvZmlsZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvLyAucHJvZmlsZS1pbmZvIHtcclxuLy8gICAgIHBhZGRpbmctdG9wOiA1JTtcclxuXHJcbi8vICAgICBpb24taXRlbSB7XHJcbi8vICAgICAgICAgLS1wYWRkaW5nLXN0YXJ0OiA1JTtcclxuLy8gICAgICAgICAtLWJvcmRlci1jb2xvcjogIzk3OTc5NzEzO1xyXG5cclxuLy8gICAgICAgICBpb24tbGFiZWwge1xyXG4vLyAgICAgICAgICAgICBjb2xvcjogIzkxOTE5MTtcclxuLy8gICAgICAgICAgICAgZm9udC1zaXplOiBsYXJnZXI7XHJcbi8vICAgICAgICAgfVxyXG5cclxuLy8gICAgICAgICBpb24taW5wdXQge1xyXG4vLyAgICAgICAgICAgICAtLWNvbG9yOiAjNDM0MzQzO1xyXG4vLyAgICAgICAgIH1cclxuLy8gICAgIH1cclxuLy8gfVxyXG5cclxuLmJhY2tidG4ge1xyXG4gICAgbWFyZ2luLWxlZnQ6IDE1cHg7XHJcbn1cclxuXHJcbi5ub3RpZmljYXRpb24ge1xyXG4gICAgbWFyZ2luLXJpZ2h0OiAxNXB4O1xyXG59Il19 */";
+      __webpack_exports__["default"] = ".backbtn {\n  margin-left: 15px;\n}\n\n.notification {\n  margin-right: 15px;\n}\n\n.custom-card {\n  padding: 0 3%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvZmlsZS9wcm9maWxlLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFrQkE7RUFDSSxpQkFBQTtBQWpCSjs7QUFvQkE7RUFDSSxrQkFBQTtBQWpCSjs7QUFvQkE7RUFDSSxhQUFBO0FBakJKIiwiZmlsZSI6InNyYy9hcHAvcHJvZmlsZS9wcm9maWxlLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIC5wcm9maWxlLWluZm8ge1xyXG4vLyAgICAgcGFkZGluZy10b3A6IDUlO1xyXG5cclxuLy8gICAgIGlvbi1pdGVtIHtcclxuLy8gICAgICAgICAtLXBhZGRpbmctc3RhcnQ6IDUlO1xyXG4vLyAgICAgICAgIC0tYm9yZGVyLWNvbG9yOiAjOTc5Nzk3MTM7XHJcblxyXG4vLyAgICAgICAgIGlvbi1sYWJlbCB7XHJcbi8vICAgICAgICAgICAgIGNvbG9yOiAjOTE5MTkxO1xyXG4vLyAgICAgICAgICAgICBmb250LXNpemU6IGxhcmdlcjtcclxuLy8gICAgICAgICB9XHJcblxyXG4vLyAgICAgICAgIGlvbi1pbnB1dCB7XHJcbi8vICAgICAgICAgICAgIC0tY29sb3I6ICM0MzQzNDM7XHJcbi8vICAgICAgICAgfVxyXG4vLyAgICAgfVxyXG4vLyB9XHJcblxyXG4uYmFja2J0biB7XHJcbiAgICBtYXJnaW4tbGVmdDogMTVweDtcclxufVxyXG5cclxuLm5vdGlmaWNhdGlvbiB7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDE1cHg7XHJcbn1cclxuXHJcbi5jdXN0b20tY2FyZHtcclxuICAgIHBhZGRpbmc6IDAgMyU7XHJcbn0iXX0= */";
       /***/
     },
 
@@ -290,26 +290,27 @@
                       });
                       this.userDetails_.next(userDetails);
                       console.log('user-details- ', userDetails);
-                      _context.next = 14;
+                      console.log('userId- ', userDetails[0]['Value']);
+                      _context.next = 15;
                       break;
 
-                    case 11:
-                      _context.prev = 11;
+                    case 12:
+                      _context.prev = 12;
                       _context.t0 = _context["catch"](2);
                       this.errorMessage_.next(_context.t0.message || _context.t0);
 
-                    case 14:
-                      _context.prev = 14;
+                    case 15:
+                      _context.prev = 15;
                       console.log('user-details- ', this.userDetails);
                       this.busy_.next(false);
-                      return _context.finish(14);
+                      return _context.finish(15);
 
-                    case 18:
+                    case 19:
                     case "end":
                       return _context.stop();
                   }
                 }
-              }, _callee, this, [[2, 11, 14, 18]]);
+              }, _callee, this, [[2, 12, 15, 19]]);
             }));
           }
         }, {

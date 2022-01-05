@@ -2,6 +2,10 @@ ion-toolbar{
     --background: transparent;
 }
 
+ion-text{
+    color: white;
+}
+
 .title-toolbar{
     display: flex;
     text-align: center;
@@ -21,5 +25,6 @@ ion-content{
     ion-card{
         margin: 0;
         padding: 0;
+        padding: 0 2%;
     }
 }

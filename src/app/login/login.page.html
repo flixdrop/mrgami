@@ -124,50 +124,38 @@
   <ion-label>Sign In</ion-label>
 </ion-toolbar> -->
 
+
+
+
 <ion-content class="card-color">
-  <div class="div vertical-center">
-    <!-- <ion-thumbnail> -->
-      <img src="../../assets/welcome.png" />
-    <!-- </ion-thumbnail> -->
-    <ion-grid class="content vertical-center">
+  <div class="div content vertical-center">
+      <img class="img" src="../../assets/logo-green.png"/>
+    <ion-grid>
     <ion-row>
-      <ion-col class="vertical-center phno" size="12">
-            <ion-label color="tertiary">{{doTranslation('Phone Number')}}</ion-label>
-            <ion-item lines="full" color="none">
-              <ion-input placeholder="enter 10-digits phone no." size="large" color="medium" [formControl]="sms" type="sms" required></ion-input>
+      <ion-col class="vertical-center" size="12">
+            <ion-label class="center phno">{{doTranslation('PHONE NUMBER')}}</ion-label>
+            <ion-item class="center item" lines="none" color="dark">
+              <ion-input placeholder="{{doTranslation('enter 10-digits phone no.')}}" [formControl]="sms" type="number" required></ion-input>
             </ion-item>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col class="center" size="12">
-        <ion-button class="loginButton" expand="block" color="tertiary" (click)="signIn()" [disabled]="(busy | async)">
-          <ion-label>{{doTranslation('GET OTP')}}</ion-label>
-          <ion-spinner *ngIf="busy | async" name="lines"></ion-spinner>
-        </ion-button>
-        <!-- <ion-item lines="none">
-          <ion-text>Not registered yet?</ion-text><ion-button size="small" fill="clear" color="medium" routerLink='/signup' routerLinkActive="active primary">Sign up</ion-button>
-        </ion-item> -->
+      <ion-col size="12">
+        <ion-button class="loginButton" (click)="signIn()" [disabled]="(busy | async)">
+        <ion-label>{{doTranslation('GET OTP')}}</ion-label>
+        <ion-spinner *ngIf="busy | async" name="lines"></ion-spinner>
+      </ion-button>
       </ion-col>
     </ion-row>
     <!-- <ion-row>
-      <ion-col size="12">
-        <ion-button fill="clear" expand="block" routerLink="/tabs/landing" routerDirection="forward">Skip for
-          now<ion-icon size="large" slot="end" name="log-in-outline"></ion-icon>
-        </ion-button>
-        <ion-text *ngIf="errorMessage | async">{{ errorMessage | async }}</ion-text>
-      </ion-col>
-    </ion-row> -->
-    <!-- <ion-row>
-      <ion-col class="flex col_4" size="12">
-        <ion-item class="center" lines="none" color="none">
+      <ion-col class="logo" size="12">
           <ion-icon size="large" name="logo-google" color="medium"></ion-icon>
-        </ion-item>
-        <ion-item class="center" lines="none" color="none">
           <ion-icon size="large" name="logo-facebook" color="medium"></ion-icon>
-        </ion-item>
       </ion-col>
     </ion-row> -->
   </ion-grid>
 </div>
 
 </ion-content>
+
+

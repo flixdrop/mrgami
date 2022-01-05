@@ -5,8 +5,12 @@
         <ion-icon size="large" name="menu" color="danger"></ion-icon>
       </ion-menu-button>
     </ion-buttons>
-    <ion-searchbar slot="start" placeholder="{{doTranslation('Search Cattles')}}" mode="md" color="none"></ion-searchbar>
+    <ion-searchbar slot="start" placeholder="{{doTranslation('Search Cattles')}}" mode="md"></ion-searchbar>
     <ion-buttons slot="end">
+        <ion-select class="content-color" placeholder="Lang" interface="action-sheet" (ionChange)="onLanguageChanged($event)" [(ngModel)]="selectedLanguage">
+          <ion-select-option value="english">English</ion-select-option>
+          <ion-select-option value="kannada">Kannada</ion-select-option>
+        </ion-select>
       <ion-icon size="large" slot="end" name="notifications" color="danger"></ion-icon>
       <ion-icon *ngIf="isAuthenticated !== undefined" size="large" slot="end" color="danger" name="log-out" (click)="onClickLogout()"></ion-icon>
     </ion-buttons>   
@@ -63,15 +67,15 @@
 <ion-content class="content-color" [fullscreen]="true">
   <!-- <div class="background"> -->
   <ion-grid class="background mobile-view">
-    <ion-toolbar class="top-space" color="none">
+    <div class="center vet-btn" color="none">
       <ion-button class="glow-on-hover" size="large" expand="block" (click)="recordAudio()">
         <ion-label color="danger">{{doTranslation('FREE VET DOCTOR 24/7')}}</ion-label>
       </ion-button>
-    </ion-toolbar>
+    </div>
 
   <div class="vertical-flex">
     <ion-row (click)="goToBuy()" class="row-size-bigbtn gradient">
-      <ion-col class="button-img" size="8" style="background-image: url('../../assets/icon/sell-cow-icon.png');">
+      <ion-col class="big-btn-img" size="8" style="background-image: url('../../assets/icon/sell-cow-icon.png');">
       </ion-col>
       <ion-col class="vertical-flex" size="4">
           <ion-label class="green">{{doTranslation('BUY/SELL')}}</ion-label>
@@ -82,7 +86,7 @@
 
   <div class="inline-flex">
     <ion-row class="row-size gradient">
-      <ion-col class="bottom-center button-img" (click)="goToFeed()" size="12" style="background-image: url('../../assets/icon/animal-feed.png');">
+      <ion-col class="bottom-center small-btn-img" (click)="goToFeed()" size="12" style="background-image: url('../../assets/icon/animal-feed.png');">
         <ion-label class="green">{{doTranslation('VET')}}</ion-label>
         <ion-label class="white">{{doTranslation('FEED')}}</ion-label>
       </ion-col>
@@ -93,7 +97,7 @@
       </ion-col> -->
     </ion-row>
     <ion-row class="row-size gradient">
-        <ion-col class="bottom-center button-img" (click)="goToMedicine()" size="12" style="background-image: url('../../assets/icon/cow-medicine.png');">
+        <ion-col class="bottom-center small-btn-img" (click)="goToMedicine()" size="12" style="background-image: url('../../assets/icon/cow-medicine.png');">
           <ion-label class="green">{{doTranslation('VET')}}</ion-label>
             <ion-label class="white">{{doTranslation('MEDICINE')}}</ion-label>
         </ion-col>
@@ -116,7 +120,7 @@
 
     
       <ion-row (click)="goToBuy()" class="row-size-bigbtn gradient">
-        <ion-col class="button-img" size="8" style="background-image: url('../../assets/icon/sell-cow-icon.png');">
+        <ion-col class="big-btn-img" size="8" style="background-image: url('../../assets/icon/sell-cow-icon.png');">
         </ion-col>
         <ion-col class="vertical-flex" size="4">
           <ion-label class="green">{{doTranslation('BUY/SELL')}}</ion-label>
@@ -125,7 +129,7 @@
       </ion-row>
   
       <ion-row class="row-size gradient">
-        <ion-col class="button-img" (click)="goToFeed()" size="8" style="background-image: url('../../assets/icon/animal-feed.png');">
+        <ion-col class="small-btn-img" (click)="goToFeed()" size="8" style="background-image: url('../../assets/icon/animal-feed.png');">
         </ion-col>
         <ion-col size="4" class="vertical-flex">
           <ion-label class="green">{{doTranslation('VET')}}</ion-label>
@@ -133,7 +137,7 @@
         </ion-col>
       </ion-row>
       <ion-row class="row-size gradient">
-          <ion-col class="button-img" (click)="goToMedicine()" size="8" style="background-image: url('../../assets/icon/cow-medicine.png');">
+          <ion-col class="small-btn-img" (click)="goToMedicine()" size="8" style="background-image: url('../../assets/icon/cow-medicine.png');">
           </ion-col>
           <ion-col size="4" class="vertical-flex">
             <ion-label class="green">{{doTranslation('VET')}}</ion-label>

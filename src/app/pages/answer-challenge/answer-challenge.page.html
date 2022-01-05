@@ -39,22 +39,22 @@
   </ion-content>
    -->
 
-<ion-content class="content ion-padding">
-  <ion-card class="vertical-center card-color custom-card">
-    <ion-toolbar color="card-color">
-      <ion-item class="title" lines="full" color="none">
-        <ion-icon name="lock-closed-outline"></ion-icon>
-        {{doTranslation('Sign-In')}}
-      </ion-item>
+<ion-content class="content-color center ion-padding">
+  <!-- <ion-card class="vertical-center card-color custom-card"> -->
+    <ion-toolbar class="center" color="card-color">
+      <!-- <ion-item class="center title" lines="full" color="none"> -->
+        <ion-icon name="lock-closed-outline" color="warning"></ion-icon>
+        <ion-label color="warning">{{doTranslation('Sign-In')}}</ion-label>
+      <!-- </ion-item> -->
     </ion-toolbar>
     <ion-toolbar color="none">
-      <ion-text>
+      <ion-text color="light">
         {{doTranslation('Please enter the secret code you received to complete sign-in')}}
       </ion-text>
     </ion-toolbar>
-    <ion-grid>
+    <ion-grid class="custom-grid">
       <ion-row>
-        <ion-col class="flex" size="12">
+        <ion-col class="center" size="12">
           <ion-input class="input" name="a" #a (keyup)="moveFocus($event,b,'')" type="tel" maxlength="1">
           </ion-input>
           <ion-input class="input" name="b" #b (keyup)="moveFocus($event,c,a)" type="tel" maxlength="1">
@@ -85,6 +85,6 @@
       </ion-row>
     </ion-grid>
 
-  </ion-card>
+  <!-- </ion-card> -->
 
 </ion-content>

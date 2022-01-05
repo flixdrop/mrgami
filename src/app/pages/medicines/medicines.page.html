@@ -8,7 +8,7 @@
   </ion-toolbar>
   <ion-toolbar class="search-color">
     <ion-item lines="none" color="none">
-      <ion-searchbar placeholder="{{doTranslation('Search medicines')}}" [(ngModel)]="searchTerm" color="none" mode="md"></ion-searchbar>
+      <ion-searchbar placeholder="{{doTranslation('Search medicines')}}" [(ngModel)]="searchTerm" mode="md"></ion-searchbar>
     </ion-item>
   </ion-toolbar>
 </ion-header>
@@ -35,28 +35,27 @@
         <ion-card class="card-color custom-card" *ngFor="let p of products | filter:searchTerm; let i=index">
           <ion-grid (click)="medModal(p)">
             <ion-row>
-              <ion-col class="vertical-center" size="6">
+              <ion-col class="vertical-center" size="5">
                 <ion-thumbnail>
                   <ion-img src="{{p.image}}"></ion-img>
                 </ion-thumbnail>
               </ion-col>
-              <ion-col class="vertical-center" size="6">
+              <ion-col class="vertical-center horizontal-margin" size="6">
                 <ion-label color="primary">{{p.name}}</ion-label>
                 <ion-text color="light">REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for
                   Buffalo,Cow,Cattle,Poultry,
                   Goat & Pig (RIGMIN Forte Powder)
                 </ion-text>
-                <ion-label color="success">{{ p.price | currency:'INR' }}</ion-label>
+                <ion-item lines="none" color="none">
+                  <ion-label slot="start" color="success">{{ p.price | currency:'INR' }}</ion-label>
+                  <ion-button slot="end" class="bottom" color="danger" size="small" (click)="addToCart(p)">
+                    {{doTranslation('Add to cart')}}
+                  </ion-button>
+                </ion-item>
               </ion-col>
             </ion-row>
           </ion-grid>
-          <ion-toolbar class="no-padding" color="none">
-            <ion-button class="bottom" color="primary" size="small" expand="block" (click)="addToCart(p)">
-              {{doTranslation('Add to cart')}}
-            </ion-button>
-          </ion-toolbar>
         </ion-card>
-
       </ion-col>
     </ion-row>
   </ion-grid>

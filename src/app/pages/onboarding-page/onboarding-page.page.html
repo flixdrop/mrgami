@@ -1,13 +1,16 @@
 <ion-content>
   <ion-slides pager="true" [options]="slideOpts" zoom="true" #mySlider>
     <ion-slide class="slide">
-        <ion-item lines="none" color="none">
-          <ion-label>Language</ion-label>
+      <div class="top-pos">
+        <img class="logo-img" src="../../../assets/logo-green.png"/>
+      </div>
+      <div class="bottom-pos center">
+          <ion-label color="dark">Language</ion-label>
           <ion-select class="content-color" interface="action-sheet" (ionChange)="onLanguageChanged($event)" [(ngModel)]="selectedLanguage">
             <ion-select-option value="english">English</ion-select-option>
-            <ion-select-option value="kannada">Kannada</ion-select-option>
+            <ion-select-option value="ಕನ್ನಡ">ಕನ್ನಡ</ion-select-option>
           </ion-select>
-        </ion-item>
+      </div>
       <ion-toolbar color="none">
         <ion-icon color="primary" [hidden]="mySlider.isBeginning()" size="large" slot="start"
           name="chevron-back-outline" (click)="prev()"></ion-icon>
@@ -19,7 +22,7 @@
       <ion-text>{{doTranslation('Sell your cattle at the best price online.')}}</ion-text>
       <ion-text>{{doTranslation('Buy your preferred breed of cattle from wide range in just one click')}}</ion-text>
       <ion-toolbar color="none">
-        <ion-icon color="primary" [hidden]="mySlider.isBeginning()" size="large" slot="start"
+        <ion-icon color="primary" size="large" slot="start"
           name="chevron-back-outline" (click)="prev()"></ion-icon>
         <ion-icon color="primary" size="large" slot="end" name="chevron-forward-outline" (click)="next()"></ion-icon>
       </ion-toolbar>

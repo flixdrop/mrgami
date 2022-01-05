@@ -46,6 +46,10 @@ ion-slides {
 }
 
 ion-searchbar{
+  color: white;
+  font-weight: bold;
+  --background: transparent;
+  background-color: transparent;
   --box-shadow: none !important;
 }
 

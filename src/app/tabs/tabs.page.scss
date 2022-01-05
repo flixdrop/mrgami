@@ -1,7 +1,7 @@
 
-ion-fab-button.background{
-    --background: url(../../assets/sell_image.jpg) 0 0/100% 100% no-repeat;
-}
+// ion-fab-button.background{
+//     --background: url(../../assets/sell_image.jpg) 0 0/100% 100% no-repeat;
+// }
 
 // ion-tab-bar.ion-no-border{
 //     position: absolute;
@@ -21,7 +21,8 @@ ion-tabs{
 ion-tab-bar{
     clip-path: polygon(50% 0, 100% 17%, 100% 99%, 0 100%, 0 17%);
     height: 10%;
-    --background: #7B7B7E !important;
+    --background: rgb(30,30,30) !important;
+    // --background: #7B7B7E !important;
     // ion-tab-button.background-avatar{
     //     --background-image: url(../../assets/icon/favicon.png) 0 0/100% 100% no-repeat;
       
@@ -60,7 +61,7 @@ ion-tab-bar{
 
 ion-fab-button{
     border-radius: 50%;
-    border: 1px solid white;
+    box-shadow: 0px 5px black;
 }
 
 .navbar{

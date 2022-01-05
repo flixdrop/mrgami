@@ -17,14 +17,22 @@
       </ion-button>
   </ion-toolbar>
 
-  <ion-card class="card-color">
+  <ion-card class="card-color custom-card">
 
-    <form [formGroup]="userDetailsForm" >
+
+    <div *ngFor="let detail of (userDetails | async)">
+      <ion-toolbar color="none">
+        <ion-text>{{detail.Value}}</ion-text>
+        <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
+      </ion-toolbar>
+    </div>
+
+    <!-- <form [formGroup]="userDetailsForm" >
       <div *ngFor="let detail of (userDetails | async)">
             <ion-input matInput readonly placeholder="{{ detail.Name }}" [formControlName]="detail.Name"></ion-input>
       </div>
           <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
-  </form>
+  </form> -->
 
     <!-- <ion-toolbar>
 

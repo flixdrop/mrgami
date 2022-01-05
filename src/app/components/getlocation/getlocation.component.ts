@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/quotes */
 /* eslint-disable guard-for-in */
 import { Component, Injectable, OnInit } from '@angular/core';
-
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder, NativeGeocoderOptions, NativeGeocoderResult } from '@ionic-native/native-geocoder/ngx';
-
 
 @Component({
   selector: 'app-getlocation',

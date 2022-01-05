@@ -102,7 +102,10 @@ import { TranslateService } from "../services/translate.service";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginPage {
-  public sms = new FormControl("+919860067118");
+
+  code: any = '+91';
+
+  public sms = new FormControl();
   private busy_ = new BehaviorSubject(false);
   public busy = this.busy_.asObservable();
 
@@ -117,17 +120,17 @@ export class LoginPage {
   ) {}
 
   public async signIn() {
-    console.log("In SignIn", this.sms.value);
+    console.log("In SignIn",  this.code+this.sms.value);
     this.busy_.next(true);
     //this.errorMessage_.next('');
     try {
-      await this.auth.signIn(this.sms.value);
-      console.log(this.sms.value);
+      await this.auth.signIn(this.code+this.sms.value);
+      console.log(this.code+this.sms.value);
       this.router.navigate(["/answer-challenge"]);
     } catch (err) {
       this.errorMessage_.next(err.message || err);
       this.router.navigateByUrl('/tabs/landing');
-      this.nonUsers(this.sms.value);
+      this.nonUsers(this.code+this.sms.value);
     } finally {
       this.busy_.next(false);
     }

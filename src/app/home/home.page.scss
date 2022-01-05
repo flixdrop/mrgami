@@ -158,6 +158,11 @@ ion-slides {
     padding: 0;
     margin: 0;
   }
+
+  ion-fab-button{
+    border-radius: 50%;
+    box-shadow: 0px 2px black;
+  }
   
   ion-slide{
       margin: 0;
@@ -190,13 +195,16 @@ ion-slides {
   }
 
   ion-searchbar{
-    color: white;
     border: none;
     border-radius: 0;
     --background: transparent;
+    background-color: transparent;
     --box-shadow: none !important;
-    border-bottom: 1px solid silver;
     z-index: 2;
+    font-weight: bold;
+    color: white;
+    --background: transparent;
+    background-color: transparent;
   }
 
   .web-view{

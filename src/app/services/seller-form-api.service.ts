@@ -102,15 +102,15 @@ constructor(private http: HttpClient) {}
   const headers = { 'content-type': 'application/json'};
   const body = dat;
 console.log(dat['imageUrls']);
-console.log('bodyline63',body);
+console.log('bodyline63', body);
   
    return this.http.post<AnimalData>(this.baseUrl+'/ad', body, {headers});
  }
 
  getData(): Observable<any>{
   console.log('getdata line 48',this.http.get<any>(this.baseUrl + '/all'));
-  // return this.http.get<any>(this.baseUrl + '/all');
-  return this.http.get<any>(this.baseUrl+'/'+this.userId.value);
+  return this.http.get<any>(this.baseUrl + '/all');
+  // return this.http.get<any>(this.baseUrl+'/'+this.userId.value);
 }
  
 //  getData(): Observable<any>{

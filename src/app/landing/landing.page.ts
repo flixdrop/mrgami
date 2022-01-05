@@ -9,11 +9,11 @@ import {
 } from "@ionic-native/media-capture/ngx";
 import { FileOpener } from "@ionic-native/file-opener/ngx";
 import { Router } from "@angular/router";
-import { FeedModalPage } from "../pages/feed-modal/feed-modal.page";
 import { ChatbotPage } from "../pages/chatbot/chatbot.page";
 import { TranslateService } from "../services/translate.service";
 import { AuthService } from "../services/auth.service";
 import { GeoLocationService } from "../services/geo-location.service";
+import { SellerFormApiService } from "../services/seller-form-api.service";
 
 @Component({
   selector: "app-landing",
@@ -30,9 +30,9 @@ export class LandingPage implements OnInit {
     speed: 500,
   };
   audio: any;
-  keys: string[] = [];  
+  keys: string[] = [];
   isAuthenticated: any = undefined;
-
+  selectedLanguage: any = "";
   constructor(
     private util: UtilService,
     private navCtrl: NavController,
@@ -42,8 +42,9 @@ export class LandingPage implements OnInit {
     private opener: FileOpener,
     private modalCtrl: ModalController,
     private translateService: TranslateService,
-    private auth: AuthService, 
-    private locService: GeoLocationService
+    private auth: AuthService,
+    private locService: GeoLocationService,
+    private sellerFormApiService: SellerFormApiService
   ) {}
 
   ngOnInit() {
@@ -59,12 +60,22 @@ export class LandingPage implements OnInit {
       "../assets/todaysoffers.PNG",
     ];
 
-    const userDetails = this.auth.getUserDetails().then(data => {
-      console.log('data- ', data);
-      this.isAuthenticated = data;
+    const userDetails = this.auth.getUserDetails().then((data) => {
+      console.log("data- ", data);
+      if(data){
+        this.isAuthenticated = data[2]['Value'];
+      }
+      else{
+        this.isAuthenticated = false;
+      }
+      this.sellerFormApiService.userId.next(data[0]['Value']);
     });
-    
+
     this.locService.getGeolocation();
+    console.log(
+      "current-location in onboarding page- ",
+      this.locService.currentLocation.value
+    );
   }
 
   goToBuy() {
@@ -98,12 +109,12 @@ export class LandingPage implements OnInit {
     this.opener.open(this.audio.fullPath, "audio/mpeg");
   }
 
-  onClickChatbot(){
+  onClickChatbot() {
     this.chatModal();
-    this.router.navigateByUrl('/tabs/chatbot');
+    this.router.navigateByUrl("/tabs/chatbot");
   }
 
-  async chatModal(){
+  async chatModal() {
     let modal = await this.modalCtrl.create({
       component: ChatbotPage,
       cssClass: "cart-modal",
@@ -111,14 +122,22 @@ export class LandingPage implements OnInit {
     modal.present();
   }
 
-  doTranslation(text){
-    var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
+  doTranslation(text) {
+    var translateText = this.translateService.doTranslation(
+      text,
+      this.translateService.currentLanguage.value
+    );
     return translateText;
   }
 
-  async onClickLogout(){
-    this.isAuthenticated= undefined;
+  onLanguageChanged(event) {
+    this.selectedLanguage = event.detail.value;
+    this.translateService.currentLanguage.next(this.selectedLanguage);
+  }
+
+  async onClickLogout() {
+    this.isAuthenticated = undefined;
     await this.auth.signOut();
-    this.router.navigateByUrl('/tabs/landing');
+    this.router.navigateByUrl("/tabs/landing");
   }
 }

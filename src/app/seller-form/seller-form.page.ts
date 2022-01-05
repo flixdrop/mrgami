@@ -194,6 +194,7 @@ export class SellerFormPage implements OnInit {
 
   ngOnInit() {
     this.myForm = this.fb.group({});
+    this.myForm.controls
     if (this.flag === false) {
       this.createForm(this.adForm.form_1);
     }
@@ -301,6 +302,7 @@ export class SellerFormPage implements OnInit {
         town: this.myForm.get("town").value,
       },
       type: this.myForm.get("type").value,
+      userId: this.sellerFormApiService.userId.value
     };
     console.log("adform json data- ", adformData);
 
@@ -539,7 +541,7 @@ export class SellerFormPage implements OnInit {
   getAllads() {
     this.sellerFormApiService.getData().subscribe((data2) => {
       this.data2 = data2;
-      console.log(data2);
+      console.log('data-2- ', data2);
     });
     // console.log('27lines',this.sellerFormApiService.data);
   }
