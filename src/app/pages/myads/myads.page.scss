@@ -5,8 +5,7 @@
 }
 
 .myadscard{
-  margin: 0;
-  padding: 0;
+  margin: 2%;
 }
 
 .cardButtons{
@@ -33,7 +32,6 @@ ion-img{
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .flex{
@@ -43,6 +41,10 @@ ion-img{
 
 ion-slides {
   height: 100%;
+  ion-img{
+    background-size: 100% 100%;
+    background-origin: border-box;
+  }
 }
 
 ion-searchbar{

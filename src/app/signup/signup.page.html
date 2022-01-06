@@ -70,10 +70,10 @@
       <ion-text color="warning">{{doTranslation('Please Sign Up')}}</ion-text>
     </ion-toolbar>
     <ion-toolbar class="center" color="none">
-      <ion-text>{{doTranslation("We'd be happy to have you join our community!")}}</ion-text>
+      <ion-text color="light">{{doTranslation("We'd be happy to have you join our community!")}}</ion-text>
     </ion-toolbar>
     <ion-toolbar class="center" color="none">
-      <ion-text color="primary">{{doTranslation('You are almost there!')}}</ion-text>
+      <ion-text color="light">{{doTranslation('You are almost there!')}}</ion-text>
     </ion-toolbar>
 
     <form [formGroup]="signup_form">
@@ -86,14 +86,14 @@
       <ion-toolbar color="none">
         <ion-item lines="none" color="none">
           <ion-label position="floating" color="danger">{{doTranslation('Phone Number')}}</ion-label>
-          <ion-input formControlName="sms" [value]="phno"></ion-input>
+          <ion-input formControlName="sms" [(value)]="phno"></ion-input>
         </ion-item>
         </ion-toolbar>
     </form>
-    <ion-button *ngIf="(busy | async) !==true" expand="block" size="small" color="success" (click)="signup()">
+    <ion-button *ngIf="(busy | async) !==true" expand="block" color="success" (click)="signup()">
       {{doTranslation('SIGN UP')}}<ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
     </ion-button>
-    <ion-button size="small" color="primary" expand="block" (click)="dismiss()">{{doTranslation('Continue without login')}}</ion-button>
+    <ion-button color="medium" expand="block" (click)="dismiss()">{{doTranslation('Continue without login')}}</ion-button>
 
     <ion-toolbar color="none">
       <ion-text *ngIf="errorMessage | async">{{ errorMessage | async }}</ion-text>

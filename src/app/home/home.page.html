@@ -13,7 +13,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding content-color">
+<!-- <ion-content class="ion-padding content-color">
   <ion-refresher class="center" slot="fixed" pullMin="120" pullMax="50" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
       refreshingText="{{doTranslation('Please Wait...')}}">
@@ -27,7 +27,7 @@
         <ion-toolbar class="web-view" color="none">
           <ion-item lines="full" color="none">
             <ion-label slot="start" color="warning">{{doTranslation('Type of Cattles')}}</ion-label>
-            <a slot="end" color="medium">{{doTranslation('See all')}}</a>
+            <ion-label slot="end" color="light">{{doTranslation('See all')}}</ion-label>
           </ion-item>
         </ion-toolbar>
 
@@ -60,7 +60,7 @@
         <ion-toolbar class="web-view" color="none">
           <ion-item lines="full" color="none">
             <ion-label slot="start" color="warning">{{doTranslation('Featured')}}</ion-label>
-            <a slot="end" color="medium">{{doTranslation('See all')}}</a>
+            <ion-label slot="end" color="light">{{doTranslation('See all')}}</ion-label>
           </ion-item>
         </ion-toolbar>
 
@@ -94,7 +94,7 @@
         <ion-toolbar class="web-view" color="none">
           <ion-item lines="full" color="none">
             <ion-label slot="start" color="warning">{{doTranslation('Best Sell')}}</ion-label>
-            <a slot="end" color="medium">{{doTranslation('See all')}}</a>
+            <ion-label slot="end" color="light">{{doTranslation('See all')}}</ion-label>
           </ion-item>
         </ion-toolbar>
 
@@ -119,12 +119,139 @@
     </ion-row>
   </ion-grid>
 
-</ion-content>
+</ion-content> -->
 
-<ion-fab slot="fixed" vertical="bottom" horizontal="start" translucent="true">
+<ion-fab edge="true" vertical="bottom" horizontal="center" translucent="true">
   <ion-fab-button size="small" (click)="onClickFab()" color="dark">
     <ion-icon size="large" name="add"></ion-icon>
   </ion-fab-button>
-  <ion-text class="center">{{doTranslation('New AD')}}</ion-text>
+  <ion-text class="center" color="light">{{doTranslation('New AD')}}</ion-text>
 </ion-fab>
 
+<ion-content class="card-color">
+  <ion-refresher class="center" slot="fixed" pullMin="120" pullMax="50" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
+      refreshingText="{{doTranslation('Please Wait...')}}">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-toolbar class="center" color="dark">
+    <ion-label class="contact-title" color="danger">ORDER THROUGH</ion-label>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button class="contact-logo" color="danger">
+          <ion-icon name="call-outline"></ion-icon>
+          CALL
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button class="contact-logo" color="danger">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+          <a href="https://api.whatsapp.com/send?phone=+919860067118">MESSAGE</a>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" offset="sm-0 md-0 lg-2 xl-3">
+
+        <ion-toolbar class="web-view" color="none">
+          <ion-item lines="full" color="none">
+            <ion-label slot="start" color="danger">{{doTranslation('Type of Cattles')}}</ion-label>
+            <ion-label slot="end" color="light">{{doTranslation('See all')}}</ion-label>
+          </ion-item>
+        </ion-toolbar>
+
+        <ion-card class="web-view" color="none">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12">
+                <ion-slides [options]="slideOpts">
+                  <ion-slide class="vertical-center" *ngFor="let category of dummydata| filter:searchTerm; let i=index">
+                    <ion-thumbnail>
+                      <ion-img src="{{category.img}}"></ion-img>
+                    </ion-thumbnail>
+                    <ion-label color="light">{{category.breed}}</ion-label>
+                  </ion-slide>
+                </ion-slides>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" offset="sm-0 md-0 lg-2 xl-3">
+
+        <ion-toolbar class="web-view" color="none">
+          <ion-item lines="full" color="none">
+            <ion-label slot="start" color="danger">{{doTranslation('Featured')}}</ion-label>
+            <ion-label slot="end" color="light">{{doTranslation('See all')}}</ion-label>
+          </ion-item>
+        </ion-toolbar>
+
+        <ion-card class="web-view" color="none">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12" routerLink="/tabs/item-details" routerDirection="forward">
+                <ion-slides [options]="slideOpts">
+                  <ion-slide class="vertical-center" *ngFor="let product of dummydata| filter:searchTerm">
+                    <ion-thumbnail>
+                      <ion-img src="{{product.img}}"></ion-img>
+                    </ion-thumbnail>
+                    <ion-label color="success">Rs {{ product.quotedPrice }}</ion-label>
+                    <ion-label color="light">{{ product.breed }}</ion-label>
+                  </ion-slide>
+                </ion-slides>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" offset="sm-0 md-0 lg-2 xl-3">
+
+        <ion-toolbar class="web-view" color="none">
+          <ion-item lines="full" color="none">
+            <ion-label slot="start" color="danger">{{doTranslation('Best Sell')}}</ion-label>
+            <ion-label slot="end" color="light">{{doTranslation('See all')}}</ion-label>
+          </ion-item>
+        </ion-toolbar>
+
+        <ion-card class="web-view" color="none">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12">
+                <ion-slides [options]="slideOpts">
+                  <ion-slide class="vertical-center" *ngFor="let product of dummydata| filter:searchTerm">
+                    <ion-thumbnail>
+                      <ion-img src="{{ product.img}}"></ion-img>
+                    </ion-thumbnail>
+                    <ion-label color="success">Rs {{ product.quotedPrice }}</ion-label>
+                    <ion-label color="light">{{ product.breed }}</ion-label>
+                  </ion-slide>
+                </ion-slides>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

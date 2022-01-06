@@ -153,6 +153,7 @@
 ion-slides {
   --box-shadow: none !important;
     --background: transparent !important;
+    background-color: transparent;
     height: 100%;
     width: 100%;
     padding: 0;
@@ -168,6 +169,7 @@ ion-slides {
       margin: 0;
       padding: 0;
     --background: transparent !important;
+    background-color: transparent;
     height: 100%;
     width: 100%;
     ion-label{
@@ -182,17 +184,25 @@ ion-slides {
 
   ion-img{
     width: 100%;  
-    height: 100%;
-    border: 1px solid silver;
+    height: 100px;
   }
 
-  .center{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: left;
+  .contact-logo{
+    width: 100%;
+    height: 70px;
+  ion-icon{
+    height: 45px;
+    width: 45px;
   }
+  a{
+    color: white;
+  }
+}
+
+.contact-title{
+  font-weight: bold;
+  font-size: 150%;
+}
 
   ion-searchbar{
     border: none;

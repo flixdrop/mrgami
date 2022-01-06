@@ -4,9 +4,9 @@
       <div class="top-pos">
         <img class="logo-img" src="../../../assets/logo-green.png"/>
       </div>
-      <div class="bottom-pos center">
-          <ion-label color="dark">Language</ion-label>
-          <ion-select class="content-color" interface="action-sheet" (ionChange)="onLanguageChanged($event)" [(ngModel)]="selectedLanguage">
+      <div class="bottom-pos center select-color">
+          <ion-label color="light">Language</ion-label>
+          <ion-select interface="action-sheet" (ionChange)="onLanguageChanged($event)" [(ngModel)]="selectedLanguage">
             <ion-select-option value="english">English</ion-select-option>
             <ion-select-option value="ಕನ್ನಡ">ಕನ್ನಡ</ion-select-option>
           </ion-select>

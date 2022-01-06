@@ -14,7 +14,60 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding content-color">
+
+<ion-content class="content-color">
+
+  <ion-refresher class="center" slot="fixed" pullMin="170" pullMax="50" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
+      refreshingText="{{doTranslation('Please Wait...')}}">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card class="myadscard card-color" *ngFor="let data of dummydata | filter:searchTerm; let i=index" >
+    <ion-grid>
+      <ion-row (click)="presentModal(i)">
+        <ion-col class="imgCol" size="6">
+          <ion-content>
+            <ion-slides pager="true" [options]="slideOpts" *ngIf="viewEntered" zoom="true">
+              <ion-slide>
+                <ion-img style="background-image: url('{{data.img}}');" class="img"></ion-img>
+              </ion-slide>
+            </ion-slides>
+          </ion-content>
+        </ion-col>
+        <ion-col size="6">
+          <ion-row color="none">
+            <ion-col class="flex" size="12">
+              <ion-toolbar color="none">
+                <ion-label slot="start">
+                  <ion-icon color="success" slot="start" name="pin-sharp"></ion-icon>{{data.lactation}}
+                </ion-label>
+                <ion-icon size="large" slot="end" color="medium" name="create-sharp"></ion-icon>
+              </ion-toolbar>
+              <ion-label color="success">{{doTranslation('Cattle Name')}}: {{data.animalName}}</ion-label>
+              <ion-label color="warning">{{doTranslation('Price')}}: {{data.quotedPrice}}</ion-label>
+              <ion-label class="subLabels">{{doTranslation('Breed')}}: {{data.breed}}</ion-label>
+              <ion-label class="subLabels">{{doTranslation('Lactation')}}: {{data.lactationNumber}}</ion-label>
+              <ion-label class="subLabels">{{doTranslation('Milk/Day')}}: {{data.milkPerDay}}</ion-label>
+              <ion-label class="subLabels">{{doTranslation('Age')}}: {{data.age}}</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+      <ion-item lines="none" color="none">
+        <ion-button color="danger" slot="start" expand="block" (click)="onDelete(i)">
+          <ion-icon slot="end" name="trash-bin-sharp"></ion-icon>{{doTranslation('DISCARD')}}
+        </ion-button>
+        <ion-button color="success" slot="end" expand="block" (click)="onPost(i)">
+          <ion-icon slot="end" name="pencil-sharp"></ion-icon>{{doTranslation('POST THIS')}}
+        </ion-button>
+      </ion-item>
+    </ion-grid>
+  </ion-card>
+
+</ion-content>
+
+<!-- <ion-content class="ion-padding content-color">
 
   <ion-refresher class="center" slot="fixed" pullMin="170" pullMax="50" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
@@ -37,9 +90,9 @@
         <ion-col size="6">
           <ion-row color="none">
             <ion-col class="flex" size="12">
-              <ion-toolbar  style="--background: #36363f; color: beige;">
+              <ion-toolbar color="none">
                 <ion-label slot="start" >
-                  <ion-icon color="success" slot="start" name="pin-sharp"></ion-icon>{{data.location}}
+                  <ion-icon color="success" slot="start" name="pin-sharp"></ion-icon>{{data.lactation}}
                 </ion-label>
                 <ion-icon size="large" slot="end" color="medium" name="create-sharp"></ion-icon>
               </ion-toolbar>
@@ -53,7 +106,7 @@
           </ion-row>
         </ion-col>
       </ion-row>
-      <ion-item lines="none" style="--background: #36363f; color: beige;">
+      <ion-item lines="none" color="none">
         <ion-button color="danger" slot="start" expand="block" (click)="onDelete(i)">
           <ion-icon slot="end" name="trash-bin-sharp"></ion-icon>{{doTranslation('DISCARD')}}
         </ion-button>
@@ -64,7 +117,7 @@
     </ion-grid>
   </ion-card>
 
-</ion-content>
+</ion-content> -->
 
 
 
@@ -120,7 +173,6 @@
     </ion-grid>
   </ion-card>
 </ion-content> -->
-
 
 <!-- 
 <ion-content [fullscreen]="true">

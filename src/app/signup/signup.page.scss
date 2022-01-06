@@ -58,20 +58,15 @@
 //     --background: transparent;
 // }
 
-.center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
 .custom-card{
-    margin: 0;
-    padding: 0;
     height: inherit;
     top: 15%;
 }
 
 ion-content{
     --background: transparent !important;
+}
+
+ion-input{
+    color: white;
 }

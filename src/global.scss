@@ -222,6 +222,11 @@
     border-radius: 0;
   }
 
+  ion-img{
+    border-radius: 5px;
+    border: 2px solid rgb(50 50 50);
+  }
+
 ion-select{
   color: white;
   ion-select-option{

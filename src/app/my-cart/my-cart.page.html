@@ -9,9 +9,6 @@
 </ion-header>
 
 <ion-content class="content-color">
-  <ion-toolbar class="center" color="none">
-    <ion-text color="danger">{{doTranslation('CART ITEMS')}}</ion-text>
-  </ion-toolbar>
 
   <ion-grid>
     <ion-row>
@@ -73,8 +70,8 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col class="center" size="12" offset="sm-0 md-0 lg-2 xl-3">
-        <ion-button size="small" expand="block" routerLink="/checkout" color="primary" routerDirection="forward">
+      <ion-col size="12" offset="sm-0 md-0 lg-2 xl-3">
+        <ion-button size="small" expand="block" routerLink="/checkout" color="success" routerDirection="forward">
           {{doTranslation('Continue')}}
         </ion-button>
       </ion-col>

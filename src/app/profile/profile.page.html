@@ -8,24 +8,38 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding content-color">
-  <ion-toolbar class="card-color">
-      <ion-label class="center">{{doTranslation('User Profile')}}</ion-label>
-      <ion-button fill="clear" slot="end">
-        {{doTranslation('edit')}} 
-        <ion-icon name="create-outline"></ion-icon>
-      </ion-button>
-  </ion-toolbar>
+<ion-content class="content">
 
   <ion-card class="card-color custom-card">
+      <div class="center">
+          <ion-icon class="person" name="person" color="medium"></ion-icon>
+      </div>
 
-
-    <div *ngFor="let detail of (userDetails | async)">
-      <ion-toolbar color="none">
-        <ion-text>{{detail.Value}}</ion-text>
-        <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
-      </ion-toolbar>
-    </div>
+      <ion-toolbar class="card-color">
+        <ion-label class="center" color="danger">{{doTranslation('User Profile')}}</ion-label>
+        <ion-button fill="clear" slot="end">
+          {{doTranslation('edit')}} 
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ion-chip class="chip" color="light">
+            <ion-text  color="light">{{(userDetails | async)[1].Name}}</ion-text>
+            <ion-text color="light">{{(userDetails | async)[1].Value}}</ion-text>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-chip class="chip" color="light">
+            <ion-text color="light">{{(userDetails | async)[3].Name}}</ion-text>
+            <ion-text color="light">{{(userDetails | async)[3].Value}}</ion-text>
+          </ion-chip>        
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
     <!-- <form [formGroup]="userDetailsForm" >
       <div *ngFor="let detail of (userDetails | async)">

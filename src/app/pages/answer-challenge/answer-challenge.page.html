@@ -39,52 +39,46 @@
   </ion-content>
    -->
 
-<ion-content class="content-color center ion-padding">
-  <!-- <ion-card class="vertical-center card-color custom-card"> -->
+<ion-content class="content center ion-padding">
+
+  <ion-grid class="custom-grid">
     <ion-toolbar class="center" color="card-color">
-      <!-- <ion-item class="center title" lines="full" color="none"> -->
-        <ion-icon name="lock-closed-outline" color="warning"></ion-icon>
-        <ion-label color="warning">{{doTranslation('Sign-In')}}</ion-label>
-      <!-- </ion-item> -->
+      <ion-icon class="lock" name="lock-closed-sharp" color="dark"></ion-icon>
     </ion-toolbar>
     <ion-toolbar color="none">
       <ion-text color="light">
-        {{doTranslation('Please enter the secret code you received to complete sign-in')}}
+        {{doTranslation('PLEASE ENTER YOUR OTP!')}}
       </ion-text>
     </ion-toolbar>
-    <ion-grid class="custom-grid">
-      <ion-row>
-        <ion-col class="center" size="12">
-          <ion-input class="input" name="a" #a (keyup)="moveFocus($event,b,'')" type="tel" maxlength="1">
-          </ion-input>
-          <ion-input class="input" name="b" #b (keyup)="moveFocus($event,c,a)" type="tel" maxlength="1">
-          </ion-input>
-          <ion-input class="input" name="c" #c (keyup)="moveFocus($event,d,b)" type="tel" maxlength="1">
-          </ion-input>
-          <ion-input class="input" name="d" #d (keyup)="moveFocus($event,e,c)" type="tel" maxlength="1">
-          </ion-input>
-          <ion-input class="input" name="e" #e (keyup)="moveFocus($event,f,d)" type="tel" maxlength="1">
-          </ion-input>
-          <ion-input class="input" name="f" #f (keyup)="moveFocus($event,f,e)" type="tel" maxlength="1">
-          </ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="12">
-          <ion-button *ngIf="(busy | async) !==true" size="small" color="success" expand="block" (click)="submit()">
-            {{doTranslation('Continue')}}
-            <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
-          </ion-button>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="errmsg" size="12">
-          <ion-text color="warning">{{answer_1}}</ion-text>
-          <ion-text color="danger" *ngIf="errorMessage | async">{{ errorMessage | async }}</ion-text>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-  <!-- </ion-card> -->
-
+    <ion-row>
+      <ion-col class="center" size="12">
+        <ion-input class="input" name="a" #a (keyup)="moveFocus($event,b,'')" type="tel" maxlength="1">
+        </ion-input>
+        <ion-input class="input" name="b" #b (keyup)="moveFocus($event,c,a)" type="tel" maxlength="1">
+        </ion-input>
+        <ion-input class="input" name="c" #c (keyup)="moveFocus($event,d,b)" type="tel" maxlength="1">
+        </ion-input>
+        <ion-input class="input" name="d" #d (keyup)="moveFocus($event,e,c)" type="tel" maxlength="1">
+        </ion-input>
+        <ion-input class="input" name="e" #e (keyup)="moveFocus($event,f,d)" type="tel" maxlength="1">
+        </ion-input>
+        <ion-input class="input" name="f" #f (keyup)="moveFocus($event,f,e)" type="tel" maxlength="1">
+        </ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button *ngIf="(busy | async) !==true" size="large" color="success" expand="block" (click)="submit()">
+          {{doTranslation('Continue')}}
+          <ion-spinner *ngIf="busy | async" name="bubbles"></ion-spinner>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="errmsg" size="12">
+        <ion-text color="warning">{{answer_1}}</ion-text>
+        <ion-text color="danger" *ngIf="errorMessage | async">{{ errorMessage | async }}</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

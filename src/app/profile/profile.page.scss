@@ -20,10 +20,35 @@
     margin-left: 15px;
 }
 
+.content{
+    --background: linear-gradient(180deg, rgb(25,25,25), rgb(50,50,50), rgb(75,75,75)) !important;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-origin: border-box;
+      background-position: center center;
+}
+
 .notification {
     margin-right: 15px;
 }
 
+.chip{
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div{
+    width: 100%;
+}
+
+.person{
+    height: 100px;
+    width: 100px;
+}
+
 .custom-card{
-    padding: 0 3%;
+    padding: 0 2%;
+    margin: 2%;
 }

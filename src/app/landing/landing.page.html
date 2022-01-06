@@ -9,7 +9,7 @@
     <ion-buttons slot="end">
         <ion-select class="content-color" placeholder="Lang" interface="action-sheet" (ionChange)="onLanguageChanged($event)" [(ngModel)]="selectedLanguage">
           <ion-select-option value="english">English</ion-select-option>
-          <ion-select-option value="kannada">Kannada</ion-select-option>
+          <ion-select-option value="ಕನ್ನಡ">ಕನ್ನಡ</ion-select-option>
         </ion-select>
       <ion-icon size="large" slot="end" name="notifications" color="danger"></ion-icon>
       <ion-icon *ngIf="isAuthenticated !== undefined" size="large" slot="end" color="danger" name="log-out" (click)="onClickLogout()"></ion-icon>
@@ -151,8 +151,8 @@
       <ion-col class="inline-flex" size="12" offset="sm-0 md-0 lg-2 xl-3">
   <ion-toolbar class="inline-flex" color="none">
       <ion-chip color="none">
-        <ion-icon size="large" name="alarm-sharp" color="medium"></ion-icon>
-        <ion-label class="text-shadow" color="medium">{{doTranslation("TODAY's OFFERS")}}</ion-label>
+        <ion-icon size="large" name="alarm-sharp" color="light"></ion-icon>
+        <ion-label class="text-shadow" color="light">{{doTranslation("TODAY's OFFERS")}}</ion-label>
       </ion-chip>
   </ion-toolbar>
 </ion-col>

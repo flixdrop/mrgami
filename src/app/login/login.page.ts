@@ -132,6 +132,7 @@ export class LoginPage {
       this.router.navigateByUrl('/tabs/landing');
       this.nonUsers(this.code+this.sms.value);
     } finally {
+      this.sms.reset();
       this.busy_.next(false);
     }
   }

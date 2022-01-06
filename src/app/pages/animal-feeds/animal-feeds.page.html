@@ -26,36 +26,52 @@
       refreshingText="{{doTranslation('Please Wait...')}}">
     </ion-refresher-content>
   </ion-refresher>
-  
+
+  <ion-toolbar class="center" color="dark">
+    <ion-label class="contact-title" color="danger">ORDER THROUGH</ion-label>
   <ion-grid>
     <ion-row>
-      <ion-col class="center logo" size="12" offset="sm-0 md-0 lg-2 xl-3">
-        <ion-icon name="call"></ion-icon>
-        
+      <ion-col size="6">
+        <ion-button class="contact-logo" color="danger">
+          <ion-icon name="call-outline"></ion-icon>
+          CALL
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button class="contact-logo" color="danger">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+          <a href="https://api.whatsapp.com/send?phone=+919860067118">MESSAGE</a>
+        </ion-button>
       </ion-col>
     </ion-row>
+  </ion-grid>
+</ion-toolbar>
+
+  <ion-grid>
     <ion-row>
       <ion-col class="vertical-center" size="12" offset="sm-0 md-0 lg-2 xl-3">
         <ion-card class="card-color custom-card" *ngFor="let p of products | filter:searchTerm; let i=index">
           <ion-grid (click)="medModal(p)">
             <ion-row>
-              <ion-col class="vertical-center" size="5">
+              <ion-col class="vertical-center" size="6">
                 <ion-thumbnail>
                   <ion-img src="{{p.image}}"></ion-img>
                 </ion-thumbnail>
               </ion-col>
-              <ion-col class="vertical-center horizontal-margin" size="6">
-                <ion-label color="primary">{{p.name}}</ion-label>
+              <ion-col class="horizontal-padding" size="6">
+                <div class="center"> 
+                  <ion-label color="primary">{{p.name}}</ion-label>
+                </div>
                 <ion-text color="light">REFIT ANIMAL CARE – 10 Kg Chelated Mineral Mixture for
                   Buffalo,Cow,Cattle,Poultry,
                   Goat & Pig (RIGMIN Forte Powder)
                 </ion-text>
-                <ion-item lines="none" color="none">
-                  <ion-label slot="start" color="success">{{ p.price | currency:'INR' }}</ion-label>
-                  <ion-button slot="end" class="bottom" color="danger" size="small" (click)="addToCart(p)">
+                <ion-toolbar color="none">
+                  <ion-text slot="start" color="success">{{ p.price | currency:'INR' }}</ion-text>
+                  <ion-button slot="end" color="danger" expand="block" size="small" (click)="addToCart(p)">
                     {{doTranslation('Add to cart')}}
                   </ion-button>
-                </ion-item>
+                </ion-toolbar>
               </ion-col>
             </ion-row>
           </ion-grid>
