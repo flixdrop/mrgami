@@ -66,7 +66,7 @@ export class AnimalFeedsPage implements OnInit {
     node.addEventListener("animationend", handleAnimationEnd);
   }
 
-  async medModal(product){
+  async feedModal(product){
     let modal = await this.modalCtrl.create({
       component: FeedModalPage,
       cssClass: "cart-modal",

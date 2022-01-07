@@ -51,9 +51,9 @@
     <ion-row>
       <ion-col class="vertical-center" size="12" offset="sm-0 md-0 lg-2 xl-3">
         <ion-card class="card-color custom-card" *ngFor="let p of products | filter:searchTerm; let i=index">
-          <ion-grid (click)="medModal(p)">
+          <ion-grid>
             <ion-row>
-              <ion-col class="vertical-center" size="6">
+              <ion-col (click)="feedModal(p)" class="vertical-center" size="6">
                 <ion-thumbnail>
                   <ion-img src="{{p.image}}"></ion-img>
                 </ion-thumbnail>

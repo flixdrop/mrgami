@@ -9,104 +9,25 @@
 // ion-item{
 //     --background:var(--background)
 // }
-
-ion-text{
-    font-size: 12px;
-    font-weight: bold;
-  }
   
   .list{
     margin: 3%;
-  }
-  
-  ion-content{
-    margin: 0;
-    padding: 0;
-  }
-  
-  ion-card{
-    margin: 0;
-    padding: 0;
-  }
-  
-  .center{
-    display: flex;
-    justify-content: center;
   }
   
   ion-avatar{
     border: 3px solid white;
   }
   
-  .itemDetails{
-    font-size: 10px;
-  }
-  
   a{
     text-decoration: underline;
   }
-  
-  .priceTable{
-    opacity: 50%;
-    font-size: 10px;
-    font-weight: lighter;
-  }
 
-
-  .center{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  p{
-    font-size: 70%;
-  }
-  
   .del-icon{
     z-index: 2;
   }
   
-  // ion-toolbar{
-  //   ion-item{
-  //     --background: #36363F;
-  //   }
-  //   --background: #36363F;
-  // }
-  
-  ion-grid{
-    margin: 0;
-    padding: 0;
-  }
-  
-  ion-row{
-    margin: 0;
-    padding: 0;
-  }
-  
-  ion-col{
-    margin: 0;
-    padding: 0;
-  }
-  
   .pager{
     border-bottom: 1px solid silver;
-  }
-  
-  .form{
-    margin: 0;
-    padding: 0;
-  }
-  
-  ion-slides{
-    margin: 0;
-    padding: 0;
-  }
-  
-  ion-slide{
-    margin: 0;
-    padding: 0;
   }
   
   .form-heading{
@@ -115,17 +36,6 @@ ion-text{
     justify-content: center;
   }
   
-  ion-title{
+  *{
     color: white;
   }
-  
-  ion-input{
-    color: white;
-  }
-  
-  ion-select{
-    width: 100%;
-    --ion-text-color: white !important;
-    --background: white !important;
-  }
-  

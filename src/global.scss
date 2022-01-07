@@ -152,28 +152,25 @@
 @font-face {
     font-family: 'Laila';    
     font-style: italic;
-    font-weight: normal;
+    font-weight: bolder;
     src: url('./assets/fonts/laila/Laila-SemiBold.ttf');
 }
 
 *{
     font-family: 'Laila';
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .cart-modal {
     --background: transparent !important;
   }
 
-.toolbar-color{
-    --background: #332626;
-}
-
 .btn-shape{
   margin: 0;
   padding: 0;
   clip-path: ellipse(100% 50% at 0% 50%); 
-  background-color: #36363f; 
+  // background-color: #36363f; 
+  background-color: rgb(30,30,30, 0.98);
   width: 100px; 
   height: 45px; 
   border-radius: 5px;
@@ -182,19 +179,20 @@
 
 .content-color{
     // --background: #1F1F29;
-    --background: rgb(75,75,75);
+    // --background: rgb(25,25,25);
+    --background: linear-gradient(180deg, rgb(50,50,50,0.7), rgb(25,25,25,0.7)) !important;
   }
 
   .card-color{
     // --background: #36363F;
-    --background: rgb(30,30,30);
+    --background: rgba(50,50,50,0.98);
   }
 
   .search-color{
     // --background: #36363F; 
     // background-color: #36363F;
-    --background: rgb(75,75,75); 
-    background-color: rgb(75,75,75);
+    --background: rgb(50,50,50); 
+    background-color: rgb(50,50,50);
   }
 
   .center{
@@ -219,11 +217,11 @@
   ion-card{
     margin: 0;
     padding: 0;
-    border-radius: 0;
+    border-radius: 10px;
   }
 
   ion-img{
-    border-radius: 5px;
+    border-radius: 10px;
     border: 2px solid rgb(50 50 50);
   }
 

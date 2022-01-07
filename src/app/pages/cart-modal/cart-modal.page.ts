@@ -153,7 +153,7 @@ export class CartModalPage implements OnInit {
     // });
   }
 
-  async medModal(product) {
+  async itemModal(product) {
     let modal = await this.modalCtrl.create({
       component: MedModalPage,
       cssClass: "cart-modal",

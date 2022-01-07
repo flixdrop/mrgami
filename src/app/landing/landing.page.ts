@@ -117,7 +117,6 @@ export class LandingPage implements OnInit {
   async chatModal() {
     let modal = await this.modalCtrl.create({
       component: ChatbotPage,
-      cssClass: "cart-modal",
     });
     modal.present();
   }

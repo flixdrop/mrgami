@@ -128,7 +128,7 @@
   <ion-text class="center" color="light">{{doTranslation('New AD')}}</ion-text>
 </ion-fab>
 
-<ion-content class="card-color">
+<ion-content class="content-color">
   <ion-refresher class="center" slot="fixed" pullMin="120" pullMax="50" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content pullingIcon="chevron-down-circle-outline" refreshingSpinner="lines"
       refreshingText="{{doTranslation('Please Wait...')}}">
@@ -160,7 +160,7 @@
       <ion-col size="12" offset="sm-0 md-0 lg-2 xl-3">
 
         <ion-toolbar class="web-view" color="none">
-          <ion-item lines="full" color="none">
+          <ion-item lines="none" color="none">
             <ion-label slot="start" color="danger">{{doTranslation('Type of Cattles')}}</ion-label>
             <ion-label slot="end" color="light">{{doTranslation('See all')}}</ion-label>
           </ion-item>
@@ -193,7 +193,7 @@
       <ion-col size="12" offset="sm-0 md-0 lg-2 xl-3">
 
         <ion-toolbar class="web-view" color="none">
-          <ion-item lines="full" color="none">
+          <ion-item lines="none" color="none">
             <ion-label slot="start" color="danger">{{doTranslation('Featured')}}</ion-label>
             <ion-label slot="end" color="light">{{doTranslation('See all')}}</ion-label>
           </ion-item>
@@ -227,7 +227,7 @@
       <ion-col size="12" offset="sm-0 md-0 lg-2 xl-3">
 
         <ion-toolbar class="web-view" color="none">
-          <ion-item lines="full" color="none">
+          <ion-item lines="none" color="none">
             <ion-label slot="start" color="danger">{{doTranslation('Best Sell')}}</ion-label>
             <ion-label slot="end" color="light">{{doTranslation('See all')}}</ion-label>
           </ion-item>

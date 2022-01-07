@@ -152,4 +152,8 @@ export class LoginPage {
     var translateText = this.translateService.doTranslation(text, this.translateService.currentLanguage.value);
     return translateText;
   }
+
+  onSkipLogin(){
+    this.router.navigateByUrl('/tabs/landing');
+  }
 }

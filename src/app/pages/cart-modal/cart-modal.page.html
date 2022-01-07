@@ -1,4 +1,4 @@
-  <!-- <ion-content fullscreen>
+<!-- <ion-content fullscreen>
 
     <div class="ion-text-end">
       <ion-button (click)="close()" fill="clear" color="dark">
@@ -65,21 +65,21 @@
 
   </ion-content> -->
 
-  <ion-content class="ion-padding content-color" *ngIf="flag === false">
-   
+<ion-content class="ion-padding content-color" *ngIf="flag === false">
+
   <ion-card class="card-color">
     <ion-item lines="none" color="none">
       <ion-icon (click)="close()" size="large" name="close" color="medium" slot="end"></ion-icon>
     </ion-item>
     <ion-list class="list" *ngFor="let c of cart; let i=index">
       <ion-toolbar class="card-color">
-        <ion-grid (click)="medModal(c)">
+        <ion-grid (click)="itemModal(c)">
           <ion-row>
-            <ion-col class="itemDetails" size="12">
-              <ion-label color="danger">REFIT ANIMAL CARE- 10KG</ion-label>
-              <p>Celebrate Mineral Mixture...</p>
-              <p>Delivery By- 6th October</p>
-              <p>Delivery Fees- &#x20B9;50</p>
+            <ion-col size="12">
+              <ion-text color="danger">REFIT ANIMAL CARE- 10KG</ion-text>
+              <ion-text>Celebrate Mineral Mixture...</ion-text>
+              <ion-text>Delivery By- 6th October</ion-text>
+              <ion-text>Delivery Fees- &#x20B9;50</ion-text>
             </ion-col>
           </ion-row>
           <ion-row>
@@ -91,10 +91,14 @@
         <ion-grid slot="end">
           <ion-row>
             <ion-col size="3"></ion-col>
-            <ion-col (click)="medModal(c)" class="center" size="6">
-              <ion-thumbnail><ion-img src="{{c.image}}" ></ion-img></ion-thumbnail>
+            <ion-col (click)="itemModal(c)" class="center" size="6">
+              <ion-thumbnail>
+                <ion-img src="{{c.image}}"></ion-img>
+              </ion-thumbnail>
             </ion-col>
-            <ion-col size="3"><ion-icon color="danger" name="trash-sharp" (click)="removeCartItem(c)"></ion-icon></ion-col>
+            <ion-col size="3">
+              <ion-icon color="danger" name="trash-sharp" (click)="removeCartItem(c)"></ion-icon>
+            </ion-col>
           </ion-row>
           <ion-row>
             <ion-col class="center" size="12">
@@ -103,11 +107,12 @@
           </ion-row>
           <ion-row>
             <ion-col class="center" size="2">
-              <ion-icon size="large" name="remove-circle-sharp" color="primary" (click)="decreaseCartItem(c)"></ion-icon>
+              <ion-icon size="large" name="remove-circle-sharp" color="primary" (click)="decreaseCartItem(c)">
+              </ion-icon>
             </ion-col>
             <ion-col class="center" size="8">
               <ion-item lines="none" color="none">
-                <ion-text color="warning">{{c.amount}}</ion-text>
+                <ion-text color="success">{{c.amount}}</ion-text>
               </ion-item>
             </ion-col>
             <ion-col class="center" size="2">
@@ -117,32 +122,11 @@
         </ion-grid>
       </ion-toolbar>
       <ion-toolbar class="card-color">
-        <ion-button shape="round" expand="block" size="small" color="medium">{{doTranslation('You have a Promo Code? Apply Here')}}</ion-button>
+        <ion-button shape="round" expand="block" size="small" color="medium">{{doTranslation('You have a Promo Code \?
+          Apply Here')}}</ion-button>
       </ion-toolbar>
     </ion-list>
-    <!-- <ion-toolbar color="none">
-      <ion-item lines="full" color="none">
-        <ion-label slot="start" color="primary">PRICE DETAILS</ion-label>
-      </ion-item>
-    </ion-toolbar>
-    <ion-toolbar class="priceTable" color="none">
-      <ion-item lines="none" color="none">
-        <ion-label slot="start" color="primary">{{'Price of c.amount Item'}})</ion-label>
-        <ion-label slot="end">1440</ion-label>
-      </ion-item>
-      <ion-item lines="none" color="none">
-        <ion-label slot="start" color="primary">Discount</ion-label>
-        <ion-label slot="end">&#x20B9;68</ion-label>
-      </ion-item>
-      <ion-item lines="full" color="none">
-        <ion-label slot="start" color="primary">Delivery Charges</ion-label>
-        <ion-label slot="end">Free</ion-label>
-      </ion-item>
-      <ion-item lines="none" color="none">
-        <ion-label slot="start" color="primary">Total Cost</ion-label>
-        <ion-label slot="end" color="warning">&#x20B9;{{'c.amount*c.price'}}</ion-label>
-      </ion-item>
-    </ion-toolbar> -->
+
   </ion-card>
   <ion-toolbar class="card-color">
     <ion-item lines="full" color="none">
@@ -150,33 +134,23 @@
     </ion-item>
   </ion-toolbar>
   <ion-toolbar class="priceTable card-color">
-    <!-- <ion-item lines="none" color="none">
-      <ion-label slot="start" color="primary">PRICE</ion-label>
-      <ion-label slot="end"></ion-label>
-    </ion-item>
-    <ion-item lines="none" color="none">
-      <ion-label slot="start" color="primary">Discount</ion-label>
-      <ion-label slot="end">&#x20B9;68</ion-label>
-    </ion-item> -->
+
     <ion-item lines="full" color="none">
       <ion-label slot="start" color="primary">Delivery Charges</ion-label>
       <ion-label slot="end">Free</ion-label>
     </ion-item>
     <ion-item lines="none" color="none">
       <ion-label slot="start" color="primary">Total Cost</ion-label>
-      <ion-label slot="end" color="warning">{{ getTotal() | currency:'INR' }}</ion-label>
+      <ion-label slot="end" color="success">{{ getTotal() | currency:'INR' }}</ion-label>
     </ion-item>
   </ion-toolbar>
 
-  <ion-button size="small" expand="block" color="success" (click)="nextAddress()"><ion-icon size="small" slot="end" name="checkmark-done-sharp"></ion-icon>PLACE ORDER!</ion-button>
+  <ion-button size="small" expand="block" color="success" (click)="nextAddress()">
+    <ion-icon size="small" slot="end" name="checkmark-done-sharp"></ion-icon>PLACE ORDER!
+  </ion-button>
 </ion-content>
 
 <ion-content *ngIf="flag === true" class="ion-padding content-color">
-  <!-- <ion-toolbar>
-    <ion-item lines="full">
-      <ion-label class="title">Provide your address</ion-label>
-    </ion-item>
-  </ion-toolbar> -->
   <ion-card class="card-color">
     <ion-item lines="none" color="none">
       <ion-icon (click)="close()" size="large" name="close" color="medium" slot="end"></ion-icon>
@@ -189,18 +163,20 @@
         </ion-item>
       </ion-toolbar>
     </form>
-    <ion-button [disabled]="!addressForm.get('address').dirty" expand="full" fill="clear" size="small" color="primary" (click)="addAddress()">Add Address<ion-icon size="small" slot="end" color="primary" name="add"></ion-icon></ion-button>
+    <ion-button [disabled]="!addressForm.get('address').dirty" expand="full" fill="clear" size="small" color="primary"
+      (click)="addAddress()">Add Address<ion-icon size="small" slot="end" color="primary" name="add"></ion-icon>
+    </ion-button>
 
-      <ion-list>
-        <ion-radio-group value="{{addressData[0]}}" (ionChange)="onSelectAddress($event)">
-          <ion-item lines="full" color="none" *ngFor="let address of addressData; let i=index">
-            <ion-text>{{address}}</ion-text>
-            <ion-radio slot="start" value="{{address}}"></ion-radio>
-            <ion-icon class="del-icon" slot="end" name="close" (click)="deleteAddress(i)"></ion-icon>
-          </ion-item>
-        </ion-radio-group>
-      </ion-list>
-    </ion-card>
+    <ion-list>
+      <ion-radio-group value="{{addressData[0]}}" (ionChange)="onSelectAddress($event)">
+        <ion-item lines="full" color="none" *ngFor="let address of addressData; let i=index">
+          <ion-text>{{address}}</ion-text>
+          <ion-radio slot="start" value="{{address}}"></ion-radio>
+          <ion-icon class="del-icon" slot="end" name="close" (click)="deleteAddress(i)"></ion-icon>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </ion-card>
 
   <ion-button expand="full" size="small" color="success" (click)="makePayment()">
     <ion-icon size="small" slot="end" name="tick"></ion-icon>
@@ -208,9 +184,3 @@
   </ion-button>
 
 </ion-content>
-
-
-  <!-- <ion-footer>
-    <ion-button expand="block" color="success" (click)="close()" (click)="makePayment()"><ion-icon slot="end" name="checkmark-done-sharp"></ion-icon>PLACE ORDER!</ion-button>
-  </ion-footer> -->
-  

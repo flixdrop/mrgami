@@ -5,15 +5,18 @@
         <ion-icon size="large" name="menu" color="danger"></ion-icon>
       </ion-menu-button>
     </ion-buttons>
-    <ion-searchbar slot="start" placeholder="{{doTranslation('Search Cattles')}}" mode="md"></ion-searchbar>
+    <!-- <ion-searchbar slot="start" placeholder="{{doTranslation('Search Cattles')}}" mode="md"></ion-searchbar> -->
     <ion-buttons slot="end">
-        <ion-select class="content-color" placeholder="Lang" interface="action-sheet" (ionChange)="onLanguageChanged($event)" [(ngModel)]="selectedLanguage">
+        <ion-select class="content-color" placeholder="Language" interface="action-sheet" (ionChange)="onLanguageChanged($event)" [(ngModel)]="selectedLanguage">
           <ion-select-option value="english">English</ion-select-option>
           <ion-select-option value="ಕನ್ನಡ">ಕನ್ನಡ</ion-select-option>
         </ion-select>
       <ion-icon size="large" slot="end" name="notifications" color="danger"></ion-icon>
       <ion-icon *ngIf="isAuthenticated !== undefined" size="large" slot="end" color="danger" name="log-out" (click)="onClickLogout()"></ion-icon>
     </ion-buttons>   
+  </ion-toolbar>
+  <ion-toolbar class="search-color"> 
+    <ion-searchbar slot="start" placeholder="{{doTranslation('Search Cattles')}}" mode="md"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -75,9 +78,9 @@
 
   <div class="vertical-flex">
     <ion-row (click)="goToBuy()" class="row-size-bigbtn gradient">
-      <ion-col class="big-btn-img" size="8" style="background-image: url('../../assets/icon/sell-cow-icon.png');">
+      <ion-col class="big-btn-img" size="7" style="background-image: url('../../assets/icon/sell-cow-icon.png');">
       </ion-col>
-      <ion-col class="vertical-flex" size="4">
+      <ion-col class="vertical-flex" size="5">
           <ion-label class="green">{{doTranslation('BUY/SELL')}}</ion-label>
           <ion-label class=" white">{{doTranslation('ANIMAL')}}</ion-label>
       </ion-col>

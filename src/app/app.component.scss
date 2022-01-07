@@ -1,6 +1,6 @@
 .app{
-  --background: rgb(75,75,75);
-  background-color: rgb(75,75,75);
+  --background: rgb(25,25,25);
+  background-color: rgb(25,25,25);
   // --background: #36363F;
   // background-color: #1F1F29;
   // background-image: url('../assets/bg_1.png') !important;
@@ -39,18 +39,10 @@
   }
 }
 
-.content{
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 ion-menu{
-  opacity: 95%;
+  // opacity: 98%;
   --width: 50% !important;
-  --ion-background-color: #36363F;
+  --ion-background-color: linear-gradient(180deg, rgb(50,50,50,0.8), rgb(25,25,25,0.8)) !important;
   ion-item{
     --background: transparent;
   }
